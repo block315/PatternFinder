@@ -9,6 +9,7 @@ func collect(target_position:Vector3, collider):
 	await get_tree().create_timer(1.0).timeout
 	position = Vector3.ZERO
 	rotation = Vector3.ZERO
-	if "matter" in collider:
+	if "matter" in collider and collider.matter != null:
+		rotation = Vector3(0,0, -PI)
 		collection = collider.matter
 		print("Clollected " + collection.name)

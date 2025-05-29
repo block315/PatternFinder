@@ -8,7 +8,6 @@ class_name Robot
 @export var speed = 3.0
 var moving: bool
 
-
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_F1):
 		animation_tree.set("parameters/conditions/greeting", true)
