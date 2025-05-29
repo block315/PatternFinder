@@ -21,9 +21,10 @@ func _on_box_looking_area_body_entered(body: Node3D) -> void:
 		animation_player.play("Chest_Open")
 		open=true
 		open_audio_stream_player_3d.play()
-		if body.hand.current_equipment is Collector:
+		if body.hand.current_equipment is Collector and body.hand.current_equipment.collection != null:
 			if body.hand.current_equipment.collection.name.to_lower() == $"../..".name.left(-4).to_lower():
 				found.emit()
+				body.hand.current_equipment.queue_free()
 
 func _on_box_looking_area_body_exited(body: Node3D) -> void:
 	if body is CharacterBody3D and open:
