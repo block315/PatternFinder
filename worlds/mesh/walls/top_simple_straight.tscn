@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://3m3atfk7km5o"]
+
+[ext_resource type="PackedScene" uid="uid://bt6826af2iu3v" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/TopSimple_Straight.gltf" id="1_6661n"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="2_kn0vn"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ikca4"]
+data = PackedVector3Array(-2, 4.6359, 2, -2, 5, -2, -2, 4.6359, -2, -2, 4.6359, 2, -2, 5, 2, -2, 5, -2, -2, 3, 2, -2, 3.6326, -2, -2, 3, -2, -2, 3, 2, -2, 3.6326, 2, -2, 3.6326, -2, -2, 3.6326, 2, -2, 4.6359, -2, -2, 3.6326, -2, -2, 3.6326, 2, -2, 4.6359, 2, -2, 4.6359, -2)
+
+[node name="TopSimple_Straight" instance=ExtResource("1_6661n")]
+
+[node name="TopSimple_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_kn0vn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TopSimple_Straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopSimple_Straight/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_ikca4")

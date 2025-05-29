@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnqw7m5tisx4f"]
+
+[ext_resource type="PackedScene" uid="uid://bead3gcmlktkp" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_DarkPlastic_Straight.gltf" id="1_pmg2y"]
+[ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://worlds/material/T_Trim_03.tres" id="2_1xvpb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7lyqm"]
+data = PackedVector3Array(-2, 0.8897, 2, -2, 0.0019, -2, -2, 0.0019, 2, -2, 0.8897, 2, -2, 0.8897, -2, -2, 0.0019, -2, -2, 1, 2, -2, 0.8897, -2, -2, 0.8897, 2, -2, 1, 2, -2, 1, -2, -2, 0.8897, -2)
+
+[node name="ShortWall_DarkPlastic_Straight" instance=ExtResource("1_pmg2y")]
+
+[node name="ShortWall_DarkPlastic_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_1xvpb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ShortWall_DarkPlastic_Straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShortWall_DarkPlastic_Straight/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_7lyqm")

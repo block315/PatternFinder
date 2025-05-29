@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://sdks4xnfwy6c"]
+
+[ext_resource type="PackedScene" uid="uid://c56gsymev5237" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Squares.gltf" id="1_i0qsy"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="2_dg57h"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_smbl7"]
+data = PackedVector3Array(-1.8817, 0, 1.8817, 0, 0, 0, 0, 0, 1.8817, -1.8817, 0, 1.8817, -1.8817, 0, 0, 0, 0, 0, 1.8817, 0, 1.8817, 0, 0, 0, 1.8817, 0, 0, 1.8817, 0, 1.8817, 0, 0, 1.8817, 0, 0, 0, -1.8817, 0, -1.8817, 0, 0, 0, -1.8817, 0, 0, -1.8817, 0, -1.8817, 0, 0, -1.8817, 0, 0, 0, 1.8817, 0, -1.8817, 0, 0, 0, 0, 0, -1.8817, 1.8817, 0, -1.8817, 1.8817, 0, 0, 0, 0, 0, -1.8817, 0, 1.8817, -2, 0, 0, -1.8817, 0, 0, -1.8817, 0, 1.8817, -2, 0, 2, -2, 0, 0, 0, 0, 1.8817, -2, 0, 2, -1.8817, 0, 1.8817, 0, 0, 1.8817, 0, 0, 2, -2, 0, 2, 1.8817, 0, 0, 2, 0, 2, 1.8817, 0, 1.8817, 1.8817, 0, 0, 2, 0, 0, 2, 0, 2, 1.8817, 0, 1.8817, 0, 0, 2, 0, 0, 1.8817, 1.8817, 0, 1.8817, 2, 0, 2, 0, 0, 2, -1.8817, 0, 0, -2, 0, -2, -1.8817, 0, -1.8817, -1.8817, 0, 0, -2, 0, 0, -2, 0, -2, -1.8817, 0, -1.8817, 0, 0, -2, 0, 0, -1.8817, -1.8817, 0, -1.8817, -2, 0, -2, 0, 0, -2, 1.8817, 0, -1.8817, 2, 0, 0, 1.8817, 0, 0, 1.8817, 0, -1.8817, 2, 0, -2, 2, 0, 0, 0, 0, -1.8817, 2, 0, -2, 1.8817, 0, -1.8817, 0, 0, -1.8817, 0, 0, -2, 2, 0, -2)
+
+[node name="Platform_Squares" instance=ExtResource("1_i0qsy")]
+
+[node name="Platform_Squares" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_dg57h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform_Squares" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Squares/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_smbl7")

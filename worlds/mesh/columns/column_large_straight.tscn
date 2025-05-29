@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsm6hqcy1xc7f"]
+
+[ext_resource type="PackedScene" uid="uid://bbooxkxuywkf6" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Large_Straight.gltf" id="1_7w58l"]
+[ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://worlds/material/T_Trim_03.tres" id="2_1i3ed"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://worlds/material/T_Trim_01.tres" id="3_rswhx"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="4_y7ex3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_or648"]
+size = Vector3(1.39842, 9.92456, 1.97803)
+
+[node name="Column_Large_Straight" instance=ExtResource("1_7w58l")]
+
+[node name="Column_Large_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_1i3ed")
+surface_material_override/1 = ExtResource("3_rswhx")
+surface_material_override/2 = ExtResource("2_1i3ed")
+surface_material_override/3 = ExtResource("4_y7ex3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Column_Large_Straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Column_Large_Straight/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00372791, 5.01477, 0.143311)
+shape = SubResource("BoxShape3D_or648")

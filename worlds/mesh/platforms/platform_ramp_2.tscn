@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjok81xtjv3sh"]
+
+[ext_resource type="PackedScene" uid="uid://b0126a86pwfg2" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Ramp_2.gltf" id="1_ud0rv"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://worlds/material/T_Trim_01.tres" id="2_anb0i"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="3_stl68"]
+[ext_resource type="Material" uid="uid://k24n7o4yhrnw" path="res://worlds/material/GrayDecalForRamp.tres" id="4_t4hta"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_srmxd"]
+data = PackedVector3Array(1, 0.8414, 0, 1, 0.0488, 1.9006, 0.9998, 1, 0, 1, 0.0488, 1.9006, 1, 0, 1.6848, 1, 0, 1.9005, 1, 0.0488, 1.9006, 1, 0.8414, 0, 1, 0, 1.6848, 1, 0, 0, 1, 0, 1.6848, 1, 0.8414, 0, -1, 0.0488, 1.9006, -1, 0.8414, 0, -1.0001, 1, 0, -1, 0.8414, 0, -1, 0, 1.9005, -1, 0, 1.6848, -1, 0.8414, 0, -1, 0.0488, 1.9006, -1, 0, 1.9005, -1, 0, 0, -1, 0.8414, 0, -1, 0, 1.6848, 0.9998, 1, 0, -1, 0.0488, 1.9006, -1.0001, 1, 0, 0.9998, 1, 0, 1, 0.0488, 1.9006, -1, 0.0488, 1.9006, 1, 0, 0, -1, 0.8414, 0, -1, 0, 0, 1, 0, 0, 1, 0.8414, 0, -1, 0.8414, 0, 0.9998, 1, 0, -1, 0.8414, 0, 1, 0.8414, 0, 0.9998, 1, 0, -1.0001, 1, 0, -1, 0.8414, 0, 1, 0.0488, 1.9006, -1, 0, 2, -1, 0.0488, 1.9006, 1, 0.0488, 1.9006, 1, 0, 2, -1, 0, 2, 1, 0, 1.9006, 1, 0, 2, 1, 0.0488, 1.9006, -1, 0.0488, 1.9006, -1, 0, 2, -1, 0, 1.9006, -0.5522, 0.5685, 0.8656, -0.878, 0.6142, 0.7759, -0.5522, 0.6142, 0.7759, -0.5522, 0.5685, 0.8656, -0.878, 0.5685, 0.8656, -0.878, 0.6142, 0.7759, 0.5522, 0.5685, 0.8656, 0.878, 0.6142, 0.7759, 0.878, 0.5685, 0.8656, 0.5522, 0.5685, 0.8656, 0.5522, 0.6142, 0.7759, 0.878, 0.6142, 0.7759, -0.0695, 0.0715, 1.8583, 0.0695, 0.1664, 1.6669, 0.0695, 0.0715, 1.8583, -0.0695, 0.0715, 1.8583, -0.0695, 0.1664, 1.6669, 0.0695, 0.1664, 1.6669)
+
+[node name="Platform_Ramp_2" instance=ExtResource("1_ud0rv")]
+
+[node name="Platform_Ramp_2" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_anb0i")
+surface_material_override/1 = ExtResource("3_stl68")
+surface_material_override/2 = ExtResource("4_t4hta")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform_Ramp_2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Ramp_2/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_srmxd")

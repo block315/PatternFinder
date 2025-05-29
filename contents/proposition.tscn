@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce20i0jttpx5"]
+
+[ext_resource type="Script" uid="uid://cic63ibvj1n7c" path="res://contents/proposition.gd" id="1_wslh8"]
+
+[node name="Proposition" type="Node3D"]
+script = ExtResource("1_wslh8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

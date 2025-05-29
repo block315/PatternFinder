@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://tp0plv2o30d1"]
+
+[ext_resource type="PackedScene" uid="uid://cu8ig5kbwmkdx" path="res://objects/items/equipments/equipment.tscn" id="1_olflt"]
+[ext_resource type="Script" uid="uid://cuj5t7vooq45n" path="res://objects/items/equipments/breaker/breaker.gd" id="2_uplrc"]
+
+[node name="Breaker" instance=ExtResource("1_olflt")]
+script = ExtResource("2_uplrc")

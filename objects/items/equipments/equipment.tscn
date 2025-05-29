@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu8ig5kbwmkdx"]
+
+[ext_resource type="Script" uid="uid://b3br2ctvox5k8" path="res://objects/items/equipments/equipment.gd" id="1_eh6po"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_eh6po"]
+height = 1.0
+radius = 1.0
+
+[node name="Equipment" type="Area3D"]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_eh6po")
+
+[node name="PickupCollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_eh6po")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm3q4o2behm28"]
+
+[ext_resource type="PackedScene" uid="uid://covxf2hmllb4m" path="res://objects/items/equipments/shooter/shooter.tscn" id="1_vjsnd"]
+[ext_resource type="Script" uid="uid://b16rbrice556r" path="res://objects/items/equipments/shooter/electron_shooter.gd" id="2_g6re1"]
+[ext_resource type="PackedScene" uid="uid://byr600w5n6bto" path="res://arts/3D/models/Modular Sci Fi Guns - Nov 2021-20250213T135710Z-001/Modular Sci Fi Guns - Nov 2021/Guns/glTF/AR_5.gltf" id="3_x1w3i"]
+
+[node name="ElectronShooter" instance=ExtResource("1_vjsnd")]
+script = ExtResource("2_g6re1")
+
+[node name="AR_52" parent="." index="0" instance=ExtResource("3_x1w3i")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -0.05, -0.1)
+
+[node name="Nozzle" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127341, -0.285436)

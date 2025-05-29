@@ -1,0 +1,16 @@
+[gd_resource type="ORMMaterial3D" load_steps=6 format=3 uid="uid://bqmdw8m0wcmas"]
+
+[ext_resource type="Texture2D" uid="uid://ckky6252blpmj" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_BaseColor_Red.png" id="1_4mnwm"]
+[ext_resource type="Texture2D" uid="uid://cnyk18a57ypm2" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_DetailMask.png" id="2_x3g2k"]
+[ext_resource type="Texture2D" uid="uid://b4v3p1mk5ojep" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_Emissive.png" id="3_q4qdo"]
+[ext_resource type="Texture2D" uid="uid://c5jnnqkyd5hnm" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_Normal.png" id="4_7gybr"]
+[ext_resource type="Texture2D" uid="uid://cjjorfjq8m1rc" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_01_ORM.png" id="5_bvxrq"]
+
+[resource]
+albedo_texture = ExtResource("1_4mnwm")
+orm_texture = ExtResource("5_bvxrq")
+emission_enabled = true
+emission_texture = ExtResource("3_q4qdo")
+normal_enabled = true
+normal_texture = ExtResource("4_7gybr")
+detail_mask = ExtResource("2_x3g2k")

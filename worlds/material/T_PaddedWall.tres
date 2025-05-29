@@ -1,0 +1,14 @@
+[gd_resource type="ORMMaterial3D" load_steps=5 format=3 uid="uid://cwiijfbs8if7j"]
+
+[ext_resource type="Texture2D" uid="uid://dxf3ckb04sdai" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_BaseColor.png" id="1_lab3u"]
+[ext_resource type="Texture2D" uid="uid://6x40p14u7pvj" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_Emissive.png" id="2_d1a5u"]
+[ext_resource type="Texture2D" uid="uid://dvks5neg6uroo" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_Normal.png" id="3_fvruy"]
+[ext_resource type="Texture2D" uid="uid://dvr03nlkwhurf" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_PaddedWall_ORM.png" id="4_j25qh"]
+
+[resource]
+albedo_texture = ExtResource("1_lab3u")
+orm_texture = ExtResource("4_j25qh")
+emission_enabled = true
+emission_texture = ExtResource("2_d1a5u")
+normal_enabled = true
+normal_texture = ExtResource("3_fvruy")

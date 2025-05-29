@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://budel1aus3j4d"]
+
+[ext_resource type="PackedScene" uid="uid://tp0plv2o30d1" path="res://objects/items/equipments/breaker/breaker.tscn" id="1_vygby"]
+[ext_resource type="Script" uid="uid://dlral60kgl1jf" path="res://objects/items/equipments/breaker/axe.gd" id="2_hxcac"]
+
+[node name="Axe" instance=ExtResource("1_vygby")]
+script = ExtResource("2_hxcac")
+state = null

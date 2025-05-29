@@ -1,0 +1,421 @@
+[gd_scene load_steps=2 format=3 uid="uid://568w2cogqc5n"]
+
+[ext_resource type="Script" uid="uid://nt5oimmqn4bm" path="res://UI/config.gd" id="1_ehuxe"]
+
+[node name="Config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehuxe")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="GamePlay" type="ScrollContainer" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="GamePlay" type="VBoxContainer" parent="TabContainer/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FullScreen" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen"]
+layout_mode = 2
+
+[node name="FullScreen13" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen13"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen13"]
+layout_mode = 2
+
+[node name="FullScreen14" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen14"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen14"]
+layout_mode = 2
+
+[node name="FullScreen15" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen15"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen15"]
+layout_mode = 2
+
+[node name="FullScreen16" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen16"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen16"]
+layout_mode = 2
+
+[node name="FullScreen17" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen17"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen17"]
+layout_mode = 2
+
+[node name="FullScreen18" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen18"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen18"]
+layout_mode = 2
+
+[node name="FullScreen19" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen19"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen19"]
+layout_mode = 2
+
+[node name="FullScreen20" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen20"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen20"]
+layout_mode = 2
+
+[node name="FullScreen21" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen21"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen21"]
+layout_mode = 2
+
+[node name="FullScreen22" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen22"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen22"]
+layout_mode = 2
+
+[node name="FullScreen23" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen23"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen23"]
+layout_mode = 2
+
+[node name="FullScreen24" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen24"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen24"]
+layout_mode = 2
+
+[node name="FullScreen25" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen25"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen25"]
+layout_mode = 2
+
+[node name="FullScreen26" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen26"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen26"]
+layout_mode = 2
+
+[node name="FullScreen27" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen27"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen27"]
+layout_mode = 2
+
+[node name="FullScreen28" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen28"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen28"]
+layout_mode = 2
+
+[node name="FullScreen29" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen29"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen29"]
+layout_mode = 2
+
+[node name="FullScreen30" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen30"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen30"]
+layout_mode = 2
+
+[node name="FullScreen31" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen31"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen31"]
+layout_mode = 2
+
+[node name="FullScreen32" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen32"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen32"]
+layout_mode = 2
+
+[node name="FullScreen2" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen2"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen2"]
+layout_mode = 2
+
+[node name="FullScreen3" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen3"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen3"]
+layout_mode = 2
+
+[node name="FullScreen4" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen4"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen4"]
+layout_mode = 2
+
+[node name="FullScreen5" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen5"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen5"]
+layout_mode = 2
+
+[node name="FullScreen6" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen6"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen6"]
+layout_mode = 2
+
+[node name="FullScreen7" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen7"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen7"]
+layout_mode = 2
+
+[node name="FullScreen8" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen8"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen8"]
+layout_mode = 2
+
+[node name="FullScreen9" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen9"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen9"]
+layout_mode = 2
+
+[node name="FullScreen10" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen10"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen10"]
+layout_mode = 2
+
+[node name="FullScreen11" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen11"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen11"]
+layout_mode = 2
+
+[node name="FullScreen12" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TabContainer/GamePlay/GamePlay/FullScreen12"]
+layout_mode = 2
+text = "Save"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/GamePlay/GamePlay/FullScreen12"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/GamePlay/GamePlay"]
+layout_mode = 2
+
+[node name="Video" type="ScrollContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Video"]
+layout_mode = 2
+
+[node name="FullScreen" type="HBoxContainer" parent="TabContainer/Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Video/HBoxContainer/FullScreen"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/Video/HBoxContainer/FullScreen"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="Audio" type="ScrollContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="FullScreen" type="HBoxContainer" parent="TabContainer/Audio"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Audio/FullScreen"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/Audio/FullScreen"]
+layout_mode = 2

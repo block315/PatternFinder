@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://lif88rujhcpl"]
+
+[ext_resource type="Texture2D" uid="uid://u2jfsrfw7gkl" path="res://arts/2D/pictures/Cavendish-walk/Cavendish-walk.png" id="1_qvroy"]
+
+[node name="Ghost" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transparency = 0.65
+visibility_range_end = 5.0
+modulate = Color(0.336608, 0.336608, 0.336608, 1)
+billboard = 2
+shaded = true
+texture = ExtResource("1_qvroy")

@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7t54asikdoa5"]
+
+[ext_resource type="Script" uid="uid://cwoin4co3juul" path="res://UI/main_menu.gd" id="1_tk8dj"]
+[ext_resource type="Shader" uid="uid://ce6avascoysm" path="res://UI/AtomicUI.gdshader" id="2_4cwpn"]
+[ext_resource type="LabelSettings" uid="uid://dwoqovdap52e3" path="res://UI/MainTitleLabel.tres" id="2_d8nwk"]
+[ext_resource type="Theme" uid="uid://3p335jre7637" path="res://UI/MainUITheme.tres" id="3_d8nwk"]
+[ext_resource type="AudioStream" uid="uid://bj304bktkpmdv" path="res://arts/audio/sounds/kenney_ui-audio/Audio/click2.ogg" id="5_f40uw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f40uw"]
+shader = ExtResource("2_4cwpn")
+shader_parameter/amount_x = 128.0
+shader_parameter/amount_y = 128.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ctay"]
+shader = ExtResource("2_4cwpn")
+shader_parameter/amount_x = 128.0
+shader_parameter/amount_y = 128.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ev3b6"]
+shader = ExtResource("2_4cwpn")
+shader_parameter/amount_x = 128.0
+shader_parameter/amount_y = 128.0
+
+[node name="MainMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_tk8dj")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+material = SubResource("ShaderMaterial_f40uw")
+layout_mode = 2
+text = "Periodic Warefare"
+label_settings = ExtResource("2_d8nwk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.7
+
+[node name="StartButton" type="Button" parent="HBoxContainer/ButtonContainer"]
+material = SubResource("ShaderMaterial_8ctay")
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_d8nwk")
+text = "Start"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.7
+
+[node name="ExitButton" type="Button" parent="HBoxContainer/ButtonContainer"]
+material = SubResource("ShaderMaterial_ev3b6")
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_d8nwk")
+text = "Exit"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.7
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="UIAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_f40uw")
+
+[connection signal="focus_entered" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_focus_entered"]
+[connection signal="pressed" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
+[connection signal="pressed" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]

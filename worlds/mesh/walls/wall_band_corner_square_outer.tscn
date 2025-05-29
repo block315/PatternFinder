@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3llfv6mu4cl1"]
+
+[ext_resource type="PackedScene" uid="uid://c7q270pe3bhgf" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Corner_Square_Outer.gltf" id="1_xwis2"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="2_n7a2m"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://worlds/material/T_Trim_01.tres" id="3_hw370"]
+[ext_resource type="Material" uid="uid://dh002qmible1f" path="res://worlds/material/T_Decals.tres" id="4_821vb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f52jn"]
+data = PackedVector3Array(0, 1, -4, -3.8, 0.8, -3.8, 0, 0.8, -3.8, 0, 1, -4, -4, 1, -4, -3.8, 0.8, -3.8, 0, 3, -4, -4, 1, -4, 0, 1, -4, 0, 3, -4, -4, 3, -4, -4, 1, -4, -4, 1, 0, -3.8, 0.8, -3.8, -4, 1, -4, -4, 1, 0, -3.8, 0.8, 0, -3.8, 0.8, -3.8, -4, 3, 0, -4, 1, -4, -4, 3, -4, -4, 3, 0, -4, 1, 0, -4, 1, -4, 0, 0.8, -3.8, -2, 0, -4, 0, 0, -4, 0, 0.8, -3.8, -2, 0.8, -3.8, -2, 0, -4, -2, 0.8, -3.8, -4, 0, -4, -2, 0, -4, -2, 0.8, -3.8, -3.5883, 0.8, -3.8, -4, 0, -4, -3.8, 0.8, 0, -4, 0, -2, -3.8, 0.8, -2, -3.8, 0.8, 0, -4, 0, 0, -4, 0, -2, -3.8, 0.8, -2, -4, 0, -4, -3.8, 0.8, -3.5647, -3.8, 0.8, -2, -4, 0, -2, -4, 0, -4, -3.5883, 0.8, -3.8, -3.8, 0.8, -3.8, -4, 0, -4, -4, 0, -4, -3.8, 0.8, -3.8, -3.8, 0.8, -3.5647, -0.0601, 2.8449, -4.0075, -0.4493, 2.6019, -4.0075, -0.0601, 2.6019, -4.0075, -0.0601, 2.8449, -4.0075, -0.4493, 2.8449, -4.0075, -0.4493, 2.6019, -4.0075, -4.0075, 2.8449, -0.0601, -4.0075, 2.6019, -0.4493, -4.0075, 2.8449, -0.4493, -4.0075, 2.8449, -0.0601, -4.0075, 2.6019, -0.0601, -4.0075, 2.6019, -0.4493)
+
+[node name="WallBand_Corner_Square_Outer" instance=ExtResource("1_xwis2")]
+
+[node name="WallBand_Corner_Square_Outer" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_n7a2m")
+surface_material_override/1 = ExtResource("3_hw370")
+surface_material_override/2 = ExtResource("4_821vb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WallBand_Corner_Square_Outer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallBand_Corner_Square_Outer/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_f52jn")

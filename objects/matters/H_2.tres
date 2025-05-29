@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Matter" load_steps=2 format=3 uid="uid://c5ffffaw6o1sr"]
+
+[ext_resource type="Script" uid="uid://dvogwt0t3rgv1" path="res://objects/matters/matter.gd" id="1_i8c20"]
+
+[resource]
+script = ExtResource("1_i8c20")
+name = "Hydrogen"
+metadata/_custom_type_script = "uid://dvogwt0t3rgv1"

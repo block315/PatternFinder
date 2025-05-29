@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu362ofw6uec7"]
+
+[ext_resource type="PackedScene" uid="uid://cu8ig5kbwmkdx" path="res://objects/items/equipments/equipment.tscn" id="1_fc42v"]
+[ext_resource type="Script" uid="uid://bni2843y7y4kp" path="res://objects/items/equipments/collector/collector.gd" id="2_bce4f"]
+
+[node name="Collector" instance=ExtResource("1_fc42v")]
+script = ExtResource("2_bce4f")
+collection = null

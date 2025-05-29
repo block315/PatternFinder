@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://blaut8av5gc5p"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://crpax1rnc2605" path="res://objects/cores/NuclearParticle.tres" id="1_p5yl4"]
+[ext_resource type="Script" uid="uid://15egf3nghmgv" path="res://objects/cores/neutron.gd" id="2_rk8km"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3l6qt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q52kx"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.784314)
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1rtvj"]
+material = SubResource("StandardMaterial3D_q52kx")
+
+[node name="Neutron" type="RigidBody3D"]
+physics_material_override = ExtResource("1_p5yl4")
+gravity_scale = 0.0
+linear_damp = 10.0
+script = ExtResource("2_rk8km")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_3l6qt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_1rtvj")

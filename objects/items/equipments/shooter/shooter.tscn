@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://covxf2hmllb4m"]
+
+[ext_resource type="PackedScene" uid="uid://cu8ig5kbwmkdx" path="res://objects/items/equipments/equipment.tscn" id="1_xyt48"]
+[ext_resource type="Script" uid="uid://bg2bfugbw1rpw" path="res://objects/items/equipments/shooter/shooter.gd" id="2_h4crb"]
+
+[node name="Shooter" instance=ExtResource("1_xyt48")]
+script = ExtResource("2_h4crb")
+
+[node name="Nozzle" type="Marker3D" parent="." index="1"]

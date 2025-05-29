@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnt8g4yspij6o"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/stages/base_room.tscn" id="1_7psvd"]
+[ext_resource type="Script" uid="uid://belrfpbfsdqo3" path="res://worlds/stages/5/boron_room.gd" id="2_dbwpa"]
+[ext_resource type="Texture2D" uid="uid://cx8gtxfi0bsvo" path="res://worlds/stages/5/T_Decals_B.png" id="3_slgww"]
+
+[node name="BoronRoom" instance=ExtResource("1_7psvd")]
+script = ExtResource("2_dbwpa")
+atomic_number = 5
+element_decal_png = ExtResource("3_slgww")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 5
+neutron = Array[int]([5, 6])
+electron = 5
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -269, 33, 0)
+visible = true
