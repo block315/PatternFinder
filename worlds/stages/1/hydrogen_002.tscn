@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://6uprydwd5mwr"]
 
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://contents/proposition.tscn" id="1_oh0yk"]
-[ext_resource type="PackedScene" uid="uid://b4wa0d3tuiqw6" path="res://arts/3D/models/Balloon.glb" id="2_0xs5f"]
+[ext_resource type="PackedScene" uid="uid://cyx4h1ejcrebj" path="res://objects/interactives/balloon.tscn" id="2_0xs5f"]
 
 [sub_resource type="Animation" id="Animation_0xs5f"]
 resource_name = "Float"
+length = 3.0
 
 [sub_resource type="Animation" id="Animation_n0hhw"]
 length = 0.001
@@ -23,19 +24,9 @@ libraries = {
 }
 
 [node name="Balloon" parent="." index="2" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(-0.458398, 0, -0.199679, 0, 0.5, 0, 0.199679, 0, -0.458398, 0, 2, 0)
 
 [node name="Balloon2" parent="." index="3" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(0.189179, 0, 0.46283, 0, 0.5, 0, -0.46283, 0, 0.189179, 3, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
 [node name="Balloon3" parent="." index="4" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(0.0232132, 0, 0.499461, 0, 0.5, 0, -0.499461, 0, 0.0232132, 3, 2, 2.34671)
-
-[node name="Balloon4" parent="." index="5" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(-0.0494949, 0, 0.497544, 0, 0.5, 0, -0.497544, 0, -0.0494949, 1.54323, 2, 0.840561)
-
-[node name="Balloon5" parent="." index="6" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(-0.384326, 0, -0.319834, 0, 0.5, 0, 0.319834, 0, -0.384326, -2.2098, 2, 0.0998316)
-
-[node name="Balloon6" parent="." index="7" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(0.454352, 0, 0.208719, 0, 0.5, 0, -0.208719, 0, 0.454352, -0.753028, 2, 1.35907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)

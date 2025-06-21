@@ -3,7 +3,7 @@ class_name PropLight
 
 @onready var blub_mesh: MeshInstance3D = get_child(0)
 @onready var omni_light_3d: OmniLight3D = blub_mesh.get_child(0)
-@onready var room: Room = get_tree().get_root().get_child(0)
+@onready var room: Room = get_tree().get_root().get_child(1)
 
 @export var power := true
 var emission_material: int

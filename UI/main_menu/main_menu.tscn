@@ -1,25 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7t54asikdoa5"]
+[gd_scene load_steps=7 format=3 uid="uid://c7t54asikdoa5"]
 
-[ext_resource type="Script" uid="uid://cwoin4co3juul" path="res://UI/main_menu.gd" id="1_tk8dj"]
-[ext_resource type="Shader" uid="uid://ce6avascoysm" path="res://UI/AtomicUI.gdshader" id="2_4cwpn"]
-[ext_resource type="LabelSettings" uid="uid://dwoqovdap52e3" path="res://UI/MainTitleLabel.tres" id="2_d8nwk"]
-[ext_resource type="Theme" uid="uid://3p335jre7637" path="res://UI/MainUITheme.tres" id="3_d8nwk"]
+[ext_resource type="Script" uid="uid://cwoin4co3juul" path="res://UI/main_menu/main_menu.gd" id="1_tk8dj"]
+[ext_resource type="LabelSettings" uid="uid://dwoqovdap52e3" path="res://UI/main_menu/MainTitleLabel.tres" id="2_d8nwk"]
+[ext_resource type="Material" uid="uid://logqbogylr5y" path="res://UI/main_menu/TitleLabelMaterial.tres" id="2_lib8g"]
+[ext_resource type="Theme" uid="uid://3p335jre7637" path="res://UI/main_menu/AtomiUITheme.tres" id="3_d8nwk"]
+[ext_resource type="Material" uid="uid://biwucvgkq5623" path="res://UI/main_menu/ButtonLabelMaterial.tres" id="4_rxajg"]
 [ext_resource type="AudioStream" uid="uid://bj304bktkpmdv" path="res://arts/audio/sounds/kenney_ui-audio/Audio/click2.ogg" id="5_f40uw"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_f40uw"]
-shader = ExtResource("2_4cwpn")
-shader_parameter/amount_x = 128.0
-shader_parameter/amount_y = 128.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ctay"]
-shader = ExtResource("2_4cwpn")
-shader_parameter/amount_x = 128.0
-shader_parameter/amount_y = 128.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ev3b6"]
-shader = ExtResource("2_4cwpn")
-shader_parameter/amount_x = 128.0
-shader_parameter/amount_y = 128.0
 
 [node name="MainMenu" type="ColorRect"]
 anchors_preset = 15
@@ -43,8 +29,9 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="HBoxContainer"]
-material = SubResource("ShaderMaterial_f40uw")
+[node name="TitleLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+material = ExtResource("2_lib8g")
 layout_mode = 2
 text = "Pattern Finder"
 label_settings = ExtResource("2_d8nwk")
@@ -64,11 +51,13 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.7
 
 [node name="StartButton" type="Button" parent="HBoxContainer/ButtonContainer"]
-material = SubResource("ShaderMaterial_8ctay")
+unique_name_in_owner = true
+material = ExtResource("4_rxajg")
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_d8nwk")
 text = "Start"
+flat = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
 layout_mode = 2
@@ -76,7 +65,8 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.7
 
 [node name="ExitButton" type="Button" parent="HBoxContainer/ButtonContainer"]
-material = SubResource("ShaderMaterial_ev3b6")
+unique_name_in_owner = true
+material = ExtResource("4_rxajg")
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_d8nwk")
@@ -94,7 +84,12 @@ size_flags_vertical = 3
 [node name="UIAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_f40uw")
 
+[node name="AtomicUITimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="focus_entered" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_focus_entered"]
 [connection signal="pressed" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="focus_entered" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
 [connection signal="pressed" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="timeout" from="AtomicUITimer" to="." method="_on_atomic_ui_timer_timeout"]

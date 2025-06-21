@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://biwucvgkq5623"]
+
+[ext_resource type="Shader" uid="uid://ce6avascoysm" path="res://UI/main_menu/AtomicUI.gdshader" id="1_j6d4m"]
+
+[resource]
+shader = ExtResource("1_j6d4m")
+shader_parameter/amount_x = 128.0
+shader_parameter/amount_y = 128.0

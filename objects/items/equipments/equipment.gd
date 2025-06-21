@@ -25,7 +25,6 @@ func _on_body_entered(body: Node3D) -> void:
 			print(body.hand.get_children())
 			state = 0
 
-
 func _on_body_exited(body: Node3D) -> void:
 	if body is Player:
 		if state == 0:

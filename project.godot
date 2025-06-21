@@ -17,7 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://game_manager.gd"
+UIAnimation="*res://addons/godot_ui_animations/UIAnimationHandler.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ui_animations/plugin.cfg")
 
 [input]
 

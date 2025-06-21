@@ -1,10 +1,10 @@
-// Shader from https://godotshaders.com/shader/circle-pixel/
+// Circle Pixel Shader from https://godotshaders.com/shader/circle-pixel/
 // Little changed
 
 shader_type canvas_item;
 
-uniform float amount_x: hint_range(0, 128) =  128;
-uniform float amount_y: hint_range(0, 128) = 128;
+uniform float amount_x: hint_range(0, 256) =  256;
+uniform float amount_y: hint_range(0, 256) = 256;
 
 void fragment() {
 	vec2 pos = UV;
@@ -20,6 +20,6 @@ void fragment() {
 	float dist = distance(pos, vec2(0.5));
 
 	vec4 c = texture(TEXTURE, cellpos);
-	COLOR = c * step(0.0, (0.5) - dist);
-	// COLOR = c * step(0.0, (0.5* c.a) - dist);
+	// COLOR = c * step(0.0, 0.5 - dist);
+	COLOR = c * step(0.0, (0.5* c.a) - dist);
 }

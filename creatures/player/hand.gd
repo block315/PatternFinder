@@ -13,7 +13,6 @@ class_name Hand
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 @onready var player: Player = $"../.."
 
-
 func _process(delta: float) -> void:
 	if current_equipment != null:
 		if Input.is_action_just_pressed("act"):
