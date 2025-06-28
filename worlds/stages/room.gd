@@ -13,7 +13,6 @@ signal turn_on_light(switch_value)
 @onready var core: Core = $Core
 @onready var speaker: Node3D = $Speaker
 
-
 func _ready():
 	core.strong_nuclear_force_activate = true
 	$Player.position = starting_position

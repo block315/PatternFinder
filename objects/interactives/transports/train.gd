@@ -4,8 +4,13 @@ class_name Train
 @export var speed := 20
 var on_board := false
 var passenger
-@export var destination : PackedScene
+@export var destination : int
 @onready var camera_3d: Camera3D = $Camera3D
+
+signal arrive
+
+func _ready() -> void:
+	pass
 
 func _process(delta: float) -> void:
 	var input_dir = Input.get_axis("ui_up", "ui_down")
@@ -31,7 +36,8 @@ func _on_radar_area_3d_area_entered(area: Area3D) -> void:
 	if area.get_parent().get_parent() is Building:
 		if area.get_parent().visible:
 			print("going to next room")
-			get_tree().change_scene_to_packed(destination)
+			PerodicWarfare.change_room(destination)
+			arrive.emit()
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion and on_board:

@@ -14,6 +14,7 @@ class_name Player
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	camera_3d.make_current()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

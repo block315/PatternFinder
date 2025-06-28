@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dp3hsvkn4gaji"]
+[gd_scene load_steps=54 format=3 uid="uid://dp3hsvkn4gaji"]
 
 [ext_resource type="PackedScene" uid="uid://r6gmeaa0rnkd" path="res://worlds/mesh/platforms/platform_simple.tscn" id="1_ec4yk"]
 [ext_resource type="Texture2D" uid="uid://053mm1cqga4r" path="res://arts/2D/pictures/jeremy-perkins-uhjiu8FjnsQ-unsplash/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg" id="1_lvs21"]
@@ -43,6 +43,7 @@
 [ext_resource type="Script" uid="uid://cfw5qyuw1nyod" path="res://worlds/stages/speaker.gd" id="42_iqynn"]
 [ext_resource type="PackedScene" uid="uid://cvhs4b65xjqdd" path="res://worlds/stages/building.tscn" id="42_ttm6q"]
 [ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="43_iqynn"]
+[ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="45_aqlw1"]
 [ext_resource type="PackedScene" uid="uid://dxphiovvot3c1" path="res://objects/interactives/transports/elevator.tscn" id="45_pl03k"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8rayy"]
@@ -1205,6 +1206,11 @@ stream = ExtResource("39_ycobv")
 
 [node name="Elevator" parent="Transport" instance=ExtResource("45_pl03k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+
+[node name="Train" parent="Transport" instance=ExtResource("45_aqlw1")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 10, 0)
+speed = 50
+destination = 2
 
 [node name="Content" type="Node3D" parent="."]
 

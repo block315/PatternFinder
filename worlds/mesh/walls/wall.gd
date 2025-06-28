@@ -1,7 +1,7 @@
 extends Node3D
 class_name Wall
 
-@onready var room:Room = get_tree().get_root().get_child(1)
+@onready var room:Room = PerodicWarfare.current_room
 @onready var mesh: MeshInstance3D = get_child(0)
 
 func _ready() -> void:

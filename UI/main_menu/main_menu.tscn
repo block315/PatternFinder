@@ -88,8 +88,8 @@ stream = ExtResource("5_f40uw")
 wait_time = 0.5
 autostart = true
 
+[connection signal="button_down" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_button_down"]
 [connection signal="focus_entered" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_focus_entered"]
-[connection signal="pressed" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="focus_entered" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
 [connection signal="pressed" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="timeout" from="AtomicUITimer" to="." method="_on_atomic_ui_timer_timeout"]

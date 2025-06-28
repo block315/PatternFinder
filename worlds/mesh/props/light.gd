@@ -3,7 +3,7 @@ class_name PropLight
 
 @onready var blub_mesh: MeshInstance3D = get_child(0)
 @onready var omni_light_3d: OmniLight3D = blub_mesh.get_child(0)
-@onready var room: Room = get_tree().get_root().get_child(1)
+@onready var room: Room = PerodicWarfare.current_room
 
 @export var power := true
 var emission_material: int
@@ -12,6 +12,7 @@ func _ready() -> void:
 	for i in range(blub_mesh.mesh.get_surface_count()):
 		if blub_mesh.get_surface_override_material(i).resource_path == "res://worlds/material/light.tres":
 			emission_material = i
+	print(room)
 	room.turn_on_light.connect(light_switch)
 	
 
