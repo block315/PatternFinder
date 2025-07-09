@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdpojnur2whta"]
+[gd_scene load_steps=17 format=3 uid="uid://bdpojnur2whta"]
 
 [ext_resource type="Script" uid="uid://dy0bjfgsx2dbn" path="res://creatures/player/hud.gd" id="1_n75y2"]
+[ext_resource type="Texture2D" uid="uid://bldkwxl1ioomk" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_102.png" id="2_jfipn"]
 [ext_resource type="Texture2D" uid="uid://d1t4cnde8fefp" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Red/Default/bar_round_gloss_large.png" id="2_v24ba"]
 [ext_resource type="Texture2D" uid="uid://deqpdv03ap0dv" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Green/Default/bar_round_gloss_large.png" id="3_o6sas"]
-[ext_resource type="Texture2D" uid="uid://cg3lcsjh3nsln" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_016.png" id="4_jfipn"]
 [ext_resource type="Texture2D" uid="uid://477qtl88mgim" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Blue/Default/crosshair_color_d.png" id="4_o6sas"]
-[ext_resource type="Texture2D" uid="uid://cc2iuwx1s7qsf" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_020.png" id="5_hwbq3"]
-[ext_resource type="Texture2D" uid="uid://dhdcnkmv0rmqr" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_102.png" id="6_yx0eb"]
+[ext_resource type="Texture2D" uid="uid://bmhes0wpa2q2e" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_118.png" id="5_hwbq3"]
+[ext_resource type="Script" uid="uid://bbjv5x6u73h3l" path="res://creatures/player/hud_equipment.gd" id="6_hwbq3"]
+[ext_resource type="Texture2D" uid="uid://cfhtpqdgcu3c6" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_163.png" id="6_yx0eb"]
+[ext_resource type="Texture2D" uid="uid://chjnq4ueroskb" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_square_large.png" id="7_ih5fd"]
+[ext_resource type="Texture2D" uid="uid://bx3kd8xim71rs" path="res://arts/2D/pictures/kenney_generic-items/PNG/White/genericItem_white_010.png" id="7_yx0eb"]
+[ext_resource type="Texture2D" uid="uid://c23fh5vqge6pd" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_square_gloss_large.png" id="8_vfjo2"]
+[ext_resource type="Texture2D" uid="uid://osmkbx6obsw2" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_048.png" id="11_uq6bm"]
+[ext_resource type="Texture2D" uid="uid://bvjckgqrqfl4c" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_155.png" id="12_lnofv"]
+[ext_resource type="Texture2D" uid="uid://p41bm25rmggw" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large.png" id="12_vfjo2"]
+[ext_resource type="Texture2D" uid="uid://cg4mpdg1sji2d" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large_square.png" id="14_uq6bm"]
+[ext_resource type="Texture2D" uid="uid://bhwgfnw61736p" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Blue/Default/button_square_header_blade_square_screws.png" id="15_lnofv"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_n75y2")
@@ -34,10 +43,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.05
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="StatusBar1" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar1"]
+layout_mode = 2
+texture = ExtResource("2_jfipn")
+expand_mode = 2
+
+[node name="HealthTextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar1"]
 texture_filter = 1
 custom_minimum_size = Vector2(300, 24)
 layout_mode = 2
@@ -50,30 +64,144 @@ stretch_margin_right = 30
 texture_under = ExtResource("2_v24ba")
 texture_progress = ExtResource("3_o6sas")
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/StatusBar1"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.05
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("4_jfipn")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="CollectorTextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar1" node_paths=PackedStringArray("equipment_progress_bar")]
 layout_mode = 2
 texture = ExtResource("5_hwbq3")
 expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Collector"
+equipment_progress_bar = NodePath("../CollectorTextureProgressBar")
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="CollectorTextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar1"]
+texture_filter = 1
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+step = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_right = 10
+texture_under = ExtResource("7_ih5fd")
+texture_progress = ExtResource("8_vfjo2")
+
+[node name="BreakerTextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar1" node_paths=PackedStringArray("equipment_progress_bar")]
+layout_mode = 2
+texture = ExtResource("7_yx0eb")
+expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Breaker"
+equipment_progress_bar = NodePath("../BreakerTextureProgressBar")
+
+[node name="BreakerTextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar1"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 30
+stretch_margin_right = 30
+texture_under = ExtResource("7_ih5fd")
+texture_progress = ExtResource("8_vfjo2")
+
+[node name="ShooterTextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar1" node_paths=PackedStringArray("equipment_progress_bar")]
 layout_mode = 2
 texture = ExtResource("6_yx0eb")
+expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Shooter"
+equipment_progress_bar = NodePath("../ShooterTextureProgressBar")
+
+[node name="ShooterTextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar1"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 24)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+step = 5.0
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 30
+stretch_margin_right = 30
+texture_under = ExtResource("7_ih5fd")
+texture_progress = ExtResource("8_vfjo2")
+
+[node name="StatusBar2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+texture = ExtResource("11_uq6bm")
+expand_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 30
+stretch_margin_right = 30
+texture_under = ExtResource("12_vfjo2")
+texture_progress = ExtResource("3_o6sas")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+texture = ExtResource("12_lnofv")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+texture = ExtResource("14_uq6bm")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+texture = ExtResource("14_uq6bm")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+layout_mode = 2
+texture = ExtResource("14_uq6bm")
 expand_mode = 2
 
 [node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("15_lnofv")
+patch_margin_left = 43
+patch_margin_top = 37
+patch_margin_right = 16
+patch_margin_bottom = 16
 
 [node name="ComputerLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
