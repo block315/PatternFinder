@@ -3,7 +3,10 @@ extends CanvasLayer
 @onready var crosshair: Sprite2D = $CrosshairColorD
 @onready var computer_label: Label = $HBoxContainer/VBoxContainer/ComputerLabel
 @onready var hand := $"../Hand"
+@onready var flash_light := $"../FlashLight"
 @onready var nine_patch_rect: NinePatchRect = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect
+@onready var battery_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/BatteryTextureProgressBar
+
 
 func _ready() -> void:
 	crosshair.position = get_viewport().size/2
@@ -18,6 +21,7 @@ func _process(delta: float) -> void:
 		else:
 			await UIAnimation.animate_shrink(nine_patch_rect)
 			nine_patch_rect.hide()
+	battery_texture_progress_bar.value = flash_light.battery
 
 
 func display(content:String):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdpojnur2whta"]
+[gd_scene load_steps=23 format=3 uid="uid://bdpojnur2whta"]
 
 [ext_resource type="Script" uid="uid://dy0bjfgsx2dbn" path="res://creatures/player/hud.gd" id="1_n75y2"]
 [ext_resource type="Texture2D" uid="uid://bldkwxl1ioomk" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_102.png" id="2_jfipn"]
@@ -16,11 +16,18 @@
 [ext_resource type="Texture2D" uid="uid://p41bm25rmggw" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large.png" id="12_vfjo2"]
 [ext_resource type="Texture2D" uid="uid://cg4mpdg1sji2d" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large_square.png" id="14_uq6bm"]
 [ext_resource type="Texture2D" uid="uid://bhwgfnw61736p" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Blue/Default/button_square_header_blade_square_screws.png" id="15_lnofv"]
+[ext_resource type="Texture2D" uid="uid://due43k7b0q4pm" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_051.png" id="16_mr65j"]
+[ext_resource type="Theme" uid="uid://c5oip1f8w3f6w" path="res://creatures/player/hud_theme.tres" id="17_0abss"]
+[ext_resource type="Texture2D" uid="uid://b0na6un2lhii4" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0380.png" id="17_ia31h"]
+[ext_resource type="Texture2D" uid="uid://by36fraushovg" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0086.png" id="17_xqew8"]
+[ext_resource type="Texture2D" uid="uid://bjgepimbsuet3" path="res://arts/2D/pictures/kenney_emotes-pack/PNG/Pixel/Style 8/emote_cross.png" id="18_ia31h"]
+[ext_resource type="Texture2D" uid="uid://cgwpu8xmql7ac" path="res://arts/2D/pictures/kenney_emotes-pack/PNG/Pixel/Style 8/emote_circle.png" id="19_212ep"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_n75y2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -136,12 +143,12 @@ texture_progress = ExtResource("8_vfjo2")
 [node name="StatusBar2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+[node name="FlashLightTextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/StatusBar2"]
 layout_mode = 2
 texture = ExtResource("11_uq6bm")
 expand_mode = 2
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar2"]
+[node name="BatteryTextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/VBoxContainer/StatusBar2"]
 texture_filter = 1
 custom_minimum_size = Vector2(300, 24)
 layout_mode = 2
@@ -183,6 +190,7 @@ expand_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -192,6 +200,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
 
 [node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
@@ -202,6 +211,73 @@ patch_margin_left = 43
 patch_margin_top = 37
 patch_margin_right = 16
 patch_margin_bottom = 16
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("16_mr65j")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("17_ia31h")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("17_0abss")
+theme_type_variation = &"HeaderLarge"
+text = "?"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("17_xqew8")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("18_ia31h")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("17_xqew8")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/CenterContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("19_212ep")
 
 [node name="ComputerLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
