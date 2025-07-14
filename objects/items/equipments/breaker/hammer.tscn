@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqcxqwc28grne"]
+
+[ext_resource type="PackedScene" uid="uid://tp0plv2o30d1" path="res://objects/items/equipments/breaker/breaker.tscn" id="1_6ijkl"]
+[ext_resource type="Script" uid="uid://dd5daf3qkqef0" path="res://objects/items/equipments/breaker/hammer.gd" id="2_xdoi8"]
+[ext_resource type="PackedScene" uid="uid://cmqc18bk2ku0r" path="res://arts/3D/models/sledgehammer_01_2k.gltf/sledgehammer_01_2k.gltf" id="3_w68ld"]
+
+[node name="Hammer" instance=ExtResource("1_6ijkl")]
+script = ExtResource("2_xdoi8")
+handle_position = Vector3(0.00409698, -0.34279, 0.00600958)
+handle_rotation = Vector3(0.416988, 2.98149, -1.54032)
+
+[node name="blend_export" parent="." index="1" instance=ExtResource("3_w68ld")]
+transform = Transform3D(-6.55671e-08, -1.5, 0, -6.55671e-08, 2.86603e-15, -1.5, 1.5, -6.55671e-08, -6.55671e-08, -0.425841, 0, 0)

@@ -1187,7 +1187,7 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="Building" parent="." instance=ExtResource("42_ttm6q")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 10, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -22, 55, 0)
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("43_iqynn")]
@@ -1210,7 +1210,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 [node name="Train" parent="Transport" instance=ExtResource("45_aqlw1")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 10, 0)
 speed = 50
-destination = 2
 
 [node name="Content" type="Node3D" parent="."]
 

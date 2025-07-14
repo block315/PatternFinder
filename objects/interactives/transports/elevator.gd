@@ -8,12 +8,6 @@ var open = false
 @export var upstairs : PackedScene
 @export var downstairs : PackedScene
 
-func _ready() -> void:
-	pass # Replace with function body.
-
-func _process(delta: float) -> void:
-	pass
-
 func door_open():
 	open = true
 	animation_player.play("DoorOpen")

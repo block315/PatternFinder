@@ -4,7 +4,7 @@ class_name Train
 @export var speed := 20
 var on_board := false
 var passenger
-@export var destination : int
+@export var destination : int = 1
 @onready var camera_3d: Camera3D = $Camera3D
 
 signal arrive
@@ -21,7 +21,6 @@ func _process(delta: float) -> void:
 			position.x -= input_dir * speed / 50.0
 	if Input.is_action_just_pressed("crouch") and on_board:
 		on_board = false
-		print(passenger)
 		passenger.show()
 		passenger.camera_3d.current = true
 
@@ -33,7 +32,7 @@ func _on_boarding_area_3d_body_entered(body: Node3D) -> void:
 		body.hide()
 
 func _on_radar_area_3d_area_entered(area: Area3D) -> void:
-	if area.get_parent().get_parent() is Building:
+	if area.get_parent().get_parent() is Building and on_board:
 		if area.get_parent().visible:
 			print("going to next room")
 			PerodicWarfare.change_room(destination)

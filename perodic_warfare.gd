@@ -8,10 +8,13 @@ var element_symbols = {
 	3 : ["Li", "Lithium", "res://worlds/stages/3/lithium_room.tscn"],
 	4 : ["Be", "Beryllium", "res://worlds/stages/4/beryllium_room.tscn"],
 	5 : ["B", "Boron", "res://worlds/stages/5/boron_room.tscn"],
+	20 : ["Ca", "Calcium", "res://worlds/stages/20/calcium_room.tscn"],
 }
 
 func _ready() -> void:
-	pass
+	for _node in get_tree().get_root().get_children():
+		if _node is Room:
+			current_room = _node
 
 func _process(delta: float) -> void:
 	pass

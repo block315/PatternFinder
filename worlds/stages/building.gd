@@ -7,9 +7,7 @@ const GLOW_BLOCK = preload("res://worlds/stages/glow_block.tres")
 
 func _ready() -> void:
 	current_room.hide()
-
-func _process(delta: float) -> void:
-	pass
+	print(current_room, " Hiding...")
 
 func glow(floor:int):
 	var glow_block: MeshInstance3D = get_node(str(floor))

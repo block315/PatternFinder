@@ -1,5 +1,5 @@
 extends Equipment
 class_name Breaker
 
-func smash():
+func smash(target_position:Vector3):
 	pass
