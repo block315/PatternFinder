@@ -1,13 +1,12 @@
 extends Node3D
 class_name Train
 
+@export var destination : int = 1
 @export var speed := 20
 var on_board := false
 var passenger
-@export var destination : int = 1
 @onready var camera_3d: Camera3D = $Camera3D
-
-signal arrive
+var _player:Player
 
 func _ready() -> void:
 	pass
@@ -26,6 +25,7 @@ func _process(delta: float) -> void:
 
 func _on_boarding_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
+		_player = body
 		camera_3d.current = true
 		on_board = true
 		passenger = body
@@ -34,9 +34,11 @@ func _on_boarding_area_3d_body_entered(body: Node3D) -> void:
 func _on_radar_area_3d_area_entered(area: Area3D) -> void:
 	if area.get_parent().get_parent() is Building and on_board:
 		if area.get_parent().visible:
-			print("going to next room")
-			PerodicWarfare.change_room(destination)
-			arrive.emit()
+			on_board = false
+			passenger.show()
+			passenger.camera_3d.current = true
+			PerodicWarfare.change_room(destination, _player.position, _player.rotation, _player.camera_3d.rotation)
+			queue_free()
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion and on_board:

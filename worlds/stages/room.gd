@@ -3,20 +3,21 @@ class_name Room
 
 signal turn_on_light(switch_value)
 
-@export var atomic_number :int = 1
-@export var element_decal_png :CompressedTexture2D
-@export var stair_access :Array[bool] = [false, false]
-@export var starting_position: Vector3 = Vector3(0,0,3.0)
-
-@onready var building: Building = $Building
-@onready var animation_player :AnimationPlayer = $AnimationPlayer
-@onready var core: Core = $Core
+@export var atomic_number: = 1
+@export var element_decal_png: CompressedTexture2D
+@export var stair_access: Array[bool] = [false, false]
+var starting_position: Vector3 = Vector3(0,0,3.0)
+var starting_rotation: Vector3 = Vector3(0,0,0)
+var starting_view_rotation: Vector3 = Vector3(0,0,0)
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var speaker: Node3D = $Speaker
 
 func _ready():
-	core.strong_nuclear_force_activate = true
+	$Core.strong_nuclear_force_activate = true
 	$Player.position = starting_position
-	building.show()
+	$Player.rotation = starting_rotation
+	$Player/Camera3D.rotation = starting_view_rotation
+	$Building.show()
 
 func activate_stairs(floor_number: int) -> void:
 	match floor_number:
