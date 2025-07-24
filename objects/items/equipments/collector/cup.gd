@@ -12,4 +12,3 @@ func collect(target_position:Vector3, collider):
 	if "matter" in collider and collider.matter != null:
 		rotation = Vector3(0,0, -PI)
 		collection = collider.matter
-		print("Clollected " + collection.name)
