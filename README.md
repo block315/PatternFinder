@@ -37,10 +37,15 @@ addons/
 │   │               └── presets
 │   └── tests
 └── rope3d
+<<<<<<< HEAD
 ```
 
 ### Put Assets on arts/ Folder
 ```
+=======
+
+### Put Assets on arts/ Folder
+>>>>>>> a607adbfa1a596ff672caa2c13d0de3378e54657
 arts/
 ├── 2D
 │   ├── UI
