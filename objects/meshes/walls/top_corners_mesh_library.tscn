@@ -1,0 +1,67 @@
+[gd_scene load_steps=22 format=3 uid="uid://qv24fnt3rmvm"]
+
+[ext_resource type="PackedScene" uid="uid://d372wq6im1hid" path="res://objects/meshes/walls/top_cables_corner_round_inner.tscn" id="1_xlumm"]
+[ext_resource type="PackedScene" uid="uid://cs41g4xyp3bm8" path="res://objects/meshes/walls/top_cables_corner_round_outer.tscn" id="2_bp1bh"]
+[ext_resource type="PackedScene" uid="uid://ct6b5c01q61vw" path="res://objects/meshes/walls/top_cables_corner_square_inner.tscn" id="3_haoch"]
+[ext_resource type="PackedScene" uid="uid://bo0mbbb1ysrko" path="res://objects/meshes/walls/top_cables_corner_square_outer.tscn" id="4_0nw5u"]
+[ext_resource type="PackedScene" uid="uid://stu4vqioi3xj" path="res://objects/meshes/walls/top_cables_straight.tscn" id="5_nd0oq"]
+[ext_resource type="PackedScene" uid="uid://cblsw1y2iu6et" path="res://objects/meshes/walls/top_cables_straight_hanging.tscn" id="6_3lymu"]
+[ext_resource type="PackedScene" uid="uid://bmpbxh63xg58r" path="res://objects/meshes/walls/top_plastic_corner_outer.tscn" id="7_3euk2"]
+[ext_resource type="PackedScene" uid="uid://j3t3x1aisure" path="res://objects/meshes/walls/top_plastic_corner_round_inner.tscn" id="8_4pp3a"]
+[ext_resource type="PackedScene" uid="uid://cyuxesrtvm7yn" path="res://objects/meshes/walls/top_plastic_corner_round_outer.tscn" id="9_1ron3"]
+[ext_resource type="PackedScene" uid="uid://b07i1ynkiudv0" path="res://objects/meshes/walls/top_plastic_straight.tscn" id="10_n7aq2"]
+[ext_resource type="PackedScene" uid="uid://cdc4ione47e76" path="res://objects/meshes/walls/top_simple_corner_round_inner.tscn" id="11_cqy4q"]
+[ext_resource type="PackedScene" uid="uid://d2c8uc4wvxd2r" path="res://objects/meshes/walls/top_simple_corner_round_outer.tscn" id="12_4lc75"]
+[ext_resource type="PackedScene" uid="uid://3m3atfk7km5o" path="res://objects/meshes/walls/top_simple_straight.tscn" id="13_tbbx6"]
+[ext_resource type="PackedScene" uid="uid://csb2rv4hwnv2a" path="res://objects/meshes/walls/top_window_corner_curve_inner.tscn" id="14_0jxe8"]
+[ext_resource type="PackedScene" uid="uid://dp1ngmbcodkm7" path="res://objects/meshes/walls/top_window_corner_curve_outer.tscn" id="15_866v0"]
+[ext_resource type="PackedScene" uid="uid://bp6yww22bk35u" path="res://objects/meshes/walls/top_window_straight.tscn" id="16_gboix"]
+[ext_resource type="PackedScene" uid="uid://b38d505v1na28" path="res://objects/meshes/walls/wall_window_corner_round_inner.tscn" id="17_f0x0c"]
+[ext_resource type="PackedScene" uid="uid://cglfkdk4h3sgu" path="res://objects/meshes/walls/wall_window_corner_round_outer.tscn" id="18_8wyue"]
+[ext_resource type="PackedScene" uid="uid://dmuo12mc1u682" path="res://objects/meshes/walls/wall_window_corner_square_inner.tscn" id="19_fw4a2"]
+[ext_resource type="PackedScene" uid="uid://dtmlbeswc6tkw" path="res://objects/meshes/walls/wall_window_corner_square_outer.tscn" id="20_7a562"]
+[ext_resource type="PackedScene" uid="uid://b27gchdt37oei" path="res://objects/meshes/walls/wall_window_straight.tscn" id="21_jl2eo"]
+
+[node name="TopCornersMeshLibrary" type="Node3D"]
+
+[node name="TopCables_Corner_Round_Inner" parent="." instance=ExtResource("1_xlumm")]
+
+[node name="TopCables_Corner_Round_Outer" parent="." instance=ExtResource("2_bp1bh")]
+
+[node name="TopCables_Corner_Square_Inner" parent="." instance=ExtResource("3_haoch")]
+
+[node name="TopCables_Corner_Square_Outer" parent="." instance=ExtResource("4_0nw5u")]
+
+[node name="TopCables_Straight" parent="." instance=ExtResource("5_nd0oq")]
+
+[node name="TopCables_Straight_Hanging" parent="." instance=ExtResource("6_3lymu")]
+
+[node name="TopPlastic_Corner_Outer" parent="." instance=ExtResource("7_3euk2")]
+
+[node name="TopPlastic_Corner_Round_Inner" parent="." instance=ExtResource("8_4pp3a")]
+
+[node name="TopPlastic_Corner_Round_Outer" parent="." instance=ExtResource("9_1ron3")]
+
+[node name="TopPlastic_Straight" parent="." instance=ExtResource("10_n7aq2")]
+
+[node name="TopSimple_Corner_Round_Inner" parent="." instance=ExtResource("11_cqy4q")]
+
+[node name="TopSimple_Corner_Round_Outer" parent="." instance=ExtResource("12_4lc75")]
+
+[node name="TopSimple_Straight" parent="." instance=ExtResource("13_tbbx6")]
+
+[node name="TopWindow_Corner_Curve_Inner" parent="." instance=ExtResource("14_0jxe8")]
+
+[node name="TopWindow_Corner_Curve_Outer" parent="." instance=ExtResource("15_866v0")]
+
+[node name="TopWindow_Straight" parent="." instance=ExtResource("16_gboix")]
+
+[node name="WallWindow_Corner_Round_Inner" parent="." instance=ExtResource("17_f0x0c")]
+
+[node name="WallWindow_Corner_Round_Outer" parent="." instance=ExtResource("18_8wyue")]
+
+[node name="WallWindow_Corner_Square_Inner" parent="." instance=ExtResource("19_fw4a2")]
+
+[node name="WallWindow_Corner_Square_Outer" parent="." instance=ExtResource("20_7a562")]
+
+[node name="WallWindow_Straight" parent="." instance=ExtResource("21_jl2eo")]

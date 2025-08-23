@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgd5tr8kg2tbh"]
+
+[ext_resource type="PackedScene" uid="uid://souhrankrva" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Stairs_4Wide.gltf" id="1_ifbhw"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="2_mxl4l"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4i2xl"]
+points = PackedVector3Array(2, 0, 0, -2, 0, 0, 2, 2, 0, -2, 2, 0, 2, 0, 4, -2, 0, 4)
+
+[node name="Platform_Stairs_4Wide" instance=ExtResource("1_ifbhw")]
+
+[node name="Platform_Stairs_4Wide" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_mxl4l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform_Stairs_4Wide" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Stairs_4Wide/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_4i2xl")

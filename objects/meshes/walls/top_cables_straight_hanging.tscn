@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://cblsw1y2iu6et"]
+
+[ext_resource type="PackedScene" uid="uid://bdmsdus43xdpq" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight_Hanging.gltf" id="1_dd3rs"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="2_wklcg"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="3_7qdxi"]
+[ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://objects/materials/T_Trim_03.tres" id="4_8pn80"]
+[ext_resource type="Material" uid="uid://dje7iltesj4jh" path="res://objects/materials/T_Trim_03_Cables.tres" id="5_vixta"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sh71r"]
+size = Vector3(0.379517, 2.02078, 4.02966)
+
+[node name="TopCables_Straight_Hanging" instance=ExtResource("1_dd3rs")]
+
+[node name="TopCables_Straight_Hanging" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_wklcg")
+surface_material_override/1 = ExtResource("3_7qdxi")
+surface_material_override/2 = ExtResource("4_8pn80")
+surface_material_override/3 = ExtResource("5_vixta")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TopCables_Straight_Hanging" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TopCables_Straight_Hanging/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98168, 4.00262, 0.00408936)
+shape = SubResource("BoxShape3D_sh71r")

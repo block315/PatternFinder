@@ -8,3 +8,10 @@ script = ExtResource("1_wslh8")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="PlayerInterestArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerInterestArea3D"]
+
+[connection signal="body_entered" from="PlayerInterestArea3D" to="." method="_on_player_interest_area_3d_body_entered"]
+[connection signal="body_exited" from="PlayerInterestArea3D" to="." method="_on_player_interest_area_3d_body_exited"]

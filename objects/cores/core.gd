@@ -80,7 +80,6 @@ func neutron_init():
 		_neutron.position.y += 1
 		nucleus_holder.add_child(_neutron)
 
-
 func electron_init():
 	for i in range(electron):
 		var _electon = ELECTRON.instantiate()

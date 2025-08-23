@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://b21uoed7p4xom"]
+
+[ext_resource type="PackedScene" uid="uid://dsb32t3t83sb2" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Straight.gltf" id="1_r4iwj"]
+[ext_resource type="Script" uid="uid://betjb5v3ws5cy" path="res://objects/meshes/walls/wall.gd" id="2_525dn"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="2_ty5hs"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="3_3ef7n"]
+[ext_resource type="Material" uid="uid://dh002qmible1f" path="res://objects/materials/T_Decals.tres" id="4_f1mai"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wvh33"]
+data = PackedVector3Array(-2, 1, 2, -2.2, 0.8, -2, -2.2, 0.8, 2, -2, 1, 2, -2, 1, -2, -2.2, 0.8, -2, -2, 3, 2, -2, 1, -2, -2, 1, 2, -2, 3, 2, -2, 3, -2, -2, 1, -2, -2.2, 0.8, 2, -2, 0, 0, -2, 0, 2, -2.2, 0.8, 2, -2.2, 0.8, 0, -2, 0, 0, -2.2, 0.8, 0, -2, 0, -2, -2, 0, 0, -2.2, 0.8, 0, -2.2, 0.8, -2, -2, 0, -2, -1.9925, 2.8449, 1.9399, -1.9925, 2.6019, 1.5507, -1.9925, 2.6019, 1.9399, -1.9925, 2.8449, 1.9399, -1.9925, 2.8449, 1.5507, -1.9925, 2.6019, 1.5507)
+
+[node name="WallBand_Straight" instance=ExtResource("1_r4iwj")]
+script = ExtResource("2_525dn")
+
+[node name="WallBand_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ty5hs")
+surface_material_override/1 = ExtResource("3_3ef7n")
+surface_material_override/2 = ExtResource("4_f1mai")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WallBand_Straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallBand_Straight/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_wvh33")

@@ -39,6 +39,5 @@ func move(target_position:Vector3):
 func _on_navigation_agent_3d_target_reached() -> void:
 	moving = false
 
-
 func _on_follow_timer_timeout() -> void:
 	move($"../Player".global_position)

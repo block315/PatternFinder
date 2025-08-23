@@ -1,8 +1,8 @@
 ![Pattern Finder](title.png?raw=true "Title")
 Currently work in progress
 
-## How to Develope
-### Install Addons on addons/ Folder
+# How to Develope
+## Install Addons on addons/ Folder
 ```
 addons/
 ├── godot_ui_animations
@@ -37,15 +37,9 @@ addons/
 │   │               └── presets
 │   └── tests
 └── rope3d
-<<<<<<< HEAD
 ```
-
-### Put Assets on arts/ Folder
+## Put Assets on arts/ Folder
 ```
-=======
-
-### Put Assets on arts/ Folder
->>>>>>> a607adbfa1a596ff672caa2c13d0de3378e54657
 arts/
 ├── 2D
 │   ├── UI
@@ -247,6 +241,7 @@ arts/
 │           └── textures
 └── audio
 	├── musics
+	├── recordings
 	└── sounds
 		├── kenney_digital-audio
 		│   └── Audio

@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_i8c20")
 name = "Hydrogen"
+phase = 2
 metadata/_custom_type_script = "uid://dvogwt0t3rgv1"

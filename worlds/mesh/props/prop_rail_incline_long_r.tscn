@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://w3fdwamo6koq"]
-
-[ext_resource type="PackedScene" uid="uid://b2ki4mm4f3207" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_Incline_Long_R.gltf" id="1_kunsg"]
-[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://worlds/material/T_Trim_02.tres" id="2_l4smh"]
-
-[node name="Prop_Rail_Incline_Long_R" instance=ExtResource("1_kunsg")]
-
-[node name="Prop_Rail_Incline_Long_R" parent="." index="0"]
-surface_material_override/0 = ExtResource("2_l4smh")

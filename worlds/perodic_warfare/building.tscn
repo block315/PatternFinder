@@ -1,0 +1,726 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvhs4b65xjqdd"]
+
+[ext_resource type="Script" uid="uid://dj01svfs0lanl" path="res://worlds/perodic_warfare/building.gd" id="1_aqeu4"]
+[ext_resource type="ArrayMesh" uid="uid://d36hgs4fcygnp" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/OBJ/Props/Prop_Crate3.obj" id="2_4duvc"]
+[ext_resource type="Texture2D" uid="uid://bdbn81340skmk" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor_Red.png" id="3_swaxb"]
+[ext_resource type="Texture2D" uid="uid://cslkx810458f1" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_DetailMask.png" id="4_7jdfh"]
+[ext_resource type="Texture2D" uid="uid://1n2hkmucm258" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor_Blue.png" id="5_13475"]
+[ext_resource type="Texture2D" uid="uid://bfj850wpbewpv" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_Normal.png" id="6_dk4f5"]
+[ext_resource type="Texture2D" uid="uid://cjfe7m0n7f5kk" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_ORM.png" id="7_8f5k4"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_glson"]
+albedo_texture = ExtResource("3_swaxb")
+orm_texture = ExtResource("7_8f5k4")
+emission_enabled = true
+emission_texture = ExtResource("5_13475")
+normal_enabled = true
+normal_texture = ExtResource("6_dk4f5")
+detail_mask = ExtResource("4_7jdfh")
+detail_blend_mode = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqeu4"]
+
+[node name="Building" type="Node3D"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+script = ExtResource("1_aqeu4")
+
+[node name="1" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="1/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="2" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, 0, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="2/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="3" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="4" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="4/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="5" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="5/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="6" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="6/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="7" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="7/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="8" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="8/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="9" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="9/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="10" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -9, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="10/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D8/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D10/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/Area3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D13/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -45, -5.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D11/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -54, -5.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D12/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="20" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="20/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 18, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D14/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 27, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D15/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 18, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 27, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -45, -13.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 16, -54, -21.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D78" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 16, -45, -21.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D82" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 18.4, -54, -29.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D83" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 18.4, -45, -29.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D84" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -54, -38)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D87" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -45, -38)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D88" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.8, -54, -44.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D91" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.8, -45, -44.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D92" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.72741, 38, -54, -48.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D93" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.72741, 38, -45, -48.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D94" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 9.05067e-08, -1.90735e-07, -9.05067e-08, 8, 1.19154e-08, 1.90735e-07, -1.19154e-08, 8, 47.1542, -54, -48.9296)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D95" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 9.05067e-08, -1.90735e-07, -9.05067e-08, 8, 1.19154e-08, 1.90735e-07, -1.19154e-08, 8, 47.1542, -45, -48.9296)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D96" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 9.05067e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -54, -46.6742)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D97" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 9.05067e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -45, -46.6742)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D98" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65686, 9.05067e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.7628, -54, -40.3962)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D99" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65686, 9.05067e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.7628, -45, -40.3962)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D100" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, -7.72741, 0, 8, 0, 7.72741, 0, 2.07055, 70.8, -54, -31.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D101" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, -7.72741, 0, 8, 0, 7.72741, 0, 2.07055, 70.8, -45, -31.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D102" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.8, -54, -8.80001)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D103" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.8, -45, -8.80001)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D104" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -54, -20.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D105" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -45, -20.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D106" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 58, -54, -18.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D107" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 58, -45, -18.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D108" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8, 0, 1.90735e-07, 0, 8, 0, -1.90735e-07, 0, -8, 48.8, -54, -17.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D109" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8, 0, 1.90735e-07, 0, 8, 0, -1.90735e-07, 0, -8, 48.8, -45, -17.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D110" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 39.2, -54, -16)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D111" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.69687, 0, -2.18133, 0, 8, 0, 2.18133, 0, -7.69687, 39.2, -45, -16)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D79" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -54, -13.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.72741, 26.6, -45, -0.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.72741, 26.6, -54, -0.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D65" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D66" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D67" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D68" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D69" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D70" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D71" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -27, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D72" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D73" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -36, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D80" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D81" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D85" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D86" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D89" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D90" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -18, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D74" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D75" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D76" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")
+
+[node name="MeshInstance3D77" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = SubResource("ORMMaterial3D_glson")

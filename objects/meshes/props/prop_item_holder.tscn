@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmtjji51q574o"]
+
+[ext_resource type="PackedScene" uid="uid://bvakqkjxf0jts" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Props/Prop_ItemHolder.gltf" id="1_8dxqs"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="2_e8pt7"]
+[ext_resource type="Material" uid="uid://dh002qmible1f" path="res://objects/materials/T_Decals.tres" id="3_erwfb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1k3"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.333333)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5s2qh"]
+height = 0.150526
+radius = 0.42276
+
+[node name="Prop_ItemHolder" instance=ExtResource("1_8dxqs")]
+
+[node name="Prop_ItemHolder" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rf1k3")
+surface_material_override/1 = ExtResource("2_e8pt7")
+surface_material_override/2 = ExtResource("3_erwfb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Prop_ItemHolder" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prop_ItemHolder/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0704855, 0)
+shape = SubResource("CylinderShape3D_5s2qh")
