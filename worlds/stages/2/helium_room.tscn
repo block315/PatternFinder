@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlvd3um4st8my"]
+[gd_scene load_steps=9 format=3 uid="uid://dlvd3um4st8my"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/stages/base_room.tscn" id="1_gt6dr"]
 [ext_resource type="Script" uid="uid://cmjvvu3pma0kh" path="res://worlds/stages/2/helium_room.gd" id="2_0ycle"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bi5urx6yqahfd" path="res://worlds/mesh/platforms/platform_center_plate_curve.tscn" id="4_0ycle"]
 [ext_resource type="PackedScene" uid="uid://ucok6obv5ji4" path="res://worlds/mesh/walls/top_astra_straight.tscn" id="4_4fvos"]
 [ext_resource type="PackedScene" uid="uid://bx4trg16o62c" path="res://worlds/mesh/walls/wall_astra_straight_window.tscn" id="5_4fvos"]
+[ext_resource type="PackedScene" uid="uid://dlf8nk1lngvlr" path="res://worlds/stages/2/helium_001.tscn" id="7_0ycle"]
 [ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_7uwws"]
 
 [node name="HeliumRoom" instance=ExtResource("1_gt6dr")]
@@ -44,6 +45,9 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 10, 0)
 
 [node name="Train" parent="Transport" index="1"]
 transform = Transform3D(-4.37112e-08, 0, 1, 0, 1, 0, -1, 0, -4.37112e-08, 5, 10, 0)
+
+[node name="Helium001" parent="Content" index="0" instance=ExtResource("7_0ycle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, 5)
 
 [node name="Robot" parent="." index="9" instance=ExtResource("9_7uwws")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)

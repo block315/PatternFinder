@@ -4,13 +4,16 @@ class_name Robot
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var robot_voice: AudioStreamPlayer3D = $RobotVoice
 
 @export var speed = 3.0
 var moving: bool
+@onready var follow_timer: Timer = $FollowTimer
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_F1):
 		animation_tree.set("parameters/conditions/greeting", true)
+		robot_voice.play()
 		await animation_tree.animation_finished
 		animation_tree.set("parameters/conditions/greeting", false)
 	elif Input.is_key_pressed(KEY_F2):
@@ -33,6 +36,9 @@ func move(target_position:Vector3):
 	moving = true
 	navigation_agent_3d.target_position = target_position
 
-
 func _on_navigation_agent_3d_target_reached() -> void:
 	moving = false
+
+
+func _on_follow_timer_timeout() -> void:
+	move($"../Player".global_position)

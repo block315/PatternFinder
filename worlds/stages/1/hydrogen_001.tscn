@@ -1,6 +1,6 @@
 [gd_scene load_steps=56 format=4 uid="uid://beam84f4y4h0o"]
 
-[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://contents/proposition.tscn" id="1_dsmqf"]
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_dsmqf"]
 [ext_resource type="Script" uid="uid://cye72mkppe1dp" path="res://worlds/stages/1/hydrogen_001.gd" id="2_bx5fg"]
 [ext_resource type="Texture2D" uid="uid://ccb6rqxa87awp" path="res://arts/3D/models/9J43rgZz/textures/WetFloorSign_01_diff_2k.jpg" id="2_qfy7r"]
 [ext_resource type="Texture2D" uid="uid://cde0xyuuda61w" path="res://arts/3D/models/9J43rgZz/textures/WetFloorSign_01_arm_2k.jpg" id="3_bx5fg"]
