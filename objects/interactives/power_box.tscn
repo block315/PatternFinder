@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=4 uid="uid://cu0r8a4gefs2g"]
 
 [ext_resource type="Script" uid="uid://bxxmump2g3igw" path="res://objects/interactives/power_box.gd" id="1_8wvdj"]
-[ext_resource type="Texture2D" uid="uid://b2opud328madb" path="res://arts/3D/models/-KIxYNmS/textures/power_box_01_diff_2k.jpg" id="1_bi40a"]
-[ext_resource type="Texture2D" uid="uid://d0adff0nlefbv" path="res://arts/3D/models/-KIxYNmS/textures/power_box_01_arm_2k.jpg" id="2_8wvdj"]
-[ext_resource type="Texture2D" uid="uid://b5gdq56hsuvvx" path="res://arts/3D/models/-KIxYNmS/textures/power_box_01_nor_gl_2k.jpg" id="3_ljrd3"]
+[ext_resource type="Texture2D" uid="uid://b2opud328madb" path="res://arts/3D/models/polyhaven/-KIxYNmS/textures/power_box_01_diff_2k.jpg" id="1_bi40a"]
+[ext_resource type="Texture2D" uid="uid://d0adff0nlefbv" path="res://arts/3D/models/polyhaven/-KIxYNmS/textures/power_box_01_arm_2k.jpg" id="2_8wvdj"]
+[ext_resource type="Texture2D" uid="uid://b5gdq56hsuvvx" path="res://arts/3D/models/polyhaven/-KIxYNmS/textures/power_box_01_nor_gl_2k.jpg" id="3_ljrd3"]
 [ext_resource type="AudioStream" uid="uid://m433a6ermx52" path="res://arts/audio/sounds/kenney_rpg-audio/Audio/creak3.ogg" id="5_ljrd3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gjmh"]

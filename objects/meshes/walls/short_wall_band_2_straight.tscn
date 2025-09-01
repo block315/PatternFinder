@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dosr5dpxe3tk1"]
 
-[ext_resource type="PackedScene" uid="uid://cvvsaufpfu6kk" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_Band2_Straight.gltf" id="1_c4xxk"]
+[ext_resource type="PackedScene" uid="uid://cvvsaufpfu6kk" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_Band2_Straight.gltf" id="1_c4xxk"]
 [ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="2_v48gb"]
 [ext_resource type="Material" uid="uid://dh002qmible1f" path="res://objects/materials/T_Decals.tres" id="3_ldxjs"]
 

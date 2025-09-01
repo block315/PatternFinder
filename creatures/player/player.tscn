@@ -112,4 +112,5 @@ unit_size = 3.0
 max_db = 0.0
 pitch_scale = 0.4
 
+[connection signal="child_exiting_tree" from="Camera3D/Hand" to="Camera3D/Hand" method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Camera3D/FlashLight/Timer" to="Camera3D/FlashLight" method="_on_timer_timeout"]

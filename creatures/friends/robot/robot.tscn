@@ -1,10 +1,10 @@
 [gd_scene load_steps=47 format=4 uid="uid://baioq4o6qy0rd"]
 
-[ext_resource type="Texture2D" uid="uid://cmnnh3lmgyqwg" path="res://arts/3D/models/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_color.png" id="2_gk0xc"]
+[ext_resource type="Texture2D" uid="uid://cmnnh3lmgyqwg" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_color.png" id="2_gk0xc"]
 [ext_resource type="Script" uid="uid://byosbofclr4co" path="res://creatures/friends/robot/robot.gd" id="2_pmslo"]
-[ext_resource type="Texture2D" uid="uid://craugl2gpyd3n" path="res://arts/3D/models/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_emission.png" id="3_5danh"]
-[ext_resource type="Texture2D" uid="uid://dm2wpopv8xljt" path="res://arts/3D/models/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_metallic-robot_roughness.png" id="4_trpfx"]
-[ext_resource type="Texture2D" uid="uid://53khlq513rh5" path="res://arts/3D/models/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_normal.png" id="5_ec50m"]
+[ext_resource type="Texture2D" uid="uid://craugl2gpyd3n" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_emission.png" id="3_5danh"]
+[ext_resource type="Texture2D" uid="uid://dm2wpopv8xljt" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_metallic-robot_roughness.png" id="4_trpfx"]
+[ext_resource type="Texture2D" uid="uid://53khlq513rh5" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_normal.png" id="5_ec50m"]
 [ext_resource type="AudioStream" uid="uid://cgextn2w3ywah" path="res://arts/audio/recordings/greet.wav" id="6_0a3dv"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fb0li"]
@@ -1502,14 +1502,14 @@ bones/0/name = "body"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 1.5352e-07, -1.5342e-07, -1.5342e-07, 1, 0.000650721, 1.5352e-07, -0.000650721, 1, -0.00203013, 0.859847, 0.00573903)
 bones/0/enabled = true
-bones/0/position = Vector3(-0.00203016, 0.722877, 0.00573903)
-bones/0/rotation = Quaternion(-0.0550534, -7.24745e-08, -8.07656e-08, 0.998483)
+bones/0/position = Vector3(-0.00203013, 0.753415, 0.00573903)
+bones/0/rotation = Quaternion(-0.0428616, -8.2342e-08, -7.09893e-08, 0.999081)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "head"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 1.088e-07, -1.087e-07, -1.0887e-07, 1, -0.000650727, 1.08629e-07, 0.000650727, 1, -4.22805e-07, 4.6944, 0.000275679)
 bones/1/enabled = true
-bones/1/position = Vector3(-4.36229e-07, 4.56567, 0.000191931)
+bones/1/position = Vector3(-3.97442e-07, 4.59438, 0.000210605)
 bones/1/rotation = Quaternion(0.000325364, -5.43322e-08, -5.44175e-08, 1)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "arml"
@@ -1517,14 +1517,14 @@ bones/2/parent = 0
 bones/2/rest = Transform3D(-0.0823858, 0.996601, -8.64077e-08, -0.000648528, -5.35251e-05, 1, 0.9966, 0.0823858, 0.000650733, 1.13317, 3.59436, -0.000439794)
 bones/2/enabled = true
 bones/2/position = Vector3(1.13317, 3.59436, -0.000439794)
-bones/2/rotation = Quaternion(0.524105, 0.480123, 0.48372, -0.510697)
+bones/2/rotation = Quaternion(0.523836, 0.480598, 0.484138, -0.510128)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "arml.001"
 bones/3/parent = 2
 bones/3/rest = Transform3D(0.988917, -0.148452, 0.00213037, 0.148467, 0.988816, -0.0141899, -3.35276e-08, 0.0143489, 0.999897, -1.65455e-08, 1.24156, 5.1855e-07)
 bones/3/enabled = true
 bones/3/position = Vector3(-1.65455e-08, 1.24156, 5.1855e-07)
-bones/3/rotation = Quaternion(0.0275942, -0.000822868, 0.658203, 0.752334)
+bones/3/rotation = Quaternion(0.0280025, -0.000853994, 0.668863, 0.742858)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "handup"
 bones/4/parent = 3
@@ -1559,14 +1559,14 @@ bones/8/parent = 0
 bones/8/rest = Transform3D(-1.43051e-06, -1, -1.18279e-07, 0.000650525, -1.19209e-07, 1, -1, 1.43043e-06, 0.000650525, -1.15052, 3.59435, -0.000441448)
 bones/8/enabled = true
 bones/8/position = Vector3(-1.15052, 3.59435, -0.000441448)
-bones/8/rotation = Quaternion(-0.517115, 0.480715, 0.479261, 0.521357)
+bones/8/rotation = Quaternion(-0.516641, 0.4812, 0.479736, 0.520943)
 bones/8/scale = Vector3(1, 1, 1)
 bones/9/name = "armr.001"
 bones/9/parent = 8
 bones/9/rest = Transform3D(0.999981, -0.00614965, 9.32446e-05, 0.00614947, 0.999979, 0.00185714, -0.000104663, -0.00185653, 0.999998, 1.52085e-10, 1.56169, 4.72269e-07)
 bones/9/enabled = true
 bones/9/position = Vector3(1.52085e-10, 1.56169, 4.72269e-07)
-bones/9/rotation = Quaternion(-0.00813269, -8.01189e-05, -0.632674, 0.774375)
+bones/9/rotation = Quaternion(-0.00820416, -8.14854e-05, -0.639259, 0.768948)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/name = "minigun"
 bones/10/parent = 9
@@ -1579,14 +1579,14 @@ bones/11/name = "iktargetleft"
 bones/11/parent = 0
 bones/11/rest = Transform3D(1.19209e-07, 1, -1.19093e-07, -0.000650585, 1.1917e-07, 1, 1, -1.19132e-07, 0.000650585, 3.90551, 3.61643, -0.000426523)
 bones/11/enabled = true
-bones/11/position = Vector3(2.46678, 3.61749, -1.62324)
+bones/11/position = Vector3(2.42551, 3.61749, -1.62324)
 bones/11/rotation = Quaternion(-0.499837, -0.499837, -0.500163, 0.500163)
 bones/11/scale = Vector3(1, 1, 1)
 bones/12/name = "iktargetright"
 bones/12/parent = 0
 bones/12/rest = Transform3D(-2.38419e-07, -1, -2.38263e-07, 0.000650764, -2.38418e-07, 1, -1, 2.38263e-07, 0.000650764, -3.8911, 3.59216, 0.00681083)
 bones/12/enabled = true
-bones/12/position = Vector3(-2.85097, 3.59301, -1.29293)
+bones/12/position = Vector3(-2.83272, 3.59301, -1.29293)
 bones/12/rotation = Quaternion(-0.499837, 0.499837, 0.500163, 0.500163)
 bones/12/scale = Vector3(1, 1, 1)
 bones/13/name = "wheel"
@@ -1595,7 +1595,7 @@ bones/13/rest = Transform3D(1, 5.53468e-07, -1.5342e-07, 1.5306e-07, 0.000650942
 bones/13/enabled = true
 bones/13/position = Vector3(4.68293e-09, -0.0317363, -2.07046e-05)
 bones/13/rotation = Quaternion(-0.706877, -2.49877e-07, -1.41519e-07, 0.707337)
-bones/13/scale = Vector3(1, 0.997234, 0.770417)
+bones/13/scale = Vector3(1, 0.997851, 0.821604)
 
 [node name="robot" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_fh40n")

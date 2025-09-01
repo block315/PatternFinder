@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=9 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
 [ext_resource type="PackedScene" uid="uid://lif88rujhcpl" path="res://creatures/neutrals/ghost.tscn" id="3_44brh"]
-[ext_resource type="PackedScene" uid="uid://ucok6obv5ji4" path="res://objects/meshes/walls/top_astra_straight.tscn" id="4_cf3pm"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
@@ -17,21 +16,6 @@ element_decal_png = ExtResource("3_0n7gw")
 
 [node name="Core" parent="." index="0"]
 neutron = Array[int]([0, 1, 2])
-
-[node name="@Node3D@27094" parent="Structure/FirstFloor/Platform_Simple13/WallAstra_Corner_Square_Inner" index="2" instance=ExtResource("4_cf3pm")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -2)
-
-[node name="@Node3D@27095" parent="Structure/FirstFloor/Platform_Simple17/WallAstra_Corner_Square_Inner" index="2" instance=ExtResource("4_cf3pm")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -2)
-
-[node name="@Node3D@27096" parent="Structure/FirstFloor/Platform_Simple21/WallAstra_Corner_Square_Inner" index="2" instance=ExtResource("4_cf3pm")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -2)
-
-[node name="@Node3D@27097" parent="Structure/FirstFloor/Platform_Simple25/WallAstra_Corner_Square_Inner" index="2" instance=ExtResource("4_cf3pm")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -2)
-
-[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
-transform = Transform3D(-1, 2.53518e-06, 9.17733e-12, 0, -3.61999e-06, 1, 2.53518e-06, 1, 3.61999e-06, 0, 3, 6)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)

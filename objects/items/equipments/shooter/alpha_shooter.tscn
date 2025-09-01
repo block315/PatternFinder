@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7f618ugjhy3u"]
 
 [ext_resource type="PackedScene" uid="uid://covxf2hmllb4m" path="res://objects/items/equipments/shooter/shooter.tscn" id="1_3kfe5"]
-[ext_resource type="PackedScene" uid="uid://cdkh10xv6xpvc" path="res://arts/3D/models/Modular Sci Fi Guns - Nov 2021-20250213T135710Z-001/Modular Sci Fi Guns - Nov 2021/Guns/glTF/SMG_1.gltf" id="2_dlf7p"]
+[ext_resource type="PackedScene" uid="uid://cdkh10xv6xpvc" path="res://arts/3D/models/quaternius/Modular Sci Fi Guns - Nov 2021-20250213T135710Z-001/Modular Sci Fi Guns - Nov 2021/Guns/glTF/SMG_1.gltf" id="2_dlf7p"]
 
 [node name="AlphaShooter" instance=ExtResource("1_3kfe5")]
 

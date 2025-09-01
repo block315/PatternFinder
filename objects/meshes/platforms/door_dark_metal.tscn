@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7nongjyyi6mr"]
 
-[ext_resource type="PackedScene" uid="uid://bj0wc40w6yuev" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_DarkMetal.gltf" id="1_372gl"]
+[ext_resource type="PackedScene" uid="uid://bj0wc40w6yuev" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_DarkMetal.gltf" id="1_372gl"]
 [ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="2_ml4ij"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_34ast"]

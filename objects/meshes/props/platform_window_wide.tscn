@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d2ki06rdu3q5s"]
 
-[ext_resource type="PackedScene" uid="uid://bama2aiq3afgk" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Window_Wide.gltf" id="1_wkm0e"]
+[ext_resource type="PackedScene" uid="uid://bama2aiq3afgk" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Window_Wide.gltf" id="1_wkm0e"]
 [ext_resource type="Material" uid="uid://x5p5p0pmejue" path="res://objects/materials/glass.tres" id="2_3oxgd"]
 [ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://objects/materials/T_Trim_03.tres" id="3_7tbco"]
 [ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="4_u5in1"]

@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://k24n7o4yhrnw"]
 
 [ext_resource type="Shader" uid="uid://cy6k1qq8nlhps" path="res://objects/materials/GrayDecalForRamp.gdshader" id="1_nc327"]
-[ext_resource type="Texture2D" uid="uid://dbi31yl4yibyn" path="res://arts/3D/models/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png" id="2_nc327"]
+[ext_resource type="Texture2D" uid="uid://dbi31yl4yibyn" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png" id="2_nc327"]
 
 [resource]
 render_priority = 0

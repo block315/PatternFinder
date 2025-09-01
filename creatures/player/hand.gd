@@ -40,3 +40,8 @@ func _process(delta: float) -> void:
 					animation_player.play("walk")
 				else:
 					animation_player.play("RESET")
+
+
+func _on_child_exiting_tree(node: Node) -> void:
+	if node is Equipment:
+		current_equipment = null
