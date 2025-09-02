@@ -7,6 +7,9 @@ class_name HUD
 @onready var nine_patch_rect: NinePatchRect = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect
 @onready var battery_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/BatteryTextureProgressBar
 @onready var debug_label: Label = %DebugLabel
+@onready var stamina_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/StaminaTextureProgressBar
+@onready var health_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar1/HealthTextureProgressBar
+@onready var player: Player = $"../.."
 
 func _ready() -> void:
 	crosshair.position = get_viewport().size/2
@@ -21,6 +24,8 @@ func _process(delta: float) -> void:
 		else:
 			await UIAnimation.animate_shrink(nine_patch_rect)
 			nine_patch_rect.hide()
+	health_texture_progress_bar.value = player.health
+	stamina_texture_progress_bar.value = player.stamina
 	battery_texture_progress_bar.value = flash_light.battery
 
 func display(content:String):

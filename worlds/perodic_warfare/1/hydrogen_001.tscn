@@ -575,6 +575,7 @@ draw_pass_1 = SubResource("SphereMesh_2b4kj")
 
 [node name="Cup" parent="." index="6" instance=ExtResource("13_n5ifu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0539985, 0.941295, -3.08075)
+liquid_color = Color(0, 1, 1, 1)
 
 [node name="Prop_Desk_Small" type="MeshInstance3D" parent="." index="7"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -3)

@@ -18,6 +18,9 @@ func pick_up(player):
 	state = 1
 
 func drop():
+	reparent(get_node("../../../.."), true)
+	show()
+	await get_tree().create_timer(3.0)
 	monitoring = true
 	state = 0
 

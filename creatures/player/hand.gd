@@ -34,13 +34,15 @@ func _process(delta: float) -> void:
 			await animation_player.animation_finished
 			current_equipment = get_child((current_equipment.get_index()-1)%(get_child_count()))
 			animation_player.play_backwards("switch")
+		elif Input.is_action_just_pressed("cancel"):
+			current_equipment.drop()
+
 		else:
 			if animation_player.current_animation != "switch" or !animation_player.is_playing():
 				if player.velocity != Vector3.ZERO:
 					animation_player.play("walk")
 				else:
 					animation_player.play("RESET")
-
 
 func _on_child_exiting_tree(node: Node) -> void:
 	if node is Equipment:
