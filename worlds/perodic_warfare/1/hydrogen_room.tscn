@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=10 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
+[ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
 [ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_3ddsq"]
 
 [node name="HydrogenRoom" instance=ExtResource("1_hru7o")]
@@ -36,6 +37,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
 script = ExtResource("8_j2i7t")
 content = "Hydrogen is very light"
+
+[node name="Hydrogen003" parent="Content" index="2" instance=ExtResource("8_x40ta")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 7)
 
 [node name="Robot" parent="." index="10" instance=ExtResource("9_3ddsq")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)

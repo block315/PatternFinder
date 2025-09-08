@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 			elif current_equipment is Collector:
 				current_equipment.collect(gaze.get_collision_point(), gaze.get_collider())
 			elif current_equipment is Breaker:
-				current_equipment.smash(gaze.get_collision_point())
+				current_equipment.smash(gaze.get_collision_point(), gaze.get_collider())
 			else:
 				current_equipment.use()
 		if Input.is_action_just_pressed("switch_down"):

@@ -1,10 +1,10 @@
 extends Node3D
 class_name Elevator
 
-
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var door_open_time: int = 3
 var open = false
+@export var player_on_board = false
 
 @export_category("Destination")
 @export var upstairs : int = 0
@@ -22,11 +22,13 @@ func door_close() -> void:
 	open = false
 	animation_player.play_backwards("DoorOpen")
 	await animation_player.animation_finished
-	go_downstairs()
+	if player_on_board:
+		go_downstairs()
 
 func _on_door_sensor_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player and !open:
 		_player = body
+		player_on_board = true
 		door_open()
 
 func go_downstairs() -> void:
@@ -36,3 +38,7 @@ func go_downstairs() -> void:
 func go_upstairs() -> void:
 	if upstairs != 0:
 		PerodicWarfare.change_room(upstairs, Vector3(0,0,13))
+
+func _on_door_sensor_area_3d_body_exited(body: Node3D) -> void:
+	if body is Player and player_on_board:
+		player_on_board = false
