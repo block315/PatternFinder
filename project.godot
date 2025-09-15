@@ -23,6 +23,10 @@ config/icon="uid://c1fbkt7ss6iyk"
 UIAnimation="*res://addons/godot_ui_animations/UIAnimationHandler.tscn"
 PerodicWarfare="*res://perodic_warfare.gd"
 
+[display]
+
+window/size/mode=3
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_ui_animations/plugin.cfg")

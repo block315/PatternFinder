@@ -1,7 +1,7 @@
 extends Node3D
 class_name Proposition
 
-@export_multiline var content :String ## Must be one sentence.
+@export_multiline var content :String ## Must be one simple sentence.
 @export var done: bool
 @export var require: Array[Proposition]
 @export var next: Proposition
@@ -28,7 +28,6 @@ signal success
 
 var _geometry_instance3d_childs = []
 
-
 func find_mesh(_node):
 	for _child in _node.get_children():
 		if _child is GeometryInstance3D:
@@ -36,12 +35,14 @@ func find_mesh(_node):
 		else:
 			find_mesh(_child)
 
-
 func _on_player_interest_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player and highlight:
 		highlight = false
-
+		var tween = get_tree().create_tween()
+		tween.tween_property(audio_stream_player, "volume_db", 0, 1.0)
 
 func _on_player_interest_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player and !highlight:
 		highlight = true
+		var tween = get_tree().create_tween()
+		tween.tween_property(audio_stream_player, "volume_db", -80, 1.0)

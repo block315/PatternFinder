@@ -17,16 +17,22 @@ func _ready() -> void:
 	nine_patch_rect.hide()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_text_backspace"):
-		if !nine_patch_rect.visible:
-			nine_patch_rect.show()
-			await UIAnimation.animate_slide_from_left(nine_patch_rect)
-		else:
-			await UIAnimation.animate_shrink(nine_patch_rect)
-			nine_patch_rect.hide()
 	health_texture_progress_bar.value = player.health
 	stamina_texture_progress_bar.value = player.stamina
 	battery_texture_progress_bar.value = flash_light.battery
 
 func display(content:String):
 	debug_label.text = content
+
+func yes_or_no(question: String) -> bool:
+	var answer: bool
+	if !nine_patch_rect.visible:
+		nine_patch_rect.show()
+		#await UIAnimation.animate_slide_from_left(nine_patch_rect)
+	if Input.is_key_pressed(KEY_Y):
+		answer = true
+	elif Input.is_key_pressed(KEY_N):
+		answer = false
+	#await UIAnimation.animate_shrink(nine_patch_rect)
+	nine_patch_rect.hide()
+	return answer

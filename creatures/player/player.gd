@@ -60,4 +60,3 @@ func _unhandled_input(event) -> void:
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, -PI/4, PI/4)
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-	

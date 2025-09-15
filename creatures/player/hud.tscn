@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bdpojnur2whta"]
+[gd_scene load_steps=24 format=3 uid="uid://bdpojnur2whta"]
 
 [ext_resource type="Script" uid="uid://dy0bjfgsx2dbn" path="res://creatures/player/hud.gd" id="1_n75y2"]
 [ext_resource type="Texture2D" uid="uid://bldkwxl1ioomk" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_102.png" id="2_jfipn"]
@@ -17,11 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://bvjckgqrqfl4c" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_155.png" id="12_lnofv"]
 [ext_resource type="Texture2D" uid="uid://cg4mpdg1sji2d" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large_square.png" id="14_uq6bm"]
 [ext_resource type="Texture2D" uid="uid://bhwgfnw61736p" path="res://arts/2D/UI/kenney_ui-pack-space-expansion/PNG/Blue/Default/button_square_header_blade_square_screws.png" id="15_lnofv"]
-[ext_resource type="Texture2D" uid="uid://due43k7b0q4pm" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_051.png" id="16_mr65j"]
-[ext_resource type="Texture2D" uid="uid://b0na6un2lhii4" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0380.png" id="17_ia31h"]
-[ext_resource type="Texture2D" uid="uid://by36fraushovg" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0086.png" id="17_xqew8"]
+[ext_resource type="Texture2D" uid="uid://d02dvyx6va2ru" path="res://arts/2D/pictures/kenney_generic-items/PNG/Colored/genericItem_color_043.png" id="17_px2jx"]
 [ext_resource type="Texture2D" uid="uid://bjgepimbsuet3" path="res://arts/2D/pictures/kenney_emotes-pack/PNG/Pixel/Style 8/emote_cross.png" id="18_ia31h"]
+[ext_resource type="Texture2D" uid="uid://ca448jvi3mmfo" path="res://arts/2D/pictures/kenney_emotes-pack/PNG/Pixel/Style 8/emote_question.png" id="18_ibfhx"]
 [ext_resource type="Texture2D" uid="uid://cgwpu8xmql7ac" path="res://arts/2D/pictures/kenney_emotes-pack/PNG/Pixel/Style 8/emote_circle.png" id="19_212ep"]
+[ext_resource type="Texture2D" uid="uid://fn0ydayj1kor" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0090.png" id="19_px2jx"]
+[ext_resource type="Texture2D" uid="uid://c63wvuyuq5mhk" path="res://arts/2D/UI/kenney_input-prompts-pixel-16/Tiles/tile_0133.png" id="21_ibfhx"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_n75y2")
@@ -253,7 +254,7 @@ size_flags_stretch_ratio = 2.0
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("16_mr65j")
+texture = ExtResource("17_px2jx")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -261,9 +262,10 @@ custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("17_ia31h")
+texture = ExtResource("18_ibfhx")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer"]
@@ -280,7 +282,7 @@ theme_override_constants/separation = 10
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("17_xqew8")
+texture = ExtResource("19_px2jx")
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
@@ -295,7 +297,7 @@ size_flags_horizontal = 3
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("17_xqew8")
+texture = ExtResource("21_ibfhx")
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
@@ -305,6 +307,7 @@ expand_mode = 3
 
 [node name="DebugLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "test"
 

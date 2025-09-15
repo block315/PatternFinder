@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=12 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
-[ext_resource type="PackedScene" uid="uid://lif88rujhcpl" path="res://creatures/neutrals/ghost.tscn" id="3_44brh"]
+[ext_resource type="AudioStream" uid="uid://lpknsq3y3tbn" path="res://arts/audio/musics/originals/hydrogen/1_Solo Synth 1.ogg" id="4_x40ta"]
+[ext_resource type="AudioStream" uid="uid://dsxs6x7vpigmg" path="res://arts/audio/musics/originals/hydrogen/2_Space SynthBrass.ogg" id="5_unnr2"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
+[ext_resource type="AudioStream" uid="uid://becbas5hxky2d" path="res://arts/audio/musics/originals/hydrogen/3_Synth Brass 3.ogg" id="7_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
 [ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
@@ -18,11 +20,15 @@ element_decal_png = ExtResource("3_0n7gw")
 [node name="Core" parent="." index="0"]
 neutron = Array[int]([0, 1, 2])
 
+[node name="AudioStreamPlayer3D" parent="Core" index="3"]
+stream = ExtResource("4_x40ta")
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 
-[node name="Ghost" parent="." index="7" instance=ExtResource("3_44brh")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5, 1.24337, -6)
+[node name="BackGroundMusicPlayer" parent="Speaker" index="1"]
+stream = ExtResource("5_unnr2")
+autoplay = true
 
 [node name="Elevator" parent="Transport" index="0"]
 downstairs = 3
@@ -33,6 +39,9 @@ destination = 2
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 
+[node name="AudioStreamPlayer" parent="Content/Hydrogen001" index="1"]
+stream = ExtResource("7_n4crl")
+
 [node name="Hydrogen002" parent="Content" index="1" instance=ExtResource("7_ty888")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
 script = ExtResource("8_j2i7t")
@@ -41,8 +50,11 @@ content = "Hydrogen is very light"
 [node name="Hydrogen003" parent="Content" index="2" instance=ExtResource("8_x40ta")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 7)
 
-[node name="Robot" parent="." index="10" instance=ExtResource("9_3ddsq")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
+[node name="Robot" parent="." index="9" instance=ExtResource("9_3ddsq")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0, 8)
 
 [connection signal="found" from="Core/Chest" to="." method="_on_chest_found"]
 [connection signal="success" from="Content/Hydrogen001" to="." method="_on_hydrogen_001_success"]
+
+[editable path="Core"]
+[editable path="Content/Hydrogen001"]

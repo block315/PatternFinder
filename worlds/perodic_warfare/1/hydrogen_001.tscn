@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://beam84f4y4h0o"]
+[gd_scene load_steps=64 format=4 uid="uid://beam84f4y4h0o"]
 
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_dsmqf"]
 [ext_resource type="Script" uid="uid://cye72mkppe1dp" path="res://worlds/perodic_warfare/1/hydrogen_001.gd" id="2_bx5fg"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://df4po18omyusx" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/T_Trim_01_BaseColor_Red.png" id="21_lm6xl"]
 [ext_resource type="Texture2D" uid="uid://efe4ridi3whu" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/T_Trim_01_ORM.png" id="22_7u2sw"]
 [ext_resource type="Texture2D" uid="uid://ddfi3t0s83yb" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/T_Trim_01_Normal.png" id="23_va841"]
+[ext_resource type="PackedScene" uid="uid://lif88rujhcpl" path="res://creatures/neutrals/ghost.tscn" id="26_tonv6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1owck"]
 friction = 0.0
@@ -590,3 +591,6 @@ shape = SubResource("ConcavePolygonShape3D_i54sj")
 [node name="CollisionShape3D" parent="PlayerInterestArea3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86354, 1.29443, -2.45619)
 shape = SubResource("BoxShape3D_g7s13")
+
+[node name="Ghost" parent="." index="9" instance=ExtResource("26_tonv6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4, 1.24337, -4)
