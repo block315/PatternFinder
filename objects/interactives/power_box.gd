@@ -8,18 +8,21 @@ class_name PowerBox
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
-signal power_on
-signal power_off
+signal switch(on)
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is Player:
 		animation_player.play("open")
-		open=true
-		if body.hud.yes_or_no("Power Switch"):
-			power_on.emit()
+		open = true
+		body.hud.switch.connect(_on_switch_on)
+		body.hud.display_options()
 
 func _on_body_exited(body: Node3D) -> void:
 	if body is Player and open:
 		animation_player.play_backwards("open")
-		open=false
-		power_off.emit()
+		open = false
+		body.hud.hide_options()
+		body.hud.switch.disconnect(_on_switch_on)
+
+func _on_switch_on(on:bool):
+	switch.emit(on)

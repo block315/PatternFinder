@@ -36,13 +36,15 @@ func find_mesh(_node):
 			find_mesh(_child)
 
 func _on_player_interest_area_3d_body_entered(body: Node3D) -> void:
-	if body is Player and highlight:
-		highlight = false
+	if body is Player:
+		if highlight:
+			highlight = false
 		var tween = get_tree().create_tween()
 		tween.tween_property(audio_stream_player, "volume_db", 0, 1.0)
 
 func _on_player_interest_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player and !highlight:
-		highlight = true
+		if !done:
+			highlight = true
 		var tween = get_tree().create_tween()
 		tween.tween_property(audio_stream_player, "volume_db", -80, 1.0)

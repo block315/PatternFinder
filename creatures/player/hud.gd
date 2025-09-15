@@ -11,6 +11,8 @@ class_name HUD
 @onready var health_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar1/HealthTextureProgressBar
 @onready var player: Player = $"../.."
 
+signal switch(on:bool)
+
 func _ready() -> void:
 	crosshair.position = get_viewport().size/2
 	UIAnimation.animate_shrink(nine_patch_rect)
@@ -20,19 +22,21 @@ func _process(delta: float) -> void:
 	health_texture_progress_bar.value = player.health
 	stamina_texture_progress_bar.value = player.stamina
 	battery_texture_progress_bar.value = flash_light.battery
+	if nine_patch_rect.visible:
+		if Input.is_key_pressed(KEY_Y):
+			switch.emit(true)
+			hide_options()
+		elif Input.is_key_pressed(KEY_X):
+			switch.emit(false)
+			hide_options()
 
-func display(content:String):
+func display_options(content:String=""):
 	debug_label.text = content
-
-func yes_or_no(question: String) -> bool:
-	var answer: bool
 	if !nine_patch_rect.visible:
 		nine_patch_rect.show()
-		#await UIAnimation.animate_slide_from_left(nine_patch_rect)
-	if Input.is_key_pressed(KEY_Y):
-		answer = true
-	elif Input.is_key_pressed(KEY_N):
-		answer = false
-	#await UIAnimation.animate_shrink(nine_patch_rect)
-	nine_patch_rect.hide()
-	return answer
+		await UIAnimation.animate_slide_from_left(nine_patch_rect)
+
+func hide_options():
+	if nine_patch_rect.visible:
+		await UIAnimation.animate_shrink(nine_patch_rect)
+		nine_patch_rect.hide()

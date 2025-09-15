@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://6uprydwd5mwr"]
+[gd_scene load_steps=8 format=3 uid="uid://6uprydwd5mwr"]
 
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_oh0yk"]
 [ext_resource type="PackedScene" uid="uid://cyx4h1ejcrebj" path="res://objects/interactives/balloon.tscn" id="2_0xs5f"]
+[ext_resource type="AudioStream" uid="uid://151mdyw087mi" path="res://arts/audio/musics/originals/hydrogen/4_Kicker.ogg" id="2_352rp"]
 
 [sub_resource type="Animation" id="Animation_0xs5f"]
 resource_name = "Float"
@@ -16,12 +17,19 @@ _data = {
 &"RESET": SubResource("Animation_n0hhw")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_352rp"]
+size = Vector3(10, 10, 10)
+
 [node name="Hydrogen002" instance=ExtResource("1_oh0yk")]
+done = true
 
 [node name="AnimationPlayer" parent="." index="0"]
 libraries = {
 &"": SubResource("AnimationLibrary_n0hhw")
 }
+
+[node name="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("2_352rp")
 
 [node name="Balloon" parent="." index="2" instance=ExtResource("2_0xs5f")]
 
@@ -30,3 +38,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 
 [node name="Balloon3" parent="." index="4" instance=ExtResource("2_0xs5f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="CollisionShape3D" parent="PlayerInterestArea3D" index="0"]
+shape = SubResource("BoxShape3D_352rp")

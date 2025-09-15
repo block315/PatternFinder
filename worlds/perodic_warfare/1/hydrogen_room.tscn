@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=11 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://lpknsq3y3tbn" path="res://arts/audio/musics/originals/hydrogen/1_Solo Synth 1.ogg" id="4_x40ta"]
 [ext_resource type="AudioStream" uid="uid://dsxs6x7vpigmg" path="res://arts/audio/musics/originals/hydrogen/2_Space SynthBrass.ogg" id="5_unnr2"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
-[ext_resource type="AudioStream" uid="uid://becbas5hxky2d" path="res://arts/audio/musics/originals/hydrogen/3_Synth Brass 3.ogg" id="7_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
 [ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
@@ -39,9 +38,6 @@ destination = 2
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 
-[node name="AudioStreamPlayer" parent="Content/Hydrogen001" index="1"]
-stream = ExtResource("7_n4crl")
-
 [node name="Hydrogen002" parent="Content" index="1" instance=ExtResource("7_ty888")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
 script = ExtResource("8_j2i7t")
@@ -57,4 +53,3 @@ transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0, 8)
 [connection signal="success" from="Content/Hydrogen001" to="." method="_on_hydrogen_001_success"]
 
 [editable path="Core"]
-[editable path="Content/Hydrogen001"]
