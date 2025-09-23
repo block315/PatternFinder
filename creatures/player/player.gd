@@ -11,7 +11,7 @@ class_name Player
 @onready var electron_shooter: Node3D = $Camera3D/Electron_shooter
 @onready var gaze: RayCast3D = $Camera3D/Gaze
 @onready var foot_step_audio_stream_player_3d: AudioStreamPlayer3D = $FootStepAudioStreamPlayer3D
-@onready var hud: CanvasLayer = $Camera3D/HUD
+@onready var hud: HUD = $Camera3D/HUD
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

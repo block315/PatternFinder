@@ -99,13 +99,13 @@ mesh = ExtResource("2_4duvc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="10/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="11" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -18, 0)
 mesh = ExtResource("2_4duvc")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D3"]
+[node name="Area3D" type="Area3D" parent="11"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="11/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="."]

@@ -140,11 +140,24 @@ arts/
 │   └── models
 │       ├── Sketchfab
 │       │   └── 1903_wright_flyer
+│       ├── ambientcg
+│       │   └── 3DLemon001_HQ-4K-PNG
 │       ├── itch
 │       │   └── Styloorobotcharacte fbx and gltfr
 │       │       ├── FBXrobot
 │       │       │   └── textures
 │       │       └── GLTFrobot
+│       ├── kenney
+│       │   └── kenney_food-kit
+│       │       ├── Models
+│       │       │   ├── FBX format
+│       │       │   │   └── Textures
+│       │       │   ├── GLB format
+│       │       │   │   └── Textures
+│       │       │   ├── OBJ format
+│       │       │   │   └── Textures
+│       │       │   └── Textures
+│       │       └── Previews
 │       ├── original
 │       ├── polyhaven
 │       │   ├── -KIxYNmS
@@ -162,6 +175,32 @@ arts/
 │       │   └── ym-7Wa4Z
 │       │       └── textures
 │       ├── quaternius
+│       │   ├── Alien Animated - April 2019-20250908T163850Z-1-001
+│       │   │   └── Alien Animated - April 2019
+│       │   │       ├── Blends
+│       │   │       ├── FBX
+│       │   │       └── OBJ
+│       │   ├── Animated Mech Pack - March 2021-20250908T163901Z-1-001
+│       │   │   └── Animated Mech Pack - March 2021
+│       │   │       ├── Flat Colors
+│       │   │       │   ├── Blends
+│       │   │       │   │   └── textures
+│       │   │       │   ├── FBX
+│       │   │       │   ├── OBJ
+│       │   │       │   └── glTF
+│       │   │       └── Textured
+│       │   │           ├── Blends
+│       │   │           │   └── textures
+│       │   │           ├── FBX
+│       │   │           ├── OBJ
+│       │   │           ├── Textures
+│       │   │           │   └── Color Variations
+│       │   │           └── glTF
+│       │   ├── Animated Monster Pack by @Quaternius-20250908T163628Z-1-001
+│       │   │   └── Animated Monster Pack by @Quaternius
+│       │   │       ├── Blend
+│       │   │       ├── FBX
+│       │   │       └── OBJ
 │       │   ├── Modular Sci Fi Guns - Nov 2021-20250213T135710Z-001
 │       │   │   └── Modular Sci Fi Guns - Nov 2021
 │       │   │       ├── Guns
@@ -243,11 +282,15 @@ arts/
 │       │               ├── Swat
 │       │               ├── Weapons
 │       │               └── Worker
+│       ├── sharetextures
+│       │   └── textures
 │       └── threedscans
 │           └── Napoleon.stl
 │               └── __MACOSX
 └── audio
 	├── musics
+	│   └── originals
+	│       └── hydrogen
 	├── recordings
 	└── sounds
 		├── kenney_digital-audio

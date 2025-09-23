@@ -19,6 +19,11 @@ element_decal_png = ExtResource("3_0n7gw")
 [node name="Core" parent="." index="0"]
 neutron = Array[int]([0, 1, 2])
 
+[node name="NucleusHolder" parent="Core" index="0"]
+surface_material_override/0 = null
+surface_material_override/1 = null
+surface_material_override/2 = null
+
 [node name="AudioStreamPlayer3D" parent="Core" index="3"]
 stream = ExtResource("4_x40ta")
 

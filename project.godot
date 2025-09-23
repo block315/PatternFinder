@@ -27,6 +27,10 @@ PerodicWarfare="*res://perodic_warfare.gd"
 
 window/size/mode=3
 
+[editor]
+
+movie_writer/movie_file="/home/block315/비디오/patternfinder.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_ui_animations/plugin.cfg")
