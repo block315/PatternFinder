@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://64yc7w3e58tr"]
+
+[ext_resource type="Texture2D" uid="uid://dfah1ddibkfwx" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_basecolor.png" id="1_eki8q"]
+[ext_resource type="Texture2D" uid="uid://cvf22wtafawij" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_ambientOcclusion.png" id="2_m0rlf"]
+[ext_resource type="Texture2D" uid="uid://wd0fqdr0cae" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_Emissive_01_Color.png" id="3_s0v2k"]
+[ext_resource type="Texture2D" uid="uid://dt4um27ir4s8q" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_metallic.png" id="4_q2r7s"]
+[ext_resource type="Texture2D" uid="uid://n5sk2kruenl7" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_normal.png" id="5_6ho0a"]
+[ext_resource type="Texture2D" uid="uid://d17a6njcnu4uc" path="res://arts/3D/textures/3dtextures.me/Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001/Sci-fi_Metal_Walkway_001_SD/Sci-fi_Metal_Walkway_001_roughness.png" id="6_v6epk"]
+
+[resource]
+albedo_texture = ExtResource("1_eki8q")
+metallic = 1.0
+metallic_texture = ExtResource("4_q2r7s")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("6_v6epk")
+emission_enabled = true
+emission_texture = ExtResource("3_s0v2k")
+normal_enabled = true
+normal_texture = ExtResource("5_6ho0a")
+ao_enabled = true
+ao_texture = ExtResource("2_m0rlf")
+uv1_triplanar = true

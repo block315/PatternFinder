@@ -285,10 +285,10 @@ layout_mode = 2
 texture = ExtResource("19_px2jx")
 expand_mode = 3
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("18_ia31h")
+texture = ExtResource("19_212ep")
 expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -301,10 +301,10 @@ layout_mode = 2
 texture = ExtResource("21_ibfhx")
 expand_mode = 3
 
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("19_212ep")
+texture = ExtResource("18_ia31h")
 expand_mode = 3
 
 [node name="DebugLabel" type="Label" parent="HBoxContainer/VBoxContainer"]

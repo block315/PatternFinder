@@ -365,11 +365,13 @@ skeleton = NodePath("")
 
 [node name="LeftSpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755333, 0.554692, -2.20521)
-spot_angle = 10.16
+spot_range = 100.0
+spot_angle = 50.0
 
 [node name="RightSpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 0.555, -2.205)
-spot_angle = 10.16
+spot_range = 100.0
+spot_angle = 50.0
 
 [connection signal="body_entered" from="BoardingArea3D" to="." method="_on_boarding_area_3d_body_entered"]
 [connection signal="area_entered" from="RadarArea3D" to="." method="_on_radar_area_3d_area_entered"]

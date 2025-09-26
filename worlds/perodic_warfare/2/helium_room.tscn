@@ -41,7 +41,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -2)
 
 [node name="Building" parent="." index="4"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 10, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 9, 0)
 
 [node name="Train" parent="Transport" index="1"]
 transform = Transform3D(-4.37112e-08, 0, 1, 0, 1, 0, -1, 0, -4.37112e-08, 5, 10, 0)

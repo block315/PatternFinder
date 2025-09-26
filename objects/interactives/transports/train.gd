@@ -6,18 +6,15 @@ class_name Train
 var on_board := false
 var passenger
 @onready var camera_3d: Camera3D = $Camera3D
+@onready var path_follow_3d: PathFollow3D = $"../../Building/Path3D/PathFollow3D"
 var _player:Player
 
-func _ready() -> void:
-	pass
-
 func _process(delta: float) -> void:
+	global_position = path_follow_3d.global_position + Vector3(0,0.5,0)
+	global_rotation = path_follow_3d.global_rotation
 	var input_dir = Input.get_axis("ui_up", "ui_down")
 	if Input.get_axis("ui_up", "ui_down") and on_board:
-		if rotation.y > 0:
-			position.x += input_dir * speed / 50.0
-		else:
-			position.x -= input_dir * speed / 50.0
+		path_follow_3d.progress_ratio -= (float(input_dir)*0.001)
 	if Input.is_action_just_pressed("crouch") and on_board:
 		on_board = false
 		passenger.show()

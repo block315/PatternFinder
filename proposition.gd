@@ -2,7 +2,7 @@ extends Node3D
 class_name Proposition
 
 @export_multiline var content :String ## Must be one simple sentence.
-@export var done: bool
+@export var done: bool = false
 @export var require: Array[Proposition]
 @export var next: Proposition
 @onready var animation_player: AnimationPlayer = $AnimationPlayer

@@ -37,13 +37,13 @@
 [ext_resource type="PackedScene" uid="uid://stu4vqioi3xj" path="res://objects/meshes/walls/top_cables_straight.tscn" id="33_c62r0"]
 [ext_resource type="PackedScene" uid="uid://bi5urx6yqahfd" path="res://objects/meshes/platforms/platform_center_plate_curve.tscn" id="35_77egl"]
 [ext_resource type="PackedScene" uid="uid://cku2nabwnlkmk" path="res://objects/meshes/props/prop_light_corner.tscn" id="36_77egl"]
+[ext_resource type="PackedScene" uid="uid://cic6vsb3qllfp" path="res://objects/meshes/platforms/door_frame_square_tall.tscn" id="39_js5db"]
 [ext_resource type="AudioStream" uid="uid://cs2017b27r07u" path="res://arts/audio/sounds/kenney_sci-fi-sounds/Audio/spaceEngineSmall_003.ogg" id="39_ycobv"]
 [ext_resource type="PackedScene" uid="uid://djpod6lkb4twu" path="res://objects/cores/core.tscn" id="40_c62r0"]
 [ext_resource type="PackedScene" uid="uid://cm03crfyp5low" path="res://objects/interactives/chest.tscn" id="41_60ji3"]
 [ext_resource type="Script" uid="uid://cfw5qyuw1nyod" path="res://worlds/perodic_warfare/speaker.gd" id="42_iqynn"]
 [ext_resource type="PackedScene" uid="uid://cvhs4b65xjqdd" path="res://worlds/perodic_warfare/building.tscn" id="42_ttm6q"]
 [ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="43_iqynn"]
-[ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="45_aqlw1"]
 [ext_resource type="PackedScene" uid="uid://dxphiovvot3c1" path="res://objects/interactives/transports/elevator.tscn" id="45_pl03k"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8rayy"]
@@ -1099,17 +1099,6 @@ transform = Transform3D(1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 5.37316
 [node name="Platform_DarkPlates20" parent="Structure/ThridFloor" instance=ExtResource("25_y0ji0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 
-[node name="WallAstra_Straight_Window" parent="Structure/ThridFloor/Platform_DarkPlates20" instance=ExtResource("26_3ifw3")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
-
-[node name="WallWindow_Straight" parent="Structure/ThridFloor/Platform_DarkPlates20/WallAstra_Straight_Window" instance=ExtResource("31_stiba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-
-[node name="TopWindow_Straight" parent="Structure/ThridFloor/Platform_DarkPlates20/WallAstra_Straight_Window/WallWindow_Straight" instance=ExtResource("32_ycobv")]
-
-[node name="TopCables_Straight" parent="Structure/ThridFloor/Platform_DarkPlates20/WallAstra_Straight_Window/WallWindow_Straight/TopWindow_Straight" instance=ExtResource("33_c62r0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="Platform_CenterPlate" parent="Structure/ThridFloor/Platform_DarkPlates20" instance=ExtResource("30_8haog")]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 10, 0)
 
@@ -1130,6 +1119,18 @@ transform = Transform3D(-1, -8.74228e-08, 6.21176e-22, 8.74228e-08, -1, 7.10543e
 
 [node name="Prop_Light_Small6" parent="Structure/ThridFloor/Platform_DarkPlates20/Platform_CenterPlate" instance=ExtResource("31_ycobv")]
 transform = Transform3D(1, -8.74228e-08, -8.74228e-08, -8.74228e-08, -1, 5.37316e-16, -8.74228e-08, 7.10543e-15, -1, 2, 0, -1)
+
+[node name="Door_Frame_SquareTall" parent="Structure/ThridFloor/Platform_DarkPlates20" instance=ExtResource("39_js5db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+
+[node name="Door_Frame_SquareTall" parent="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall" index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.25, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="TopWindow_Straight" parent="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall" instance=ExtResource("32_ycobv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 2, 2)
+
+[node name="TopCables_Straight" parent="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall/TopWindow_Straight" instance=ExtResource("33_c62r0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Platform_DarkPlates21" parent="Structure/ThridFloor" instance=ExtResource("25_y0ji0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
@@ -1207,10 +1208,8 @@ stream = ExtResource("39_ycobv")
 [node name="Elevator" parent="Transport" instance=ExtResource("45_pl03k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 
-[node name="Train" parent="Transport" instance=ExtResource("45_aqlw1")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 10, 0)
-speed = 50
-
 [node name="Content" type="Node3D" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

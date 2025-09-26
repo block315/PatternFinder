@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dabd4wrfpv3xu" path="res://worlds/perodic_warfare/1/wooden_bucket.gd" id="6_bx5fg"]
 [ext_resource type="Texture2D" uid="uid://crys2mkeltksu" path="res://arts/3D/models/polyhaven/ym-7Wa4Z/textures/wooden_bucket_02_nor_gl_2k.jpg" id="7_4rloe"]
 [ext_resource type="Resource" uid="uid://coytvu23vh8w6" path="res://objects/matters/H_2O.tres" id="7_neim0"]
-[ext_resource type="Shader" uid="uid://bnd4ag4cyhfyw" path="res://objects/materials/water.gdshader" id="8_6362b"]
+[ext_resource type="Shader" uid="uid://bnd4ag4cyhfyw" path="res://objects/materials/Water.gdshader" id="8_6362b"]
 [ext_resource type="PackedScene" uid="uid://cu0r8a4gefs2g" path="res://objects/interactives/power_box.tscn" id="10_me822"]
 [ext_resource type="Texture2D" uid="uid://dty0vdenbydrt" path="res://arts/3D/models/polyhaven/ZamdZxf7/textures/rubber_duck_toy_diff_2k.jpg" id="11_g7s13"]
 [ext_resource type="Material" uid="uid://dje7iltesj4jh" path="res://objects/materials/T_Trim_03_Cables.tres" id="11_k5s0m"]
@@ -207,9 +207,9 @@ height = 1.5
 frequency = 0.0922
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8s5s1"]
+noise = SubResource("FastNoiseLite_vxryk")
 seamless = true
 as_normal_map = true
-noise = SubResource("FastNoiseLite_vxryk")
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_uvhhg"]
 seamless = true

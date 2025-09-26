@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=12 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://lpknsq3y3tbn" path="res://arts/audio/musics/originals/hydrogen/1_Solo Synth 1.ogg" id="4_x40ta"]
 [ext_resource type="AudioStream" uid="uid://dsxs6x7vpigmg" path="res://arts/audio/musics/originals/hydrogen/2_Space SynthBrass.ogg" id="5_unnr2"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
+[ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
 [ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
@@ -27,8 +28,12 @@ surface_material_override/2 = null
 [node name="AudioStreamPlayer3D" parent="Core" index="3"]
 stream = ExtResource("4_x40ta")
 
+[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
+transform = Transform3D(-1, 2.5351817e-06, 9.1773325e-12, 0, -3.6199901e-06, 1, 2.5351817e-06, 1, 3.6199901e-06, 0, 3, 6)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
+visible = true
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="1"]
 stream = ExtResource("5_unnr2")
@@ -37,7 +42,8 @@ autoplay = true
 [node name="Elevator" parent="Transport" index="0"]
 downstairs = 3
 
-[node name="Train" parent="Transport" index="1"]
+[node name="Train" parent="Transport" index="1" instance=ExtResource("6_n4crl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 destination = 2
 
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
@@ -55,6 +61,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0, 8)
 
 [connection signal="found" from="Core/Chest" to="." method="_on_chest_found"]
-[connection signal="success" from="Content/Hydrogen001" to="." method="_on_hydrogen_001_success"]
+[connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
 
 [editable path="Core"]
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
