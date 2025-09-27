@@ -1,6 +1,7 @@
 extends Node
 
 var current_room : Room ## Room that is player in.
+var train_position : float = 0
 
 ## Element Information
 var element_symbols = {
@@ -9,6 +10,8 @@ var element_symbols = {
 	3 : ["Li", "Lithium", "res://worlds/perodic_warfare/3/lithium_room.tscn"],
 	4 : ["Be", "Beryllium", "res://worlds/perodic_warfare/4/beryllium_room.tscn"],
 	5 : ["B", "Boron", "res://worlds/perodic_warfare/5/boron_room.tscn"],
+	6 : ["C", "Carbon", "res://worlds/perodic_warfare/6/carbon_room.tscn"],
+	11 : ["Na", "Sodium", "res://worlds/perodic_warfare/11/sodium_room.tscn"],
 	20 : ["Ca", "Calcium", "res://worlds/perodic_warfare/20/calcium_room.tscn"],
 }
 

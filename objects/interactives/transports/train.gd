@@ -34,6 +34,7 @@ func _on_radar_area_3d_area_entered(area: Area3D) -> void:
 			on_board = false
 			passenger.show()
 			passenger.camera_3d.current = true
+			PerodicWarfare.train_position += 0.2
 			PerodicWarfare.change_room(destination, _player.position, _player.rotation, _player.camera_3d.rotation)
 			queue_free()
 
