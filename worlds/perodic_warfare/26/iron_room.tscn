@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://br8gaqivnp2s2"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_1kbvf"]
+[ext_resource type="Script" uid="uid://c6brlp7qfi5xu" path="res://worlds/perodic_warfare/26/iron_room.gd" id="2_ang2k"]
+[ext_resource type="Texture2D" uid="uid://cc7y0wf4ksguh" path="res://worlds/perodic_warfare/26/T_Decals_Fe.png" id="2_wfjpk"]
+[ext_resource type="PackedScene" uid="uid://52bmjnemdgoc" path="res://worlds/perodic_warfare/26/iron_001.tscn" id="4_wxqsf"]
+
+[node name="IronRoom" instance=ExtResource("1_1kbvf")]
+script = ExtResource("2_ang2k")
+atomic_number = 26
+element_decal_png = ExtResource("2_wfjpk")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 26
+neutron = Array[int]([28, 30, 31])
+electron = 26
+
+[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
+transform = Transform3D(-1, 2.5351817e-06, 9.1773325e-12, 0, -3.6199901e-06, 1, 2.5351817e-06, 1, 3.6199901e-06, 0, 3, 6)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -158, 78, 0)
+
+[node name="Iron_001" parent="Content" index="0" instance=ExtResource("4_wxqsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

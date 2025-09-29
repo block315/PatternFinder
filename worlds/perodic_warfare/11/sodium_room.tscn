@@ -10,8 +10,14 @@ script = ExtResource("2_n4i06")
 atomic_number = 11
 element_decal_png = ExtResource("3_gs677")
 
+[node name="Core" parent="." index="0"]
+atomic_number = 11
+electron = 10
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 55, 0)
 
 [node name="SodiumProposition001" parent="Content" index="0" instance=ExtResource("4_h2227")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2937, 0, -8)
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

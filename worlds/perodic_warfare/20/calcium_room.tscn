@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbmhbs7lv2j68"]
+[gd_scene load_steps=7 format=3 uid="uid://cbmhbs7lv2j68"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_vipfr"]
 [ext_resource type="Script" uid="uid://dsw81o517fy0i" path="res://worlds/perodic_warfare/20/calcium_room.gd" id="2_khy7v"]
 [ext_resource type="Texture2D" uid="uid://bj42lff6ge7ou" path="res://worlds/perodic_warfare/20/T_Decals_Ca.png" id="3_owpyh"]
 [ext_resource type="PackedScene" uid="uid://cxaq5k0i8qc5c" path="res://worlds/perodic_warfare/20/calcium_001.tscn" id="4_fj2y5"]
 [ext_resource type="Script" uid="uid://nj10538ga5p5" path="res://worlds/perodic_warfare/20/calcium_001.gd" id="5_owpyh"]
+[ext_resource type="PackedScene" uid="uid://72gr8vvyotxs" path="res://worlds/perodic_warfare/20/calcium_002.tscn" id="6_pbmjh"]
 
 [node name="CalciumRoom" instance=ExtResource("1_vipfr")]
 script = ExtResource("2_khy7v")
@@ -15,9 +16,17 @@ element_decal_png = ExtResource("3_owpyh")
 atomic_number = 20
 neutron = Array[int]([20, 22, 24])
 
+[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
+transform = Transform3D(-1, 2.5351817e-06, 9.1773325e-12, 0, -3.6199901e-06, 1, 2.5351817e-06, 1, 3.6199901e-06, 0, 3, 6)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -22, 77, 0)
 
 [node name="Calcium001" parent="Content" index="0" instance=ExtResource("4_fj2y5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -7)
 script = ExtResource("5_owpyh")
+
+[node name="Calcium002" parent="Content" index="1" instance=ExtResource("6_pbmjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://70p5jrd5uhe2"]
+
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_f3udj"]
+[ext_resource type="PackedScene" uid="uid://c2aqrr3tssno0" path="res://arts/3D/models/polyhaven/sand_rocks_small_01_2k.gltf/sand_rocks_small_01_2k.gltf" id="2_1uyri"]
+
+[node name="Silicon_001" instance=ExtResource("1_f3udj")]
+
+[node name="sand_rocks_small_01_2k" parent="." index="3" instance=ExtResource("2_1uyri")]

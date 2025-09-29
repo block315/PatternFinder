@@ -12,7 +12,9 @@ var element_symbols = {
 	5 : ["B", "Boron", "res://worlds/perodic_warfare/5/boron_room.tscn"],
 	6 : ["C", "Carbon", "res://worlds/perodic_warfare/6/carbon_room.tscn"],
 	11 : ["Na", "Sodium", "res://worlds/perodic_warfare/11/sodium_room.tscn"],
+	14 : ["Si", "Silicon", "res://worlds/perodic_warfare/14/silicon_room.tscn"],
 	20 : ["Ca", "Calcium", "res://worlds/perodic_warfare/20/calcium_room.tscn"],
+	26 : ["Fe", "Iron", "res://worlds/perodic_warfare/26/iron_room.tscn"],
 }
 
 func _ready() -> void:

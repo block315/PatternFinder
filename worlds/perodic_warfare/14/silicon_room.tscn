@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmndj33w6k0gf"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_k8s4q"]
+[ext_resource type="Script" uid="uid://d081qhlhtfow3" path="res://worlds/perodic_warfare/14/silicon_room.gd" id="2_3bywq"]
+[ext_resource type="Texture2D" uid="uid://b5sngxgokxjub" path="res://worlds/perodic_warfare/14/T_Decals_Si.png" id="3_ms6ed"]
+[ext_resource type="PackedScene" uid="uid://70p5jrd5uhe2" path="res://worlds/perodic_warfare/14/silicon_001.tscn" id="4_rkdsx"]
+
+[node name="SiliconRoom" instance=ExtResource("1_k8s4q")]
+script = ExtResource("2_3bywq")
+atomic_number = 14
+element_decal_png = ExtResource("3_ms6ed")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 14
+neutron = Array[int]([14, 15, 16])
+electron = 14
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 55, 0)
+
+[node name="Silicon_001" parent="Content" index="0" instance=ExtResource("4_rkdsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.706862, 0.11126304, -5.472309)
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
