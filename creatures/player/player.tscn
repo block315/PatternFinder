@@ -93,6 +93,7 @@ script = ExtResource("3_1q4qw")
 libraries = {
 &"": SubResource("AnimationLibrary_y4u5n")
 }
+playback_default_blend_time = 0.5
 
 [node name="FlashLight" type="SpotLight3D" parent="Camera3D"]
 light_energy = 10.0

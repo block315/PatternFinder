@@ -18,7 +18,7 @@ func collect(target_position:Vector3, collider):
 		rotation = Vector3(0,0, -PI)
 	await get_tree().create_timer(1.0).timeout
 	position = Vector3.ZERO
-	rotation = Vector3.ZERO
+	rotation = handle_rotation
 	if "matter" in collider and collider.matter != null:
 		if collider.matter.phase == 2:
 			rotation = Vector3(0,0, -PI)

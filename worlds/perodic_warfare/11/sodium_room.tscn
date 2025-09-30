@@ -1,23 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvicjctk5gw78"]
+[gd_scene load_steps=6 format=3 uid="uid://cvicjctk5gw78"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_xmxx3"]
 [ext_resource type="Script" uid="uid://chlk2yxwwg16h" path="res://worlds/perodic_warfare/11/sodium_room.gd" id="2_n4i06"]
 [ext_resource type="Texture2D" uid="uid://drfmk7pd5hu8u" path="res://worlds/perodic_warfare/11/T_Decals_Na.png" id="3_gs677"]
-[ext_resource type="PackedScene" uid="uid://6jn5d2h1exgb" path="res://worlds/perodic_warfare/11/sodium_proposition_001.tscn" id="4_h2227"]
+[ext_resource type="PackedScene" uid="uid://6iteesrr6nxi" path="res://worlds/perodic_warfare/11/sodium_002.tscn" id="4_61fjg"]
+[ext_resource type="PackedScene" uid="uid://6jn5d2h1exgb" path="res://worlds/perodic_warfare/11/sodium_001.tscn" id="4_h2227"]
 
 [node name="SodiumRoom" instance=ExtResource("1_xmxx3")]
 script = ExtResource("2_n4i06")
 atomic_number = 11
 element_decal_png = ExtResource("3_gs677")
+stair_access = Array[bool]([true, true])
 
 [node name="Core" parent="." index="0"]
 atomic_number = 11
 electron = 10
 
+[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
+transform = Transform3D(-1, 0, -2.5351817e-06, 0, 1, 0, 2.5351817e-06, 0, -1, 0, 3, 6)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 55, 0)
 
-[node name="SodiumProposition001" parent="Content" index="0" instance=ExtResource("4_h2227")]
+[node name="Sodium002" parent="Content" index="0" instance=ExtResource("4_61fjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2528229, 0.153211, -6.01464)
+
+[node name="Sodium001" parent="Content" index="1" instance=ExtResource("4_h2227")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2937, 0, -8)
 
 [editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

@@ -18,6 +18,10 @@ func _ready():
 	$Player.rotation = starting_rotation
 	$Player/Camera3D.rotation = starting_view_rotation
 	$Building.show()
+	if stair_access[0]:
+		activate_stairs(2)
+	if stair_access[1]:
+		activate_stairs(3)
 
 func activate_stairs(floor_number: int) -> void:
 	match floor_number:

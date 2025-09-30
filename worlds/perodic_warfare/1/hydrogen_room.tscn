@@ -33,7 +33,6 @@ transform = Transform3D(-1, 2.5351817e-06, 9.1773325e-12, 0, -3.6199901e-06, 1, 
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
-visible = true
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="1"]
 stream = ExtResource("5_unnr2")
@@ -47,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 destination = 2
 
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
 [node name="Hydrogen002" parent="Content" index="1" instance=ExtResource("7_ty888")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)

@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://6jn5d2h1exgb"]
+
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_wd0br"]
+[ext_resource type="PackedScene" uid="uid://cpbao05qqvl0x" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Shelves_WideTall.gltf" id="2_sa77p"]
+[ext_resource type="PackedScene" uid="uid://b2cmq40ijja0h" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Desk_L.gltf" id="3_4by34"]
+[ext_resource type="PackedScene" uid="uid://c2h0pu68udko7" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/shaker-salt.glb" id="4_3oc74"]
+[ext_resource type="PackedScene" uid="uid://daryp5gjfa2km" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/shaker-pepper.glb" id="5_b0abo"]
+[ext_resource type="PackedScene" uid="uid://2uqlrc4xp4eb" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/soda-bottle.glb" id="6_b0abo"]
+[ext_resource type="PackedScene" uid="uid://bgd36prls2b4l" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/soda-can.glb" id="7_j5hp5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4by34"]
+size = Vector3(6.91321, 2.22913, 6.46326)
+
+[node name="SodiumProposition001" instance=ExtResource("1_wd0br")]
+
+[node name="CollisionShape3D" parent="PlayerInterestArea3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2359, 1.13275, 1.21332)
+shape = SubResource("BoxShape3D_4by34")
+
+[node name="Prop_Shelves_WideTall" parent="." index="3" instance=ExtResource("2_sa77p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49244, 0, -0.370726)
+
+[node name="Prop_Desk_L2" parent="." index="4" instance=ExtResource("3_4by34")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.49669, 0, 1.7215853)
+
+[node name="shaker-salt2" parent="." index="5" instance=ExtResource("4_3oc74")]
+transform = Transform3D(0.285688, 0, -0.958323, 0, 1, 0, 0.958323, 0, 0.285688, -0.104703, 1.94367, -0.329814)
+
+[node name="shaker-pepper2" parent="." index="6" instance=ExtResource("5_b0abo")]
+transform = Transform3D(0.593503, 0, -0.804832, 0, 1, 0, 0.804832, 0, 0.593503, 0.112772, 1.94105, -0.329814)
+
+[node name="soda-bottle2" parent="." index="7" instance=ExtResource("6_b0abo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527174, 1.21515, -0.377102)
+
+[node name="soda-can2" parent="." index="8" instance=ExtResource("7_j5hp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0692637, 1.21839, -0.451029)

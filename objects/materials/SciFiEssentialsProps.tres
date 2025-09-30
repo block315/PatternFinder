@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cril1ml34134p"]
+
+[ext_resource type="Texture2D" uid="uid://304gtsnu7shl" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/Textures/T_Trim_01_BaseColor.png" id="1_pqivp"]
+
+[resource]
+albedo_texture = ExtResource("1_pqivp")
