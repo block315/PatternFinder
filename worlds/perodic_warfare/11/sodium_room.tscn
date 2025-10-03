@@ -16,11 +16,11 @@ stair_access = Array[bool]([true, true])
 atomic_number = 11
 electron = 10
 
-[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
-transform = Transform3D(-1, 0, -2.5351817e-06, 0, 1, 0, 2.5351817e-06, 0, -1, 0, 3, 6)
-
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 55, 0)
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 3
 
 [node name="Sodium002" parent="Content" index="0" instance=ExtResource("4_61fjg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2528229, 0.153211, -6.01464)

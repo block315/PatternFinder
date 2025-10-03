@@ -7,6 +7,7 @@ class_name HUD
 @onready var nine_patch_rect: NinePatchRect = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect
 @onready var battery_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/BatteryTextureProgressBar
 @onready var debug_label: Label = %DebugLabel
+@onready var computer_label: Label = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/ComputerLabel
 @onready var stamina_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/StaminaTextureProgressBar
 @onready var health_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar1/HealthTextureProgressBar
 @onready var player: Player = $"../.."
@@ -18,7 +19,7 @@ func _ready() -> void:
 	UIAnimation.animate_shrink(nine_patch_rect)
 	nine_patch_rect.hide()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	health_texture_progress_bar.value = player.health
 	stamina_texture_progress_bar.value = player.stamina
 	battery_texture_progress_bar.value = flash_light.battery
@@ -31,7 +32,7 @@ func _process(delta: float) -> void:
 			hide_options()
 
 func display_options(content:String=""):
-	debug_label.text = content
+	computer_label.text = content
 	if !nine_patch_rect.visible:
 		nine_patch_rect.show()
 		await UIAnimation.animate_slide_from_left(nine_patch_rect)

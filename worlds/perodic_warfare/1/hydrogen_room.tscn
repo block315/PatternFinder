@@ -28,9 +28,6 @@ surface_material_override/2 = null
 [node name="AudioStreamPlayer3D" parent="Core" index="3"]
 stream = ExtResource("4_x40ta")
 
-[node name="Platform_Stairs_4WideTall" parent="Structure/SecondFloor/Platform_Metal16" index="2"]
-transform = Transform3D(-1, 2.5351817e-06, 9.1773325e-12, 0, -3.6199901e-06, 1, 2.5351817e-06, 1, 3.6199901e-06, 0, 3, 6)
-
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 

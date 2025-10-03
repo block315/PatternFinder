@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxphiovvot3c1"]
+[gd_scene load_steps=15 format=3 uid="uid://dxphiovvot3c1"]
 
 [ext_resource type="PackedScene" uid="uid://up66vgigdeaq" path="res://objects/meshes/platforms/platform_3_plates.tscn" id="1_5ytdf"]
 [ext_resource type="Script" uid="uid://be5818g7d1o4s" path="res://objects/interactives/transports/elevator.gd" id="1_f7iu7"]
@@ -48,6 +48,9 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nh2gb"]
 size = Vector3(5, 3, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3bk2l"]
+size = Vector3(9, 7, 8)
 
 [node name="Elevator" type="Node3D"]
 script = ExtResource("1_f7iu7")
@@ -253,7 +256,7 @@ libraries = {
 
 [node name="Prop_Computer" parent="." instance=ExtResource("9_wxdkt")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 5)
-content = "Going downstairs"
+content = "⬆️"
 
 [node name="DoorSensorArea3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
@@ -276,5 +279,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 4)
 [node name="Prop_Light_Small2" parent="Lights/Prop_Light_Small2" instance=ExtResource("9_nh2gb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
+[node name="ElevatorArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2.5)
+shape = SubResource("BoxShape3D_3bk2l")
+
 [connection signal="body_entered" from="DoorSensorArea3D" to="." method="_on_door_sensor_area_3d_body_entered"]
-[connection signal="body_exited" from="DoorSensorArea3D" to="." method="_on_door_sensor_area_3d_body_exited"]
+[connection signal="body_entered" from="ElevatorArea3D" to="." method="_on_elevator_area_3d_body_entered"]
+[connection signal="body_exited" from="ElevatorArea3D" to="." method="_on_elevator_area_3d_body_exited"]

@@ -16,3 +16,9 @@ electron = 3
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 1
+downstairs = 11
+
+[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

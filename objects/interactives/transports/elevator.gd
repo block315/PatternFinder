@@ -22,13 +22,9 @@ func door_close() -> void:
 	open = false
 	animation_player.play_backwards("DoorOpen")
 	await animation_player.animation_finished
-	if player_on_board:
-		go_downstairs()
 
 func _on_door_sensor_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player and !open:
-		_player = body
-		player_on_board = true
 		door_open()
 
 func go_downstairs() -> void:
@@ -39,6 +35,19 @@ func go_upstairs() -> void:
 	if upstairs != 0:
 		PerodicWarfare.change_room(upstairs, Vector3(0,0,13))
 
-func _on_door_sensor_area_3d_body_exited(body: Node3D) -> void:
+func elevator_switch(up:bool):
+	if up:
+		go_upstairs()
+	else:
+		go_downstairs()
+
+func _on_elevator_area_3d_body_entered(body: Node3D) -> void:
+	if body is Player:
+		_player = body
+		player_on_board = true
+		_player.hud.switch.connect(elevator_switch)
+
+func _on_elevator_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player and player_on_board:
 		player_on_board = false
+		_player.hud.switch.disconnect(elevator_switch)
