@@ -64,13 +64,13 @@ liquid_color = Color(1, 1, 1, 1)
 handle_position = Vector3(-0.2, 0, 0.1)
 handle_rotation = Vector3(0.14835298, -1.6755161, -0.19198623)
 
-[node name="Liquid" type="MeshInstance3D" parent="." index="1"]
+[node name="Liquid" type="MeshInstance3D" parent="." index="0"]
 transform = Transform3D(0.63666236, 0, 0, 0, 1.2216734, 0, 0, 0, 0.657595, 0, 0.09118663, 0)
 visible = false
 transparency = 0.5
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_gdut6")
 
-[node name="Prop_Mug" type="MeshInstance3D" parent="." index="2"]
+[node name="Prop_Mug" type="MeshInstance3D" parent="." index="1"]
 mesh = SubResource("ArrayMesh_8l7mx")
 skeleton = NodePath("")

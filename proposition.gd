@@ -29,6 +29,7 @@ signal success
 var _geometry_instance3d_childs = []
 
 func find_mesh(_node):
+	_geometry_instance3d_childs.clear()
 	for _child in _node.get_children():
 		if _child is GeometryInstance3D:
 			_geometry_instance3d_childs.append(_child)

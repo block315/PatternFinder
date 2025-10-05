@@ -15,7 +15,7 @@ func _on_body_entered(body: Node3D) -> void:
 		animation_player.play("open")
 		open = true
 		body.hud.switch.connect(_on_switch_on)
-		body.hud.display_options()
+		body.hud.display_options("🔌🎚")
 
 func _on_body_exited(body: Node3D) -> void:
 	if body is Player and open:
