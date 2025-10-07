@@ -5,8 +5,9 @@ class_name Core
 @export var neutron:Array[int] = [1]
 @export var electron:int = 1
 @export var strong_nuclear_force:int = 50
-@export_range(0, 1.0, 0.1) var particle_size = 1.0
+@export_range(0, 1.0, 0.1) var particle_size:float = 1.0
 
+@onready var isotope_timer: Timer = $IsotopeTimer
 @onready var isotope_audio_stream_player_3d: AudioStreamPlayer3D = $IsotopeAudioStreamPlayer3D
 @onready var nucleus_center_point: OmniLight3D = $NucleusHolder/NucleusCenterPoint
 @onready var nucleus_holder: MeshInstance3D = $NucleusHolder
@@ -27,13 +28,14 @@ func _ready() -> void:
 	if get_parent() is Room:
 		atomic_number = get_parent().atomic_number
 		electron = get_parent().atomic_number
-		if neutron.size() < 2:
-			neutron = [atomic_number]
 	particle_size = 1.01**(-atomic_number)
+	if neutron.size() == 1:
+		isotope_timer.stop()
 	_on_isotope_timer_timeout()
 
 
-func _physics_process(delta: float) -> void:
+
+func _physics_process(_delta: float) -> void:
 	if strong_nuclear_force_activate:
 		for _particle in nucleus_holder.get_children():
 			if _particle is RigidBody3D:
@@ -53,7 +55,6 @@ func _on_isotope_timer_timeout() -> void:
 	for _particle in nucleus_holder.get_children():
 		if _particle is RigidBody3D:
 			_particle.show()
-
 	for _electron in nucleus_center_point.get_children():
 		_electron.electron_basis_randomize()
 	current_neutron_index = (current_neutron_index + 1) % neutron.size()

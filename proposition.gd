@@ -1,3 +1,4 @@
+@icon("res://arts/2D/UI/itch.io/IconGodotNode/node/icon_event.png")
 extends Node3D
 class_name Proposition
 

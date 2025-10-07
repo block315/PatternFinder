@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_wd0br"]
 [ext_resource type="PackedScene" uid="uid://cpbao05qqvl0x" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Shelves_WideTall.gltf" id="2_sa77p"]
 [ext_resource type="PackedScene" uid="uid://b2cmq40ijja0h" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Desk_L.gltf" id="3_4by34"]
-[ext_resource type="PackedScene" uid="uid://c2h0pu68udko7" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/shaker-salt.glb" id="4_3oc74"]
-[ext_resource type="PackedScene" uid="uid://daryp5gjfa2km" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/shaker-pepper.glb" id="5_b0abo"]
-[ext_resource type="PackedScene" uid="uid://2uqlrc4xp4eb" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/soda-bottle.glb" id="6_b0abo"]
-[ext_resource type="PackedScene" uid="uid://bgd36prls2b4l" path="res://arts/3D/models/kenney/kenney_food-kit/Models/GLB format/soda-can.glb" id="7_j5hp5"]
+[ext_resource type="PackedScene" uid="uid://c2h0pu68udko7" path="res://arts/3D/models/kenney.nl/kenney_food-kit/Models/GLB format/shaker-salt.glb" id="4_3oc74"]
+[ext_resource type="PackedScene" uid="uid://daryp5gjfa2km" path="res://arts/3D/models/kenney.nl/kenney_food-kit/Models/GLB format/shaker-pepper.glb" id="5_b0abo"]
+[ext_resource type="PackedScene" uid="uid://2uqlrc4xp4eb" path="res://arts/3D/models/kenney.nl/kenney_food-kit/Models/GLB format/soda-bottle.glb" id="6_b0abo"]
+[ext_resource type="PackedScene" uid="uid://bgd36prls2b4l" path="res://arts/3D/models/kenney.nl/kenney_food-kit/Models/GLB format/soda-can.glb" id="7_j5hp5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4by34"]
 size = Vector3(6.91321, 2.22913, 6.46326)

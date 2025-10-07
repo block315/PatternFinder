@@ -1,3 +1,4 @@
+@icon("res://arts/2D/UI/itch.io/IconGodotNode/node_3D/icon_map.png")
 extends Node3D
 class_name Room
 

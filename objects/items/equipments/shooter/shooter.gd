@@ -1,3 +1,4 @@
+@icon("res://arts/2D/UI/itch.io/IconGodotNode/node_3D/canon_2.png")
 extends Equipment
 class_name Shooter
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=47 format=4 uid="uid://baioq4o6qy0rd"]
 
-[ext_resource type="Texture2D" uid="uid://cmnnh3lmgyqwg" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_color.png" id="2_gk0xc"]
+[ext_resource type="Texture2D" uid="uid://cmnnh3lmgyqwg" path="res://arts/3D/models/itch.io/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_color.png" id="2_gk0xc"]
 [ext_resource type="Script" uid="uid://byosbofclr4co" path="res://creatures/friends/robot/robot.gd" id="2_pmslo"]
-[ext_resource type="Texture2D" uid="uid://craugl2gpyd3n" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_emission.png" id="3_5danh"]
-[ext_resource type="Texture2D" uid="uid://dm2wpopv8xljt" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_metallic-robot_roughness.png" id="4_trpfx"]
-[ext_resource type="Texture2D" uid="uid://53khlq513rh5" path="res://arts/3D/models/itch/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_normal.png" id="5_ec50m"]
+[ext_resource type="Texture2D" uid="uid://craugl2gpyd3n" path="res://arts/3D/models/itch.io/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_emission.png" id="3_5danh"]
+[ext_resource type="Texture2D" uid="uid://dm2wpopv8xljt" path="res://arts/3D/models/itch.io/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_metallic-robot_roughness.png" id="4_trpfx"]
+[ext_resource type="Texture2D" uid="uid://53khlq513rh5" path="res://arts/3D/models/itch.io/Styloorobotcharacte fbx and gltfr/GLTFrobot/robot_robot_normal.png" id="5_ec50m"]
 [ext_resource type="AudioStream" uid="uid://cgextn2w3ywah" path="res://arts/audio/recordings/greet.wav" id="6_0a3dv"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fb0li"]

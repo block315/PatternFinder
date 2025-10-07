@@ -1,3 +1,4 @@
+@icon("res://arts/2D/UI/itch.io/IconGodotNode/color/icon_character.png")
 extends CharacterBody3D
 class_name Player
 

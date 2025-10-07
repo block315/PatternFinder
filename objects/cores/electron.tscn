@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://hmdnabgdhody"]
 
 [ext_resource type="Script" uid="uid://7ffx7ucocsoj" path="res://objects/cores/electron.gd" id="1_gg1jg"]
-[ext_resource type="Texture2D" uid="uid://dwl1hcv64xbmq" path="res://arts/2D/pictures/kenney_particle-pack/PNG (Transparent)/circle_05.png" id="1_u4tpu"]
+[ext_resource type="Texture2D" uid="uid://dwl1hcv64xbmq" path="res://arts/2D/pictures/kenney.nl/kenney_particle-pack/PNG (Transparent)/circle_05.png" id="1_u4tpu"]
 
 [sub_resource type="Curve" id="Curve_u4tpu"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
