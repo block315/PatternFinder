@@ -1,14 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=16 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
 [ext_resource type="AudioStream" uid="uid://lpknsq3y3tbn" path="res://arts/audio/musics/originals/hydrogen/1_Solo Synth 1.ogg" id="4_x40ta"]
+[ext_resource type="PackedScene" uid="uid://bx4trg16o62c" path="res://objects/meshes/walls/wall_astra_straight_window.tscn" id="5_eqvbh"]
 [ext_resource type="AudioStream" uid="uid://dsxs6x7vpigmg" path="res://arts/audio/musics/originals/hydrogen/2_Space SynthBrass.ogg" id="5_unnr2"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
+[ext_resource type="PackedScene" uid="uid://b27gchdt37oei" path="res://objects/meshes/walls/wall_window_straight.tscn" id="6_yumeh"]
+[ext_resource type="PackedScene" uid="uid://bp6yww22bk35u" path="res://objects/meshes/walls/top_window_straight.tscn" id="7_57wpb"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
+[ext_resource type="PackedScene" uid="uid://stu4vqioi3xj" path="res://objects/meshes/walls/top_cables_straight.tscn" id="8_m0o4g"]
 [ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
 [ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_3ddsq"]
 
@@ -27,6 +31,20 @@ surface_material_override/2 = null
 
 [node name="AudioStreamPlayer3D" parent="Core" index="3"]
 stream = ExtResource("4_x40ta")
+
+[node name="Door_Frame_SquareTall" parent="Structure/ThridFloor/Platform_DarkPlates15" index="2"]
+visible = false
+
+[node name="WallAstra_Straight_Window" parent="Structure/ThridFloor/Platform_DarkPlates15" index="3" instance=ExtResource("5_eqvbh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="WallWindow_Straight" parent="Structure/ThridFloor/Platform_DarkPlates15/WallAstra_Straight_Window" index="1" instance=ExtResource("6_yumeh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="TopWindow_Straight" parent="Structure/ThridFloor/Platform_DarkPlates15/WallAstra_Straight_Window/WallWindow_Straight" index="1" instance=ExtResource("7_57wpb")]
+
+[node name="TopCables_Straight" parent="Structure/ThridFloor/Platform_DarkPlates15/WallAstra_Straight_Window/WallWindow_Straight/TopWindow_Straight" index="1" instance=ExtResource("8_m0o4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -60,4 +78,5 @@ transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0, 8)
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
 
 [editable path="Core"]
+[editable path="Structure/ThridFloor/Platform_DarkPlates15/Door_Frame_SquareTall"]
 [editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

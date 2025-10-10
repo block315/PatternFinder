@@ -12,6 +12,8 @@ data = PackedVector3Array(2.0211, 0.7828, 3.7993, 2.0964, 2.6524, 0.263, 2.0828,
 surface_material_override/0 = ExtResource("2_0rn8q")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platform_Rails_4Wide" index="0"]
+collision_layer = 65
+collision_mask = 65
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Rails_4Wide/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_ywhca")

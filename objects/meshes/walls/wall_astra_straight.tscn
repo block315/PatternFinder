@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxs5156f5q4t"]
 
 [ext_resource type="PackedScene" uid="uid://gahlexadghfs" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight.gltf" id="1_idkxe"]
-[ext_resource type="Script" uid="uid://betjb5v3ws5cy" path="res://objects/meshes/walls/wall.gd" id="2_38ptd"]
+[ext_resource type="Script" uid="uid://betjb5v3ws5cy" path="res://objects/meshes/walls/wall_with_symbol.gd" id="2_38ptd"]
 [ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://objects/materials/T_Trim_03.tres" id="2_mnoj4"]
 [ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="3_qe8ee"]
 [ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="4_hrow0"]
@@ -21,6 +21,8 @@ surface_material_override/3 = ExtResource("6_38ptd")
 surface_material_override/4 = ExtResource("2_mnoj4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WallAstra_Straight" index="0"]
+collision_layer = 65
+collision_mask = 65
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WallAstra_Straight/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_n6i61")

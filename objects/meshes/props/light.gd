@@ -1,9 +1,10 @@
+@icon("res://arts/2D/UI/itch.io/IconGodotNode/node_3D/icon_light_bulb.png")
 extends Node3D
 class_name PropLight
 
 @onready var blub_mesh: MeshInstance3D = get_child(0)
 @onready var omni_light_3d: OmniLight3D = blub_mesh.get_child(0)
-@onready var room: Room = PerodicWarfare.current_room
+@onready var room: ElementRoom = PerodicWarfare.current_room
 
 @export var power := true
 var emission_material: int
@@ -14,7 +15,7 @@ func _ready() -> void:
 			emission_material = i
 	room.turn_on_light.connect(light_switch)
 
-func _input(event):
+func _input(_event):
 	if Input.is_key_pressed(KEY_1):
 		light_switch(true)
 	elif Input.is_key_pressed(KEY_2):

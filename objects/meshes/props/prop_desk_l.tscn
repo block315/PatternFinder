@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://o48ge0lgxews"]
+
+[ext_resource type="PackedScene" uid="uid://b2cmq40ijja0h" path="res://arts/3D/models/quaternius/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Desk_L.gltf" id="1_46lrd"]
+
+[node name="Prop_Desk_L" instance=ExtResource("1_46lrd")]
+
+[node name="StaticBody3D" parent="Prop_Desk_L" index="0"]
+collision_layer = 65
+collision_mask = 65

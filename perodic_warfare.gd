@@ -1,6 +1,6 @@
 extends Node
 
-var current_room : Room ## Room that is player in.
+var current_room : ElementRoom ## Room that is player in.
 var train_position : float = 0
 
 ## Element Information
@@ -20,7 +20,7 @@ var element_symbols = {
 
 func _ready() -> void:
 	for _node in get_tree().get_root().get_children():
-		if _node is Room:
+		if _node is ElementRoom:
 			current_room = _node
 
 ## change current scene to another element room

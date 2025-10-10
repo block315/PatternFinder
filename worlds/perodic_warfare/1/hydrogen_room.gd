@@ -1,4 +1,4 @@
-extends Room
+extends ElementRoom
 class_name HydrogenRoom
 
 func _ready() -> void:

@@ -11,8 +11,7 @@ extends TextureRect
 @onready var hud = $"../../../.."
 @export var equipment_progress_bar : TextureProgressBar
 
-
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if hud.hand.current_equipment != null:
 		if !active:
 			if hud.hand.current_equipment is Shooter and equipment_type == "Shooter":

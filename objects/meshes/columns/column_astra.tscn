@@ -16,6 +16,8 @@ surface_material_override/1 = ExtResource("3_p1o1c")
 surface_material_override/2 = ExtResource("4_av5b4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Column_Astra" index="0"]
+collision_layer = 65
+collision_mask = 65
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Column_Astra/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_nj0bs")

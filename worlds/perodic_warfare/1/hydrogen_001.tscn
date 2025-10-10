@@ -457,7 +457,6 @@ draw_pass_1 = SubResource("SphereMesh_2b4kj")
 
 [node name="Cup" parent="." instance=ExtResource("13_n5ifu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4764962, 0.941295, -5.5079613)
-liquid_color = Color(0, 1, 1, 1)
 
 [node name="PlayerInterestArea3D" type="Area3D" parent="."]
 

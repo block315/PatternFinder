@@ -25,7 +25,7 @@ const PROTON = preload("res://objects/cores/proton.tscn")
 const ELECTRON = preload("res://objects/cores/electron.tscn")
 
 func _ready() -> void:
-	if get_parent() is Room:
+	if get_parent() is ElementRoom:
 		atomic_number = get_parent().atomic_number
 		electron = get_parent().atomic_number
 	particle_size = 1.01**(-atomic_number)

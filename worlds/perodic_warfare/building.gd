@@ -1,5 +1,5 @@
 extends Node3D
-class_name Building
+class_name PeriodicBuilding
 
 const GLOW_BLOCK = preload("res://objects/materials/Glow.tres")
 @onready var atomic_number = get_parent().atomic_number

@@ -1,4 +1,5 @@
 extends SpotLight3D
+class_name FlashLight
 
 @export_range(0,1,0.1) var power_consumption:float = 0.5
 @export var battery:int = 100
@@ -8,11 +9,11 @@ extends SpotLight3D
 func _ready() -> void:
 	light_energy = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if on and timer.is_stopped():
 		timer.start()
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("light"):
 		on = !on
 		if on:

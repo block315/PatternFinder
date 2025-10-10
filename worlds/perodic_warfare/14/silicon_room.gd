@@ -1,4 +1,4 @@
-extends Room
+extends ElementRoom
 class_name SiliconRoom
 
 func _ready() -> void:

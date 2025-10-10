@@ -19,7 +19,7 @@ func _ready() -> void:
 	camera_3d.make_current()
 
 func _physics_process(delta: float) -> void:
-	if is_on_floor():
+	if is_on_floor() and visible:
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = jump_speed
 		if Input.is_action_pressed("crouch"):
@@ -30,9 +30,10 @@ func _physics_process(delta: float) -> void:
 				camera_3d.position.y += .1
 			if Input.is_action_pressed("boost") and stamina > 0:
 				speed = 10.0
-				stamina -= .1
+				stamina -= .2
 			else:
 				speed = 5.0
+				stamina += .01
 	else:
 		velocity += get_gravity() * delta
 		foot_step_audio_stream_player_3d.stop()
@@ -48,7 +49,7 @@ func _physics_process(delta: float) -> void:
 			foot_step_audio_stream_player_3d.stop()
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-		stamina += .01
+		stamina += .02
 	if Input.is_action_just_pressed("ui_page_up"):
 		get_tree().change_scene_to_file("res://worlds/stages/"+str(int(get_parent().name)+1)
 				+"/"+str(int(get_parent().name)+1)+".tscn")

@@ -58,3 +58,9 @@ mesh = SubResource("ArrayMesh_qkaim")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_dslqe")
 surface_material_override/1 = ExtResource("2_vjnpd")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)

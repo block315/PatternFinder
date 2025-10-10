@@ -12,6 +12,8 @@ data = PackedVector3Array(0.001, 0, 2, -1.9915, 0, 1.7383, 0.0053, 0, 1.8692, 0.
 surface_material_override/0 = ExtResource("2_l2kc0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platform_Squares_Curve" index="0"]
+collision_layer = 65
+collision_mask = 65
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Squares_Curve/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_pfimt")

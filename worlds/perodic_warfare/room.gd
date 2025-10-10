@@ -1,6 +1,6 @@
 @icon("res://arts/2D/UI/itch.io/IconGodotNode/node_3D/icon_map.png")
 extends Node3D
-class_name Room
+class_name ElementRoom
 
 signal turn_on_light(switch_value)
 
@@ -40,7 +40,7 @@ func turn_on_lights():
 func turn_off_lights():
 	turn_on_light.emit(false)
 
-func _input(event):
+func _input(_event):
 	if Input.is_key_label_pressed(KEY_0):
 		activate_stairs(2)
 	if Input.is_key_label_pressed(KEY_9):

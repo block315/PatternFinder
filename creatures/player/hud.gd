@@ -16,7 +16,6 @@ signal switch(on:bool)
 
 func _ready() -> void:
 	crosshair.position = get_viewport().size/2
-	UIAnimation.animate_shrink(nine_patch_rect)
 	nine_patch_rect.hide()
 
 func _process(_delta: float) -> void:
@@ -35,9 +34,7 @@ func display_options(content:String=""):
 	computer_label.text = content
 	if !nine_patch_rect.visible:
 		nine_patch_rect.show()
-		await UIAnimation.animate_slide_from_left(nine_patch_rect)
 
 func hide_options():
 	if nine_patch_rect.visible:
-		await UIAnimation.animate_shrink(nine_patch_rect)
 		nine_patch_rect.hide()

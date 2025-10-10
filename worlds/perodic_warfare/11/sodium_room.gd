@@ -1,8 +1,8 @@
-extends Room
+extends ElementRoom
 class_name SodiumRoom
 
 func _ready() -> void:
 	super._ready()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

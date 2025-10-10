@@ -5,3 +5,6 @@
 
 [node name="Breaker" instance=ExtResource("1_olflt")]
 script = ExtResource("2_uplrc")
+smash_position = Vector3(0, 0, 0)
+smash_rotation = Vector3(0, 0, 0)
+smash_speed = 0.25

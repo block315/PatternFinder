@@ -29,12 +29,12 @@ func _on_boarding_area_3d_body_entered(body: Node3D) -> void:
 		body.hide()
 
 func _on_radar_area_3d_area_entered(area: Area3D) -> void:
-	if area.get_parent().get_parent() is Building and on_board:
+	if area.get_parent().get_parent() is PeriodicBuilding and on_board:
 		if area.get_parent().visible:
 			on_board = false
 			passenger.show()
 			passenger.camera_3d.current = true
-			PerodicWarfare.train_position += 0.2
+			PerodicWarfare.train_position += 2
 			PerodicWarfare.change_room(destination, _player.position, _player.rotation, _player.camera_3d.rotation)
 			queue_free()
 

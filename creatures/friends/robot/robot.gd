@@ -10,7 +10,7 @@ class_name Robot
 var moving: bool
 @onready var follow_timer: Timer = $FollowTimer
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_F1):
 		animation_tree.set("parameters/conditions/greeting", true)
 		robot_voice.play()
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	elif Input.is_key_pressed(KEY_F2):
 		move($"../Player".global_position)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if moving:
 		velocity = velocity.move_toward((navigation_agent_3d.get_next_path_position() \
 			- global_transform.origin).normalized() * speed, 0.25)

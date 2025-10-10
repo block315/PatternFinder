@@ -1,19 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu8ig5kbwmkdx"]
+[gd_scene load_steps=5 format=3 uid="uid://cu8ig5kbwmkdx"]
 
 [ext_resource type="Script" uid="uid://b3br2ctvox5k8" path="res://objects/items/equipments/equipment.gd" id="1_eh6po"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_eh6po"]
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_eh6po"]
-height = 1.0
+height = 1.5
 radius = 1.0
 
-[node name="Equipment" type="Area3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_eh6po"]
+size = Vector3(0.26081544, 0.7632812, 0.2)
+
+[node name="Equipment" type="RigidBody3D"]
+physics_interpolation_mode = 2
+collision_layer = 64
+collision_mask = 64
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_eh6po")
+script = ExtResource("1_eh6po")
+
+[node name="PickupArea3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19980842, 0)
 collision_layer = 0
 collision_mask = 16
 monitorable = false
-script = ExtResource("1_eh6po")
 
-[node name="PickupCollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="PickupCollisionShape3D" type="CollisionShape3D" parent="PickupArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CylinderShape3D_eh6po")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_eh6po")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="body_entered" from="PickupArea3D" to="." method="_on_pickup_area_3d_body_entered"]
