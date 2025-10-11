@@ -27,6 +27,10 @@ PerodicWarfare="*res://perodic_warfare.gd"
 
 movie_writer/movie_file="/home/block315/비디오/patternfinder.avi"
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_left={

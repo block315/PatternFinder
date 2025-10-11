@@ -850,48 +850,78 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0.5, 0)
 
 [node name="RailwayTrackCurve" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(-5.463924e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.463924e-09, -0.05243683, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 3.2975633, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight2" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.547563, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight3" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 7.797563, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight4" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 10.0475645, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight5" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 12.2975645, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight6" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.067499995, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 14.0475645, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackStraight7" parent="RailWay" instance=ExtResource("4_r3eje")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 15.812569, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve2" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(-0.125, 2.9802323e-09, 1.0927848e-08, 2.9802323e-09, 0.125, 3.5527137e-16, -1.0927848e-08, 0, -0.125, 19.137403, 0, -2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve3" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(1.6391771e-08, -1.302701e-16, 0.125, 2.9802323e-09, 0.125, 3.5527137e-16, -0.125, 2.9802323e-09, 1.6391771e-08, 19.137403, 0, 2.25)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve6" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(-2.7160064e-08, -0.032352384, -0.12074073, -4.1921555e-09, 0.12074073, -0.032352384, 0.125, -2.9802323e-09, -2.7319619e-08, 14.74396, -0.6, 2.25)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve7" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(0.125, -1.5660657e-09, -2.2041876e-08, -3.5356276e-09, 0.1216619, -0.028694645, 2.181275e-08, 0.028694645, 0.1216619, 14.74396, -1.1065469, 6.6899753)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve8" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(1.8170844e-08, 8.441161e-24, 0.125, 1.273882e-09, 0.12500001, -5.9604646e-09, -0.125, 7.4505774e-10, 1.788139e-08, 19.226091, -1.1, 6.6877646)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve5" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(-0.13257824, -2.9802323e-09, -1.0927848e-08, -3.1609115e-09, 0.125, 3.5527137e-16, 1.1590359e-08, 0, -0.125, 19.23145, -1.1000003, 2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="RailwayTrackCurve4" parent="RailWay" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 14.587404, -1.1000003, 2.2)
+surface_material_override/0 = null
+surface_material_override/1 = null
 
 [node name="Path3D" type="Path3D" parent="."]
 script = ExtResource("6_ge7ke")

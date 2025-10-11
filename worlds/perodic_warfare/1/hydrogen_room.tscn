@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
 [ext_resource type="PackedScene" uid="uid://stu4vqioi3xj" path="res://objects/meshes/walls/top_cables_straight.tscn" id="8_m0o4g"]
 [ext_resource type="PackedScene" uid="uid://det2qxgvoc4xe" path="res://worlds/perodic_warfare/1/hydrogen_003.tscn" id="8_x40ta"]
-[ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_3ddsq"]
+[ext_resource type="PackedScene" uid="uid://cmdpp4lhgeppk" path="res://creatures/friends/human/spacesuit_man.tscn" id="15_eqvbh"]
 
 [node name="HydrogenRoom" instance=ExtResource("1_hru7o")]
 script = ExtResource("2_lgy6p")
@@ -49,6 +49,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 
+[node name="Player" parent="." index="5" groups=["player"]]
+
 [node name="BackGroundMusicPlayer" parent="Speaker" index="1"]
 stream = ExtResource("5_unnr2")
 autoplay = true
@@ -71,8 +73,8 @@ content = "Hydrogen is very light"
 [node name="Hydrogen003" parent="Content" index="2" instance=ExtResource("8_x40ta")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 7)
 
-[node name="Robot" parent="." index="9" instance=ExtResource("9_3ddsq")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -7, 0, 8)
+[node name="SpacesuitMan" parent="." index="9" instance=ExtResource("15_eqvbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [connection signal="found" from="Core/Chest" to="." method="_on_chest_found"]
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
