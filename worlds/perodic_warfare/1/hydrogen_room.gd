@@ -4,13 +4,7 @@ class_name HydrogenRoom
 func _ready() -> void:
 	super._ready()
 
-
-func _on_chest_found() -> void:
-	if !stair_access[0]:
-		stair_access[0] = true
-		activate_stairs(2)
-
-func _on_hydrogen_003_success() -> void:
-	if !stair_access[1]:
-		stair_access[1] = true
+func _on_hydrogen_003_success(_proposition_number) -> void:
+	if !PerodicWarfare.access[1][1]:
+		PerodicWarfare.access[1][1] = true
 		activate_stairs(3)

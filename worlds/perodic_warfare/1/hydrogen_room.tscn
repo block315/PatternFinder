@@ -18,7 +18,6 @@
 
 [node name="HydrogenRoom" instance=ExtResource("1_hru7o")]
 script = ExtResource("2_lgy6p")
-atomic_number = 1
 element_decal_png = ExtResource("3_0n7gw")
 
 [node name="Core" parent="." index="0"]
@@ -51,7 +50,7 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 
 [node name="Player" parent="." index="5" groups=["player"]]
 
-[node name="BackGroundMusicPlayer" parent="Speaker" index="1"]
+[node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
 stream = ExtResource("5_unnr2")
 autoplay = true
 
@@ -76,7 +75,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 
 [node name="SpacesuitMan" parent="." index="9" instance=ExtResource("15_eqvbh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
-[connection signal="found" from="Core/Chest" to="." method="_on_chest_found"]
+[connection signal="found" from="Core/Chest" to="Content/Hydrogen001" method="_on_chest_found"]
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
 
 [editable path="Core"]

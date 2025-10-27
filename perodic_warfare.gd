@@ -1,9 +1,11 @@
 extends Node
 
-var current_room : ElementRoom ## Room that is player in.
-var train_position : float = 0
+var current_room : ElementRoom ## Room that is player in
+var train_position : float = 0 ## Manage train
+var propositions = [] ## Store game data for perodic warfare
+var access = [] ## [first stair, second stair, elevator, train]
 
-## Element Information
+## Element information
 var element_symbols = {
 	1 : ["H", "Hydrogen", "res://worlds/perodic_warfare/1/hydrogen_room.tscn"],
 	2 : ["He", "Helium", "res://worlds/perodic_warfare/2/helium_room.tscn"],
@@ -19,6 +21,12 @@ var element_symbols = {
 }
 
 func _ready() -> void:
+	propositions.resize(119)
+	access.resize(119)
+	for i in range(propositions.size()):
+		propositions[i] = []
+	for i in range(access.size()):
+		access[i] = [false, false, false, false]
 	for _node in get_tree().get_root().get_children():
 		if _node is ElementRoom:
 			current_room = _node

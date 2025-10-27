@@ -28,3 +28,6 @@ func _on_power_box_power_on(on:bool) -> void:
 		hydrogen_gas.hide()
 		oxygen_gas.hide()
 		wooden_bucket.matter = H_2O
+
+func _on_chest_found() -> void:
+	success.emit(1)

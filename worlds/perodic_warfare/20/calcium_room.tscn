@@ -74,4 +74,5 @@ transform = Transform3D(1.4994875, -0.009837468, 0.037953965, 0.010259115, 1.499
 mesh = SubResource("ArrayMesh_s3vkm")
 skeleton = NodePath("")
 
+[editable path="Structure/ThridFloor/Platform_DarkPlates15/Door_Frame_SquareTall"]
 [editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]

@@ -2,8 +2,8 @@
 extends Node3D
 class_name Proposition
 
-@export_multiline var content :String ## Must be one simple sentence.
-@export var done: bool = false
+@export_multiline var content: String ## Must be one simple sentence.
+@export var done: bool = false 
 @export var require: Array[Proposition]
 @export var next: Proposition
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -25,7 +25,7 @@ class_name Proposition
 
 const HIGHLIGHT = preload("res://UI/shaders/highlight.gdshader")
 
-signal success
+signal success(proposition_number: int)
 
 var _geometry_instance3d_childs = []
 

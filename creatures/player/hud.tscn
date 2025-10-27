@@ -17,16 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://bvjckgqrqfl4c" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/Colored/genericItem_color_155.png" id="12_lnofv"]
 [ext_resource type="Texture2D" uid="uid://cg4mpdg1sji2d" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large_square.png" id="14_uq6bm"]
 [ext_resource type="Texture2D" uid="uid://c1dqek8jio7s6" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Grey/Default/button_square_header_blade_square_screws.png" id="16_px2jx"]
+[ext_resource type="FontFile" uid="uid://c70oaji800u6b" path="res://arts/font/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf" id="17_212ep"]
 [ext_resource type="Texture2D" uid="uid://yxoiwxscikh2" path="res://arts/2D/pictures/kenney.nl/kenney_emotes-pack/PNG/Vector/Style 8/emote_circle.png" id="18_ia31h"]
 [ext_resource type="Texture2D" uid="uid://fn0ydayj1kor" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0090.png" id="19_px2jx"]
 [ext_resource type="Texture2D" uid="uid://c2nnks8ba80e5" path="res://arts/2D/pictures/kenney.nl/kenney_emotes-pack/PNG/Vector/Style 8/emote_cross.png" id="20_212ep"]
 [ext_resource type="Texture2D" uid="uid://c63wvuyuq5mhk" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0133.png" id="21_ibfhx"]
 
-[sub_resource type="SystemFont" id="SystemFont_212ep"]
-subpixel_positioning = 0
-
 [sub_resource type="LabelSettings" id="LabelSettings_px2jx"]
-font = SubResource("SystemFont_212ep")
+font = ExtResource("17_212ep")
 font_size = 70
 font_color = Color(0, 0, 0, 1)
 

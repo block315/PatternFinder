@@ -43,4 +43,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, 5)
 
 [connection signal="found" from="Core/Chest" to="." method="_on_chest_found"]
 
+[editable path="Structure/ThridFloor/Platform_DarkPlates15/Door_Frame_SquareTall"]
 [editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
