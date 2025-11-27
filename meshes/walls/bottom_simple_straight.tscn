@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://w65dm2w85o41"]
+
+[ext_resource type="PackedScene" uid="uid://55qsn34n8d6w" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/BottomSimple_Straight.gltf" id="1_jps03"]
+[ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://materials/T_Trim_03.tres" id="2_60qus"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f0072"]
+data = PackedVector3Array(-1.4, 0, 2, -1.4, 0.02, 0, -1.4, 0, 0, -1.4, 0, 2, -1.4, 0.02, 2, -1.4, 0.02, 0, -1.8, 0.02, 2, -1.4, 0.02, 0, -1.4, 0.02, 2, -1.8, 0.02, 2, -1.8, 0.02, 0, -1.4, 0.02, 0, -2, 0.02, 2, -1.8, 0.02, 0, -1.8, 0.02, 2, -2, 0.02, 2, -2, 0.02, 0, -1.8, 0.02, 0, -2, 0, 0, -2, 0.02, 2, -2, 0, 2, -2, 0, 0, -2, 0.02, 0, -2, 0.02, 2, -1.4, 0, -2, -1.4, 0.02, 0, -1.4, 0.02, -2, -1.4, 0, -2, -1.4, 0, 0, -1.4, 0.02, 0, -1.8, 0.02, -2, -1.4, 0.02, 0, -1.8, 0.02, 0, -1.8, 0.02, -2, -1.4, 0.02, -2, -1.4, 0.02, 0, -2, 0.02, -2, -1.8, 0.02, 0, -2, 0.02, 0, -2, 0.02, -2, -1.8, 0.02, -2, -1.8, 0.02, 0, -2, 0, 0, -2, 0.02, -2, -2, 0.02, 0, -2, 0, 0, -2, 0, -2, -2, 0.02, -2)
+
+[node name="BottomSimple_Straight" instance=ExtResource("1_jps03")]
+
+[node name="BottomSimple_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_60qus")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BottomSimple_Straight" index="0"]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BottomSimple_Straight/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_f0072")

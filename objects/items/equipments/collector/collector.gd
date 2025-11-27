@@ -4,5 +4,5 @@ class_name Collector
 
 @export var collection: Matter
 
-func collect(target_position, collider):
-	print("collector is collecting from " + collider.name)
+func collect(_target_position, collider):
+	pass

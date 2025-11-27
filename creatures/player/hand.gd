@@ -19,7 +19,8 @@ func _process(_delta: float) -> void:
 			if current_equipment is Shooter:
 				current_equipment.fire(gaze.get_collision_point())
 			elif current_equipment is Collector:
-				current_equipment.collect(gaze.get_collision_point(), gaze.get_collider())
+				var _collectable = find_collectable(gaze.get_collider())
+				current_equipment.collect(gaze.get_collision_point(), _collectable)
 			elif current_equipment is Breaker:
 				current_equipment.smash(gaze.get_collision_point(), gaze.get_collider())
 			else:
@@ -47,3 +48,11 @@ func _process(_delta: float) -> void:
 func _on_child_exiting_tree(node: Node) -> void:
 	if node is Equipment:
 		current_equipment = null
+
+func find_collectable(_collectable):
+	if _collectable is Proposition or _collectable == null:
+		return null
+	if _collectable is Collectable:
+		return _collectable
+	else:
+		return find_collectable(_collectable.get_parent())

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbd4a0yqwmhpw"]
+
+[ext_resource type="PackedScene" uid="uid://cpbao05qqvl0x" path="res://arts/3D/models/quaternius.com/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Shelves_WideTall.gltf" id="1_4wdet"]
+[ext_resource type="Material" uid="uid://cril1ml34134p" path="res://materials/SciFiEssentialsProps.tres" id="2_0ql7s"]
+
+[node name="Prop_Shelves_WideTall" instance=ExtResource("1_4wdet")]
+
+[node name="Prop_Shelves_WideTall" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_0ql7s")

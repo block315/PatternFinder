@@ -10,6 +10,9 @@ var open = false
 @export var upstairs : int = 0
 @export var downstairs : int = 0
 
+func _ready() -> void:
+	door_close()
+
 var _player:Player
 
 func door_open() -> void:
@@ -27,19 +30,17 @@ func _on_door_sensor_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player and !open:
 		door_open()
 
-func go_downstairs() -> void:
-	if downstairs != 0:
-		PerodicWarfare.change_room(downstairs, _player.position, _player.rotation)
-
-func go_upstairs() -> void:
-	if upstairs != 0:
-		PerodicWarfare.change_room(upstairs, Vector3(0,0,13))
-
 func elevator_switch(up:bool):
-	if up:
-		go_upstairs()
-	else:
-		go_downstairs()
+	print("using eleavtor : ", up)
+	if up and upstairs != 0:
+		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
+		await get_tree().create_timer(2.0).timeout
+		PerodicWarfare.change_room(upstairs)
+	elif downstairs != 0:
+		print("going downstairs")
+		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
+		await get_tree().create_timer(2.0).timeout
+		PerodicWarfare.change_room(downstairs)
 
 func _on_elevator_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:

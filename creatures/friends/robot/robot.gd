@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 		await animation_tree.animation_finished
 		animation_tree.set("parameters/conditions/greeting", false)
 	elif Input.is_key_pressed(KEY_F2):
-		move($"../Player".global_position)
+		move(get_tree().get_first_node_in_group("player").global_position)
 
 func _physics_process(_delta: float) -> void:
 	if moving:
@@ -40,4 +40,4 @@ func _on_navigation_agent_3d_target_reached() -> void:
 	moving = false
 
 func _on_follow_timer_timeout() -> void:
-	move($"../Player".global_position)
+	move(get_tree().get_first_node_in_group("player").global_position)

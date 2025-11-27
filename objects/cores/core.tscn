@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=4 uid="uid://djpod6lkb4twu"]
 
 [ext_resource type="Script" uid="uid://dvlirvk5ena0d" path="res://objects/cores/core.gd" id="1_i5cd7"]
-[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://objects/materials/T_Trim_01.tres" id="2_nah87"]
-[ext_resource type="Shader" uid="uid://cy6k1qq8nlhps" path="res://objects/materials/RemoveBackgroundforDecal.gdshader" id="3_k5cr0"]
-[ext_resource type="Texture2D" uid="uid://dbi31yl4yibyn" path="res://arts/3D/models/quaternius/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png" id="4_jg3mo"]
-[ext_resource type="AudioStream" uid="uid://dmehhiqfmdyv1" path="res://arts/audio/sounds/kenney_sci-fi-sounds/Audio/impactMetal_001.ogg" id="5_k5cr0"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://materials/T_Trim_01.tres" id="2_nah87"]
+[ext_resource type="Shader" uid="uid://cy6k1qq8nlhps" path="res://materials/RemoveBackgroundforDecal.gdshader" id="3_k5cr0"]
+[ext_resource type="Texture2D" uid="uid://dbi31yl4yibyn" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png" id="4_jg3mo"]
+[ext_resource type="AudioStream" uid="uid://dmehhiqfmdyv1" path="res://arts/audio/sounds/kenney.nl/kenney_sci-fi-sounds/Audio/impactMetal_001.ogg" id="5_k5cr0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_it23r"]
 resource_name = "M_LightFade_Red"
@@ -146,8 +146,5 @@ autostart = true
 stream = ExtResource("5_k5cr0")
 volume_db = 50.0
 unit_size = 2.0
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-autoplay = true
 
 [connection signal="timeout" from="IsotopeTimer" to="." method="_on_isotope_timer_timeout"]

@@ -23,7 +23,7 @@ class_name Proposition
 				_child.material_overlay = null
 		highlight = value
 
-const HIGHLIGHT = preload("res://UI/shaders/highlight.gdshader")
+const HIGHLIGHT = preload("res://shaders/highlight.gdshader")
 
 signal success(proposition_number: int)
 

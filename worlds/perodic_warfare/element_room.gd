@@ -14,9 +14,9 @@ var starting_view_rotation: Vector3 = Vector3(0,0,0)
 
 func _ready():
 	$Core.strong_nuclear_force_activate = true
-	$Player.position = starting_position
-	$Player.rotation = starting_rotation
-	$Player/Camera3D.rotation = starting_view_rotation
+	#$Player.position = starting_position
+	#$Player.rotation = starting_rotation
+	#$Player/Camera3D.rotation = starting_view_rotation
 	$Building.show()
 	if PerodicWarfare.access[atomic_number][0]:
 		activate_stairs(2)

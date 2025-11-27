@@ -1,8 +1,8 @@
 extends Proposition
 
-@onready var lemon: Lemon = $Lemon
+@onready var lemon: Breakable = $"Lemon/Lemon 01"
 
 func _process(_delta: float) -> void:
 	if lemon.smashed and !done:
-		success.emit()
+		success.emit(3)
 		done = true

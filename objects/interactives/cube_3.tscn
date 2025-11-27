@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://cgxvfo3auqid3"]
 
 [ext_resource type="Script" uid="uid://bin24xiuibpr5" path="res://objects/interactives/cube.gd" id="1_eotn5"]
-[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://objects/materials/T_Trim_02.tres" id="2_5e15t"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://materials/T_Trim_02.tres" id="2_5e15t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyw17"]
 resource_name = "MI_Trim_02"

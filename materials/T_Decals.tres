@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dh002qmible1f"]
+
+[ext_resource type="Shader" uid="uid://cy6k1qq8nlhps" path="res://materials/RemoveBackgroundforDecal.gdshader" id="1_gide0"]
+[ext_resource type="Texture2D" uid="uid://dbi31yl4yibyn" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Decals.png" id="2_ehxkn"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_gide0")
+shader_parameter/decals_color = Color(0.683077, 0.683077, 0.683077, 1)
+shader_parameter/decals_texture = ExtResource("2_ehxkn")

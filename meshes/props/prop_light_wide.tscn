@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpe05ls2mr8ca"]
+
+[ext_resource type="Script" uid="uid://c4dcabqan41h8" path="res://meshes/props/light.gd" id="1_rn5fq"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://materials/T_Trim_01.tres" id="2_ag0vl"]
+[ext_resource type="Material" uid="uid://dv0ieu24cutl4" path="res://materials/WhiteLight.tres" id="3_ifir5"]
+[ext_resource type="PackedScene" uid="uid://2n8o8r3l8jif" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Light_Wide.gltf" id="4_1q7d6"]
+
+[node name="PropLightWide" instance=ExtResource("4_1q7d6")]
+script = ExtResource("1_rn5fq")
+
+[node name="Prop_Light_Wide" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ag0vl")
+surface_material_override/1 = ExtResource("3_ifir5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Prop_Light_Wide" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.285033, -0.15246, 0)
+light_indirect_energy = 5.0
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 15.0

@@ -66,7 +66,7 @@ handle_position = Vector3(0.0032057166, -0.268219, 0.0047022104)
 handle_rotation = Vector3(0.054258723, -1.6542816, 0.2634957)
 
 [node name="CollisionShape3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019079603, 0.3287109, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012550205, 0.31698376, -0.0008392446)
 
 [node name="Hammer" type="MeshInstance3D" parent="." index="2"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)

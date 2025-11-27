@@ -1,12 +1,12 @@
 extends Proposition
 
-@onready var rubber_duck: Node3D = $WoodenBucket/rubber_duck_toy
 var rubber_duck_float_sin: float
+@onready var rubber_duck: = $WoodenBucket/RubberDuck
 @onready var power_box: PowerBox = $PowerBox
-@onready var hydrogen_gas: GPUParticles3D = $Prop_Cable_3/HydrogenGas
-@onready var oxygen_gas: GPUParticles3D = $Prop_Cable_3/OxygenGas
-@onready var cup: Cup = $Prop_Cable_32/Cup
-@onready var wooden_bucket: StaticBody3D = $WoodenBucket
+@onready var hydrogen_gas: GPUParticles3D = $PropCable3/HydrogenGas
+@onready var oxygen_gas: GPUParticles3D = $PropCable3/OxygenGas
+@onready var wooden_bucket: = $WoodenBucket
+@onready var cup: Cup = $Cup
 
 const H_2 = preload("res://objects/matters/H_2.tres")
 const H_2O = preload("res://objects/matters/H_2O.tres")

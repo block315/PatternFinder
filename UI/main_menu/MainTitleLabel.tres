@@ -1,7 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dwoqovdap52e3"]
 
-[sub_resource type="SystemFont" id="SystemFont_g3l0i"]
+[ext_resource type="FontFile" uid="uid://bb4tollw1fm8w" path="res://arts/font/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="1_lqw6l"]
 
 [resource]
-font = SubResource("SystemFont_g3l0i")
-font_size = 100
+font = ExtResource("1_lqw6l")
+font_size = 200
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)

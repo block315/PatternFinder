@@ -9,7 +9,7 @@ var passenger
 @onready var path_follow_3d: PathFollow3D = $"../../Building/Path3D/PathFollow3D"
 var _player:Player
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	global_position = path_follow_3d.global_position + Vector3(0,0.5,0)
 	global_rotation = path_follow_3d.global_rotation
 	var input_dir = Input.get_axis("ui_up", "ui_down")
@@ -35,7 +35,7 @@ func _on_radar_area_3d_area_entered(area: Area3D) -> void:
 			passenger.show()
 			passenger.camera_3d.current = true
 			PerodicWarfare.train_position += 2
-			PerodicWarfare.change_room(destination, _player.position, _player.rotation, _player.camera_3d.rotation)
+			PerodicWarfare.change_room(destination)
 			queue_free()
 
 func _unhandled_input(event) -> void:

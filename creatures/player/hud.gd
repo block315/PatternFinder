@@ -29,6 +29,8 @@ func _process(_delta: float) -> void:
 		elif Input.is_key_pressed(KEY_X):
 			switch.emit(false)
 			hide_options()
+		elif Input.is_action_pressed("ui_cancel"):
+			hide_options()
 
 func display_options(content:String=""):
 	computer_label.text = content

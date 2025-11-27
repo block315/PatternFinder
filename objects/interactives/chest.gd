@@ -19,9 +19,7 @@ func _on_box_looking_area_body_entered(body: Node3D) -> void:
 		if body.hand.current_equipment is Collector and body.hand.current_equipment.collection != null:
 			if body.hand.current_equipment.collection.name.to_lower() == $"../..".name.left(-4).to_lower():
 				found.emit()
-				body.hand.current_equipment.queue_free()
-			else:
-				body.hand.current_equipment.collection = null
+			body.hand.current_equipment.collection = null
 
 func _on_box_looking_area_body_exited(body: Node3D) -> void:
 	if body is CharacterBody3D and open:

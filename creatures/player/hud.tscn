@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bdpojnur2whta"]
+[gd_scene load_steps=29 format=3 uid="uid://bdpojnur2whta"]
 
 [ext_resource type="Script" uid="uid://dy0bjfgsx2dbn" path="res://creatures/player/hud.gd" id="1_n75y2"]
 [ext_resource type="Texture2D" uid="uid://bldkwxl1ioomk" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/Colored/genericItem_color_102.png" id="2_jfipn"]
@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://fn0ydayj1kor" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0090.png" id="19_px2jx"]
 [ext_resource type="Texture2D" uid="uid://c2nnks8ba80e5" path="res://arts/2D/pictures/kenney.nl/kenney_emotes-pack/PNG/Vector/Style 8/emote_cross.png" id="20_212ep"]
 [ext_resource type="Texture2D" uid="uid://c63wvuyuq5mhk" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0133.png" id="21_ibfhx"]
+[ext_resource type="Texture2D" uid="uid://bybmpfmyfhoq8" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0017.png" id="22_ibfhx"]
+[ext_resource type="Texture2D" uid="uid://dpnlvoh0wihsp" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0678.png" id="23_f8bq3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_px2jx"]
 font = ExtResource("17_212ep")
@@ -35,6 +37,10 @@ region = Rect2(6, 6, 20, 20)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibfhx"]
 atlas = ExtResource("20_212ep")
 region = Rect2(6, 6, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kraf3"]
+atlas = ExtResource("23_f8bq3")
+margin = Rect2(2, 2, 0, 0)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_n75y2")
@@ -314,6 +320,23 @@ texture = SubResource("AtlasTexture_ibfhx")
 expand_mode = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("22_ibfhx")
+expand_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = SubResource("AtlasTexture_kraf3")
+expand_mode = 3
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0

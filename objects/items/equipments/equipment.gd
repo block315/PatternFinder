@@ -16,6 +16,8 @@ class_name Equipment
 				-1:
 					freeze = false
 					pickup_area_3d.monitoring = false
+@onready var drop_audio_stream_player_3d: AudioStreamPlayer3D = $DropAudioStreamPlayer3D
+
 
 @export var handle_position:Vector3 = Vector3.ZERO
 @export var handle_rotation:Vector3 = Vector3.ZERO ## in Radian
@@ -32,7 +34,7 @@ func pick_up(player):
 
 func drop():
 	var _position = global_position
-	reparent(get_node("../../../.."), true)
+	reparent(PerodicWarfare.current_room, true)
 	show()
 	state = -1
 	global_position = _position

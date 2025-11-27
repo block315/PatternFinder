@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://7rn53hful5ec"]
+
+[ext_resource type="PackedScene" uid="uid://bameaj17ori10" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_Simple2_Straight.gltf" id="1_tovjx"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://materials/T_Trim_02.tres" id="2_bqeyo"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ujk0g"]
+data = PackedVector3Array(-2, 1, 2, -2, 0, -2, -2, 0, 2, -2, 1, 2, -2, 1, -2, -2, 0, -2)
+
+[node name="ShortWall_Simple2_Straight" instance=ExtResource("1_tovjx")]
+
+[node name="ShortWall_Simple2_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_bqeyo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ShortWall_Simple2_Straight" index="0"]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShortWall_Simple2_Straight/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_ujk0g")

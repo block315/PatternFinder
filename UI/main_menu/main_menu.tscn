@@ -1,96 +1,407 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7t54asikdoa5"]
+[gd_scene load_steps=31 format=3 uid="uid://c7t54asikdoa5"]
 
 [ext_resource type="Script" uid="uid://cwoin4co3juul" path="res://UI/main_menu/main_menu.gd" id="1_tk8dj"]
-[ext_resource type="LabelSettings" uid="uid://dwoqovdap52e3" path="res://UI/main_menu/MainTitleLabel.tres" id="2_d8nwk"]
-[ext_resource type="Material" uid="uid://logqbogylr5y" path="res://UI/main_menu/TitleLabelMaterial.tres" id="2_lib8g"]
-[ext_resource type="Theme" uid="uid://3p335jre7637" path="res://UI/main_menu/AtomiUITheme.tres" id="3_d8nwk"]
-[ext_resource type="Material" uid="uid://biwucvgkq5623" path="res://UI/main_menu/ButtonLabelMaterial.tres" id="4_rxajg"]
-[ext_resource type="AudioStream" uid="uid://bj304bktkpmdv" path="res://arts/audio/sounds/kenney_ui-audio/Audio/click2.ogg" id="5_f40uw"]
+[ext_resource type="AudioStream" uid="uid://bj304bktkpmdv" path="res://arts/audio/sounds/kenney.nl/kenney_ui-audio/Audio/click2.ogg" id="5_f40uw"]
+[ext_resource type="FontFile" uid="uid://bb4tollw1fm8w" path="res://arts/font/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="5_usm5j"]
+[ext_resource type="Script" uid="uid://dhobtrbecfjtq" path="res://UI/main_menu/letter.gd" id="6_lib8g"]
+[ext_resource type="Script" uid="uid://08gb0cxhvh84" path="res://UI/main_menu/button3d.gd" id="7_rxajg"]
 
-[node name="MainMenu" type="ColorRect"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qtoa1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_usm5j"]
+sky_material = SubResource("ProceduralSkyMaterial_qtoa1")
+
+[sub_resource type="Environment" id="Environment_lib8g"]
+background_mode = 2
+sky = SubResource("Sky_usm5j")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usm5j"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qtoa1"]
+material = SubResource("StandardMaterial3D_usm5j")
+size = Vector2(1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1dcnu"]
+size = Vector3(1, 0.05, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_qtoa1"]
+text = "Pattern Finder"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxajg"]
+size = Vector3(0.414917, 0.58813477, 0.05267334)
+
+[sub_resource type="TextMesh" id="TextMesh_usm5j"]
+text = "P"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_lib8g"]
+text = "a"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_rxajg"]
+text = "t"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xi1j"]
+size = Vector3(0.33755493, 0.58813477, 0.05267334)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1p4x4"]
+size = Vector3(0.33755493, 0.58813477, 0.05267334)
+
+[sub_resource type="TextMesh" id="TextMesh_1dcnu"]
+text = "e"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_0xi1j"]
+text = "r"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_1p4x4"]
+text = "n
+"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_x0650"]
+text = "F"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_vdx01"]
+text = "i"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0650"]
+size = Vector3(0.08042908, 0.47460938, 0.05267334)
+
+[sub_resource type="TextMesh" id="TextMesh_1pdvm"]
+text = "d"
+font = ExtResource("5_usm5j")
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_5771y"]
+text = "START"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lib8g"]
+albedo_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rxajg"]
+material = SubResource("StandardMaterial3D_lib8g")
+size = Vector3(1.6, 0.3, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lib8g"]
+size = Vector3(1.6, 0.4, 0.1)
+
+[sub_resource type="TextMesh" id="TextMesh_rtlbh"]
+text = "Exit"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[node name="MainMenu" type="Node3D"]
 script = ExtResource("1_tk8dj")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lib8g")
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TitleLabel" type="Label" parent="HBoxContainer"]
-unique_name_in_owner = true
-material = ExtResource("2_lib8g")
-layout_mode = 2
-text = "Pattern Finder"
-label_settings = ExtResource("2_d8nwk")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ButtonContainer" type="HBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.7
-
-[node name="StartButton" type="Button" parent="HBoxContainer/ButtonContainer"]
-unique_name_in_owner = true
-material = ExtResource("4_rxajg")
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("3_d8nwk")
-text = "Start"
-flat = true
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.7
-
-[node name="ExitButton" type="Button" parent="HBoxContainer/ButtonContainer"]
-unique_name_in_owner = true
-material = ExtResource("4_rxajg")
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("3_d8nwk")
-text = "Exit"
-
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.7
-
-[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
 
 [node name="UIAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_f40uw")
+volume_db = -10.0
 
-[node name="AtomicUITimer" type="Timer" parent="."]
+[node name="UITimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="button_down" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_button_down"]
-[connection signal="mouse_entered" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/ButtonContainer/StartButton" to="." method="_on_start_button_mouse_exited"]
-[connection signal="mouse_entered" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
-[connection signal="mouse_exited" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_mouse_exited"]
-[connection signal="pressed" from="HBoxContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="timeout" from="AtomicUITimer" to="." method="_on_atomic_ui_timer_timeout"]
+[node name="BackScreen" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_qtoa1")
+skeleton = NodePath("../Camera3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BackScreen"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackScreen/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0)
+shape = SubResource("BoxShape3D_1dcnu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3, 0)
+current = true
+
+[node name="Title" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.121, -0.816)
+transparency = 1.0
+cast_shadow = 0
+mesh = SubResource("TextMesh_qtoa1")
+
+[node name="P" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7229168, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-2.7229168, 0, 0)
+scatter_strength = 200
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/P"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="P" type="MeshInstance3D" parent="Title/P"]
+mesh = SubResource("TextMesh_usm5j")
+skeleton = NodePath("../../..")
+
+[node name="a" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2371116, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-2.2371116, 0, 0)
+scatter_strength = 200
+
+[node name="a" type="MeshInstance3D" parent="Title/a"]
+mesh = SubResource("TextMesh_lib8g")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="t" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7941716, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-1.7941716, 0, 0)
+scatter_strength = 200
+
+[node name="t" type="MeshInstance3D" parent="Title/t"]
+mesh = SubResource("TextMesh_rxajg")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/t"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04689026, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_0xi1j")
+
+[node name="t2" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3940961, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-1.3940961, 0, 0)
+scatter_strength = 200
+
+[node name="t2" type="MeshInstance3D" parent="Title/t2"]
+mesh = SubResource("TextMesh_rxajg")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/t2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_1p4x4")
+
+[node name="e" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9654441, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-0.9654441, 0, 0)
+scatter_strength = 200
+
+[node name="e" type="MeshInstance3D" parent="Title/e"]
+mesh = SubResource("TextMesh_1dcnu")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/e"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="r" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47963834, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-0.47963834, 0, 0)
+scatter_strength = 200
+
+[node name="r" type="MeshInstance3D" parent="Title/r"]
+mesh = SubResource("TextMesh_0xi1j")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/r"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="n" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0009765625, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(-0.0009765625, 0, 0)
+scatter_strength = 200
+
+[node name="n" type="MeshInstance3D" parent="Title/n"]
+mesh = SubResource("TextMesh_1p4x4")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/n"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="F" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6348571, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(0.6348571, 0, 0)
+scatter_strength = 200
+
+[node name="F" type="MeshInstance3D" parent="Title/F"]
+mesh = SubResource("TextMesh_x0650")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/F"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="i" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96348995, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(0.96348995, 0, 0)
+scatter_strength = 200
+
+[node name="i" type="MeshInstance3D" parent="Title/i"]
+mesh = SubResource("TextMesh_vdx01")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/i"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040626526, -0.08081055, -0.0010681227)
+shape = SubResource("BoxShape3D_x0650")
+
+[node name="n2" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2778354, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(1.2778354, 0, 0)
+scatter_strength = 200
+
+[node name="n2" type="MeshInstance3D" parent="Title/n2"]
+mesh = SubResource("TextMesh_1p4x4")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/n2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="d" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7707853, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(1.7707853, 0, 0)
+scatter_strength = 200
+
+[node name="d" type="MeshInstance3D" parent="Title/d"]
+mesh = SubResource("TextMesh_1pdvm")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/d"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="e2" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.242302, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(2.242302, 0, 0)
+scatter_strength = 200
+
+[node name="e2" type="MeshInstance3D" parent="Title/e2"]
+mesh = SubResource("TextMesh_1dcnu")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/e2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="r2" type="RigidBody3D" parent="Title"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7209637, 0, 0)
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("6_lib8g")
+position_in_word = Vector3(2.7209637, 0, 0)
+scatter_strength = 200
+
+[node name="r2" type="MeshInstance3D" parent="Title/r2"]
+mesh = SubResource("TextMesh_0xi1j")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Title/r2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
+shape = SubResource("BoxShape3D_rxajg")
+
+[node name="StartButton" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2, 0.1, 1)
+script = ExtResource("7_rxajg")
+
+[node name="StartButtonMesh" type="MeshInstance3D" parent="StartButton"]
+mesh = SubResource("TextMesh_5771y")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StartButton/StartButtonMesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.009674951)
+mesh = SubResource("BoxMesh_rxajg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartButton"]
+shape = SubResource("BoxShape3D_lib8g")
+
+[node name="ExitButton" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.1, 1)
+script = ExtResource("7_rxajg")
+
+[node name="ExitButtonMesh" type="MeshInstance3D" parent="ExitButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_rtlbh")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ExitButton/ExitButtonMesh"]
+mesh = SubResource("BoxMesh_rxajg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_lib8g")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)
+light_energy = 2.0
+shadow_enabled = true
+spot_angle = 15.0
+
+[node name="RayCast3D" type="RayCast3D" parent="SpotLight3D"]
+target_position = Vector3(0, 0, -10)
+
+[node name="3DCursor" type="Marker3D" parent="."]
+
+[connection signal="clicked" from="StartButton" to="." method="_on_start_button_clicked"]
+[connection signal="clicked" from="ExitButton" to="." method="_on_exit_button_clicked"]

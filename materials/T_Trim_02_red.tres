@@ -1,0 +1,14 @@
+[gd_resource type="ORMMaterial3D" load_steps=5 format=3 uid="uid://dhp7fbywxhuxt"]
+
+[ext_resource type="Texture2D" uid="uid://bdbn81340skmk" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_BaseColor_Red.png" id="1_s4oe6"]
+[ext_resource type="Texture2D" uid="uid://cslkx810458f1" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_DetailMask.png" id="2_0x212"]
+[ext_resource type="Texture2D" uid="uid://bfj850wpbewpv" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_Normal.png" id="3_decek"]
+[ext_resource type="Texture2D" uid="uid://cjfe7m0n7f5kk" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/Textures/T_Trim_02_ORM.png" id="4_jdyj0"]
+
+[resource]
+albedo_texture = ExtResource("1_s4oe6")
+orm_texture = ExtResource("4_jdyj0")
+normal_enabled = true
+normal_texture = ExtResource("3_decek")
+detail_mask = ExtResource("2_0x212")
+detail_blend_mode = 3

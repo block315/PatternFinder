@@ -11,7 +11,6 @@ class_name Player
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var electron_shooter: Node3D = $Camera3D/Electron_shooter
 @onready var gaze: RayCast3D = $Camera3D/Gaze
-@onready var foot_step_audio_stream_player_3d: AudioStreamPlayer3D = $FootStepAudioStreamPlayer3D
 @onready var hud: HUD = $Camera3D/HUD
 
 func _ready() -> void:
@@ -36,17 +35,12 @@ func _physics_process(delta: float) -> void:
 				stamina += .01
 	else:
 		velocity += get_gravity() * delta
-		foot_step_audio_stream_player_3d.stop()
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and visible:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
-		if !foot_step_audio_stream_player_3d.playing and is_on_floor():
-			foot_step_audio_stream_player_3d.play()
 	else:
-		if foot_step_audio_stream_player_3d.playing:
-			foot_step_audio_stream_player_3d.stop()
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 		stamina += .02
@@ -60,5 +54,5 @@ func _unhandled_input(event) -> void:
 		rotate_y(-event.relative.x * 0.005)
 		camera_3d.rotate_x(-event.relative.y * 0.005)
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, -PI/4, PI/4)
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("quit_game"):
 		get_tree().quit()

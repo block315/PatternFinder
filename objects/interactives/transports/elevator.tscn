@@ -1,28 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxphiovvot3c1"]
+[gd_scene load_steps=19 format=3 uid="uid://dxphiovvot3c1"]
 
-[ext_resource type="PackedScene" uid="uid://up66vgigdeaq" path="res://objects/meshes/platforms/platform_3_plates.tscn" id="1_5ytdf"]
 [ext_resource type="Script" uid="uid://be5818g7d1o4s" path="res://objects/interactives/transports/elevator.gd" id="1_f7iu7"]
-[ext_resource type="PackedScene" uid="uid://cfr1kmdgtdjr7" path="res://objects/meshes/platforms/platform_simple_2.tscn" id="2_ux0k1"]
-[ext_resource type="PackedScene" uid="uid://cic6vsb3qllfp" path="res://objects/meshes/platforms/door_frame_square_tall.tscn" id="2_yv0t1"]
-[ext_resource type="PackedScene" uid="uid://dmffwtyqsgohd" path="res://objects/meshes/walls/short_wall_metal_2_straight.tscn" id="4_ux0k1"]
-[ext_resource type="PackedScene" uid="uid://cr6ejf3s13cf" path="res://objects/meshes/platforms/door_simple.tscn" id="5_yv0t1"]
-[ext_resource type="PackedScene" uid="uid://bjqavrcvtijh" path="res://objects/meshes/columns/column_pipes.tscn" id="9_3bk2l"]
-[ext_resource type="PackedScene" uid="uid://sohnsoah75ru" path="res://objects/meshes/props/prop_light_small.tscn" id="9_nh2gb"]
+[ext_resource type="PackedScene" uid="uid://dvn6ovnrhwiqh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_SquareTall.gltf" id="2_yv0t1"]
+[ext_resource type="PackedScene" uid="uid://cbyali05dycyp" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_Triangles_Straight.gltf" id="3_cagac"]
+[ext_resource type="PackedScene" uid="uid://34actix14eqq" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight.gltf" id="5_nh2gb"]
+[ext_resource type="PackedScene" uid="uid://6ds2baqk8bcb" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Corner_Square_Inner.gltf" id="6_3bk2l"]
+[ext_resource type="PackedScene" uid="uid://lcobwvn0do4n" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Simple.gltf" id="6_cagac"]
+[ext_resource type="PackedScene" uid="uid://bameaj17ori10" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/ShortWall_Simple2_Straight.gltf" id="7_3bk2l"]
+[ext_resource type="AudioStream" uid="uid://y03d76e7ejjy" path="res://arts/audio/sounds/kenney.nl/kenney_sci-fi-sounds/Audio/spaceEngineLow_002.ogg" id="7_ux0k1"]
+[ext_resource type="PackedScene" uid="uid://dchowmpegqap7" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_X.gltf" id="8_wxdkt"]
+[ext_resource type="PackedScene" uid="uid://dcdeljpadacex" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_DarkPlates.gltf" id="9_06mtl"]
+[ext_resource type="PackedScene" uid="uid://sohnsoah75ru" path="res://meshes/props/prop_light_small.tscn" id="9_nh2gb"]
 [ext_resource type="PackedScene" uid="uid://tpwsmncqllm3" path="res://objects/interactives/computer.tscn" id="9_wxdkt"]
+[ext_resource type="PackedScene" uid="uid://tx4fexdihpop" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_3Plates.gltf" id="10_u3rjs"]
 
 [sub_resource type="Animation" id="Animation_f7iu7"]
 resource_name = "DoorOpen"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Door_Simple:position")
+tracks/0/path = NodePath("ElevatorDoor:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(2, 2, -2), Vector3(2, -4.1, -2)]
+"values": [Vector3(1.5, 0, -2), Vector3(1.5, -4.5, -2)]
 }
 
 [sub_resource type="Animation" id="Animation_nh2gb"]
@@ -30,14 +34,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Door_Simple:position")
+tracks/0/path = NodePath("ElevatorDoor:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(2, 2, -2)]
+"values": [Vector3(1.5, -4.5, -2)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3bk2l"]
@@ -50,204 +54,133 @@ _data = {
 size = Vector3(5, 3, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3bk2l"]
-size = Vector3(9, 7, 8)
+size = Vector3(5, 7, 8)
 
 [node name="Elevator" type="Node3D"]
 script = ExtResource("1_f7iu7")
 
-[node name="Door_Simple" parent="." instance=ExtResource("5_yv0t1")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 2, -2)
+[node name="ElevatorDoor" parent="." instance=ExtResource("6_cagac")]
+transform = Transform3D(1.5, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.5, -4.5, -2)
 
-[node name="Door_Simple2" parent="Door_Simple" instance=ExtResource("5_yv0t1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -7.15256e-07, 0)
-
-[node name="Door_Simple4" parent="Door_Simple" instance=ExtResource("5_yv0t1")]
-transform = Transform3D(-1, 8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 3.82137e-15, 8.74228e-08, -3.82137e-15, -1, 2, -9.53674e-07, 0)
-
-[node name="Door_Simple5" parent="Door_Simple" instance=ExtResource("5_yv0t1")]
-transform = Transform3D(-1, 8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 3.82137e-15, 8.74228e-08, -3.82137e-15, -1, 0, -1.19209e-06, 0)
-
-[node name="Door_Simple6" parent="Door_Simple" instance=ExtResource("5_yv0t1")]
-transform = Transform3D(-1, 8.74228e-08, -8.74228e-08, 8.74228e-08, 1, 3.82137e-15, 8.74228e-08, -3.82137e-15, -1, -2, -1.19209e-06, 0)
-
-[node name="Door_Simple3" parent="Door_Simple" instance=ExtResource("5_yv0t1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4.76837e-07, 0)
+[node name="DoorSimple2" parent="ElevatorDoor" instance=ExtResource("6_cagac")]
+transform = Transform3D(-1, 0, -1.1073026e-07, 0, 1, 0, 2.0590338e-07, 0, -1, -2.1087213, 0, 0.065656304)
 
 [node name="Structure" type="Node3D" parent="."]
 
-[node name="Platform_3Plates2" parent="Structure" instance=ExtResource("1_5ytdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+[node name="Interior" type="Node3D" parent="Structure"]
 
-[node name="Platform_3Plates3" parent="Structure" instance=ExtResource("1_5ytdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="Platform_3Plates5" parent="Structure" instance=ExtResource("1_5ytdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-
-[node name="Platform_Simple2" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 8.74228e-08, -1, 3.82137e-15, 1, 8.74228e-08, 4.37114e-08, 0, 5, 0)
-
-[node name="Platform_Simple8" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, -1.7484558e-07, 1, -7.642742e-15, -1, -1.7484558e-07, -4.37114e-08, 0, 6, 0)
-
-[node name="Platform_Simple4" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 8.74228e-08, -1, 3.82137e-15, 1, 8.74228e-08, 4.37114e-08, -4, 5, 0)
-
-[node name="Platform_Simple6" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, -2.1316282e-14, 1, 1.6940659e-21, -1, -2.1316282e-14, -4.37114e-08, -4, 6, 0)
-
-[node name="Platform_Simple3" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 8.74228e-08, -1, 3.82137e-15, 1, 8.74228e-08, 4.37114e-08, 0, 5, -4)
-
-[node name="Platform_Simple9" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, -2.1316282e-14, 1, 1.6940659e-21, -1, -2.1316282e-14, -4.37114e-08, 0, 6, -4)
-
-[node name="Platform_Simple5" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 8.74228e-08, -1, 3.82137e-15, 1, 8.74228e-08, 4.37114e-08, -4, 5, -4)
-
-[node name="Platform_Simple7" parent="Structure/Platform_3Plates5" instance=ExtResource("2_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, -2.1316282e-14, 1, 1.6940659e-21, -1, -2.1316282e-14, -4.37114e-08, -4, 6, -4)
-
-[node name="Platform_3Plates6" parent="Structure" instance=ExtResource("1_5ytdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
-
-[node name="Door_Frame_SquareTall" parent="Structure" instance=ExtResource("2_yv0t1")]
+[node name="DoorFrameSquareTall" parent="Structure/Interior" instance=ExtResource("2_yv0t1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="ShortWall_Metal2_Straight2" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+[node name="ShortWallTrianglesStraight" parent="Structure/Interior" instance=ExtResource("3_cagac")]
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight2" instance=ExtResource("4_ux0k1")]
+[node name="ShortWallTrianglesStraight2" parent="Structure/Interior" instance=ExtResource("3_cagac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="ShortWallTrianglesStraight3" parent="Structure/Interior" instance=ExtResource("3_cagac")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 4)
+
+[node name="ShortWallTrianglesStraight4" parent="Structure/Interior" instance=ExtResource("3_cagac")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="ShortWallTrianglesStraight5" parent="Structure/Interior" instance=ExtResource("3_cagac")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 4)
+
+[node name="TopCablesStraight" parent="Structure/Interior" instance=ExtResource("5_nh2gb")]
+
+[node name="TopCablesStraight2" parent="Structure/Interior" instance=ExtResource("5_nh2gb")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="TopCablesStraight3" parent="Structure/Interior" instance=ExtResource("5_nh2gb")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 4)
+
+[node name="TopCables_Corner_Square_Inner2" parent="Structure/Interior" instance=ExtResource("6_3bk2l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, 2)
+
+[node name="ShortWallSimple2Straight" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="ShortWallSimple2Straight2" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight2" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="ShortWallSimple2Straight3" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
 
-[node name="ShortWall_Metal2_Straight6" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+[node name="ShortWallSimple2Straight4" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight6" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="ShortWallSimple2Straight5" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1, 4)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight6" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="ShortWallSimple2Straight6" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, 4)
+[node name="ShortWallSimple2Straight7" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight3" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="ShortWallSimple2Straight8" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2, 4)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight3" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="ShortWallSimple2Straight9" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, 0)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 4)
+[node name="ShortWallSimple2Straight10" parent="Structure/Interior" instance=ExtResource("7_3bk2l")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2, 0)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight4" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="PlatformX" parent="Structure/Interior" instance=ExtResource("8_wxdkt")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 0)
 
-[node name="ShortWall_Metal2_Straight5" parent="Structure/ShortWall_Metal2_Straight4" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="PlatformX2" parent="Structure/Interior" instance=ExtResource("8_wxdkt")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 4)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight4" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="PlatformDarkPlates" parent="Structure/Interior" instance=ExtResource("9_06mtl")]
 
-[node name="ShortWall_Metal2_Straight5" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 4)
+[node name="PlatformDarkPlates2" parent="Structure/Interior" instance=ExtResource("9_06mtl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight5" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Exterior" type="Node3D" parent="Structure"]
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight5" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="Platform_3Plates2" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 
-[node name="ShortWall_Metal2_Straight10" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 1.7484558e-07, 0, 1, 0, -1.7484558e-07, 0, 1, 6, 0, 4)
+[node name="Platform_3Plates3" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight10" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Platform_3Plates14" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, -0.9999998, 4)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight10" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="Platform_3Plates15" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, -1.0000001, 0)
 
-[node name="ShortWall_Metal2_Straight11" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 1.7484558e-07, 0, 1, 0, -1.7484558e-07, 0, 1, 6, 0, 0)
+[node name="Platform_3Plates12" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 5, 6)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight11" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Platform_3Plates13" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 6)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight11" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="Platform_3Plates4" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 2, 1, 4)
 
-[node name="ShortWall_Metal2_Straight12" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1.3113419e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113419e-07, 2, 0, 8)
+[node name="Platform_3Plates7" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 2, 5, 4)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight12" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Platform_3Plates5" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 2, 1, 0)
 
-[node name="ShortWall_Metal2_Straight13" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1.3113419e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113419e-07, -2, 0, 8)
+[node name="Platform_3Plates6" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 2, 5, 0)
 
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight13" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="Platform_3Plates8" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.0000002, 5, 4)
 
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight13" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+[node name="Platform_3Plates9" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.9999999, 1, 4)
 
-[node name="ShortWall_Metal2_Straight5" parent="Structure/ShortWall_Metal2_Straight13" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 4, -4)
+[node name="Platform_3Plates10" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.0000002, 5, 0)
 
-[node name="ShortWall_Metal2_Straight14" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 4)
-
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight14" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="ShortWall_Metal2_Straight15" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0, 0)
-
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight15" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight15" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-
-[node name="ShortWall_Metal2_Straight5" parent="Structure/ShortWall_Metal2_Straight15" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 4, -4)
-
-[node name="ShortWall_Metal2_Straight7" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 0)
-
-[node name="ShortWall_Metal2_Straight3" parent="Structure/ShortWall_Metal2_Straight7" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="ShortWall_Metal2_Straight4" parent="Structure/ShortWall_Metal2_Straight7" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-
-[node name="ShortWall_Metal2_Straight8" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-5.7320575e-15, -1, 4.371139e-08, 1.3113419e-07, -4.371139e-08, -1, 1, 0, 1.3113419e-07, 4, 3, 0)
-
-[node name="ShortWall_Metal2_Straight16" parent="Structure/ShortWall_Metal2_Straight8" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3113419e-07, 0, 0.9999999)
-
-[node name="ShortWall_Metal2_Straight9" parent="Structure" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(-5.7320575e-15, -1, 4.371139e-08, 1.3113419e-07, -4.371139e-08, -1, 1, 0, 1.3113419e-07, -2, 3, 0)
-
-[node name="ShortWall_Metal2_Straight16" parent="Structure/ShortWall_Metal2_Straight9" instance=ExtResource("4_ux0k1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3113419e-07, 0, 0.9999999)
-
-[node name="Column_Pipes" parent="Structure" instance=ExtResource("9_3bk2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.5)
-
-[node name="Column_Pipes3" parent="Structure" instance=ExtResource("9_3bk2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 5.5)
-
-[node name="Column_Pipes2" parent="Structure" instance=ExtResource("9_3bk2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -1.5)
-
-[node name="Column_Pipes4" parent="Structure" instance=ExtResource("9_3bk2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 5.5)
+[node name="Platform_3Plates11" parent="Structure/Exterior" instance=ExtResource("10_u3rjs")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.9999999, 1, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -256,7 +189,7 @@ libraries = {
 
 [node name="Prop_Computer" parent="." instance=ExtResource("9_wxdkt")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 5)
-content = "⬆️"
+content = "⬆️⭕️⬇️❌"
 
 [node name="DoorSensorArea3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
@@ -284,6 +217,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2.5)
 shape = SubResource("BoxShape3D_3bk2l")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -2)
+stream = ExtResource("7_ux0k1")
 
 [connection signal="body_entered" from="DoorSensorArea3D" to="." method="_on_door_sensor_area_3d_body_entered"]
 [connection signal="body_entered" from="ElevatorArea3D" to="." method="_on_elevator_area_3d_body_entered"]

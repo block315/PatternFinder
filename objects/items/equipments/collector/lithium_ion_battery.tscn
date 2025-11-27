@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://n6kwoj0ic4km"]
+
+[ext_resource type="PackedScene" uid="uid://bu362ofw6uec7" path="res://objects/items/equipments/collector/collector.tscn" id="1_ksp1j"]
+[ext_resource type="PackedScene" uid="uid://ph1527hp68uo" path="res://arts/3D/models/original/LithiumIonBattery.glb" id="2_0p0iy"]
+
+[node name="LithiumIonBattery" instance=ExtResource("1_ksp1j")]
+handle_position = Vector3(-0.0011807084, 0.088974, -0.07942152)
+handle_rotation = Vector3(0.0017315886, 1.5833937, 0.7558572)
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008613594, 0.00044253469, 0)
+
+[node name="LithiumIonBattery" parent="." index="2" instance=ExtResource("2_0p0iy")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)

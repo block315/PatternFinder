@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://b21uoed7p4xom"]
+
+[ext_resource type="PackedScene" uid="uid://dsb32t3t83sb2" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Straight.gltf" id="1_r4iwj"]
+[ext_resource type="Script" uid="uid://betjb5v3ws5cy" path="res://meshes/walls/wall_with_symbol.gd" id="2_525dn"]
+[ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://materials/T_Trim_02.tres" id="2_ty5hs"]
+[ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://materials/T_Trim_01.tres" id="3_3ef7n"]
+[ext_resource type="Material" uid="uid://dh002qmible1f" path="res://materials/T_Decals.tres" id="4_f1mai"]
+
+[node name="WallBand_Straight" instance=ExtResource("1_r4iwj")]
+script = ExtResource("2_525dn")
+
+[node name="WallBand_Straight" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ty5hs")
+surface_material_override/1 = ExtResource("3_3ef7n")
+surface_material_override/2 = ExtResource("4_f1mai")

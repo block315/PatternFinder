@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://bww5j8qok75vj"]
 
-[ext_resource type="PackedScene" uid="uid://be58evvrkmfvw" path="res://objects/meshes/platforms/platform_metal_2.tscn" id="1_dbsjo"]
-[ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://objects/meshes/walls/wall_astra_straight.tscn" id="2_ujoix"]
-[ext_resource type="PackedScene" uid="uid://v6xhxglfxwyr" path="res://objects/meshes/walls/wall_astra_straight_flat_window.tscn" id="3_1nfg6"]
-[ext_resource type="PackedScene" uid="uid://ucok6obv5ji4" path="res://objects/meshes/walls/top_astra_straight.tscn" id="4_17283"]
-[ext_resource type="PackedScene" uid="uid://bvohxhr0qb1qy" path="res://objects/meshes/platforms/platform_metal_2_curve.tscn" id="5_5fup1"]
-[ext_resource type="PackedScene" uid="uid://cqd1tkd1be7p4" path="res://objects/meshes/walls/wall_astra_corner_round_inner.tscn" id="6_6oqdt"]
-[ext_resource type="PackedScene" uid="uid://bvvh7m21ucikx" path="res://objects/meshes/walls/top_astra_corner_round_inner.tscn" id="7_os1c7"]
-[ext_resource type="PackedScene" uid="uid://day4oe50timgx" path="res://objects/meshes/platforms/platform_dark_plates.tscn" id="8_rayer"]
-[ext_resource type="PackedScene" uid="uid://065cdmbgsehk" path="res://objects/meshes/platforms/platform_dark_plates_curves.tscn" id="9_rgaul"]
+[ext_resource type="PackedScene" path="res://objects/meshes/platforms/platform_metal_2.tscn" id="1_dbsjo"]
+[ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://meshes/walls/wall_astra_straight.tscn" id="2_ujoix"]
+[ext_resource type="PackedScene" uid="uid://v6xhxglfxwyr" path="res://meshes/walls/wall_astra_straight_flat_window.tscn" id="3_1nfg6"]
+[ext_resource type="PackedScene" path="res://objects/meshes/walls/top_astra_straight.tscn" id="4_17283"]
+[ext_resource type="PackedScene" path="res://objects/meshes/platforms/platform_metal_2_curve.tscn" id="5_5fup1"]
+[ext_resource type="PackedScene" uid="uid://cqd1tkd1be7p4" path="res://meshes/walls/wall_astra_corner_round_inner.tscn" id="6_6oqdt"]
+[ext_resource type="PackedScene" uid="uid://bvvh7m21ucikx" path="res://meshes/walls/top_astra_corner_round_inner.tscn" id="7_os1c7"]
+[ext_resource type="PackedScene" path="res://objects/meshes/platforms/platform_dark_plates.tscn" id="8_rayer"]
+[ext_resource type="PackedScene" path="res://objects/meshes/platforms/platform_dark_plates_curves.tscn" id="9_rgaul"]
 
 [node name="TestRoom" type="Node3D"]
 

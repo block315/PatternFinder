@@ -5,7 +5,19 @@ Currently work in progress
 ## Install Addons on addons/ Folder and Put Assets on arts/ Folder
 ```
 addons/
-├── godot_ui_animations
+├── godot_material_footsteps
+│   ├── assets
+│   │   └── editor_icons
+│   ├── core
+│   ├── resources
+│   └── scripts
+│       └── material_detectors
+├── naejimer_3d_planet_generator
+│   ├── noises
+│   ├── scenes
+│   └── shaders
+├── obj_origin_tool
+│   └── images
 ├── proton_scatter
 │   ├── demos
 │   ├── icons
@@ -36,7 +48,7 @@ addons/
 │   │               ├── modifier_list_popup
 │   │               └── presets
 │   └── tests
-└── rope3d
+└── shaky_camera_3d
 arts/
 ├── 2D
 │   ├── UI
@@ -97,73 +109,83 @@ arts/
 │   │               ├── Red
 │   │               └── Yellow
 │   ├── pictures
-│   │   ├── Cavendish-walk
-│   │   ├── jeremy-perkins-uhjiu8FjnsQ-unsplash
-│   │   └── kenney.nl
-│   │       ├── kenney_emotes-pack
-│   │       │   ├── PNG
-│   │       │   │   ├── Pixel
-│   │       │   │   │   ├── Style 1
-│   │       │   │   │   ├── Style 2
-│   │       │   │   │   ├── Style 3
-│   │       │   │   │   ├── Style 4
-│   │       │   │   │   ├── Style 5
-│   │       │   │   │   ├── Style 6
-│   │       │   │   │   ├── Style 7
-│   │       │   │   │   └── Style 8
-│   │       │   │   └── Vector
-│   │       │   │       ├── Style 1
-│   │       │   │       ├── Style 2
-│   │       │   │       ├── Style 3
-│   │       │   │       ├── Style 4
-│   │       │   │       ├── Style 5
-│   │       │   │       ├── Style 6
-│   │       │   │       ├── Style 7
-│   │       │   │       └── Style 8
-│   │       │   ├── Spritesheets
-│   │       │   ├── Tilesheets
-│   │       │   └── Vector
-│   │       ├── kenney_generic-items
-│   │       │   ├── PNG
-│   │       │   │   ├── Colored
-│   │       │   │   └── White
-│   │       │   ├── Spritesheet
-│   │       │   └── Vector
-│   │       ├── kenney_particle-pack
-│   │       │   ├── PNG (Black background)
-│   │       │   │   └── Rotated
-│   │       │   ├── PNG (Transparent)
-│   │       │   │   └── Rotated
-│   │       │   └── Unity samples
-│   │       └── kenney_planets
-│   │           ├── Parts
-│   │           └── Planets
+│   │   ├── commons.wikimedia.org
+│   │   │   └── Cavendish-walk
+│   │   ├── kenney.nl
+│   │   │   ├── kenney_emotes-pack
+│   │   │   │   ├── PNG
+│   │   │   │   │   ├── Pixel
+│   │   │   │   │   │   ├── Style 1
+│   │   │   │   │   │   ├── Style 2
+│   │   │   │   │   │   ├── Style 3
+│   │   │   │   │   │   ├── Style 4
+│   │   │   │   │   │   ├── Style 5
+│   │   │   │   │   │   ├── Style 6
+│   │   │   │   │   │   ├── Style 7
+│   │   │   │   │   │   └── Style 8
+│   │   │   │   │   └── Vector
+│   │   │   │   │       ├── Style 1
+│   │   │   │   │       ├── Style 2
+│   │   │   │   │       ├── Style 3
+│   │   │   │   │       ├── Style 4
+│   │   │   │   │       ├── Style 5
+│   │   │   │   │       ├── Style 6
+│   │   │   │   │       ├── Style 7
+│   │   │   │   │       └── Style 8
+│   │   │   │   ├── Spritesheets
+│   │   │   │   ├── Tilesheets
+│   │   │   │   └── Vector
+│   │   │   ├── kenney_generic-items
+│   │   │   │   ├── PNG
+│   │   │   │   │   ├── Colored
+│   │   │   │   │   └── White
+│   │   │   │   ├── Spritesheet
+│   │   │   │   └── Vector
+│   │   │   └── kenney_particle-pack
+│   │   │       ├── PNG (Black background)
+│   │   │       │   └── Rotated
+│   │   │       ├── PNG (Transparent)
+│   │   │       │   └── Rotated
+│   │   │       └── Unity samples
+│   │   └── unsplash.com
+│   │       └── jeremy-perkins-uhjiu8FjnsQ-unsplash
 │   └── textures
 │       ├── 3dtextures.me
+│       │   ├── Metal_Painted_001_SD-20251011T165507Z-1-001
+│       │   │   └── Metal_Painted_001_SD
+│       │   ├── Metal_scratched_008_SD-20251011T165301Z-1-001
+│       │   │   └── Metal_scratched_008_SD
+│       │   ├── Plastic_001_SD-20251011T165158Z-1-001
+│       │   │   └── Plastic_001_SD
+│       │   ├── Plastic_004_SD-20251011T170549Z-1-001
+│       │   │   └── Plastic_004_SD
 │       │   └── Sci-fi_Metal_Walkway_001_SD-20250926T172603Z-1-001
 │       │       └── Sci-fi_Metal_Walkway_001_SD
-│       └── polyhaven
+│       └── polyhaven.com
 │           ├── fine_grained_wood_1k.gltf
 │           │   └── textures
 │           └── rusty_metal_sheet_1k.gltf
 │               └── textures
 ├── 3D
 │   ├── animations
-│   │   └── Universal Animation Library[Standard]
-│   │       └── Animation Library[Standard]
-│   │           ├── Godot
-│   │           ├── Unity
-│   │           └── Unreal Engine
+│   │   └── quaternius.com
+│   │       └── Universal Animation Library[Standard]
+│   │           └── Animation Library[Standard]
+│   │               ├── Godot
+│   │               ├── Unity
+│   │               └── Unreal Engine
 │   └── models
-│       ├── Sketchfab
-│       │   ├── 1903_wright_flyer
-│       │   ├── 1964.88_armor_for_man_and_horse
-│       │   ├── halite_crystals
-│       │   └── triceratops_horridus_marsh
-│       ├── ambientcg
+│       ├── ambientcg.com
 │       │   └── 3DLemon001_HQ-4K-PNG
-│       ├── blendswap
-│       │   └── 11-common-household-items
+│       ├── blendswap.com
+│       │   ├── 11-common-household-items
+│       │   ├── air-compressor
+│       │   │   └── textures
+│       │   ├── heater
+│       │   │   └── textures
+│       │   ├── oscilloscope
+│       │   │   └── textures
+│       │   └── simple-sci-fi-crates
 │       ├── itch.io
 │       │   ├── CityEnvPack1
 │       │   │   ├── AC_Unit_OutDoor
@@ -302,7 +324,17 @@ arts/
 │       │       │   └── textures
 │       │       └── GLTFrobot
 │       ├── kenney.nl
-│       │   └── kenney_food-kit
+│       │   ├── kenney_food-kit
+│       │   │   ├── Models
+│       │   │   │   ├── FBX format
+│       │   │   │   │   └── Textures
+│       │   │   │   ├── GLB format
+│       │   │   │   │   └── Textures
+│       │   │   │   ├── OBJ format
+│       │   │   │   │   └── Textures
+│       │   │   │   └── Textures
+│       │   │   └── Previews
+│       │   └── kenney_train-kit
 │       │       ├── Models
 │       │       │   ├── FBX format
 │       │       │   │   └── Textures
@@ -313,24 +345,22 @@ arts/
 │       │       │   └── Textures
 │       │       └── Previews
 │       ├── original
-│       ├── polyhaven
-│       │   ├── -KIxYNmS
+│       ├── polyhaven.com
+│       │   ├── barrel_03_2k.gltf
 │       │   │   └── textures
-│       │   ├── 7iHxTxSC
+│       │   ├── power_box_01_2k.gltf
 │       │   │   └── textures
-│       │   ├── 9J43rgZz
-│       │   │   └── textures
-│       │   ├── ZamdZxf7
-│       │   │   └── textures
-│       │   ├── eAsdW74t
+│       │   ├── rubber_duck_toy_2k.gltf
 │       │   │   └── textures
 │       │   ├── sand_rocks_small_01_2k.gltf
 │       │   │   └── textures
-│       │   ├── sledgehammer_01_2k.gltf
+│       │   ├── scandinavian_masonry_heater_2k.gltf
 │       │   │   └── textures
-│       │   └── ym-7Wa4Z
+│       │   ├── wicker_basket_01_2k.blend
+│       │   │   └── textures
+│       │   └── wooden_bucket_02_2k.gltf
 │       │       └── textures
-│       ├── quaternius
+│       ├── quaternius.com
 │       │   ├── Alien Animated - April 2019-20250908T163850Z-1-001
 │       │   │   └── Alien Animated - April 2019
 │       │   │       ├── Blends
@@ -438,26 +468,41 @@ arts/
 │       │               ├── Swat
 │       │               ├── Weapons
 │       │               └── Worker
-│       ├── sharetextures
+│       ├── sharetextures.com
 │       │   ├── 3D_lemon_1
 │       │   │   └── textures
 │       │   └── 3D_scales_1
 │       │       └── textures
-│       └── threedscans
+│       ├── sketchfab.com
+│       │   ├── 1903_wright_flyer
+│       │   ├── 1964.88_armor_for_man_and_horse
+│       │   ├── chimpanzee_skull
+│       │   ├── halite_crystals
+│       │   ├── lion_skull
+│       │   ├── penguin_skull
+│       │   └── raven_skull
+│       └── threedscans.com
 │           └── Napoleon.stl
 │               └── __MACOSX
-└── audio
-	├── musics
-	│   └── originals
-	│       └── hydrogen
-	├── recordings
-	└── sounds
-		├── kenney_digital-audio
-		│   └── Audio
-		├── kenney_rpg-audio
-		│   └── Audio
-		├── kenney_sci-fi-sounds
-		│   └── Audio
-		└── kenney_ui-audio
-			└── Audio
+├── audio
+│   ├── musics
+│   │   └── originals
+│   │       └── hydrogen
+│   ├── recordings
+│   └── sounds
+│       ├── freesound.org
+│       │   └── water
+│       └── kenney.nl
+│           ├── kenney_digital-audio
+│           │   └── Audio
+│           ├── kenney_rpg-audio
+│           │   └── Audio
+│           ├── kenney_sci-fi-sounds
+│           │   └── Audio
+│           └── kenney_ui-audio
+│               └── Audio
+└── font
+    ├── Noto_Color_Emoji
+    └── kenney_kenney-fonts
+        └── Fonts
 ```

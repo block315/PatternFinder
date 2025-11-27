@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="1_oh0yk"]
 [ext_resource type="PackedScene" uid="uid://cyx4h1ejcrebj" path="res://objects/interactives/balloon.tscn" id="2_0xs5f"]
-[ext_resource type="AudioStream" uid="uid://151mdyw087mi" path="res://arts/audio/musics/originals/hydrogen/4_Kicker.ogg" id="2_352rp"]
+[ext_resource type="PackedScene" uid="uid://comhnrgbx06ar" path="res://arts/3D/models/itch.io/IndustrialPack/Gas_Cylinder/Gas_Cylinder.fbx" id="4_e5ty3"]
 
 [sub_resource type="Animation" id="Animation_0xs5f"]
 resource_name = "Float"
@@ -28,8 +28,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_n0hhw")
 }
 
-[node name="AudioStreamPlayer" parent="." index="1"]
-stream = ExtResource("2_352rp")
+[node name="CollisionShape3D" parent="PlayerInterestArea3D" index="0"]
+shape = SubResource("BoxShape3D_352rp")
 
 [node name="Balloon" parent="." index="2" instance=ExtResource("2_0xs5f")]
 
@@ -39,5 +39,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
 [node name="Balloon3" parent="." index="4" instance=ExtResource("2_0xs5f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
-[node name="CollisionShape3D" parent="PlayerInterestArea3D" index="0"]
-shape = SubResource("BoxShape3D_352rp")
+[node name="GasCylinder" parent="." index="5" instance=ExtResource("4_e5ty3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, -0.35554063, 2)

@@ -120,7 +120,7 @@ shadow_mesh = SubResource("ArrayMesh_32mhi")
 height = 3.36426
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yq3ap"]
-radius = 1.0
+radius = 1.02
 
 [node name="Balloon" type="RigidBody3D"]
 axis_lock_linear_x = true
