@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cm3q4o2behm28"]
+[gd_scene load_steps=10 format=4 uid="uid://cm3q4o2behm28"]
 
 [ext_resource type="PackedScene" uid="uid://covxf2hmllb4m" path="res://objects/items/equipments/shooter/shooter.tscn" id="1_vjsnd"]
 [ext_resource type="Script" uid="uid://b16rbrice556r" path="res://objects/items/equipments/shooter/electron_shooter.gd" id="2_g6re1"]
@@ -129,8 +129,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_638gc")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_167g1"]
+size = Vector3(0.086, 0.30361718, 0.8379414)
+
 [node name="ElectronShooter" instance=ExtResource("1_vjsnd")]
 script = ExtResource("2_g6re1")
+handle_position = Vector3(-0.11, 0.06, -0.265)
+handle_rotation = Vector3(0.034906585, -0.10471976, 0)
 
 [node name="AR_5" type="MeshInstance3D" parent="." index="0"]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, -0.05, -0.1)
@@ -139,3 +144,7 @@ skeleton = NodePath("")
 
 [node name="Nozzle" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127341, -0.285436)
+
+[node name="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030808594, 0.020970702)
+shape = SubResource("BoxShape3D_167g1")

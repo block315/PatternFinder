@@ -1235,18 +1235,19 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="Star" parent="Environment" instance=ExtResource("50_fs28l")]
-transform = Transform3D(30.942356, 0, 39.27557, 0, 50, 0, -39.27557, 0, 30.942356, 0, 0, -3069)
+transform = Transform3D(-26.553263, 0, 42.366543, 0, 50, 0, -42.366543, 0, -26.553263, 0, 0, -3069)
 layers = 4
 
 [node name="PlanetGaseous" parent="Environment" instance=ExtResource("51_dca73")]
-transform = Transform3D(291.5366, 0, 744.9867, 0, 800, 0, -744.9867, 0, 291.5366, 0, 487, 1748)
+transform = Transform3D(750.0861, 0, 278.15378, 0, 800, 0, -278.15378, 0, 750.0861, 0, 487, 1748)
 layers = 4
 
 [node name="PlanetSand" parent="Environment" instance=ExtResource("52_q1lyk")]
-transform = Transform3D(218.48877, 0, 310.90613, 0, 380, 0, -310.90613, 0, 218.48877, 1356, 0, 0)
+transform = Transform3D(364.76877, 0, 106.50689, 0, 380, 0, -106.50689, 0, 364.76877, 1356, 0, 0)
 
 [node name="SunLightGuard" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1, 10, -16)
+transparency = 1.0
 mesh = SubResource("PlaneMesh_q1lyk")
 skeleton = NodePath("../..")
 

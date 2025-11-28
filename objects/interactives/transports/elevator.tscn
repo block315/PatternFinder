@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dxphiovvot3c1"]
+[gd_scene load_steps=20 format=3 uid="uid://dxphiovvot3c1"]
 
 [ext_resource type="Script" uid="uid://be5818g7d1o4s" path="res://objects/interactives/transports/elevator.gd" id="1_f7iu7"]
 [ext_resource type="PackedScene" uid="uid://dvn6ovnrhwiqh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_SquareTall.gltf" id="2_yv0t1"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://sohnsoah75ru" path="res://meshes/props/prop_light_small.tscn" id="9_nh2gb"]
 [ext_resource type="PackedScene" uid="uid://tpwsmncqllm3" path="res://objects/interactives/computer.tscn" id="9_wxdkt"]
 [ext_resource type="PackedScene" uid="uid://tx4fexdihpop" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_3Plates.gltf" id="10_u3rjs"]
+[ext_resource type="AudioStream" uid="uid://dflmst4e7wc7" path="res://arts/audio/sounds/kenney.nl/kenney_sci-fi-sounds/Audio/spaceEngineLow_000.ogg" id="14_e0hii"]
 
 [sub_resource type="Animation" id="Animation_f7iu7"]
 resource_name = "DoorOpen"
@@ -41,7 +42,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1.5, -4.5, -2)]
+"values": [Vector3(1.5, 0, -2)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3bk2l"]
@@ -60,7 +61,7 @@ size = Vector3(5, 7, 8)
 script = ExtResource("1_f7iu7")
 
 [node name="ElevatorDoor" parent="." instance=ExtResource("6_cagac")]
-transform = Transform3D(1.5, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.5, -4.5, -2)
+transform = Transform3D(1.5, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 1.5, 0, -2)
 
 [node name="DoorSimple2" parent="ElevatorDoor" instance=ExtResource("6_cagac")]
 transform = Transform3D(-1, 0, -1.1073026e-07, 0, 1, 0, 2.0590338e-07, 0, -1, -2.1087213, 0, 0.065656304)
@@ -221,6 +222,10 @@ shape = SubResource("BoxShape3D_3bk2l")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -2)
 stream = ExtResource("7_ux0k1")
+pitch_scale = 4.0
+
+[node name="MotorAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("14_e0hii")
 
 [connection signal="body_entered" from="DoorSensorArea3D" to="." method="_on_door_sensor_area_3d_body_entered"]
 [connection signal="body_entered" from="ElevatorArea3D" to="." method="_on_elevator_area_3d_body_entered"]

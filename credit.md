@@ -1,5 +1,4 @@
 # Under [Creative Commons CC0](https://creativecommons.org/public-domain/cc0/)
-- https://pixel-boy.itch.io/icon-godot-node
 - https://commons.wikimedia.org/wiki/File:Cavendish-walk.jpg
 - https://ambientcg.com/view?id=3DLemon001
 - https://blendswap.com/blend/19504
@@ -31,6 +30,7 @@
 - https://3dtextures.me/2025/03/31/sci-fi-metal-walkway-001/
 
 ## From [itch.io](https://itch.io/)
+- https://pixel-boy.itch.io/icon-godot-node
 - https://styloo.itch.io/robot-character
 
 ### by [3DModelsCC0](https://3dmodelscc0.itch.io/)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=27 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://b4pjla2vfw7ww" path="res://worlds/perodic_warfare/1/hydrogen_003.gd" id="18_vvanm"]
 [ext_resource type="Script" uid="uid://bf5r4uu760m8q" path="res://objects/interactives/breakables/breakable.gd" id="20_vvanm"]
 [ext_resource type="ArrayMesh" uid="uid://cy30wegkoeq83" path="res://arts/3D/models/ambientcg.com/3DLemon001_HQ-4K-PNG/3DLemon001_HQ-4K-PNG.obj" id="21_nqshe"]
+[ext_resource type="PackedScene" uid="uid://cm3q4o2behm28" path="res://objects/items/equipments/shooter/electron_shooter.tscn" id="23_6cl36"]
 [ext_resource type="PackedScene" uid="uid://cqcxqwc28grne" path="res://objects/items/equipments/breaker/hammer.tscn" id="23_l5qo0"]
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="23_vvanm"]
 [ext_resource type="PackedScene" uid="uid://cuqxhmc72oryo" path="res://arts/3D/models/sharetextures.com/3D_lemon_1/3D_lemon_1.blend" id="24_6cl36"]
@@ -48,7 +49,7 @@ surface_material_override/2 = null
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, -5, 1)
 
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
-transform = Transform3D(5.960461e-08, 0.99999946, 0, 0, 5.9604616e-08, -0.99999934, -0.99999934, 0, 5.960461e-08, -11, 3, 2)
+transform = Transform3D(5.9604606e-08, 0.9999994, 0, 0, 5.9604613e-08, -0.9999993, -0.9999993, 0, 5.9604606e-08, -11, 3, 2)
 
 [node name="@Node3D@89259" parent="Structure/SecondFloor/Platforms/PlatformMetal8" index="2" instance=ExtResource("7_vvanm")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 3, 2)
@@ -71,13 +72,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="Star" parent="Environment" index="1"]
-transform = Transform3D(-8.752296, 0, -49.22801, 0, 50, 0, 49.22801, 0, -8.752296, 0, 0, -3069)
+transform = Transform3D(-18.885715, 0, 46.296104, 0, 50, 0, -46.296104, 0, -18.885715, 0, 0, -3069)
 
 [node name="PlanetGaseous" parent="Environment" index="2"]
-transform = Transform3D(582.02826, 0, 548.85516, 0, 800, 0, -548.85516, 0, 582.02826, 0, 487, 1748)
+transform = Transform3D(-156.77213, 0, -784.488, 0, 800, 0, 784.488, 0, -156.77213, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="3"]
-transform = Transform3D(312.58142, 0, 216.08527, 0, 380, 0, -216.08527, 0, 312.58142, 1356, 0, 0)
+transform = Transform3D(-338.7056, 0, -172.27458, 0, 380, 0, 172.27458, 0, -338.7056, 1356, 0, 0)
 
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -196,6 +197,9 @@ shape = SubResource("ConvexPolygonShape3D_nqshe")
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 0, 0, 0)
 mesh = ExtResource("21_nqshe")
 skeleton = NodePath("../..")
+
+[node name="ElectronShooter" parent="Content/Hydrogen003" index="10" instance=ExtResource("23_6cl36")]
+transform = Transform3D(-4.3711385e-08, 1, 4.37114e-08, -1, -4.371139e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -1.1022248, 1.1708469, 1.6522166)
 
 [connection signal="found" from="Core/Chest" to="Content/Hydrogen001" method="_on_chest_found"]
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]

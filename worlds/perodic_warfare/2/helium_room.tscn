@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlvd3um4st8my"]
+[gd_scene load_steps=8 format=3 uid="uid://dlvd3um4st8my"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_gt6dr"]
 [ext_resource type="Script" uid="uid://cmjvvu3pma0kh" path="res://worlds/perodic_warfare/2/helium_room.gd" id="2_0ycle"]
 [ext_resource type="Texture2D" uid="uid://dyvxj17yf4xj8" path="res://worlds/perodic_warfare/2/T_Decals_He.png" id="3_b4uus"]
+[ext_resource type="AudioStream" uid="uid://cljtx7w6ceeoj" path="res://arts/audio/musics/originals/helium.ogg" id="5_atodp"]
 [ext_resource type="PackedScene" uid="uid://dlf8nk1lngvlr" path="res://worlds/perodic_warfare/2/helium_001.tscn" id="7_0ycle"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="7_7q16b"]
 [ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_7uwws"]
@@ -20,14 +21,28 @@ electron = 2
 [node name="Robot" parent="." index="2" instance=ExtResource("9_7uwws")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
 
+[node name="Star" parent="Environment" index="1"]
+transform = Transform3D(27.952616, 0, 41.456615, 0, 50, 0, -41.456615, 0, 27.952616, 0, 0, -3069)
+
+[node name="PlanetGaseous" parent="Environment" index="2"]
+transform = Transform3D(789.4047, 0, 129.76453, 0, 800, 0, -129.76453, 0, 789.4047, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="3"]
+transform = Transform3D(376.7767, 0, 49.38927, 0, 380, 0, -49.38927, 0, 376.7767, 1356, 0, 0)
+
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 9, 0)
+
+[node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
+stream = ExtResource("5_atodp")
+volume_db = -10.0
+autoplay = true
 
 [node name="Train" parent="Transport" index="1" instance=ExtResource("7_7q16b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 destination = 6
 
 [node name="Helium001" parent="Content" index="0" instance=ExtResource("7_0ycle")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, 6)
 
 [editable path="Structure/SecondFloor/StairShaft"]
