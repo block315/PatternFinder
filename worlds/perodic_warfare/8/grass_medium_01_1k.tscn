@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0rbtfkk6hqhc"]
+
+[ext_resource type="PackedScene" uid="uid://biee73su072nm" path="res://arts/3D/models/polyhaven.com/grass_medium_01_1k.gltf/grass_medium_01_1k.gltf" id="1_2pstg"]
+
+[node name="grass_medium_01_1k" instance=ExtResource("1_2pstg")]

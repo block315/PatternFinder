@@ -21,6 +21,7 @@
 - https://polyhaven.com/a/rusty_metal_sheet
 - https://polyhaven.com/a/wicker_basket_01
 - https://polyhaven.com/a/scandinavian_masonry_heater
+- https://polyhaven.com/a/grass_medium_01
 
 ## From [3DTextures](https://3dtextures.me/)
 - https://3dtextures.me/2018/10/15/painted-metal-001/

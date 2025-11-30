@@ -1,0 +1,99 @@
+[gd_scene load_steps=13 format=3 uid="uid://c0rjd7jj5qyj1"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_el4l7"]
+[ext_resource type="Script" uid="uid://bdkxydawlbg7b" path="res://worlds/perodic_warfare/8/oxygen_room.gd" id="2_0mrac"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="2_pyscx"]
+[ext_resource type="Texture2D" uid="uid://bsdiov7s5chh0" path="res://worlds/perodic_warfare/8/T_Decals_O.png" id="3_8w4fh"]
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="4_ugcw3"]
+[ext_resource type="MeshLibrary" uid="uid://cuerebstceco6" path="res://worlds/perodic_warfare/8/grass.tres" id="5_qw0i3"]
+[ext_resource type="Shader" uid="uid://x333vw5qstth" path="res://fire.gdshader" id="6_uusdo"]
+[ext_resource type="PackedScene" uid="uid://bl0tc51w03yyu" path="res://arts/3D/models/itch.io/IndustrialPack2/Fire_Extinguisher/Fire_extinguisher.fbx" id="7_r0gc8"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uusdo"]
+noise_type = 5
+frequency = 0.3
+fractal_gain = 1.0
+fractal_weighted_strength = 0.3
+domain_warp_enabled = true
+domain_warp_fractal_octaves = 1
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_r0gc8"]
+noise = SubResource("FastNoiseLite_uusdo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r0gc8"]
+render_priority = 0
+shader = ExtResource("6_uusdo")
+shader_parameter/raymarch_steps = 6
+shader_parameter/sample_jitter = true
+shader_parameter/potato_mode = false
+shader_parameter/sample_noise = SubResource("NoiseTexture3D_r0gc8")
+shader_parameter/billboard = true
+shader_parameter/billboard_z_offset = 0.675
+shader_parameter/proximity_fade_distance = 0.375
+shader_parameter/time_scale = 0.027
+shader_parameter/noise_scale = 0.45
+shader_parameter/noise_threshold = 0.43
+shader_parameter/fire_height = 1.43
+shader_parameter/fire_width = 1.18
+shader_parameter/box_center = Vector3(0, 0, 0)
+shader_parameter/box_rotation = Vector3(0, 0, 0)
+shader_parameter/taper_factor = 0.425
+shader_parameter/wobble_strength = 2.0
+shader_parameter/wobble_speed = 6.0
+shader_parameter/wobble_noise_frequency = 0.125
+shader_parameter/sharpness_cutoff = 4.5
+shader_parameter/emission_strength = 12.5
+shader_parameter/core_glow_multiplier = 16.0
+shader_parameter/color_core = Vector3(1, 0.9, 0.5)
+shader_parameter/color_mid = Vector3(1, 0.625, 0)
+shader_parameter/color_outer = Vector3(0.8, 0.01, 0)
+shader_parameter/color_smoke = Vector3(-0.067, -0.067, -0.067)
+shader_parameter/jitter_multiplier = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_lb2er"]
+material = SubResource("ShaderMaterial_r0gc8")
+
+[node name="OxygenRoom" instance=ExtResource("1_el4l7")]
+script = ExtResource("2_0mrac")
+atomic_number = 8
+element_decal_png = ExtResource("3_8w4fh")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 8
+neutron = Array[int]([8])
+
+[node name="Star" parent="Environment" index="1"]
+transform = Transform3D(-49.78465, 0, -4.6355734, 0, 50, 0, 4.6355734, 0, -49.78465, 0, 0, -3069)
+
+[node name="PlanetGaseous" parent="Environment" index="2"]
+transform = Transform3D(-12.379367, 0, 799.90344, 0, 800, 0, -799.90344, 0, -12.379367, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="3"]
+transform = Transform3D(112.94344, 0, 362.82745, 0, 380, 0, -362.82745, 0, 112.94344, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -337, 33, 0)
+visible = false
+
+[node name="Oxygen001" parent="Content" index="0" instance=ExtResource("4_ugcw3")]
+
+[node name="GridMap" type="GridMap" parent="Content/Oxygen001" index="2"]
+mesh_library = ExtResource("5_qw0i3")
+cell_size = Vector3(0.2, 0.2, 0.2)
+cell_scale = 5.0
+data = {
+"cells": PackedInt32Array(65499, 65533, 8, 65501, 22, 8, 65522, 26, 8, 8, 16, 8, 21, 17, 8, 20, 17, 8, 14, 33, 8, 46, 65518, 8, 23, 65530, 8, 3, 12, 8, 2, 12, 8, 65523, 7, 8, 65522, 7, 8, 65512, 65518, 8, 65505, 65526, 8, 65509, 6, 8, 65508, 6, 8, 65509, 20, 8, 65521, 19, 8, 3, 23, 8, 28, 65524, 8, 23, 65515, 8, 21, 65485, 8, 65515, 65506, 8, 65522, 5, 8, 65508, 12, 8, 65495, 65530, 8, 65503, 18, 8, 65525, 15, 8, 65528, 1, 8, 65506, 65526, 8, 65493, 65513, 8, 65505, 15, 8, 65500, 15, 8, 65503, 23, 8, 65508, 27, 8, 65531, 26, 1, 1, 27, 1, 8, 24, 1, 8, 23, 1, 16, 14, 1, 17, 13, 1, 25, 65527, 2, 19, 65523, 1, 9, 65528, 1, 8, 65528, 1, 8, 65529, 10, 7, 65529, 10, 65529, 3, 1, 65528, 3, 1, 65527, 3, 1, 65519, 2, 1, 65518, 1, 1, 65517, 1, 1, 65515, 0, 1, 65509, 65531, 1, 65508, 65531, 1, 65509, 65514, 1, 65510, 65514, 1, 65523, 65516, 1, 65523, 65515, 1, 65531, 65499, 1, 31, 65508, 1, 10, 16, 1, 16, 25, 1, 14, 32, 1, 65535, 32, 1, 65516, 19, 1, 65502, 14, 1, 65491, 65535, 1, 65512, 3, 1, 65535, 22, 1, 9, 28, 1, 23, 27, 1, 21, 15, 1, 28, 65535, 1, 15, 65534, 1, 14, 65534, 1, 65532, 13, 1, 65523, 21, 1, 65516, 25, 1, 65515, 25, 1, 65514, 25, 1, 65528, 30, 10, 65498, 27, 1, 65507, 34, 1, 65518, 33, 1, 65520, 37, 1, 65509, 32, 1, 65515, 24, 1, 65520, 12, 10, 65517, 8, 1, 22, 65497, 1, 15, 65497, 1, 18, 65504, 1, 21, 65521, 4, 20, 65521, 1, 20, 65522, 1, 11, 65518, 1, 19, 65516, 1, 41, 65514, 1, 36, 65517, 1, 36, 65518, 1, 27, 65532, 1, 26, 65533, 1, 21, 8, 1, 20, 8, 1, 22, 10, 1, 9, 2, 1, 65533, 11, 1, 65522, 65518, 1, 65517, 65524, 6, 65513, 65532, 1, 65513, 65533, 1, 65512, 65533, 1, 65511, 16, 1, 65511, 17, 1, 65510, 23, 1, 65510, 24, 1, 65508, 26, 1, 65501, 24, 1, 65511, 32, 1, 65515, 32, 1, 65525, 34, 1, 65525, 18, 1, 65530, 20, 1, 65530, 21, 1, 65531, 24, 1, 65531, 25, 1, 65535, 31, 1, 6, 30, 1, 6, 31, 1, 10, 31, 1, 26, 18, 1, 25, 27, 1, 33, 4, 1, 22, 32, 1, 10, 37, 1, 1, 37, 1, 15, 37, 1, 12, 25, 1, 0, 12, 1, 65531, 65535, 1, 65522, 65519, 1, 65521, 65531, 7, 65515, 14, 10, 65516, 23, 1, 65516, 24, 1, 65519, 32, 1, 65522, 31, 1, 4, 34, 10, 19, 9, 10, 17, 4, 10, 16, 4, 10, 12, 3, 10, 11, 3, 10, 5, 7, 10, 4, 7, 10, 4, 8, 10, 65520, 65530, 10, 65520, 65529, 10, 65516, 65521, 10, 65516, 65520, 10, 65520, 65510, 10, 65526, 65500, 10, 23, 65500, 10, 23, 65501, 10, 14, 65528, 10, 65533, 65533, 10, 65529, 2, 10, 65528, 2, 10, 65519, 12, 10, 65519, 13, 10, 65516, 14, 10, 65502, 1, 10, 65499, 2, 10, 65501, 10, 10, 65491, 65519, 10, 65492, 65519, 10, 65502, 65531, 10, 65503, 65532, 10, 65503, 65534, 10, 65504, 65535, 10, 65505, 0, 10, 65516, 15, 10, 65516, 16, 10, 65528, 31, 10, 65529, 31, 10, 65531, 33, 10, 65531, 34, 10, 65524, 36, 10, 7, 39, 10, 13, 38, 10, 25, 36, 10, 21, 32, 10, 18, 24, 10, 16, 20, 10, 8, 15, 10, 0, 14, 10, 65531, 12, 10, 65530, 12, 10, 65530, 11, 10, 0, 65535, 10, 2, 65534, 10, 3, 65534, 10, 17, 65533, 10, 33, 14, 10, 25, 17, 10, 27, 6, 10, 27, 5, 10, 25, 4, 10, 24, 1, 10, 23, 65535, 10, 23, 65534, 10, 22, 65526, 10, 22, 65525, 10, 17, 65509, 10, 12, 65505, 10, 8, 65499, 10, 0, 65492, 10, 65527, 65507, 10, 65526, 65524, 7, 65526, 65530, 10, 65526, 65531, 10, 65526, 65532, 10, 65526, 65533, 10, 65526, 65534, 10, 65527, 6, 10, 65527, 8, 10, 65527, 9, 10, 65528, 10, 10, 65535, 20, 10, 0, 20, 10, 65527, 24, 10, 65523, 28, 10, 65523, 29, 10, 6, 28, 8, 11, 16, 8, 13, 14, 8, 17, 30, 8, 14, 35, 8, 13, 35, 8, 65530, 35, 8, 65516, 30, 8, 65509, 18, 8, 65508, 10, 8, 65508, 11, 8, 65509, 11, 8, 4, 26, 2, 13, 16, 2, 13, 15, 2, 19, 2, 2, 20, 2, 2, 20, 1, 2, 25, 65526, 2, 24, 65525, 2, 19, 65508, 2, 13, 65514, 2, 7, 65521, 2, 7, 65507, 2, 65535, 8, 2, 65535, 9, 2, 65534, 9, 2, 65525, 5, 2, 65516, 13, 2, 65514, 17, 2, 65513, 16, 2, 65511, 19, 2, 65523, 32, 2, 65524, 32, 2, 9, 35, 2, 22, 27, 2, 25, 32, 2, 32, 22, 2, 11, 40, 2, 65516, 65516, 7, 65509, 65523, 7, 65510, 65525, 7, 65514, 65528, 7, 65515, 65528, 7, 65526, 65525, 7, 65527, 65524, 7, 65532, 65518, 7, 65533, 65512, 7, 6, 65512, 7, 13, 65515, 7, 18, 65520, 7, 0, 65511, 7, 65533, 65514, 7, 65532, 65514, 7, 65526, 65514, 7, 65525, 65514, 7, 6, 65516, 7, 13, 65525, 7, 13, 65526, 7, 65533, 65528, 7, 65523, 65527, 7, 65523, 65526, 7, 65523, 65525, 4, 65523, 65517, 7, 65525, 65513, 0, 65533, 65511, 0, 1, 65511, 0, 2, 65511, 0, 3, 65512, 0, 4, 65512, 0, 8, 65512, 0, 9, 65512, 0, 14, 65512, 0, 17, 65512, 0, 17, 65513, 0, 18, 65513, 0, 24, 65518, 0, 24, 65519, 0, 27, 65520, 0, 6, 65519, 0, 8, 65522, 0, 8, 65523, 0, 9, 65523, 0, 9, 65524, 0, 9, 65525, 0, 7, 65530, 0, 65533, 65527, 0, 65532, 65527, 0, 65531, 65527, 0, 65529, 65526, 6, 65528, 65526, 0, 65525, 65521, 0, 65525, 65520, 0, 65526, 65518, 0, 65509, 65519, 0, 65516, 65515, 0, 65517, 65515, 0, 65516, 65513, 0, 65513, 65514, 0, 65504, 65522, 0, 65502, 65524, 0, 65499, 65529, 0, 65499, 65530, 0, 65508, 65529, 0, 65511, 65526, 0, 65519, 65519, 6, 65522, 65524, 6, 65523, 65524, 6, 65534, 65529, 6, 65535, 65529, 4, 4, 65529, 6, 65529, 65525, 6, 65519, 65516, 6, 65513, 65522, 6, 65513, 65523, 6, 65505, 65529, 6, 65495, 9, 6, 65494, 10, 6, 65498, 12, 6, 65499, 12, 6, 65507, 6, 6, 65468, 73, 6, 65495, 39, 6, 65502, 35, 6, 65494, 26, 6, 65510, 65520, 4, 65509, 65517, 4, 65520, 65523, 4, 7, 65526, 4, 7, 65525, 4, 14, 65518, 4, 13, 65518, 4, 21, 65525, 4, 21, 65530, 4, 30, 65523, 4, 29, 65523, 4, 21, 65519, 4, 21, 65520, 4, 10, 8, 4, 12, 15, 4, 65533, 0, 4, 65533, 65535, 4, 65513, 65531, 4, 65513, 65530, 4, 65514, 65519, 4, 65514, 65518, 4, 65515, 65516, 4, 65515, 65515, 4, 65512, 65513, 4, 65501, 65518, 3, 65498, 65517, 3, 65500, 65514, 3, 65504, 65517, 3, 65518, 65529, 3, 65494, 65533, 3, 65493, 65524, 3, 65494, 65524, 3, 65500, 65521, 3, 65500, 65520, 3, 65501, 65520, 3, 65505, 65525, 3, 65501, 65519, 3, 65502, 65515, 3, 65513, 65517, 16, 65519, 65508, 16, 65525, 65508, 16, 65528, 65511, 16, 65521, 65506, 16, 10, 65520, 16, 11, 65512, 16, 12, 65510, 16, 65497, 6, 15, 65493, 3, 15, 65490, 11, 15, 65492, 18, 15, 65493, 22, 15, 65499, 18, 15, 65487, 10, 15, 65491, 12, 15)
+}
+
+[node name="Oxygen002" parent="Content" index="1" instance=ExtResource("4_ugcw3")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Content/Oxygen002" index="2"]
+transform = Transform3D(0.68767726, 0, 0, 0, 2.7434483, 0, 0, 0, 1, -5.693194, 1.0415002, -5.876815)
+mesh = SubResource("QuadMesh_lb2er")
+
+[node name="Fire_extinguisher" parent="Content/Oxygen002" index="3" instance=ExtResource("7_r0gc8")]
+transform = Transform3D(-0.34641016, 0, -0.20000003, 0, 0.4, 0, 0.20000003, 0, -0.34641016, -6.916009, 1.3595705, -5.631646)
+
+[node name="Player" parent="." index="8" instance=ExtResource("2_pyscx")]
+
+[editable path="Structure/SecondFloor/StairShaft"]

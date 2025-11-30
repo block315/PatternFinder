@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://b4uw4bgui2o52"]
+[gd_scene load_steps=16 format=3 uid="uid://b4uw4bgui2o52"]
 
 [ext_resource type="Script" uid="uid://clwfa8y6bnl43" path="res://creatures/player/player.gd" id="1_2fd13"]
 [ext_resource type="Script" uid="uid://e7vntkkxpcx8" path="res://creatures/player/camera_3d.gd" id="2_2fd13"]
 [ext_resource type="PackedScene" uid="uid://bdpojnur2whta" path="res://creatures/player/hud.tscn" id="2_nlfm3"]
 [ext_resource type="Script" uid="uid://bn1qdd8bjdyvp" path="res://creatures/player/hand.gd" id="3_1q4qw"]
 [ext_resource type="Script" uid="uid://cvasrfslkrl6k" path="res://creatures/player/flash_light.gd" id="4_ui20s"]
-[ext_resource type="AudioStream" uid="uid://ijqsaeogfs8g" path="res://arts/audio/sounds/kenney.nl/kenney_rpg-audio/Audio/footstep02.ogg" id="6_e2a4r"]
 [ext_resource type="Script" uid="uid://jy4sym0dop3s" path="res://addons/godot_material_footsteps/core/material_footstep_player_3d.gd" id="7_1q4qw"]
 [ext_resource type="Script" uid="uid://cfs28riswyejx" path="res://addons/godot_material_footsteps/resources/material_footstep.gd" id="8_b5q5c"]
 [ext_resource type="AudioStream" uid="uid://30ufftfckgv6" path="res://arts/audio/sounds/kenney.nl/kenney_rpg-audio/Audio/footstep00.ogg" id="9_b5q5c"]
@@ -117,20 +116,13 @@ script = ExtResource("4_ui20s")
 [node name="Timer" type="Timer" parent="Camera3D/FlashLight"]
 one_shot = true
 
-[node name="FootStepAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-visible = false
-stream = ExtResource("6_e2a4r")
-volume_db = -10.0
-unit_size = 3.0
-max_db = 0.0
-pitch_scale = 0.4
-
 [node name="MaterialFootstepPlayer3D" type="RayCast3D" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("7_1q4qw")
 character = NodePath("..")
 material_footstep_sound_map = Array[ExtResource("8_b5q5c")]([SubResource("Resource_63yw6")])
 accepted_meta_data_names = PackedStringArray("surface_type")
 default_material_footstep_movement_sound = ExtResource("9_b5q5c")
+min_footstep_delay = 0.1
 metadata/_custom_type_script = "uid://jy4sym0dop3s"
 
 [connection signal="child_exiting_tree" from="Camera3D/Hand" to="Camera3D/Hand" method="_on_child_exiting_tree"]

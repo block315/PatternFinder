@@ -500,8 +500,8 @@ rotation_edit_mode = 1
 [node name="Column_Round" parent="Structure/SecondFloor/StairShaft" index="0"]
 transform = Transform3D(1, -3.5527137e-15, 3.5527137e-15, 3.5527137e-15, 1, 0, -3.5527137e-15, 0, 1, 0.3376093, 0.13522816, 0)
 
-[node name="StaticBody3D" parent="Structure/SecondFloor/StairShaft/Column_Round" index="0"]
-visible = false
+[node name="CollisionShape3D" parent="Structure/SecondFloor/StairShaft/Column_Round/StaticBody3D" index="0"]
+disabled = true
 
 [node name="PlatformStairs4WideTall" parent="Structure/SecondFloor/StairShaft" instance=ExtResource("20_0ms2t")]
 transform = Transform3D(1.2119348e-07, -1, -4.371139e-08, -1, -1.2119348e-07, -4.3711395e-08, 4.371139e-08, 4.3711395e-08, -1, 3, 3, 0)
@@ -1235,15 +1235,15 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="Star" parent="Environment" instance=ExtResource("50_fs28l")]
-transform = Transform3D(-26.553263, 0, 42.366543, 0, 50, 0, -42.366543, 0, -26.553263, 0, 0, -3069)
+transform = Transform3D(-49.20203, 0, -8.89719, 0, 50, 0, 8.89719, 0, -49.20203, 0, 0, -3069)
 layers = 4
 
 [node name="PlanetGaseous" parent="Environment" instance=ExtResource("51_dca73")]
-transform = Transform3D(750.0861, 0, 278.15378, 0, 800, 0, -278.15378, 0, 750.0861, 0, 487, 1748)
+transform = Transform3D(680.58704, 0, 420.47592, 0, 800, 0, -420.47592, 0, 680.58704, 0, 487, 1748)
 layers = 4
 
 [node name="PlanetSand" parent="Environment" instance=ExtResource("52_q1lyk")]
-transform = Transform3D(364.76877, 0, 106.50689, 0, 380, 0, -106.50689, 0, 364.76877, 1356, 0, 0)
+transform = Transform3D(343.36215, 0, 162.79561, 0, 380, 0, -162.79561, 0, 343.36215, 1356, 0, 0)
 
 [node name="SunLightGuard" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1, 10, -16)

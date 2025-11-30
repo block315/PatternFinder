@@ -33,7 +33,7 @@ movie_writer/movie_file="/home/block315/비디오/patternfinder.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_material_footsteps/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_material_footsteps/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
 
 [global_group]
 
