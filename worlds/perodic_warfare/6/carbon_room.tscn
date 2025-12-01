@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8gia4u2nm8gt"]
+[gd_scene load_steps=6 format=3 uid="uid://c8gia4u2nm8gt"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_es6x4"]
 [ext_resource type="Script" uid="uid://uqspo66st6s7" path="res://worlds/perodic_warfare/6/carbon_room.gd" id="2_1vny6"]
 [ext_resource type="Texture2D" uid="uid://d4il2e0c1lqnv" path="res://worlds/perodic_warfare/6/T_Decals_C.png" id="3_bb6ho"]
+[ext_resource type="AudioStream" uid="uid://d4igj24xwj20u" path="res://arts/audio/musics/originals/carbon.ogg" id="4_0d10w"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="4_lsblh"]
 
 [node name="CarbonRoom" instance=ExtResource("1_es6x4")]
@@ -15,12 +16,25 @@ atomic_number = 6
 neutron = Array[int]([6])
 electron = 6
 
+[node name="Star" parent="Environment" index="1"]
+transform = Transform3D(-25.49923, 0, 43.009174, 0, 50, 0, -43.009174, 0, -25.49923, 0, 0, -3069)
+
+[node name="PlanetGaseous" parent="Environment" index="2"]
+transform = Transform3D(137.39859, 0, 788.1119, 0, 800, 0, -788.1119, 0, 137.39859, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="3"]
+transform = Transform3D(166.05382, 0, 341.79834, 0, 380, 0, -341.79834, 0, 166.05382, 1356, 0, 0)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 31, 1)
-visible = true
+
+[node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
+stream = ExtResource("4_0d10w")
+volume_db = -20.0
+autoplay = true
 
 [node name="Train" parent="Transport" index="1" instance=ExtResource("4_lsblh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
 destination = 8
 
-[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
+[editable path="Structure/SecondFloor/StairShaft"]

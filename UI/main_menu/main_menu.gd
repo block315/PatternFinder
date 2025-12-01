@@ -1,9 +1,11 @@
 extends Node3D
 class_name MainMenu
 
-@onready var spot_light_3d: SpotLight3D = $SpotLight3D
+@onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 @onready var _3d_cursor: Marker3D = $"3DCursor"
-@onready var ray_cast_3d: RayCast3D = $SpotLight3D/RayCast3D
+@onready var ray_cast_3d: RayCast3D = $Camera3D/SpotLight3D/RayCast3D
+
+@onready var camera_3d: Camera3D = $Camera3D
 
 const PLAYER = preload("uid://b4uw4bgui2o52")
 @onready var ui_audio_stream_player: AudioStreamPlayer = $UIAudioStreamPlayer
@@ -36,10 +38,29 @@ func _input(event: InputEvent) -> void:
 					_button_3d.hover = false
 
 func _on_start_button_clicked() -> void:
+	var tween:Tween = get_tree().create_tween()
+	tween.tween_property(camera_3d, "position", Vector3(-7,3,0), 1.0)
+	tween.parallel().tween_property(_3d_cursor, "position", Vector3(-7,0,0), 1.0)
+
+func _on_exit_button_clicked() -> void:
+	get_tree().quit()
+
+func _on_config_button_clicked() -> void:
+	var tween:Tween = get_tree().create_tween()
+	tween.tween_property(camera_3d, "position", Vector3(7,3,0), 1.0)
+	tween.parallel().tween_property(_3d_cursor, "position", Vector3(7,0,0), 1.0)
+
+func _on_perodic_warefare_button_clicked() -> void:
 	var _player = PLAYER.instantiate()
 	get_tree().get_root().add_child(_player)
 	PerodicWarfare.change_room(1)
 	queue_free()
 
-func _on_exit_button_clicked() -> void:
-	get_tree().quit()
+func _on_soaked_button_clicked() -> void:
+	var _player = PLAYER.instantiate()
+	get_tree().get_root().add_child(_player)
+
+func _on_home_button_left_clicked() -> void:
+	var tween:Tween = get_tree().create_tween()
+	tween.tween_property(camera_3d, "position", Vector3(0,3,0), 1.0)
+	tween.parallel().tween_property(_3d_cursor, "position", Vector3(0,0,0), 1.0)

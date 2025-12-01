@@ -12,9 +12,9 @@ var _player:Player
 func _process(_delta: float) -> void:
 	global_position = path_follow_3d.global_position + Vector3(0,0.5,0)
 	global_rotation = path_follow_3d.global_rotation
-	var input_dir = Input.get_axis("ui_up", "ui_down")
-	if Input.get_axis("ui_up", "ui_down") and on_board:
-		path_follow_3d.progress_ratio -= (float(input_dir)*0.001)
+	#var input_dir = Input.get_axis("ui_up", "ui_down")
+	if Input.is_action_pressed("ui_up") and on_board:
+		path_follow_3d.progress_ratio += (0.001)
 	if Input.is_action_just_pressed("crouch") and on_board:
 		on_board = false
 		passenger.show()

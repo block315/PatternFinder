@@ -72,19 +72,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
 [node name="Star" parent="Environment" index="1"]
-transform = Transform3D(49.992344, 0, 0.8747575, 0, 50, 0, -0.8747575, 0, 49.992344, 0, 0, -3069)
+transform = Transform3D(-26.437529, 0, 42.438858, 0, 50, 0, -42.438858, 0, -26.437529, 0, 0, -3069)
 
 [node name="PlanetGaseous" parent="Environment" index="2"]
-transform = Transform3D(397.97717, 0, 693.98346, 0, 800, 0, -693.98346, 0, 397.97717, 0, 487, 1748)
+transform = Transform3D(750.21265, 0, 277.8125, 0, 800, 0, -277.8125, 0, 750.21265, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="3"]
-transform = Transform3D(253.61, 0, 282.9876, 0, 380, 0, -282.9876, 0, 253.61, 1356, 0, 0)
+transform = Transform3D(364.80756, 0, 106.37417, 0, 380, 0, -106.37417, 0, 364.80756, 1356, 0, 0)
 
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
 stream = ExtResource("12_vvanm")
+volume_db = -10.0
 autoplay = true
 
 [node name="Elevator" parent="Transport" index="0"]

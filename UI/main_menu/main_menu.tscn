@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c7t54asikdoa5"]
+[gd_scene load_steps=40 format=3 uid="uid://c7t54asikdoa5"]
 
 [ext_resource type="Script" uid="uid://cwoin4co3juul" path="res://UI/main_menu/main_menu.gd" id="1_tk8dj"]
 [ext_resource type="AudioStream" uid="uid://bj304bktkpmdv" path="res://arts/audio/sounds/kenney.nl/kenney_ui-audio/Audio/click2.ogg" id="5_f40uw"]
@@ -105,10 +105,52 @@ material = SubResource("StandardMaterial3D_lib8g")
 size = Vector3(1.6, 0.3, 0.02)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lib8g"]
-size = Vector3(1.6, 0.4, 0.1)
+size = Vector3(1.6, 1, 0.1)
 
 [sub_resource type="TextMesh" id="TextMesh_rtlbh"]
 text = "Exit"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_urid5"]
+text = "Config"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[sub_resource type="TextMesh" id="TextMesh_b1gt2"]
+text = "Perodic
+Warefare"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dcnu"]
+albedo_color = Color(0.6666667, 0.34901962, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xi1j"]
+material = SubResource("StandardMaterial3D_1dcnu")
+size = Vector3(3, 1, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_usm5j"]
+size = Vector3(3, 1, 0.1)
+
+[sub_resource type="TextMesh" id="TextMesh_3a88e"]
+text = "Soaked!"
+font = ExtResource("5_usm5j")
+font_size = 10
+pixel_size = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxajg"]
+albedo_color = Color(0.0018679063, 0, 0.5302368, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1dcnu"]
+material = SubResource("StandardMaterial3D_rxajg")
+size = Vector3(3, 1, 0.02)
+
+[sub_resource type="TextMesh" id="TextMesh_m33db"]
+text = "->"
 font = ExtResource("5_usm5j")
 font_size = 10
 pixel_size = 0.08
@@ -130,10 +172,11 @@ stream = ExtResource("5_f40uw")
 volume_db = -10.0
 
 [node name="UITimer" type="Timer" parent="."]
+wait_time = 1.5
 autostart = true
 
 [node name="BackScreen" type="MeshInstance3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 mesh = SubResource("PlaneMesh_qtoa1")
 skeleton = NodePath("../Camera3D")
 
@@ -146,6 +189,15 @@ shape = SubResource("BoxShape3D_1dcnu")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3, 0)
 current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+light_energy = 5.0
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 10.0
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D/SpotLight3D"]
+target_position = Vector3(0, 0, -10)
 
 [node name="Title" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.121, -0.816)
@@ -365,11 +417,11 @@ shape = SubResource("BoxShape3D_rxajg")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2, 0.1, 1)
 script = ExtResource("7_rxajg")
 
-[node name="StartButtonMesh" type="MeshInstance3D" parent="StartButton"]
+[node name="ButtonMesh" type="MeshInstance3D" parent="StartButton"]
 mesh = SubResource("TextMesh_5771y")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StartButton/StartButtonMesh"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StartButton/ButtonMesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.009674951)
 mesh = SubResource("BoxMesh_rxajg")
 
@@ -380,28 +432,104 @@ shape = SubResource("BoxShape3D_lib8g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.1, 1)
 script = ExtResource("7_rxajg")
 
-[node name="ExitButtonMesh" type="MeshInstance3D" parent="ExitButton"]
+[node name="ButtonMesh" type="MeshInstance3D" parent="ExitButton"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("TextMesh_rtlbh")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="ExitButton/ExitButtonMesh"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ExitButton/ButtonMesh"]
 mesh = SubResource("BoxMesh_rxajg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExitButton"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("BoxShape3D_lib8g")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2, 0)
-light_energy = 2.0
-shadow_enabled = true
-spot_angle = 15.0
+[node name="ConfigButton" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 1)
+script = ExtResource("7_rxajg")
 
-[node name="RayCast3D" type="RayCast3D" parent="SpotLight3D"]
-target_position = Vector3(0, 0, -10)
+[node name="ButtonMesh" type="MeshInstance3D" parent="ConfigButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_urid5")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="ConfigButton/ButtonMesh"]
+mesh = SubResource("BoxMesh_rxajg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConfigButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_lib8g")
 
 [node name="3DCursor" type="Marker3D" parent="."]
 
+[node name="PerodicWarefareButton" type="RigidBody3D" parent="."]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -9, 0.1, -1)
+script = ExtResource("7_rxajg")
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="PerodicWarefareButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_b1gt2")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PerodicWarefareButton/ButtonMesh"]
+mesh = SubResource("BoxMesh_0xi1j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PerodicWarefareButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_usm5j")
+
+[node name="SoakedButton" type="RigidBody3D" parent="."]
+transform = Transform3D(0.96592593, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.96592593, -7, 0.1, 1)
+script = ExtResource("7_rxajg")
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="SoakedButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_3a88e")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="SoakedButton/ButtonMesh"]
+mesh = SubResource("BoxMesh_1dcnu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SoakedButton"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_usm5j")
+
+[node name="HomeButtonLeft" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.1, -1)
+script = ExtResource("7_rxajg")
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="HomeButtonLeft"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_m33db")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="HomeButtonLeft/ButtonMesh"]
+mesh = SubResource("BoxMesh_rxajg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomeButtonLeft"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_lib8g")
+
+[node name="HomeButtonRight" type="RigidBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7, 0.1, -1)
+script = ExtResource("7_rxajg")
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="HomeButtonRight"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("TextMesh_m33db")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="HomeButtonRight/ButtonMesh"]
+mesh = SubResource("BoxMesh_rxajg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomeButtonRight"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_lib8g")
+
 [connection signal="clicked" from="StartButton" to="." method="_on_start_button_clicked"]
 [connection signal="clicked" from="ExitButton" to="." method="_on_exit_button_clicked"]
+[connection signal="clicked" from="ConfigButton" to="." method="_on_config_button_clicked"]
+[connection signal="clicked" from="PerodicWarefareButton" to="." method="_on_perodic_warefare_button_clicked"]
+[connection signal="clicked" from="SoakedButton" to="." method="_on_soaked_button_clicked"]
+[connection signal="clicked" from="HomeButtonLeft" to="." method="_on_home_button_left_clicked"]
+[connection signal="clicked" from="HomeButtonRight" to="." method="_on_home_button_left_clicked"]
