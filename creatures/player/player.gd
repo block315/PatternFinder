@@ -14,6 +14,8 @@ class_name Player
 @onready var hud: HUD = $Camera3D/HUD
 
 func _ready() -> void:
+	if get_tree().get_node_count_in_group("player") > 1:
+		get_tree().get_first_node_in_group("player").queue_free()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	camera_3d.make_current()
 
