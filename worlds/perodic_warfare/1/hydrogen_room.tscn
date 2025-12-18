@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=26 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ct06r4bik6sps" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopWindow_Straight.gltf" id="8_m0o4g"]
 [ext_resource type="PackedScene" uid="uid://34actix14eqq" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight.gltf" id="9_ae4a2"]
 [ext_resource type="AudioStream" uid="uid://wkvaofnkwde" path="res://arts/audio/musics/originals/hydrogen/hydrogen.ogg" id="12_vvanm"]
-[ext_resource type="PackedScene" uid="uid://cmdpp4lhgeppk" path="res://creatures/friends/human/spacesuit_man.tscn" id="15_eqvbh"]
 [ext_resource type="Script" uid="uid://b4pjla2vfw7ww" path="res://worlds/perodic_warfare/1/hydrogen_003.gd" id="18_vvanm"]
 [ext_resource type="Script" uid="uid://bf5r4uu760m8q" path="res://objects/interactives/breakables/breakable.gd" id="20_vvanm"]
 [ext_resource type="ArrayMesh" uid="uid://cy30wegkoeq83" path="res://arts/3D/models/ambientcg.com/3DLemon001_HQ-4K-PNG/3DLemon001_HQ-4K-PNG.obj" id="21_nqshe"]
@@ -49,7 +48,7 @@ surface_material_override/2 = null
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, -5, 1)
 
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
-transform = Transform3D(5.9604606e-08, 0.9999994, 0, 0, 5.9604613e-08, -0.9999993, -0.9999993, 0, 5.9604606e-08, -11, 3, 2)
+transform = Transform3D(5.9604602e-08, 0.99999934, 0, 0, 5.960461e-08, -0.9999992, -0.9999992, 0, 5.9604602e-08, -11, 3, 2)
 
 [node name="@Node3D@89259" parent="Structure/SecondFloor/Platforms/PlatformMetal8" index="2" instance=ExtResource("7_vvanm")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 3, 2)
@@ -68,19 +67,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 [node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow/WallWindowStraight/TopWindowStraight" index="1" instance=ExtResource("9_ae4a2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="SpacesuitMan" parent="." index="2" instance=ExtResource("15_eqvbh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
-
 [node name="Star" parent="Environment" index="1"]
-transform = Transform3D(-26.437529, 0, 42.438858, 0, 50, 0, -42.438858, 0, -26.437529, 0, 0, -3069)
+transform = Transform3D(-48.86565, 0, 10.589993, 0, 50, 0, -10.589993, 0, -48.86565, 0, 0, -3069)
 
 [node name="PlanetGaseous" parent="Environment" index="2"]
-transform = Transform3D(750.21265, 0, 277.8125, 0, 800, 0, -277.8125, 0, 750.21265, 0, 487, 1748)
+transform = Transform3D(28.448812, 0, 799.4932, 0, 800, 0, -799.4932, 0, 28.448812, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="3"]
-transform = Transform3D(364.80756, 0, 106.37417, 0, 380, 0, -106.37417, 0, 364.80756, 1356, 0, 0)
+transform = Transform3D(127.66118, 0, 357.9143, 0, 380, 0, -357.9143, 0, 127.66118, 1356, 0, 0)
 
-[node name="Building" parent="." index="5"]
+[node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
@@ -102,7 +98,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
 script = ExtResource("8_j2i7t")
 content = "Hydrogen Gas is very light"
-done = false
 
 [node name="Hydrogen003" parent="Content" index="2" instance=ExtResource("23_vvanm")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 7)
@@ -110,7 +105,6 @@ script = ExtResource("18_vvanm")
 content = "An acid is a molecule or ion capable of either donating a proton (i.e. hydrogen cation, H+)"
 
 [node name="Hammer" parent="Content/Hydrogen003" index="2" instance=ExtResource("23_l5qo0")]
-physics_interpolation_mode = 2
 transform = Transform3D(0.02301879, -0.99973506, 4.355687e-08, 2.6685183e-09, 4.3629857e-08, 1, -0.99973506, -0.02301879, 3.6721175e-09, -0.9427171, 1.2688618, -1.0444567)
 
 [node name="Lemon" parent="Content/Hydrogen003" index="3" instance=ExtResource("24_6cl36")]

@@ -5,6 +5,8 @@ class_name FlashLight
 @export var battery:int = 100
 @export var on:bool = false
 @onready var timer: Timer = $Timer
+@onready var flashlight: Node3D = $Flashlight
+
 
 func _ready() -> void:
 	light_energy = 0
@@ -18,8 +20,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 		on = !on
 		if on:
 			light_energy = 10
+			flashlight.show()
 		else:
 			light_energy = 0
+			flashlight.hide()
 
 func _on_timer_timeout() -> void:
 	battery -= 1

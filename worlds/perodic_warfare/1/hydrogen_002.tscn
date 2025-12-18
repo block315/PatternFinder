@@ -21,7 +21,6 @@ _data = {
 size = Vector3(10, 10, 10)
 
 [node name="Hydrogen002" instance=ExtResource("1_oh0yk")]
-done = true
 
 [node name="AnimationPlayer" parent="." index="0"]
 libraries = {

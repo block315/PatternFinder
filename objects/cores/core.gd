@@ -33,8 +33,6 @@ func _ready() -> void:
 		isotope_timer.stop()
 	_on_isotope_timer_timeout()
 
-
-
 func _physics_process(_delta: float) -> void:
 	if strong_nuclear_force_activate:
 		for _particle in nucleus_holder.get_children():

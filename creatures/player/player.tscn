@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4uw4bgui2o52"]
+[gd_scene load_steps=17 format=3 uid="uid://b4uw4bgui2o52"]
 
 [ext_resource type="Script" uid="uid://clwfa8y6bnl43" path="res://creatures/player/player.gd" id="1_2fd13"]
 [ext_resource type="Script" uid="uid://e7vntkkxpcx8" path="res://creatures/player/camera_3d.gd" id="2_2fd13"]
 [ext_resource type="PackedScene" uid="uid://bdpojnur2whta" path="res://creatures/player/hud.tscn" id="2_nlfm3"]
 [ext_resource type="Script" uid="uid://bn1qdd8bjdyvp" path="res://creatures/player/hand.gd" id="3_1q4qw"]
 [ext_resource type="Script" uid="uid://cvasrfslkrl6k" path="res://creatures/player/flash_light.gd" id="4_ui20s"]
+[ext_resource type="PackedScene" uid="uid://f3p7q4710py3" path="res://arts/3D/models/itch.io/Gadgets&Electronics/Flashlight/Flashlight.fbx" id="6_b5q5c"]
 [ext_resource type="Script" uid="uid://jy4sym0dop3s" path="res://addons/godot_material_footsteps/core/material_footstep_player_3d.gd" id="7_1q4qw"]
 [ext_resource type="Script" uid="uid://cfs28riswyejx" path="res://addons/godot_material_footsteps/resources/material_footstep.gd" id="8_b5q5c"]
 [ext_resource type="AudioStream" uid="uid://30ufftfckgv6" path="res://arts/audio/sounds/kenney.nl/kenney_rpg-audio/Audio/footstep00.ogg" id="9_b5q5c"]
@@ -115,6 +116,10 @@ script = ExtResource("4_ui20s")
 
 [node name="Timer" type="Timer" parent="Camera3D/FlashLight"]
 one_shot = true
+
+[node name="Flashlight" parent="Camera3D/FlashLight" instance=ExtResource("6_b5q5c")]
+transform = Transform3D(-0.023110272, 0, -0.09729294, -0.0022938964, 0.0999722, 0.0005448758, 0.09726589, 0.0023577213, -0.023103848, -0.7620976, -0.40368378, -0.67197)
+visible = false
 
 [node name="MaterialFootstepPlayer3D" type="RayCast3D" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("7_1q4qw")

@@ -33,16 +33,16 @@ func _on_door_sensor_area_3d_body_entered(body: Node3D) -> void:
 
 func elevator_switch(up:bool):
 	if up and upstairs != 0:
-		for _light in $Lights.get_children():
-			_light.power = false
+		#for _light in $Lights.get_children():
+			#_light.power = false
 		motor_audio_stream_player_3d.play()
 		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
 		await get_tree().create_timer(2.0).timeout
 
 		PerodicWarfare.change_room(upstairs)
 	elif downstairs != 0:
-		for _light in $Lights.get_children():
-			_light.power = false
+		#for _light in $Lights.get_children():
+			#_light.power = false
 		motor_audio_stream_player_3d.play()
 		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
 		await get_tree().create_timer(2.0).timeout
