@@ -1,10 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://jh7rfth5gxgi"]
+[gd_scene load_steps=18 format=3 uid="uid://jh7rfth5gxgi"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_q8vm6"]
 [ext_resource type="Script" uid="uid://bkqpy5vp4ntw" path="res://worlds/perodic_warfare/3/lithium_room.gd" id="2_pu50v"]
 [ext_resource type="Texture2D" uid="uid://bbydytria8frl" path="res://worlds/perodic_warfare/3/T_Decals_Li.png" id="3_fvtva"]
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="4_axjjo"]
 [ext_resource type="PackedScene" uid="uid://n6kwoj0ic4km" path="res://objects/items/equipments/collector/lithium_ion_battery.tscn" id="5_vnjh2"]
+[ext_resource type="Script" uid="uid://cic63ibvj1n7c" path="res://proposition.gd" id="6_imlwr"]
+[ext_resource type="PackedScene" uid="uid://jbk3ufyctr0l" path="res://arts/3D/models/polyhaven.com/stone_fire_pit_1k.blend/stone_fire_pit_1k.blend" id="7_i7ua3"]
+[ext_resource type="Texture2D" uid="uid://pi7e2qjv4mtk" path="res://arts/2D/pictures/kenney.nl/kenney_particle-pack/PNG (Transparent)/fire_01.png" id="8_mx4nq"]
+[ext_resource type="PackedScene" uid="uid://bl0tc51w03yyu" path="res://arts/3D/models/itch.io/IndustrialPack2/Fire_Extinguisher/Fire_extinguisher.fbx" id="9_cq74e"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_mx4nq"]
+inner_radius = 0.578
+
+[sub_resource type="Gradient" id="Gradient_mx4nq"]
+offsets = PackedFloat32Array(0, 0.62068963, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cq74e"]
+gradient = SubResource("Gradient_mx4nq")
+
+[sub_resource type="Curve" id="Curve_mx4nq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.14873418, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_cq74e"]
+curve = SubResource("Curve_mx4nq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cq74e"]
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+direction = Vector3(0, 1, 0)
+spread = 5.0
+initial_velocity_min = 0.5
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 0.99999774
+scale_curve = SubResource("CurveTexture_cq74e")
+color_ramp = SubResource("GradientTexture1D_cq74e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cq74e"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("8_mx4nq")
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_5iail"]
+material = SubResource("StandardMaterial3D_cq74e")
+size = Vector2(0.5, 0.5)
 
 [node name="LithiumRoom" instance=ExtResource("1_q8vm6")]
 script = ExtResource("2_pu50v")
@@ -16,26 +61,52 @@ atomic_number = 3
 neutron = Array[int]([3, 4])
 electron = 3
 
-[node name="Star" parent="Environment" index="1"]
-transform = Transform3D(23.398409, 0, 44.187263, 0, 50, 0, -44.187263, 0, 23.398409, 0, 0, -3069)
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(742.72943, 0, -297.24008, 0, 800, 0, 297.24008, 0, 742.72943, 0, 487, 1748)
 
-[node name="PlanetGaseous" parent="Environment" index="2"]
-transform = Transform3D(269.02344, 0, 753.409, 0, 800, 0, -753.409, 0, 269.02344, 0, 487, 1748)
-
-[node name="PlanetSand" parent="Environment" index="3"]
-transform = Transform3D(210.95284, 0, 316.06784, 0, 380, 0, -316.06784, 0, 210.95284, 1356, 0, 0)
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(3.6541705, 0, -379.9824, 0, 380, 0, 379.9824, 0, 3.6541705, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
-visible = false
 
 [node name="Elevator" parent="Transport" index="0"]
 upstairs = 1
 downstairs = 11
 
 [node name="Lithium001" parent="Content" index="0" instance=ExtResource("4_axjjo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+content = "Li-ion battery uses the reversible intercalation of Li ions."
 
 [node name="LithiumIonBattery" parent="Content/Lithium001" index="2" instance=ExtResource("5_vnjh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.97282577, -5.6805816)
+
+[node name="Lithium002" type="Node3D" parent="Content" index="1"]
+script = ExtResource("6_imlwr")
+content = "Lithium flame color is carmine red."
+metadata/_custom_type_script = "uid://cic63ibvj1n7c"
+
+[node name="stone_fire_pit_1k" parent="Content/Lithium002" index="0" instance=ExtResource("7_i7ua3")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -5.596437, 0.9975611, -5.577442)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Content/Lithium002/stone_fire_pit_1k" index="1"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.18521357, 0)
+mesh = SubResource("TorusMesh_mx4nq")
+
+[node name="FireFlame" type="GPUParticles3D" parent="Content/Lithium002" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5901637, 0.97056115, -5.5759144)
+amount = 16
+lifetime = 0.83
+preprocess = 2.0
+process_material = SubResource("ParticleProcessMaterial_cq74e")
+draw_pass_1 = SubResource("QuadMesh_5iail")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Content/Lithium002/FireFlame" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26845765, 0)
+light_color = Color(1, 0.49411765, 0.21568628, 1)
+shadow_enabled = true
+
+[node name="Fire_extinguisher" parent="Content/Lithium002" index="2" instance=ExtResource("9_cq74e")]
+transform = Transform3D(-0.25980762, 0, -0.15000002, 0, 0.3, 0, 0.15000002, 0, -0.25980762, -7.059228, 0.3435288, -4.9651456)
 
 [editable path="Structure/SecondFloor/StairShaft"]

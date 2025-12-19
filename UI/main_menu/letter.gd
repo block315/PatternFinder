@@ -9,7 +9,7 @@ class_name Letter
 func _ready() -> void:
 	position_in_word.z -= 1
 	position_in_word.y += 0.5
-	global_position = Vector3(randf_range(-10,10), randf_range(2,10), randf_range(-10,10))
+	#global_position = Vector3(randf_range(-10,10), randf_range(2,10), randf_range(-10,10))
 	ui_timer.timeout.connect(_on_ui_timer_timeout)
 
 func _process(_delta: float) -> void:
