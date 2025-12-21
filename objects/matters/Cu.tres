@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Matter" load_steps=2 format=3 uid="uid://baxxwv2cxhj0u"]
+
+[ext_resource type="Script" uid="uid://dvogwt0t3rgv1" path="res://objects/matters/matter.gd" id="1_par0s"]
+
+[resource]
+script = ExtResource("1_par0s")
+name = "Copper"
+metadata/_custom_type_script = "uid://dvogwt0t3rgv1"

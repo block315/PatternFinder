@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://jh7rfth5gxgi"]
+[gd_scene load_steps=30 format=3 uid="uid://jh7rfth5gxgi"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_q8vm6"]
 [ext_resource type="Script" uid="uid://bkqpy5vp4ntw" path="res://worlds/perodic_warfare/3/lithium_room.gd" id="2_pu50v"]
@@ -9,6 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://jbk3ufyctr0l" path="res://arts/3D/models/polyhaven.com/stone_fire_pit_1k.blend/stone_fire_pit_1k.blend" id="7_i7ua3"]
 [ext_resource type="Texture2D" uid="uid://pi7e2qjv4mtk" path="res://arts/2D/pictures/kenney.nl/kenney_particle-pack/PNG (Transparent)/fire_01.png" id="8_mx4nq"]
 [ext_resource type="PackedScene" uid="uid://bl0tc51w03yyu" path="res://arts/3D/models/itch.io/IndustrialPack2/Fire_Extinguisher/Fire_extinguisher.fbx" id="9_cq74e"]
+[ext_resource type="Script" uid="uid://hplbqmyh77d4" path="res://objects/interactives/collectables/collectable.gd" id="10_0bxl1"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="10_5iail"]
+[ext_resource type="PackedScene" uid="uid://bbv3jnntgl4gy" path="res://objects/items/equipments/collector/tongs.tscn" id="11_0bxl1"]
+[ext_resource type="Resource" uid="uid://bcwvotswtxkqs" path="res://objects/matters/Ca.tres" id="11_3em3g"]
+[ext_resource type="Resource" uid="uid://baxxwv2cxhj0u" path="res://objects/matters/Cu.tres" id="12_lxd25"]
+[ext_resource type="Resource" uid="uid://cy34cx6djp5jq" path="res://objects/matters/Li.tres" id="13_fd3v1"]
+[ext_resource type="Resource" uid="uid://b7isxkjephgeu" path="res://objects/matters/Na.tres" id="14_mwoek"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_mx4nq"]
 inner_radius = 0.578
@@ -51,6 +58,21 @@ billboard_mode = 2
 material = SubResource("StandardMaterial3D_cq74e")
 size = Vector2(0.5, 0.5)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_824va"]
+data = PackedVector3Array(-0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5iail"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0bxl1"]
+data = PackedVector3Array(-0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3em3g"]
+data = PackedVector3Array(-0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lxd25"]
+data = PackedVector3Array(-0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, 0.049999997, -0.049999997, 0.049999997, 0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997, -0.049999997)
+
 [node name="LithiumRoom" instance=ExtResource("1_q8vm6")]
 script = ExtResource("2_pu50v")
 atomic_number = 3
@@ -62,10 +84,10 @@ neutron = Array[int]([3, 4])
 electron = 3
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(742.72943, 0, -297.24008, 0, 800, 0, 297.24008, 0, 742.72943, 0, 487, 1748)
+transform = Transform3D(-614.93066, 0, 511.7217, 0, 800, 0, -511.7217, 0, -614.93066, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(3.6541705, 0, -379.9824, 0, 380, 0, 379.9824, 0, 3.6541705, 1356, 0, 0)
+transform = Transform3D(-143.50124, 0, 351.8627, 0, 380, 0, -351.8627, 0, -143.50124, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
@@ -108,5 +130,61 @@ shadow_enabled = true
 
 [node name="Fire_extinguisher" parent="Content/Lithium002" index="2" instance=ExtResource("9_cq74e")]
 transform = Transform3D(-0.25980762, 0, -0.15000002, 0, 0.3, 0, 0.15000002, 0, -0.25980762, -7.059228, 0.3435288, -4.9651456)
+
+[node name="Rocks" type="Node3D" parent="Content/Lithium002" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -9)
+
+[node name="Rock1" type="StaticBody3D" parent="Content/Lithium002/Rocks" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5766964, 0.27059674, 0.022266388)
+script = ExtResource("10_0bxl1")
+matter = ExtResource("11_3em3g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Content/Lithium002/Rocks/Rock1" index="0"]
+shape = SubResource("ConcavePolygonShape3D_824va")
+
+[node name="Rock1" type="MeshInstance3D" parent="Content/Lithium002/Rocks/Rock1" index="1"]
+mesh = SubResource("BoxMesh_5iail")
+skeleton = NodePath("../..")
+
+[node name="Rock2" type="StaticBody3D" parent="Content/Lithium002/Rocks" index="1"]
+transform = Transform3D(0.5969672, 0, -0.80226564, 0, 1, 0, 0.80226564, 0, 0.5969672, -0.34314537, 0.27059674, 0.022266388)
+script = ExtResource("10_0bxl1")
+matter = ExtResource("12_lxd25")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Content/Lithium002/Rocks/Rock2" index="0"]
+shape = SubResource("ConcavePolygonShape3D_0bxl1")
+
+[node name="Rock2" type="MeshInstance3D" parent="Content/Lithium002/Rocks/Rock2" index="1"]
+mesh = SubResource("BoxMesh_5iail")
+skeleton = NodePath("../..")
+
+[node name="Rock3" type="StaticBody3D" parent="Content/Lithium002/Rocks" index="2"]
+transform = Transform3D(0.5136012, 0, 0.85802907, 0, 1, 0, -0.85802907, 0, 0.5136012, -0.09614086, 0.27059674, 0.022266388)
+script = ExtResource("10_0bxl1")
+matter = ExtResource("13_fd3v1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Content/Lithium002/Rocks/Rock3" index="0"]
+shape = SubResource("ConcavePolygonShape3D_3em3g")
+
+[node name="Rock3" type="MeshInstance3D" parent="Content/Lithium002/Rocks/Rock3" index="1"]
+mesh = SubResource("BoxMesh_5iail")
+skeleton = NodePath("../..")
+
+[node name="Rock4" type="StaticBody3D" parent="Content/Lithium002/Rocks" index="3"]
+transform = Transform3D(0.64954096, 0, -0.7603266, 0, 1, 0, 0.7603266, 0, 0.64954096, 0.2690711, 0.27059674, 0.022266388)
+script = ExtResource("10_0bxl1")
+matter = ExtResource("14_mwoek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Content/Lithium002/Rocks/Rock4" index="0"]
+shape = SubResource("ConcavePolygonShape3D_lxd25")
+
+[node name="Rock4" type="MeshInstance3D" parent="Content/Lithium002/Rocks/Rock4" index="1"]
+mesh = SubResource("BoxMesh_5iail")
+skeleton = NodePath("../..")
+
+[node name="Tongs" parent="Content/Lithium002" index="4" instance=ExtResource("11_0bxl1")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -6.758566, 0.96426356, -5.6068854)
+
+[node name="Player" parent="." index="8" instance=ExtResource("10_5iail")]
 
 [editable path="Structure/SecondFloor/StairShaft"]

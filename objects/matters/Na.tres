@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Matter" load_steps=2 format=3 uid="uid://b7isxkjephgeu"]
+
+[ext_resource type="Script" uid="uid://dvogwt0t3rgv1" path="res://objects/matters/matter.gd" id="1_2jj5r"]
+
+[resource]
+script = ExtResource("1_2jj5r")
+name = "Sodium"
+metadata/_custom_type_script = "uid://dvogwt0t3rgv1"

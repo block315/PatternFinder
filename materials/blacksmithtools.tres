@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cktyfaor33o0u"]
+
+[ext_resource type="Texture2D" uid="uid://biltb6x5ygjy4" path="res://arts/3D/models/blendswap.com/blacksmith-tools-collection/textures/Metal_Pack_V1_041.jpg" id="1_e55ht"]
+
+[resource]
+albedo_texture = ExtResource("1_e55ht")
