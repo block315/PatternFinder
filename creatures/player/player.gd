@@ -55,6 +55,6 @@ func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * 0.005)
 		camera_3d.rotate_x(-event.relative.y * 0.005)
-		camera_3d.rotation.x = clamp(camera_3d.rotation.x, -PI/4, PI/4)
+		camera_3d.rotation.x = clamp(camera_3d.rotation.x, -PI/3, PI/3)
 	if event.is_action_pressed("quit_game"):
 		get_tree().quit()

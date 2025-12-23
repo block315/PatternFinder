@@ -6,3 +6,6 @@ class_name Collector
 
 func collect(_target_position, collider):
 	pass
+
+func throw():
+	pass

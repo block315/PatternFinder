@@ -25,7 +25,10 @@ func _process(_delta: float) -> void:
 				current_equipment.smash(gaze.get_collision_point(), gaze.get_collider())
 			else:
 				current_equipment.use()
-		if Input.is_action_just_pressed("switch_down"):
+		if Input.is_action_just_pressed("control"):
+			if current_equipment is Collector:
+				current_equipment.throw()
+		elif Input.is_action_just_pressed("switch_down"):
 			animation_player.play("switch")
 			await animation_player.animation_finished
 			current_equipment = get_child((current_equipment.get_index()+1)%(get_child_count()))
@@ -37,7 +40,6 @@ func _process(_delta: float) -> void:
 			animation_player.play_backwards("switch")
 		elif Input.is_action_just_pressed("cancel"):
 			current_equipment.drop()
-
 		else:
 			if animation_player.current_animation != "switch" or !animation_player.is_playing():
 				if player.velocity != Vector3.ZERO:

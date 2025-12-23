@@ -115,10 +115,10 @@ handle_position = Vector3(-0.00016063452, -0.0021708012, -0.123711646)
 handle_rotation = Vector3(-0.5769138, 1.2319576, -0.69457537)
 
 [node name="CollisionShape3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07957512, 0.0049072206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07108703, 0.0018798895)
 
 [node name="LeftTongPivot" type="Node3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.96592575, 0.258819, 0, -0.258819, 0.96592575, 0, 0, 0)
 
 [node name="Tongs1" parent="LeftTongPivot" index="0" instance=ExtResource("3_xoqur")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.078886986, -0.5028172, -0.28216082)
