@@ -22,8 +22,8 @@ func collect(target_position, collider):
 			if collider is RigidBody3D:
 				collider.set_collision_layer_value(1, false)
 				collider.set_collision_mask_value(1, false)
-				collider.set_collision_layer_value(7, true)
-				collider.set_collision_mask_value(7, true)
+				#collider.set_collision_layer_value(7, true)
+				#collider.set_collision_mask_value(7, true)
 				collider.freeze = true
 			collider.reparent(grab_point)
 			collection = collider.matter
@@ -42,8 +42,12 @@ func throw():
 		if _collection is RigidBody3D:
 			_collection.set_collision_layer_value(1, true)
 			_collection.set_collision_mask_value(1, true)
-			_collection.set_collision_layer_value(7, false)
-			_collection.set_collision_mask_value(7, false)
+			#_collection.set_collision_layer_value(7, false)
+			#_collection.set_collision_mask_value(7, false)
 			_collection.freeze = false
 		collection = null
 	animation_player.play_backwards("Open")
+
+func _process(_delta: float) -> void:
+	if collection == null and grab_point.get_child_count() > 0:
+		grab_point.get_child(0).queue_free()
