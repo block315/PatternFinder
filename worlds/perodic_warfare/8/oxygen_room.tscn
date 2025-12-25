@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0rjd7jj5qyj1"]
+[gd_scene load_steps=8 format=3 uid="uid://c0rjd7jj5qyj1"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_el4l7"]
 [ext_resource type="Script" uid="uid://bdkxydawlbg7b" path="res://worlds/perodic_warfare/8/oxygen_room.gd" id="2_0mrac"]
@@ -6,52 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsdiov7s5chh0" path="res://worlds/perodic_warfare/8/T_Decals_O.png" id="3_8w4fh"]
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="4_ugcw3"]
 [ext_resource type="MeshLibrary" uid="uid://cuerebstceco6" path="res://worlds/perodic_warfare/8/grass.tres" id="5_qw0i3"]
-[ext_resource type="Shader" uid="uid://x333vw5qstth" path="res://fire.gdshader" id="6_uusdo"]
 [ext_resource type="PackedScene" uid="uid://bl0tc51w03yyu" path="res://arts/3D/models/itch.io/IndustrialPack2/Fire_Extinguisher/Fire_extinguisher.fbx" id="7_r0gc8"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_uusdo"]
-noise_type = 5
-frequency = 0.3
-fractal_gain = 1.0
-fractal_weighted_strength = 0.3
-domain_warp_enabled = true
-domain_warp_fractal_octaves = 1
-
-[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_r0gc8"]
-noise = SubResource("FastNoiseLite_uusdo")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r0gc8"]
-render_priority = 0
-shader = ExtResource("6_uusdo")
-shader_parameter/raymarch_steps = 6
-shader_parameter/sample_jitter = true
-shader_parameter/potato_mode = false
-shader_parameter/sample_noise = SubResource("NoiseTexture3D_r0gc8")
-shader_parameter/billboard = true
-shader_parameter/billboard_z_offset = 0.675
-shader_parameter/proximity_fade_distance = 0.375
-shader_parameter/time_scale = 0.027
-shader_parameter/noise_scale = 0.45
-shader_parameter/noise_threshold = 0.43
-shader_parameter/fire_height = 1.43
-shader_parameter/fire_width = 1.18
-shader_parameter/box_center = Vector3(0, 0, 0)
-shader_parameter/box_rotation = Vector3(0, 0, 0)
-shader_parameter/taper_factor = 0.425
-shader_parameter/wobble_strength = 2.0
-shader_parameter/wobble_speed = 6.0
-shader_parameter/wobble_noise_frequency = 0.125
-shader_parameter/sharpness_cutoff = 4.5
-shader_parameter/emission_strength = 12.5
-shader_parameter/core_glow_multiplier = 16.0
-shader_parameter/color_core = Vector3(1, 0.9, 0.5)
-shader_parameter/color_mid = Vector3(1, 0.625, 0)
-shader_parameter/color_outer = Vector3(0.8, 0.01, 0)
-shader_parameter/color_smoke = Vector3(-0.067, -0.067, -0.067)
-shader_parameter/jitter_multiplier = 1.0
-
-[sub_resource type="QuadMesh" id="QuadMesh_lb2er"]
-material = SubResource("ShaderMaterial_r0gc8")
 
 [node name="OxygenRoom" instance=ExtResource("1_el4l7")]
 script = ExtResource("2_0mrac")
@@ -63,10 +18,10 @@ atomic_number = 8
 neutron = Array[int]([8])
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(799.9868, 0, 4.4535074, 0, 800, 0, -4.4535074, 0, 799.9868, 0, 487, 1748)
+transform = Transform3D(564.61273, 0, 566.75494, 0, 800, 0, -566.75494, 0, 564.61273, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(379.99622, 0, 1.6923376, 0, 380, 0, -1.6923376, 0, 379.99622, 1356, 0, 0)
+transform = Transform3D(307.08774, 0, 223.8238, 0, 380, 0, -223.8238, 0, 307.08774, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -337, 33, 0)
@@ -83,11 +38,7 @@ data = {
 
 [node name="Oxygen002" parent="Content" index="1" instance=ExtResource("4_ugcw3")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Content/Oxygen002" index="2"]
-transform = Transform3D(0.68767726, 0, 0, 0, 2.7434483, 0, 0, 0, 1, -5.693194, 1.0415002, -5.876815)
-mesh = SubResource("QuadMesh_lb2er")
-
-[node name="Fire_extinguisher" parent="Content/Oxygen002" index="3" instance=ExtResource("7_r0gc8")]
+[node name="Fire_extinguisher" parent="Content/Oxygen002" index="2" instance=ExtResource("7_r0gc8")]
 transform = Transform3D(-0.34641016, 0, -0.20000003, 0, 0.4, 0, 0.20000003, 0, -0.34641016, -6.916009, 1.3595705, -5.631646)
 
 [node name="Player" parent="." index="8" instance=ExtResource("2_pyscx")]

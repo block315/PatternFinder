@@ -81,10 +81,10 @@ neutron = Array[int]([3, 4])
 electron = 3
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-799.2078, 0, 35.574135, 0, 800, 0, -35.574135, 0, -799.2078, 0, 487, 1748)
+transform = Transform3D(798.04517, 0, 55.880264, 0, 800, 0, -55.880264, 0, 798.04517, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-299.2851, 0, 234.15468, 0, 380, 0, -234.15468, 0, -299.2851, 1356, 0, 0)
+transform = Transform3D(379.40585, 0, 21.240746, 0, 380, 0, -21.240746, 0, 379.40585, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
@@ -98,7 +98,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 content = "Li-ion battery uses the reversible intercalation of Li ions."
 
 [node name="LithiumIonBattery" parent="Content/Lithium001" index="2" instance=ExtResource("5_vnjh2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.97282577, -5.6805816)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.9621029, 5.928951)
 
 [node name="Lithium002" type="Node3D" parent="Content" index="1"]
 script = ExtResource("6_mwoek")

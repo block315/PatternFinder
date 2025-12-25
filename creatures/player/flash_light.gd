@@ -16,14 +16,15 @@ func _process(_delta: float) -> void:
 		timer.start()
 
 func _unhandled_input(_event: InputEvent) -> void:
+	var tween: Tween = create_tween()
 	if Input.is_action_just_pressed("light"):
 		on = !on
 		if on:
-			light_energy = 10
-			flashlight.show()
+			tween.tween_property(flashlight, "position:z", -0.672, 0.2)
+			tween.tween_property(self, "light_energy", 10, 0.2)
 		else:
 			light_energy = 0
-			flashlight.hide()
+			tween.tween_property(flashlight, "position:z", 0.4, 0.2)
 
 func _on_timer_timeout() -> void:
 	battery -= 1

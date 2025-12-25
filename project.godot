@@ -132,7 +132,6 @@ control={
 [layer_names]
 
 3d_physics/layer_7="Equipment"
-3d_physics/layer_8="Flame"
 
 [physics]
 

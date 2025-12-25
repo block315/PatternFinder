@@ -118,8 +118,7 @@ script = ExtResource("4_ui20s")
 one_shot = true
 
 [node name="Flashlight" parent="Camera3D/FlashLight" instance=ExtResource("6_b5q5c")]
-transform = Transform3D(-0.023110272, 0, -0.09729294, -0.0022938964, 0.0999722, 0.0005448758, 0.09726589, 0.0023577213, -0.023103848, -0.7620976, -0.40368378, -0.67197)
-visible = false
+transform = Transform3D(-0.023110272, 0, -0.09729294, -0.0022938964, 0.0999722, 0.0005448758, 0.09726589, 0.0023577213, -0.023103848, -0.762, -0.404, 0.4)
 
 [node name="MaterialFootstepPlayer3D" type="RayCast3D" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("7_1q4qw")
