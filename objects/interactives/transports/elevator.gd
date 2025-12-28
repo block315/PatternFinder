@@ -33,7 +33,7 @@ func _on_door_sensor_area_3d_body_entered(body: Node3D) -> void:
 
 func elevator_switch(up:bool):
 	await animation_player.animation_finished
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.2).timeout
 	if up and upstairs != 0:
 		#for _light in $Lights.get_children():
 			#_light.power = false

@@ -4,7 +4,7 @@ class_name Player
 
 @export var speed = 5.0
 @export var jump_speed = 4.5
-@export_range(0,100,1.0) var health: int = 50
+@export_range(0,100,1.0) var health: float = 50
 @export_range(0,100,1.0) var stamina: float = 50
 
 @onready var hand: Hand = $Camera3D/Hand
@@ -13,6 +13,8 @@ class_name Player
 @onready var gaze: RayCast3D = $Camera3D/Gaze
 @onready var hud: HUD = $Camera3D/HUD
 
+var damage_over_time: float = 0
+
 func _ready() -> void:
 	if get_tree().get_node_count_in_group("player") > 1:
 		get_tree().get_first_node_in_group("player").queue_free()
@@ -20,6 +22,7 @@ func _ready() -> void:
 	camera_3d.make_current()
 
 func _physics_process(delta: float) -> void:
+	health -= damage_over_time
 	if is_on_floor() and visible:
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = jump_speed
@@ -58,3 +61,11 @@ func _unhandled_input(event) -> void:
 		camera_3d.rotation.x = clamp(camera_3d.rotation.x, -PI/3, PI/3)
 	if event.is_action_pressed("quit_game"):
 		get_tree().quit()
+
+func _on_hit_box_area_entered(area: Area3D) -> void:
+	if area.get_collision_layer_value(8):
+		damage_over_time += 0.1
+
+func _on_hit_box_area_exited(area: Area3D) -> void:
+	if area.get_collision_layer_value(8):
+		damage_over_time -= 0.1

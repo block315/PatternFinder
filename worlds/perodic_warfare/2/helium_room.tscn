@@ -34,10 +34,10 @@ transform = Transform3D(5.9604616e-08, 0.9999996, 0, 0, 5.9604623e-08, -0.999999
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(796.8719, 0, 70.667076, 0, 800, 0, -70.667076, 0, 796.8719, 0, 487, 1748)
+transform = Transform3D(773.9962, 0, 202.30794, 0, 800, 0, -202.30794, 0, 773.9962, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(379.04904, 0, 26.86613, 0, 380, 0, -26.86613, 0, 379.04904, 1356, 0, 0)
+transform = Transform3D(372.0795, 0, 77.18026, 0, 380, 0, -77.18026, 0, 372.0795, 1356, 0, 0)
 
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 9, 0)
@@ -47,6 +47,9 @@ visible = true
 stream = ExtResource("5_atodp")
 volume_db = -30.0
 autoplay = true
+
+[node name="Elevator" parent="Transport" index="0"]
+downstairs = 10
 
 [node name="Train" parent="Transport" index="1" instance=ExtResource("7_7q16b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
@@ -58,7 +61,7 @@ content = "Helium are created by nuclear fusion of hydrogen in stars."
 metadata/_custom_type_script = "uid://cic63ibvj1n7c"
 
 [node name="Star" parent="Content/Helium001" index="0" instance=ExtResource("9_7q16b")]
-transform = Transform3D(5.1747317, 0, 3.0367992, 0, 6, 0, -3.0367992, 0, 5.1747317, 0, 14, -6)
+transform = Transform3D(0.22092448, 0, 5.995931, 0, 6, 0, -5.995931, 0, 0.22092448, 0, 14, -6)
 layers = 4
 
 [node name="Helium002" type="Node3D" parent="Content" index="1"]

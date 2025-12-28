@@ -89,6 +89,7 @@ mesh = SubResource("CapsuleMesh_ksomb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+cull_mask = 1048573
 script = ExtResource("2_2fd13")
 
 [node name="Gaze" type="RayCast3D" parent="Camera3D"]
@@ -130,5 +131,15 @@ min_footstep_delay = 0.1
 max_footstep_delay = 0.4
 metadata/_custom_type_script = "uid://jy4sym0dop3s"
 
+[node name="HitBox" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_mnm1f")
+
 [connection signal="child_exiting_tree" from="Camera3D/Hand" to="Camera3D/Hand" method="_on_child_exiting_tree"]
 [connection signal="timeout" from="Camera3D/FlashLight/Timer" to="Camera3D/FlashLight" method="_on_timer_timeout"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_exited" from="HitBox" to="." method="_on_hit_box_area_exited"]

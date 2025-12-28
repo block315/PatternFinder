@@ -16,14 +16,11 @@ atomic_number = 6
 neutron = Array[int]([6])
 electron = 6
 
-[node name="Star" parent="Environment" index="1"]
-transform = Transform3D(-25.49923, 0, 43.009174, 0, 50, 0, -43.009174, 0, -25.49923, 0, 0, -3069)
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(780.5946, 0, 175.13081, 0, 800, 0, -175.13081, 0, 780.5946, 0, 487, 1748)
 
-[node name="PlanetGaseous" parent="Environment" index="2"]
-transform = Transform3D(137.39859, 0, 788.1119, 0, 800, 0, -788.1119, 0, 137.39859, 0, 487, 1748)
-
-[node name="PlanetSand" parent="Environment" index="3"]
-transform = Transform3D(166.05382, 0, 341.79834, 0, 380, 0, -341.79834, 0, 166.05382, 1356, 0, 0)
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(374.09232, 0, 66.74508, 0, 380, 0, -66.74508, 0, 374.09232, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 31, 1)
@@ -32,6 +29,9 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 31, 1)
 stream = ExtResource("4_0d10w")
 volume_db = -20.0
 autoplay = true
+
+[node name="Elevator" parent="Transport" index="0"]
+downstairs = 14
 
 [node name="Train" parent="Transport" index="1" instance=ExtResource("4_lsblh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)

@@ -81,10 +81,10 @@ neutron = Array[int]([3, 4])
 electron = 3
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(798.04517, 0, 55.880264, 0, 800, 0, -55.880264, 0, 798.04517, 0, 487, 1748)
+transform = Transform3D(705.71936, 0, 376.7744, 0, 800, 0, -376.7744, 0, 705.71936, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(379.40585, 0, 21.240746, 0, 380, 0, -21.240746, 0, 379.40585, 1356, 0, 0)
+transform = Transform3D(351.13065, 0, 145.28333, 0, 380, 0, -145.28333, 0, 351.13065, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)

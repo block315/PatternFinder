@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d02pha1jihxco"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_5xpd8"]
+[ext_resource type="Script" uid="uid://dbl3ef0uvbwa8" path="res://worlds/perodic_warfare/10/neon_room.gd" id="2_s2qpn"]
+[ext_resource type="Texture2D" uid="uid://cf8gkfof7fvyh" path="res://worlds/perodic_warfare/10/T_Decals_Ne.png" id="3_aiq3y"]
+
+[node name="NeonRoom" instance=ExtResource("1_5xpd8")]
+script = ExtResource("2_s2qpn")
+atomic_number = 10
+element_decal_png = ExtResource("3_aiq3y")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 10
+neutron = Array[int]([10, 12])
+electron = 10
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-758.39667, 0, -254.6236, 0, 800, 0, 254.6236, 0, -758.39667, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-354.396, 0, 137.1257, 0, 380, 0, -137.1257, 0, -354.396, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -382, 33, 0)
+visible = true
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 2
+downstairs = 18
+
+[editable path="Structure/SecondFloor/StairShaft"]

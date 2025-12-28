@@ -207,6 +207,7 @@ power = false
 
 [node name="Prop_Light_Small2" parent="Lights/Prop_Light_Small" instance=ExtResource("9_nh2gb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+power = false
 
 [node name="Prop_Light_Small2" parent="Lights" instance=ExtResource("9_nh2gb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 4)
@@ -214,6 +215,7 @@ power = false
 
 [node name="Prop_Light_Small2" parent="Lights/Prop_Light_Small2" instance=ExtResource("9_nh2gb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+power = false
 
 [node name="ElevatorArea3D" type="Area3D" parent="."]
 

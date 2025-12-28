@@ -127,105 +127,157 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -26, 22)
 
 [node name="WallBandStraight10" parent="Structure/Wall" index="11"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="WallBandStraight11" parent="Structure/Wall" index="12"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="WallBandStraight13" parent="Structure/Wall" index="15"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="WallBandStraight16" parent="Structure/Wall" index="18"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight14" parent="Structure/Wall" index="33"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight15" parent="Structure/Wall" index="34"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight16" parent="Structure/Wall" index="35"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight17" parent="Structure/Wall" index="36"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight19" parent="Structure/Wall" index="38"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight22" parent="Structure/Wall" index="41"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight38" parent="Structure/Wall" index="57"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 13.6285, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight39" parent="Structure/Wall" index="58"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 17.6285, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight40" parent="Structure/Wall" index="59"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21.6285, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight41" parent="Structure/Wall" index="60"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9.6285, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight43" parent="Structure/Wall" index="62"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2.0284991, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight46" parent="Structure/Wall" index="65"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6.0284996, 2, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
+
+[node name="TopSimpleStraight56" parent="Structure/Wall" index="75"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.628502, 4, 10.009123)
+
+[node name="TopSimpleStraight59" parent="Structure/Wall" index="78"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.628502, 4, 14.009123)
 
 [node name="TopSimpleStraight62" parent="Structure/Wall" index="81"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight63" parent="Structure/Wall" index="82"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight64" parent="Structure/Wall" index="83"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight65" parent="Structure/Wall" index="84"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight67" parent="Structure/Wall" index="86"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight70" parent="Structure/Wall" index="89"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight86" parent="Structure/Wall" index="105"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight87" parent="Structure/Wall" index="106"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight88" parent="Structure/Wall" index="107"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight89" parent="Structure/Wall" index="108"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight91" parent="Structure/Wall" index="110"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight94" parent="Structure/Wall" index="113"]
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight110" parent="Structure/Wall" index="129"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 13.6285, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight111" parent="Structure/Wall" index="130"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 17.6285, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight112" parent="Structure/Wall" index="131"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 21.6285, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight113" parent="Structure/Wall" index="132"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9.6285, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight115" parent="Structure/Wall" index="134"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 2.0284991, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight118" parent="Structure/Wall" index="137"]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 6.0284996, 8, 21.609123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight121" parent="Structure/Wall" index="140" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.6, -5, 6)
@@ -444,148 +496,184 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.6
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6000004, -15, 2)
 
 [node name="TopSimpleStraight193" parent="Structure/Wall" index="212" instance=ExtResource("2_xlv7y")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -5, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.628508, -5, 22.009123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight194" parent="Structure/Wall" index="213" instance=ExtResource("2_xlv7y")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -5, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.628508, -5, 22.009123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight195" parent="Structure/Wall" index="214" instance=ExtResource("2_xlv7y")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -5, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.628508, -5, 22.009123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight196" parent="Structure/Wall" index="215" instance=ExtResource("2_xlv7y")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -5, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.6285076, -5, 22.009123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight197" parent="Structure/Wall" index="216" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -5, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight198" parent="Structure/Wall" index="217" instance=ExtResource("2_xlv7y")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -5, 22)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.628508, -5, 22.009123)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight199" parent="Structure/Wall" index="218" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight200" parent="Structure/Wall" index="219" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight201" parent="Structure/Wall" index="220" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight202" parent="Structure/Wall" index="221" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight203" parent="Structure/Wall" index="222" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight204" parent="Structure/Wall" index="223" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -7, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight205" parent="Structure/Wall" index="224" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight206" parent="Structure/Wall" index="225" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight207" parent="Structure/Wall" index="226" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight208" parent="Structure/Wall" index="227" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight209" parent="Structure/Wall" index="228" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight210" parent="Structure/Wall" index="229" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -9, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight211" parent="Structure/Wall" index="230" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight212" parent="Structure/Wall" index="231" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight213" parent="Structure/Wall" index="232" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight214" parent="Structure/Wall" index="233" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight215" parent="Structure/Wall" index="234" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight216" parent="Structure/Wall" index="235" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -11, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight217" parent="Structure/Wall" index="236" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight218" parent="Structure/Wall" index="237" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight219" parent="Structure/Wall" index="238" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight220" parent="Structure/Wall" index="239" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight221" parent="Structure/Wall" index="240" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight222" parent="Structure/Wall" index="241" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -13, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight223" parent="Structure/Wall" index="242" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.600006, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight224" parent="Structure/Wall" index="243" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.600006, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight225" parent="Structure/Wall" index="244" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.600006, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight226" parent="Structure/Wall" index="245" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.600006, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight227" parent="Structure/Wall" index="246" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6000061, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="TopSimpleStraight228" parent="Structure/Wall" index="247" instance=ExtResource("2_xlv7y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.600006, -15, 22)
 script = ExtResource("2_2u6np")
+wall_color = Color(1, 0, 0, 1)
 
 [node name="ColumnLargeStraight7" parent="Structure/Column" index="1" instance=ExtResource("3_2u6np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -10, 1)
@@ -665,7 +753,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -7, 14)
 
 [node name="PlatformRamp4Wide22" parent="Structure/Slope" index="21" instance=ExtResource("2_da0mf")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -7, 10)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.0285015, -7, 10.009123)
 
 [node name="PlatformRamp4Wide23" parent="Structure/Slope" index="22" instance=ExtResource("2_da0mf")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, -7, 6)
@@ -738,8 +826,3 @@ transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 20
 
 [node name="Heater7" parent="Axis/X" index="9" instance=ExtResource("3_da0mf")]
 transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 24.6736, 0.91231465, 17)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="5"]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 12.673599, 0.91231465, 17)
-light_color = Color(0.8340346, 0.38436344, 0.13573173, 1)
-light_bake_mode = 1

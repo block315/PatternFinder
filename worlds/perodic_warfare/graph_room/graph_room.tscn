@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ncnkw0hhg0um"]
+[gd_scene load_steps=12 format=3 uid="uid://ncnkw0hhg0um"]
 
 [ext_resource type="PackedScene" uid="uid://bbooxkxuywkf6" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Large_Straight.gltf" id="3_eetix"]
 [ext_resource type="PackedScene" uid="uid://dcdeljpadacex" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_DarkPlates.gltf" id="3_kdkxg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dsb32t3t83sb2" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Straight.gltf" id="4_kdkxg"]
 [ext_resource type="PackedScene" uid="uid://uqmf23w2cf60" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/WallBand_Corner_Square_Inner.gltf" id="5_rhxpu"]
 [ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="7_hyel3"]
+[ext_resource type="Texture2D" uid="uid://bgj1e3eildnii" path="res://arts/2D/pictures/kenney.nl/kenney_particle-pack/PNG (Transparent)/star_05.png" id="7_unrdp"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_unrdp"]
 vertices = PackedVector3Array(0.54402924, 0.48183608, 23.062687, 1.7940292, 0.48183608, 23.062687, 1.7940292, 0.48183608, 21.812687, 1.7940292, 0.48183608, 2.062686, 1.7940292, 0.48183608, 0.56268597, 0.54402924, 0.48183608, 0.56268597, 23.04403, 0.48183608, 0.56268597, 21.29403, 0.48183608, 0.56268597, 21.04403, 0.48183608, 2.562686, 20.79403, 0.48183608, 21.312687, 21.29403, 0.48183608, 23.062687, 23.04403, 0.48183608, 23.062687, 19.29403, 0.48183608, 2.812686, 19.29403, 0.48183608, 21.312687, 2.2940292, 0.48183608, 2.812686, 4.294029, 0.48183608, 23.062687, 18.79403, 0.48183608, 23.062687, 18.79403, 0.48183608, 21.812687, 3.7940292, 0.48183608, 21.312687, 18.79403, 0.48183608, 2.062686, 18.79403, 0.48183608, 0.56268597, 4.294029, 0.48183608, 0.56268597, 4.044029, 0.48183608, 2.562686, 2.2940292, 0.48183608, 21.312687, 2.7940292, 10.481836, 0.56268597, 2.7940292, 10.481836, 1.562686, 3.2940292, 10.481836, 1.312686, 3.2940292, 10.481836, 0.56268597, 19.79403, 10.481836, 0.56268597, 19.79403, 10.481836, 1.562686, 20.29403, 10.481836, 1.312686, 20.29403, 10.481836, 0.56268597, 2.7940292, 10.481836, 22.312687, 2.7940292, 10.481836, 23.062687, 3.2940292, 10.481836, 23.062687, 19.79403, 10.481836, 22.312687, 19.79403, 10.481836, 23.062687, 20.29403, 10.481836, 23.062687)
@@ -577,6 +578,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0
 [node name="Player" parent="." instance=ExtResource("7_hyel3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10)
 
+[node name="Sprite3D" type="Sprite3D" parent="Player"]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 2, 0)
+layers = 2
+texture = ExtResource("7_unrdp")
+
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
@@ -594,3 +600,55 @@ directional_shadow_max_distance = 1.0
 [node name="X" type="Node3D" parent="Axis"]
 
 [node name="Y" type="Node3D" parent="Axis"]
+
+[node name="MiniMap" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MiniMap"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniMap/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MiniMap/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="MarginContainer" type="MarginContainer" parent="MiniMap/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MiniMap/VBoxContainer/HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(208, 192)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MiniMap/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 10, 18, 12)
+projection = 1
+size = 27.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="MiniMap/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="MarginContainer2" type="MarginContainer" parent="MiniMap/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5

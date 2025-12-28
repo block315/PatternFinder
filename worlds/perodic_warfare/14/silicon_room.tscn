@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmndj33w6k0gf"]
+[gd_scene load_steps=6 format=3 uid="uid://cmndj33w6k0gf"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_k8s4q"]
 [ext_resource type="Script" uid="uid://d081qhlhtfow3" path="res://worlds/perodic_warfare/14/silicon_room.gd" id="2_3bywq"]
 [ext_resource type="Texture2D" uid="uid://b5sngxgokxjub" path="res://worlds/perodic_warfare/14/T_Decals_Si.png" id="3_ms6ed"]
 [ext_resource type="PackedScene" uid="uid://70p5jrd5uhe2" path="res://worlds/perodic_warfare/14/silicon_001.tscn" id="4_rkdsx"]
+[ext_resource type="PackedScene" uid="uid://c2aqrr3tssno0" path="res://arts/3D/models/polyhaven.com/sand_rocks_small_01_2k.gltf/sand_rocks_small_01_2k.gltf" id="5_cms1n"]
 
 [node name="SiliconRoom" instance=ExtResource("1_k8s4q")]
 script = ExtResource("2_3bywq")
@@ -15,10 +16,22 @@ atomic_number = 14
 neutron = Array[int]([14, 15, 16])
 electron = 14
 
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(6.7725353, 0, -799.9705, 0, 800, 0, 799.9705, 0, 6.7725353, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-305.90674, 0, -225.43524, 0, 380, 0, 225.43524, 0, -305.90674, 1356, 0, 0)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 55, 0)
 
-[node name="Silicon_001" parent="Content" index="0" instance=ExtResource("4_rkdsx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.706862, 0.11126304, -5.472309)
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 6
+downstairs = 32
 
-[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
+[node name="Silicon_001" parent="Content" index="0" instance=ExtResource("4_rkdsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.706862, 0.07256496, 4.527691)
+
+[node name="sand_rocks_small_01_2k" parent="Content/Silicon_001" index="2" instance=ExtResource("5_cms1n")]
+
+[editable path="Structure/SecondFloor/StairShaft"]
