@@ -1,18 +1,16 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=24 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
+[ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://meshes/walls/wall_astra_straight.tscn" id="5_l5qo0"]
 [ext_resource type="PackedScene" uid="uid://dj8m5svy4l571" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Simple.gltf" id="5_q6ybd"]
+[ext_resource type="PackedScene" uid="uid://cvolcimrxjrnh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopAstra_Straight.gltf" id="6_6cl36"]
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
-[ext_resource type="PackedScene" uid="uid://dgp8s35u4etjn" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/WallAstra_Straight_Window.gltf" id="6_yumeh"]
-[ext_resource type="PackedScene" uid="uid://bfsfu5wma7e1c" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/WallWindow_Straight.gltf" id="7_57wpb"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="PackedScene" uid="uid://souhrankrva" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Stairs_4Wide.gltf" id="7_vvanm"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
-[ext_resource type="PackedScene" uid="uid://ct06r4bik6sps" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopWindow_Straight.gltf" id="8_m0o4g"]
-[ext_resource type="PackedScene" uid="uid://34actix14eqq" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopCables_Straight.gltf" id="9_ae4a2"]
 [ext_resource type="AudioStream" uid="uid://wkvaofnkwde" path="res://arts/audio/musics/originals/hydrogen/hydrogen.ogg" id="12_vvanm"]
 [ext_resource type="Script" uid="uid://b4pjla2vfw7ww" path="res://worlds/perodic_warfare/1/hydrogen_003.gd" id="18_vvanm"]
 [ext_resource type="Script" uid="uid://bf5r4uu760m8q" path="res://objects/interactives/breakables/breakable.gd" id="20_vvanm"]
@@ -47,34 +45,29 @@ surface_material_override/2 = null
 [node name="@Node3D@517631" parent="Structure/FirstFloor/Platforms/PlatformSimple13/PlatformRamp2" index="2" instance=ExtResource("5_q6ybd")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, -5, 1)
 
+[node name="DoorFrameSquare" parent="Structure/FirstFloor/Platforms/PlatformSimple24" index="1"]
+visible = false
+
+[node name="WallAstra_Straight" parent="Structure/FirstFloor/Platforms/PlatformSimple24" index="3" instance=ExtResource("5_l5qo0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("6_6cl36")]
+
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
-transform = Transform3D(5.9604602e-08, 0.99999934, 0, 0, 5.960461e-08, -0.9999992, -0.9999992, 0, 5.9604602e-08, -11, 3, 2)
+transform = Transform3D(5.96046e-08, 0.9999993, 0, 0, 5.9604606e-08, -0.99999917, -0.99999917, 0, 5.96046e-08, -11, 3, 2)
 
 [node name="@Node3D@89259" parent="Structure/SecondFloor/Platforms/PlatformMetal8" index="2" instance=ExtResource("7_vvanm")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 3, 2)
 
-[node name="DoorFrameSquareTall" parent="Structure/ThridFloor/PlatformDarkPlates15" index="2"]
-visible = false
-
-[node name="WallAstraStraightWindow" parent="Structure/ThridFloor/PlatformDarkPlates15" index="4" instance=ExtResource("6_yumeh")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-
-[node name="WallWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow" index="1" instance=ExtResource("7_57wpb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-
-[node name="TopWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow/WallWindowStraight" index="1" instance=ExtResource("8_m0o4g")]
-
-[node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow/WallWindowStraight/TopWindowStraight" index="1" instance=ExtResource("9_ae4a2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(785.3608, 0, 152.33884, 0, 800, 0, -152.33884, 0, 785.3608, 0, 487, 1748)
+transform = Transform3D(656.88904, 0, 456.6131, 0, 800, 0, -456.6131, 0, 656.88904, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(375.54504, 0, 58.016716, 0, 380, 0, -58.016716, 0, 375.54504, 1356, 0, 0)
+transform = Transform3D(336.00772, 0, 177.479, 0, 380, 0, -177.479, 0, 336.00772, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
+visible = true
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
 stream = ExtResource("12_vvanm")
@@ -87,6 +80,7 @@ downstairs = 3
 [node name="Train" parent="Transport" index="1" instance=ExtResource("6_n4crl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 destination = 2
+destination_position = Vector3(4, 0, -5)
 
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)

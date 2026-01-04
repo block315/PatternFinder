@@ -1,7 +1,7 @@
 extends Node
 
 var current_room : ElementRoom ## Room that is player in
-var train_position : float = 0 ## Manage train
+var train_position : Array[float] = [0.0,0.0,0.0,0.0] ## Manage train
 var propositions = [] ## Store game data for perodic warfare
 var access = [] ## [first stair, second stair, elevator, train]
 

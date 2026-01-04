@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dp3hsvkn4gaji"]
+[gd_scene load_steps=68 format=3 uid="uid://dp3hsvkn4gaji"]
 
 [ext_resource type="Texture2D" uid="uid://053mm1cqga4r" path="res://arts/2D/pictures/unsplash.com/jeremy-perkins-uhjiu8FjnsQ-unsplash/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg" id="1_lvs21"]
 [ext_resource type="Script" uid="uid://c06kml6k08ak" path="res://worlds/perodic_warfare/element_room.gd" id="1_ofr2s"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bx0upkq7yx83p" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Rails_2.gltf" id="19_yiu3u"]
 [ext_resource type="PackedScene" uid="uid://dkpsy33bubnch" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Stairs_4WideTall.gltf" id="20_0ms2t"]
 [ext_resource type="PackedScene" uid="uid://dhnsed5jytaqw" path="res://arts/3D/models/quaternius.com/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Crate_Tarp_Large.gltf" id="20_ky51i"]
+[ext_resource type="PackedScene" uid="uid://uwueevqyejas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_Square.gltf" id="20_q1lyk"]
 [ext_resource type="PackedScene" uid="uid://bbp1sv2ektdas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Round.gltf" id="20_r7xwa"]
 [ext_resource type="PackedScene" uid="uid://cannlbg5g6uws" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal2.gltf" id="22_0ms2t"]
 [ext_resource type="PackedScene" uid="uid://cfnun0b7fdr1l" path="res://meshes/props/prop_light_floor.tscn" id="22_sf43r"]
@@ -463,13 +464,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="PlatformSimple24" parent="Structure/FirstFloor/Platforms" instance=ExtResource("7_u1fk7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0, -8)
 
+[node name="DoorFrameSquare" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("20_q1lyk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -4.7683716e-07)
+
 [node name="PlatformSimple2" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("8_0ms2t")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 0)
-
-[node name="WallAstra_Straight" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("2_gocgk")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" instance=ExtResource("12_u1fk7")]
 
 [node name="PlatformSimple25" parent="Structure/FirstFloor/Platforms" instance=ExtResource("7_u1fk7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 8, 0, -8)
@@ -997,13 +996,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 8.742276e-08, -1, 3.8213718e-15, 1, 
 [node name="Prop_Light_Small2" parent="Structure/ThridFloor/PlatformDarkPlates15/PlatformCenterPlate" instance=ExtResource("31_ycobv")]
 transform = Transform3D(-4.37114e-08, 0, -1, -8.742279e-08, -1, 3.8213718e-15, -1, 8.74228e-08, 4.37114e-08, 1, 0, 0)
 
-[node name="DoorFrameSquareTall" parent="Structure/ThridFloor/PlatformDarkPlates15" instance=ExtResource("43_dr2j5")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.2, 0, 1, 0, -4.371139e-08, 2, 0, -8.742279e-08)
-
 [node name="TopWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates15" instance=ExtResource("35_yiu3u")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 3, 0)
 
 [node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/TopWindowStraight" instance=ExtResource("36_cx5h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="WallAstraStraightWindow" parent="Structure/ThridFloor/PlatformDarkPlates15" instance=ExtResource("32_ky51i")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="WallWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow" instance=ExtResource("34_aal4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="TopWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow/WallWindowStraight" instance=ExtResource("35_yiu3u")]
+
+[node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates15/WallAstraStraightWindow/WallWindowStraight/TopWindowStraight" instance=ExtResource("36_cx5h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="PlatformDarkPlates16" parent="Structure/ThridFloor" instance=ExtResource("30_r7xwa")]
@@ -1234,11 +1241,11 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="PlanetGaseous" parent="Environment" instance=ExtResource("51_dca73")]
-transform = Transform3D(785.74805, 0, 150.32881, 0, 800, 0, -150.32881, 0, 785.74805, 0, 487, 1748)
+transform = Transform3D(698.3726, 0, 390.22354, 0, 800, 0, -390.22354, 0, 698.3726, 0, 487, 1748)
 layers = 4
 
 [node name="PlanetSand" parent="Environment" instance=ExtResource("52_q1lyk")]
-transform = Transform3D(375.66296, 0, 57.247852, 0, 380, 0, -57.247852, 0, 375.66296, 1356, 0, 0)
+transform = Transform3D(348.86304, 0, 150.64717, 0, 380, 0, -150.64717, 0, 348.86304, 1356, 0, 0)
 
 [node name="SunLightGuard" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.5, 0, -1, -2.1855694e-08, 1, 6, -16)
