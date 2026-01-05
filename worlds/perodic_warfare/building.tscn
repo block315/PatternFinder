@@ -154,16 +154,6 @@ surface_material_override/0 = ExtResource("3_73e34")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="6/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
-[node name="TrainDoor" type="MeshInstance3D" parent="6"]
-transform = Transform3D(0.075, 0, 0, 0, 0.063, 0, 0, 0, 0.05, 0, 0.05, 0.43395177)
-mesh = SubResource("ArrayMesh_u1r7e")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("4_u602w")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="6/TrainDoor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3809524, 0)
-mesh = SubResource("BoxMesh_u1r7e")
-
 [node name="TrainDoor2" type="MeshInstance3D" parent="6"]
 transform = Transform3D(0.075, 0, 0, 0, 0.063, 0, 0, 0, 0.05, 0.20656013, -0.45000002, -0.5353758)
 mesh = SubResource("ArrayMesh_u1r7e")
@@ -877,10 +867,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.380516, -2.3, -17.6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.380516, -2.3, -17.6)
 
 [node name="RailwayTrackStraight6" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.53999996, 0, 0, 0, 1, 0, 0, 0, 1, 112.380516, -2.3, -17.6)
+transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 1, 112.380516, -2.3, -17.6)
 
 [node name="RailwayTrackStraight7" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.99901915, 0.044281963, 0, -0.044281963, 0.99901915, 0, 0, 0, 1, 126.18396, -2.7, -17.6)
+transform = Transform3D(0.99901915, 0.044281963, 0, -0.044281963, 0.99901915, 0, 0, 0, 1, 127.383965, -2.7, -17.6)
 
 [node name="RailwayTrackCurve2" parent="RailWays/H2HePath3D" instance=ExtResource("4_wq5ep")]
 transform = Transform3D(-1, 2.3841858e-08, 8.7422784e-08, 2.3841858e-08, 1, 2.842171e-15, -8.7422784e-08, 0, -1, 154.83809, -3.5, -17.6)

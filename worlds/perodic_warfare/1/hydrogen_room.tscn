@@ -60,10 +60,10 @@ transform = Transform3D(5.96046e-08, 0.9999993, 0, 0, 5.9604606e-08, -0.99999917
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 3, 2)
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(656.88904, 0, 456.6131, 0, 800, 0, -456.6131, 0, 656.88904, 0, 487, 1748)
+transform = Transform3D(-779.4592, 0, -180.11696, 0, 800, 0, 180.11696, 0, -779.4592, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(336.00772, 0, 177.479, 0, 380, 0, -177.479, 0, 336.00772, 1356, 0, 0)
+transform = Transform3D(-342.7227, 0, 164.13754, 0, 380, 0, -164.13754, 0, -342.7227, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -80,7 +80,6 @@ downstairs = 3
 [node name="Train" parent="Transport" index="1" instance=ExtResource("6_n4crl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 destination = 2
-destination_position = Vector3(4, 0, -5)
 
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)

@@ -7,6 +7,7 @@ var open = false
 @export var player_on_board = false
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
 @onready var motor_audio_stream_player_3d: AudioStreamPlayer3D = $MotorAudioStreamPlayer3D
+@onready var ui_timer: Timer = $UITimer
 
 @export_category("Destination")
 @export var upstairs : int = 0
@@ -35,15 +36,11 @@ func elevator_switch(up:bool):
 	await animation_player.animation_finished
 	await get_tree().create_timer(0.2).timeout
 	if up and upstairs != 0:
-		#for _light in $Lights.get_children():
-			#_light.power = false
 		motor_audio_stream_player_3d.play()
 		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
 		await get_tree().create_timer(2.0).timeout
 		PerodicWarfare.change_room(upstairs)
 	elif downstairs != 0:
-		#for _light in $Lights.get_children():
-			#_light.power = false
 		motor_audio_stream_player_3d.play()
 		get_tree().get_first_node_in_group("player").camera_3d.camera_shake(2.0, 0.1)
 		await get_tree().create_timer(2.0).timeout
