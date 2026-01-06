@@ -849,31 +849,31 @@ rotation_mode = 1
 loop = false
 
 [node name="RailwayTrackCurve" parent="RailWays/H2HePath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-4.3711392e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711392e-08, -0.41949463, 0.5, -17.6)
+transform = Transform3D(-4.3711392e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711392e-08, -0.019494629, 0.5, -19.200003)
 
 [node name="RailwayTrackStraight" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.9961948, 0.08715574, 0, -0.08715574, 0.9961948, 0, 0, 0, 1, 26.380507, -0.3, -17.6)
+transform = Transform3D(0.9961948, 0.08715574, 0, -0.08715574, 0.9961948, 0, 0, 0, 1, 26.380507, -0.3, -19.2)
 
 [node name="RailwayTrackStraight2" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.9961948, 0.08715574, 0, -0.08715574, 0.9961948, 0, 0, 0, 1, 44.380505, -1.9, -17.6)
+transform = Transform3D(0.9961948, 0.08715574, 0, -0.08715574, 0.9961948, 0, 0, 0, 1, 44.380505, -1.9, -19.2)
 
 [node name="RailwayTrackStraight3" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.9997426, -0.022687335, 0, 0.022687335, 0.9997426, 0, 0, 0, 1, 62.380505, -2.4664743, -17.6)
+transform = Transform3D(0.9997426, -0.022687335, 0, 0.022687335, 0.9997426, 0, 0, 0, 1, 62.380505, -2.4664743, -19.2)
 
 [node name="RailwayTrackStraight4" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.380516, -2.3, -17.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.380516, -2.3, -19.2)
 
 [node name="RailwayTrackStraight5" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.380516, -2.3, -17.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.380516, -2.3, -19.2)
 
 [node name="RailwayTrackStraight6" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 1, 112.380516, -2.3, -17.6)
+transform = Transform3D(0.6997602, -0.02617695, 0, 0.018323867, 0.99965733, 0, 0, 0, 1, 113.736206, -2.118366, -19.2)
 
 [node name="RailwayTrackStraight7" parent="RailWays/H2HePath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(0.99901915, 0.044281963, 0, -0.044281963, 0.99901915, 0, 0, 0, 1, 127.383965, -2.7, -17.6)
+transform = Transform3D(0.9961947, 0.08715574, 0, -0.08715574, 0.9961947, 0, 0, 0, 1, 128.98396, -2.7, -19.2)
 
 [node name="RailwayTrackCurve2" parent="RailWays/H2HePath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-1, 2.3841858e-08, 8.7422784e-08, 2.3841858e-08, 1, 2.842171e-15, -8.7422784e-08, 0, -1, 154.83809, -3.5, -17.6)
+transform = Transform3D(-1, 2.3841858e-08, 8.7422784e-08, 2.3841858e-08, 1, 2.842171e-15, -8.7422784e-08, 0, -1, 154.83809, -3.5, -19.2)
 
 [node name="H2CPath3D" type="Path3D" parent="RailWays"]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, -0.0625, 0)
@@ -887,25 +887,25 @@ rotation_mode = 1
 loop = false
 
 [node name="RailwayTrackStraight8" parent="RailWays/H2CPath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(-4.3711392e-08, 0, 0.9999998, 0, 1, 0, -1, 0, -4.371138e-08, 152.98402, 0.89999944, -11.999999)
+transform = Transform3D(-4.3711392e-08, 0, 0.9999998, 0, 1, 0, -1, 0, -4.371138e-08, 152.98402, 0.49999943, -10)
 
 [node name="RailwayTrackCurve3" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-1, -7.619398e-09, -8.709011e-08, 0, 0.9961948, -0.08715574, 8.7422784e-08, -0.08715574, -0.9961948, 153, -0.6999999, -39)
+transform = Transform3D(-0.9999076, -0.013543968, 0.0011848558, -0.013595696, 0.99610275, -0.08714768, 8.7422784e-08, -0.08715574, -0.9961948, 153, -1.0999999, -37)
 
 [node name="RailwayTrackCurve6" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(0.99619484, -0.08715573, 0, 0.08682409, 0.99240386, 0.08715574, -0.0075961235, -0.086824074, 0.9961947, 117.200005, -2.4, -39)
+transform = Transform3D(0.99619484, -0.08715573, 0, 0.08682409, 0.9924039, 0.08715574, -0.0075961235, -0.086824074, 0.9961948, 117.2, -2.8, -37)
 
 [node name="RailwayTrackCurve7" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(0.007596079, 0.08682409, -0.9961948, 0.08682408, 0.9924039, 0.08715574, 0.9961948, -0.08715573, -4.3545054e-08, 117.200005, -5.6, -74.200005)
+transform = Transform3D(0.007596079, 0.08682409, -0.9961948, 0.08682408, 0.9924039, 0.08715574, 0.9961948, -0.08715573, -4.3545054e-08, 117, -6, -73)
 
 [node name="RailwayTrackCurve8" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-0.9961948, 0.08715575, -8.709011e-08, 0.08682408, 0.9924041, 0.08715574, 0.0075962096, 0.08682408, -0.9961948, 152.80003, -8.8, -74.40001)
+transform = Transform3D(-0.9927023, 0.09353485, -0.07611515, 0.08682408, 0.9924041, 0.08715574, 0.08368906, 0.079911076, -0.99328274, 152.8, -9.2, -74.244255)
 
 [node name="RailwayTrackCurve5" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-4.3711392e-08, -0.08715574, 0.9961948, 0, 0.9961948, 0.08715574, -1, 3.809699e-09, -4.3545054e-08, 152.8, -10.8, -38.600002)
+transform = Transform3D(0.03531725, -0.1190774, 0.99225664, 0.0011358038, 0.99288017, 0.1191118, -0.99937546, -0.0030796912, 0.03520104, 153.68126, -10.8, -38.346592)
 
 [node name="RailwayTrackCurve4" parent="RailWays/H2CPath3D" instance=ExtResource("4_wq5ep")]
-transform = Transform3D(-4.3711392e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711392e-08, 117, -12.400001, -38.4)
+transform = Transform3D(0.063800745, 0, -0.99796265, 0, 1, 0, 0.99796265, 0, 0.063800745, 117.908035, -12.8, -37.8)
 
 [node name="RailwayTrackStraight9" parent="RailWays/H2CPath3D" instance=ExtResource("4_r3eje")]
-transform = Transform3D(-0.08715577, 0, 0.99619454, 0, 1, 0, -0.9961948, 0, -0.08715575, 118.200005, -12.400001, -12)
+transform = Transform3D(0.013717842, 0, 0.99990577, 0, 1, 0, -0.99990606, 0, 0.013717818, 118.8, -12.95, -10.800001)
