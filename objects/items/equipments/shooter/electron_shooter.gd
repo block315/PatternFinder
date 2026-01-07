@@ -6,6 +6,6 @@ const ELECTRON = preload("res://objects/cores/electron.tscn")
 
 func fire(target_postion:Vector3 = Vector3.ZERO):
 	var _electon = ELECTRON.instantiate()
-	get_tree().get_root().add_child(_electon)
+	PerodicWarfare.current_room.add_child(_electon)
 	_electon.global_position = nozzle.global_position
 	_electon.shoot(target_postion)

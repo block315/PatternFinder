@@ -31,9 +31,10 @@ libraries = {
 shape = SubResource("BoxShape3D_352rp")
 
 [node name="Balloon" parent="." index="2" instance=ExtResource("2_0xs5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Balloon2" parent="." index="3" instance=ExtResource("2_0xs5f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
 
 [node name="Balloon3" parent="." index="4" instance=ExtResource("2_0xs5f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)

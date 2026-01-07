@@ -1,16 +1,25 @@
 # Under [Creative Commons CC0](https://creativecommons.org/public-domain/cc0/)
 - https://commons.wikimedia.org/wiki/File:Cavendish-walk.jpg
 - https://ambientcg.com/view?id=3DLemon001
+- https://www.sharetextures.com/models/food/lemon_1
+- https://www.sharetextures.com/models/decorative/scales_1
+- https://threedscans.com/nouveau-musee-national-de-monaco/napoleon-ler/
+- https://freesound.org/people/aspenholden/sounds/788284/
+
+## From [Blendswap](https://www.blendswap.com)
 - https://blendswap.com/blend/19504
 - https://blendswap.com/blend/27577
 - https://www.blendswap.com/blend/9033
 - https://www.blendswap.com/blend/28955
 - https://www.blendswap.com/blend/29770
 - https://www.blendswap.com/blend/27058
-- https://www.sharetextures.com/models/food/lemon_1
-- https://www.sharetextures.com/models/decorative/scales_1
-- https://threedscans.com/nouveau-musee-national-de-monaco/napoleon-ler/
-- https://freesound.org/people/aspenholden/sounds/788284/
+- Old CRT TV for EEVEE : https://www.blendswap.com/blend/24857
+- Battery Mesh : https://www.blendswap.com/blend/23773
+- Raspberry Pi 3 Model B : https://www.blendswap.com/blend/22255
+- Ceiling Fan : https://www.blendswap.com/blend/15033
+- light emitting diodes set : https://www.blendswap.com/blend/6166
+- Filament bulb : https://www.blendswap.com/blend/4580
+- Wires : https://www.blendswap.com/blend/2184
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=34 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://beam84f4y4h0o" path="res://worlds/perodic_warfare/1/hydrogen_001.tscn" id="6_ga7x4"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
-[ext_resource type="PackedScene" uid="uid://souhrankrva" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Stairs_4Wide.gltf" id="7_vvanm"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
 [ext_resource type="PackedScene" uid="uid://c1lxtdgeggnej" path="res://addons/naejimer_3d_planet_generator/scenes/star.tscn" id="10_nqshe"]
 [ext_resource type="AudioStream" uid="uid://wkvaofnkwde" path="res://arts/audio/musics/originals/hydrogen/hydrogen.ogg" id="12_vvanm"]
@@ -17,6 +16,8 @@
 [ext_resource type="Script" uid="uid://bf5r4uu760m8q" path="res://objects/interactives/breakables/breakable.gd" id="20_vvanm"]
 [ext_resource type="PackedScene" uid="uid://b0sldq8ujgtrr" path="res://arts/3D/models/original/Hindenburg.glb" id="21_hbnn5"]
 [ext_resource type="ArrayMesh" uid="uid://cy30wegkoeq83" path="res://arts/3D/models/ambientcg.com/3DLemon001_HQ-4K-PNG/3DLemon001_HQ-4K-PNG.obj" id="21_nqshe"]
+[ext_resource type="Script" uid="uid://dpgvjbjs43ypn" path="res://worlds/perodic_warfare/1/hydrogen_004.gd" id="22_l5qo0"]
+[ext_resource type="PackedScene" uid="uid://dla7f1004257c" path="res://arts/3D/models/blendswap.com/ceiling-fan/018.blend" id="23_5sfnc"]
 [ext_resource type="PackedScene" uid="uid://cm3q4o2behm28" path="res://objects/items/equipments/shooter/electron_shooter.tscn" id="23_6cl36"]
 [ext_resource type="PackedScene" uid="uid://cqcxqwc28grne" path="res://objects/items/equipments/breaker/hammer.tscn" id="23_l5qo0"]
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="23_vvanm"]
@@ -94,6 +95,47 @@ _data = {
 &"zeppelinMove": SubResource("Animation_hbnn5")
 }
 
+[sub_resource type="Animation" id="Animation_vvanm"]
+resource_name = "Operate"
+
+[sub_resource type="Animation" id="Animation_l5qo0"]
+resource_name = "run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fan_Rig/Skeleton3D/Bone/Circle_022:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5707965, 3.1415927), Vector3(0, 4.712389, 3.1415927)]
+}
+
+[sub_resource type="Animation" id="Animation_6cl36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fan_Rig/Skeleton3D/Bone/Circle_022:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5707965, 3.1415927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6cl36"]
+_data = {
+&"Operate": SubResource("Animation_vvanm"),
+&"RESET": SubResource("Animation_6cl36"),
+&"run": SubResource("Animation_l5qo0")
+}
+
 [node name="HydrogenRoom" instance=ExtResource("1_hru7o")]
 script = ExtResource("2_lgy6p")
 element_decal_png = ExtResource("3_0n7gw")
@@ -120,14 +162,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
 transform = Transform3D(5.96046e-08, 0.9999993, 0, 0, 5.9604606e-08, -0.99999917, -0.99999917, 0, 5.96046e-08, -11, 3, 2)
 
-[node name="@Node3D@89259" parent="Structure/SecondFloor/Platforms/PlatformMetal8" index="2" instance=ExtResource("7_vvanm")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 3, 2)
-
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(795.8004, 0, 81.85648, 0, 800, 0, -81.85648, 0, 795.8004, 0, 487, 1748)
+transform = Transform3D(704.49316, 0, 379.06226, 0, 800, 0, -379.06226, 0, 704.49316, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(378.72318, 0, 31.125114, 0, 380, 0, -31.125114, 0, 378.72318, 1356, 0, 0)
+transform = Transform3D(350.7524, 0, 146.19427, 0, 380, 0, -146.19427, 0, 350.7524, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -145,7 +184,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -6)
 destination = 2
 
 [node name="Star" parent="Transport/Train" index="7" instance=ExtResource("10_nqshe")]
-transform = Transform3D(1.6335461, 0, 1.1539176, 0, 2, 0, -1.1539176, 0, 1.6335461, 0, 2, -2)
+transform = Transform3D(-1.9677604, 0, 0.3576551, 0, 2, 0, -0.3576551, 0, -1.9677604, 0, 2, -2)
 layers = 4
 
 [node name="Hydrogen001" parent="Content" index="0" instance=ExtResource("6_ga7x4")]
@@ -255,6 +294,8 @@ transform = Transform3D(-4.3711385e-08, 1, 4.37114e-08, -1, -4.371139e-08, 4.371
 
 [node name="Hydrogen004" parent="Content" index="3" instance=ExtResource("23_vvanm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+script = ExtResource("22_l5qo0")
+content = "The Hindenburg disaster due to hydrogen"
 
 [node name="AnimationPlayer" parent="Content/Hydrogen004" index="0"]
 libraries = {
@@ -266,10 +307,26 @@ speed_scale = 0.25
 [node name="Hindenburg" parent="Content/Hydrogen004" index="2" instance=ExtResource("21_hbnn5")]
 transform = Transform3D(0.09999995, 0, 0, 0, 0.09999994, 0, 0, 0, 0.09999995, 5, 8, -3)
 
+[node name="CeilingFan" parent="Content/Hydrogen004" index="3" instance=ExtResource("23_5sfnc")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 8, 0)
+
+[node name="Circle_022" parent="Content/Hydrogen004/CeilingFan/Fan_Rig/Skeleton3D/Bone" index="0"]
+transform = Transform3D(1.6292067e-07, 8.742278e-08, 0.99999994, 1.4242978e-14, -1, 8.742277e-08, 0.99999994, 0, -1.6292067e-07, -3.573564e-08, 0.4, 8.813913e-09)
+rotation_order = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Content/Hydrogen004/CeilingFan" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_6cl36")
+}
+autoplay = "run"
+
 [connection signal="found" from="Core/Chest" to="Content/Hydrogen001" method="_on_chest_found"]
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
 
 [editable path="Core"]
 [editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]
 [editable path="Content/Hydrogen003/Lemon"]
 [editable path="Content/Hydrogen004"]
+[editable path="Content/Hydrogen004/CeilingFan"]

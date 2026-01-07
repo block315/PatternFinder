@@ -16,8 +16,8 @@ class_name Equipment
 				-1:
 					freeze = false
 					pickup_area_3d.monitoring = false
-@onready var drop_audio_stream_player_3d: AudioStreamPlayer3D = $DropAudioStreamPlayer3D
 
+@onready var drop_audio_stream_player_3d: AudioStreamPlayer3D = $DropAudioStreamPlayer3D
 @export var handle_position:Vector3 = Vector3.ZERO
 @export var handle_rotation:Vector3 = Vector3.ZERO ## in Radian
 
@@ -26,6 +26,13 @@ func use(_target_position=Vector3.ZERO):
 
 func pick_up(player):
 	state = 1
+	for _player_equipment in player.hand.get_children():
+		if _player_equipment is Breaker and self is Breaker:
+			_player_equipment.drop()
+		elif _player_equipment is Collector and self is Collector:
+			_player_equipment.drop()
+		elif _player_equipment is Shooter and self is Shooter:
+			_player_equipment.drop()
 	reparent(player.hand,false)
 	position = handle_position
 	rotation = handle_rotation

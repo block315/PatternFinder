@@ -3,7 +3,7 @@ class_name Train
 
 @export var train_number: int = 0
 @export var destination : int = 1
-@export var speed := 20
+@export var speed := 20.0
 @export var destination_position : Vector3 = Vector3(4,0,-5)
 @onready var building: PeriodicBuilding = $"../../Building"
 
@@ -22,8 +22,8 @@ var _player: Player
 func _process(_delta: float) -> void:
 	global_position = path_follow_3d.global_position + Vector3(0,0.5,0)
 	global_rotation = path_follow_3d.global_rotation
-	if Input.is_action_pressed("ui_up") and on_board:
-		path_follow_3d.progress_ratio += (0.001)
+	if on_board:
+		path_follow_3d.progress_ratio += ((0.0001) * speed)
 	if Input.is_action_just_pressed("crouch") and on_board:
 		on_board = false
 		passenger.show()
@@ -42,12 +42,11 @@ func _on_radar_area_3d_area_entered(area: Area3D) -> void:
 		if area.get_parent().visible:
 			on_board = false
 			passenger.global_position = Vector3.ZERO
-			passenger.show()
 			passenger.camera_3d.current = true
 			PerodicWarfare.train_position[train_number] += 2
-			
-			PerodicWarfare.change_room(destination)
 			get_tree().get_first_node_in_group("player").position = destination_position
+			PerodicWarfare.change_room(destination)
+			get_tree().get_first_node_in_group("player").show()
 			queue_free()
 
 func _unhandled_input(event) -> void:
