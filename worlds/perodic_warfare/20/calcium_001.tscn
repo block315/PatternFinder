@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxaq5k0i8qc5c"]
 
 [ext_resource type="Script" uid="uid://nj10538ga5p5" path="res://worlds/perodic_warfare/20/calcium_001.gd" id="1_1mw2i"]
-[ext_resource type="PackedScene" uid="uid://cja6f8ps5ryj5" path="res://arts/3D/models/threedscans/Napoleon.stl/Napoleon.glb" id="2_ek5n5"]
+[ext_resource type="PackedScene" uid="uid://cja6f8ps5ryj5" path="res://arts/3D/models/threedscans.com/Napoleon.stl/Napoleon.glb" id="2_ek5n5"]
 [ext_resource type="PackedScene" uid="uid://cqcxqwc28grne" path="res://objects/items/equipments/breaker/hammer.tscn" id="10_oeg1u"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_oeg1u"]

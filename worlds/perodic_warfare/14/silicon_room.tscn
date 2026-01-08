@@ -1,10 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmndj33w6k0gf"]
+[gd_scene load_steps=17 format=3 uid="uid://cmndj33w6k0gf"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_k8s4q"]
 [ext_resource type="Script" uid="uid://d081qhlhtfow3" path="res://worlds/perodic_warfare/14/silicon_room.gd" id="2_3bywq"]
 [ext_resource type="Texture2D" uid="uid://b5sngxgokxjub" path="res://worlds/perodic_warfare/14/T_Decals_Si.png" id="3_ms6ed"]
 [ext_resource type="PackedScene" uid="uid://70p5jrd5uhe2" path="res://worlds/perodic_warfare/14/silicon_001.tscn" id="4_rkdsx"]
 [ext_resource type="PackedScene" uid="uid://c2aqrr3tssno0" path="res://arts/3D/models/polyhaven.com/sand_rocks_small_01_2k.gltf/sand_rocks_small_01_2k.gltf" id="5_cms1n"]
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="6_qjtik"]
+[ext_resource type="PackedScene" uid="uid://dhqcu64mpqp3r" path="res://arts/3D/models/blendswap.com/raspberry-pi-3-model-b/raspberrypi3modelb_images_packed_v1_0.glb" id="7_c4jv3"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="8_c4jv3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c4jv3"]
+size = Vector3(8.41272, 0.3095703, 5.4664307)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yrj0m"]
+size = Vector3(2.0245667, 1.9729614, 5.4664307)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rwhn4"]
+size = Vector3(4.980385, 0.8751526, 0.5309448)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ok4hy"]
+size = Vector3(1.6636143, 0.8751526, 1.1049042)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfh37"]
+size = Vector3(0.8671365, 0.8751526, 1.4644585)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ub2bb"]
+size = Vector3(0.41453803, 0.8751526, 2.2405653)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8g6k"]
+size = Vector3(0.41453803, 0.8751526, 2.2405653)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4iu4n"]
+size = Vector3(0.656613, 0.461586, 0.5264499)
 
 [node name="SiliconRoom" instance=ExtResource("1_k8s4q")]
 script = ExtResource("2_3bywq")
@@ -17,10 +44,10 @@ neutron = Array[int]([14, 15, 16])
 electron = 14
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(6.7725353, 0, -799.9705, 0, 800, 0, 799.9705, 0, 6.7725353, 0, 487, 1748)
+transform = Transform3D(730.7845, 0, -325.50388, 0, 800, 0, 325.50388, 0, 730.7845, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-305.90674, 0, -225.43524, 0, 380, 0, 225.43524, 0, -305.90674, 1356, 0, 0)
+transform = Transform3D(-216.83134, 0, 312.06433, 0, 380, 0, -312.06433, 0, -216.83134, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 55, 0)
@@ -29,9 +56,72 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 55, 0)
 upstairs = 6
 downstairs = 32
 
-[node name="Silicon_001" parent="Content" index="0" instance=ExtResource("4_rkdsx")]
+[node name="Silicon001" parent="Content" index="0" instance=ExtResource("4_rkdsx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.706862, 0.07256496, 4.527691)
 
-[node name="sand_rocks_small_01_2k" parent="Content/Silicon_001" index="2" instance=ExtResource("5_cms1n")]
+[node name="sand_rocks_small_01_2k" parent="Content/Silicon001" index="2" instance=ExtResource("5_cms1n")]
+
+[node name="Silicon002" parent="." index="9" instance=ExtResource("6_qjtik")]
+
+[node name="raspberrypi3modelb_images_packed_v1_0" parent="Silicon002" index="2" instance=ExtResource("7_c4jv3")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 6, 9.5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01763916, 0.5342498, -0.76434326)
+shape = SubResource("BoxShape3D_c4jv3")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3794098, 1.3659453, -0.7643435)
+shape = SubResource("BoxShape3D_yrj0m")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6616826, 0.8170409, 1.7033978)
+shape = SubResource("BoxShape3D_rwhn4")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.52584, 0.8170409, -3.104589)
+shape = SubResource("BoxShape3D_ok4hy")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D5" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7784605, 0.8170409, -2.999804)
+shape = SubResource("BoxShape3D_xfh37")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D6" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91873, 0.8170409, -2.375094)
+shape = SubResource("BoxShape3D_ub2bb")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D7" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8536327, 0.8170409, -0.7936783)
+shape = SubResource("BoxShape3D_t8g6k")
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Silicon002/raspberrypi3modelb_images_packed_v1_0/StaticBody3D8" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4713576, 0.6102576, -3.3176618)
+shape = SubResource("BoxShape3D_4iu4n")
+
+[node name="Player" parent="." index="10" instance=ExtResource("8_c4jv3")]
 
 [editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

@@ -20,6 +20,12 @@
 - light emitting diodes set : https://www.blendswap.com/blend/6166
 - Filament bulb : https://www.blendswap.com/blend/4580
 - Wires : https://www.blendswap.com/blend/2184
+- Molecule Pack One : https://www.blendswap.com/blend/27276
+- Molecule Pack Two - Amino Acids : https://www.blendswap.com/blend/27277
+- Molecule Pack Three - More Common Molecules : https://www.blendswap.com/blend/27401
+- Molecule Pack Four - Solvents : https://www.blendswap.com/blend/27485
+- Skull https://www.blendswap.com/blend/21809
+- Skull of Virg. Opossum (Didelphis virginiana) https://www.blendswap.com/blend/8971
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03
@@ -62,9 +68,6 @@
 - https://sketchfab.com/3d-models/196488-armor-for-man-and-horse-faca2ad557f64809b598c3a646a8804f
 - https://sketchfab.com/3d-models/chimpanzee-skull-6ef86b9a368d4058b67f0c99a7880fb4
 - https://sketchfab.com/3d-models/halite-crystals-4f4a474678f845f79cb0db63f08306fb
-- https://sketchfab.com/3d-models/lion-skull-b7b59f40f37b4ea99a59a16e17d033f9
-- https://sketchfab.com/3d-models/penguin-skull-0f4893dbf99e4b3b865a0ec186c61d7a
-- https://sketchfab.com/3d-models/raven-skull-dc0ed4da5bce44d9a6609a18821c289d
 
 ## From [quaternius.com](https://quaternius.com/)
 - https://quaternius.com/packs/universalanimationlibrary.html
