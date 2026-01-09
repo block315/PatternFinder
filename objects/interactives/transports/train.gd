@@ -6,6 +6,7 @@ class_name Train
 @export var speed := 20.0
 @export var destination_position : Vector3 = Vector3(4,0,-5)
 @onready var building: PeriodicBuilding = $"../../Building"
+@onready var boarding_area_3d: Area3D = $BoardingArea3D
 
 var on_board := false:
 	set(value):
@@ -28,6 +29,10 @@ func _process(_delta: float) -> void:
 		on_board = false
 		passenger.show()
 		passenger.camera_3d.current = true
+	if get_tree().get_first_node_in_group("player").visible:
+		boarding_area_3d.monitoring = true
+	else:
+		boarding_area_3d.monitorable = false
 
 func _on_boarding_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
