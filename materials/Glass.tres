@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://x5p5p0pmejue"]
-
-[resource]
-transparency = 1
-albedo_color = Color(0, 0.0627451, 0.298039, 0.686275)
-metallic = 1.0
-roughness = 0.0
-subsurf_scatter_strength = 0.09
-refraction_scale = -0.15

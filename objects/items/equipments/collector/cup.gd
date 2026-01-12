@@ -2,18 +2,18 @@ extends Collector
 class_name Cup
 
 @onready var liquid: MeshInstance3D = $Liquid
-@export var liquid_color: Color = Color.WHITE :
+@export var liquid_material: Material :
 	set(value):
-		var _material = StandardMaterial3D.new()
-		if liquid != null:
-			_material.albedo_color = value
-			liquid.material_override = _material
-		liquid_color = value
+		if liquid != null and value != null:
+			liquid.material_override = liquid_material
+		liquid_material = value
 @onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+
+@onready var prop_mug: MeshInstance3D = $Mug/Prop_Mug
+
 
 func collect(target_position:Vector3, collider):
 	super.collect(target_position, collider)
-	liquid_color = liquid_color
 	var tween:Tween = get_tree().create_tween()
 	audio_stream_player_3d.play()
 	if (global_position - target_position).length() < 1:
@@ -33,6 +33,8 @@ func collect(target_position:Vector3, collider):
 					collection = collider.matter
 				if collider.matter.phase == 1:
 					collection = collider.matter
+					if liquid_material != null:
+						liquid.material_override = liquid_material
 					liquid.show()
 		else:
 			audio_stream_player_3d.stop()

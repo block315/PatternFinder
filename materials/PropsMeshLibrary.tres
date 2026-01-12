@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://bqmdw8m0wcmas" path="res://materials/T_Trim_01.tres" id="2_lyibr"]
 [ext_resource type="Material" uid="uid://dv0ieu24cutl4" path="res://materials/WhiteLight.tres" id="3_5tygi"]
 [ext_resource type="Material" uid="uid://cwiijfbs8if7j" path="res://materials/T_PaddedWall.tres" id="4_eek8u"]
-[ext_resource type="Material" uid="uid://x5p5p0pmejue" path="res://materials/Glass.tres" id="5_nmjsk"]
+[ext_resource type="Material" uid="uid://x5p5p0pmejue" path="res://materials/GLASS.tres" id="5_nmjsk"]
 [ext_resource type="Material" uid="uid://celyxiqm8wp4p" path="res://materials/T_Trim_03.tres" id="6_7lp00"]
 [ext_resource type="Material" uid="uid://dje7iltesj4jh" path="res://materials/T_Trim_03_Cables.tres" id="7_660a7"]
 [ext_resource type="Material" uid="uid://dh002qmible1f" path="res://materials/T_Decals.tres" id="8_hb0nt"]

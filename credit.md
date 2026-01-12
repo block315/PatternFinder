@@ -26,6 +26,7 @@
 - Molecule Pack Four - Solvents : https://www.blendswap.com/blend/27485
 - Skull https://www.blendswap.com/blend/21809
 - Skull of Virg. Opossum (Didelphis virginiana) https://www.blendswap.com/blend/8971
+- Laboratory Glassware Bundle Part 1 https://www.blendswap.com/blend/27806
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03

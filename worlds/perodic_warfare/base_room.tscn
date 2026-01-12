@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://dp3hsvkn4gaji"]
+[gd_scene load_steps=78 format=4 uid="uid://dp3hsvkn4gaji"]
 
 [ext_resource type="Texture2D" uid="uid://053mm1cqga4r" path="res://arts/2D/pictures/unsplash.com/jeremy-perkins-uhjiu8FjnsQ-unsplash/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg" id="1_lvs21"]
 [ext_resource type="Script" uid="uid://c06kml6k08ak" path="res://worlds/perodic_warfare/element_room.gd" id="1_ofr2s"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://uwueevqyejas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_Square.gltf" id="20_q1lyk"]
 [ext_resource type="PackedScene" uid="uid://bbp1sv2ektdas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Round.gltf" id="20_r7xwa"]
 [ext_resource type="PackedScene" uid="uid://cannlbg5g6uws" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal2.gltf" id="22_0ms2t"]
+[ext_resource type="PackedScene" uid="uid://snn41m4cc0lb" path="res://arts/3D/models/blendswap.com/laboratory-glassware-bundle-part-1/laboratory-glassware-bundle-part-1WITHOUTSUBDIV.blend" id="22_je14t"]
 [ext_resource type="PackedScene" uid="uid://cfnun0b7fdr1l" path="res://meshes/props/prop_light_floor.tscn" id="22_sf43r"]
 [ext_resource type="PackedScene" uid="uid://m3djkmeyl7xx" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Rail_4.gltf" id="23_r7xwa"]
 [ext_resource type="PackedScene" uid="uid://bt6826af2iu3v" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopSimple_Straight.gltf" id="25_u1fk7"]
@@ -594,6 +595,153 @@ transform = Transform3D(1, 0, 1.7682976e-07, 0, 1, 0, -1.7682976e-07, 0, 1, -2.0
 
 [node name="PropCrateTarpLarge" parent="Structure/FirstFloor" instance=ExtResource("20_ky51i")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, -7)
+
+[node name="laboratory-glassware-bundle-part-1WITHOUTSUBDIV" parent="Structure/FirstFloor" instance=ExtResource("22_je14t")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7, 0, -9)
+
+[node name="5 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7876382, 0.6075022, -0.0019016266)
+
+[node name="50 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8865466, 0.6085692, -0.056560993)
+
+[node name="100 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5787749, 0.62317234, 0.033022404)
+
+[node name="150 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.620003, 0.61738473, -0.0345006)
+
+[node name="250 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28039885, 0.61738473, 0.06774855)
+
+[node name="400 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13121057, 0.253815, -0.055722237)
+
+[node name="600 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41033888, 0.61199325, 0.019517899)
+
+[node name="1000 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25667882, 1.3464458, -0.0036330223)
+
+[node name="2000 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13770628, 0.6212432, -0.009420395)
+
+[node name="5000 mL Beaker" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2981162, 0.25634235, -0.009420395)
+
+[node name="250 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="10"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -0.70780134, 1.357977, -0.0608263)
+
+[node name="25 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="11"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -0.839005, 1.0063996, 0.030143261)
+
+[node name="50 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="12"]
+transform = Transform3D(0.9795528, 0, -0.20118724, 0, 1, 0, 0.20118724, 0, 0.9795528, -0.7675538, 0.25503862, 0.010295391)
+
+[node name="125 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="13"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -0.46201754, 0.25669265, -0.029400349)
+
+[node name="500 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="14"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 0.41192293, 1.3478727, -0.02609253)
+
+[node name="1000 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="15"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 0.050715446, 0.2682706, 0.018565178)
+
+[node name="2000 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="16"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -0.6440363, 0.2510051, -0.0045905113)
+
+[node name="4000 mL ER" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="17"]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 0.6076851, 0.22342664, -0.02609253)
+
+[node name="100 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3385105, 1.0096893, -0.017014027)
+
+[node name="1000 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75932574, 0.2338509, 0.032031536)
+
+[node name="10 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67874956, 1.0016993, -0.06245756)
+
+[node name="25 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2142024, 1.0154058, -0.023087025)
+
+[node name="50 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2678709, 0.9972328, -0.012588501)
+
+[node name="500 ml GC" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34844732, 0.256347, -0.038835526)
+
+[node name="50 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="24"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.82270527, 1.0204508, -0.054371834)
+
+[node name="100 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="25"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.5098624, 1.371708, -0.051746845)
+
+[node name="250 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="26"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.362041, 1.3768524, -0.0356946)
+
+[node name="500 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="27"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -0.20022416, 1.3823292, -0.06485033)
+
+[node name="2000 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="28"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.28524256, 0.69120264, 0.014285564)
+
+[node name="5000 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="29"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.6017957, 1.1071793, -0.021656036)
+
+[node name="24_40 Stopper" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7685232, 1.0095948, 0.026780605)
+
+[node name="1000 mL RB" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="31"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.01767373, 1.0334753, 0.019662857)
+
+[node name="Cork Ring 80-30-30 OD-ID-H" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="32"]
+visible = false
+
+[node name="Cork Ring 110-60-30 OD-ID-H" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="33"]
+visible = false
+
+[node name="Cork Ring 140-90-30 OD-ID-H" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="34"]
+visible = false
+
+[node name="Cork Ring 170-120-30 OD-ID-H" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="35"]
+visible = false
+
+[node name="Keck Clamp 24" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="36"]
+visible = false
+
+[node name="Scintillation Vial - 20 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="37"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11699128, 0.28944883, -0.05560398)
+
+[node name="0_50 Dram Vial - 1_9 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="38"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07178664, 0.27002883, 0.082185745)
+
+[node name="0_75 Dram Vial - 2_75 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="39"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043489695, 0.63681793, 0.03268051)
+
+[node name="1_0 Dram Vial - 3_7 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="40"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01396203, 0.6210662, -0.086582184)
+
+[node name="1_5 Dram Vial - 5 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="41"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01606822, 1.0072094, -0.033557415)
+
+[node name="2_0 Dram Vial - 7_5 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04705763, 1.3653964, 0.0644083)
+
+[node name="3_0 Dram Vial - 11 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="43"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079689264, 0.630654, -0.054986954)
+
+[node name="0_25 Dram Vial - 0_92 mL" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="44"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10035634, 1.0102708, -0.073355675)
+
+[node name="Allihn Condenser" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="45"]
+visible = false
+
+[node name="Graham Condenser" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="46"]
+visible = false
+
+[node name="Liebig Condenser" parent="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV" index="47"]
+visible = false
 
 [node name="SecondFloor" type="Node3D" parent="Structure"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -1354,11 +1502,11 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="PlanetGaseous" parent="Environment" instance=ExtResource("51_dca73")]
-transform = Transform3D(451.74435, 0, -660.24677, 0, 800, 0, 660.24677, 0, 451.74435, 0, 487, 1748)
+transform = Transform3D(226.30028, 0, -767.3245, 0, 800, 0, 767.3245, 0, 226.30028, 0, 487, 1748)
 layers = 4
 
 [node name="PlanetSand" parent="Environment" instance=ExtResource("52_q1lyk")]
-transform = Transform3D(-169.53078, 0, -340.08725, 0, 380, 0, 340.08725, 0, -169.53078, 1356, 0, 0)
+transform = Transform3D(32.1583, 0, 378.63684, 0, 380, 0, -378.63684, 0, 32.1583, 1356, 0, 0)
 
 [node name="SunLightGuard" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.5, 0, -1, -2.1855694e-08, 1, 6, -16)
@@ -1416,6 +1564,7 @@ script = ExtResource("70_ck1vy")
 [connection signal="body_entered" from="Molecule/Area3D" to="Molecule" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Molecule/Area3D" to="Molecule" method="_on_area_3d_body_exited"]
 
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

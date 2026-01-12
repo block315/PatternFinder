@@ -95,6 +95,7 @@ transform = Transform3D(7.22128e-08, -0.206341, 0.97848, 1.55783e-08, 0.97848, 0
 
 [node name="Cup" parent="." instance=ExtResource("13_n5ifu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4764962, 0.941295, -5.5079613)
+liquid_material = SubResource("ShaderMaterial_wo4ms")
 
 [node name="PlayerInterestArea3D" type="Area3D" parent="."]
 

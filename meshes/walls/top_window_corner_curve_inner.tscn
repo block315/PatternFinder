@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://doneob3wegov0" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopWindow_Corner_Curve_Inner.gltf" id="1_wmprm"]
 [ext_resource type="Material" uid="uid://o21faxsrv4r6" path="res://materials/T_Trim_02.tres" id="2_vsg1p"]
-[ext_resource type="Material" uid="uid://x5p5p0pmejue" path="res://materials/Glass.tres" id="3_7b5fm"]
+[ext_resource type="Material" uid="uid://x5p5p0pmejue" path="res://materials/GLASS.tres" id="3_7b5fm"]
 [ext_resource type="Material" uid="uid://cwiijfbs8if7j" path="res://materials/T_PaddedWall.tres" id="4_2t5xd"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ujj4a"]

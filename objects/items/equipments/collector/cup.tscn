@@ -18,7 +18,7 @@ radius = 0.08
 
 [node name="Cup" instance=ExtResource("1_xu0rp")]
 script = ExtResource("2_lkp33")
-liquid_color = Color(0, 1, 1, 0.8156863)
+liquid_material = null
 handle_position = Vector3(-0.2, 0, 0.1)
 handle_rotation = Vector3(0.14835298, -1.6755161, -0.19198623)
 

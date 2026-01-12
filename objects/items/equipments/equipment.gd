@@ -1,6 +1,9 @@
 extends RigidBody3D
 class_name Equipment
 
+signal picking
+signal dropping
+
 @onready var pickup_area_3d: Area3D = $PickupArea3D
 @export_enum("Equip:1", "Pick:0", "Drop:-1") var state: int = 0 :
 	set(value):
@@ -10,12 +13,14 @@ class_name Equipment
 				1:
 					freeze = true
 					pickup_area_3d.monitoring = false
+					picking.emit()
 				0:
 					freeze = true
 					pickup_area_3d.monitoring = true
 				-1:
 					freeze = false
 					pickup_area_3d.monitoring = false
+					dropping.emit()
 
 @onready var drop_audio_stream_player_3d: AudioStreamPlayer3D = $DropAudioStreamPlayer3D
 @export var handle_position:Vector3 = Vector3.ZERO

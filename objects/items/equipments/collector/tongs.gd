@@ -4,6 +4,9 @@ class_name Tongs
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var grab_point: Node3D = $GrabPoint
 
+@onready var tongs_3_001: MeshInstance3D = $LeftTongPivot/Tongs1/Tongs3_001
+@onready var tongs_3: MeshInstance3D = $RightTongPivot/Tongs2/Tongs3
+
 func _ready() -> void:
 	animation_player.play("Idle")
 
@@ -51,3 +54,17 @@ func throw():
 func _process(_delta: float) -> void:
 	if collection == null and grab_point.get_child_count() > 0:
 		grab_point.get_child(0).queue_free()
+
+
+func _on_picking() -> void:
+	for _tongs in [tongs_3_001, tongs_3]:
+		var _material : StandardMaterial3D = _tongs.mesh.surface_get_material(0)
+		_material.no_depth_test = true
+		_tongs.mesh.surface_set_material(0,_material)
+
+
+func _on_dropping() -> void:
+	for _tongs in [tongs_3_001, tongs_3]:
+		var _material : StandardMaterial3D = _tongs.mesh.surface_get_material(0)
+		_material.no_depth_test = false
+		_tongs.mesh.surface_set_material(0,_material)
