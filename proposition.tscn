@@ -11,5 +11,6 @@ script = ExtResource("1_wslh8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerInterestArea3D"]
 
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="body_entered" from="PlayerInterestArea3D" to="." method="_on_player_interest_area_3d_body_entered"]
 [connection signal="body_exited" from="PlayerInterestArea3D" to="." method="_on_player_interest_area_3d_body_exited"]

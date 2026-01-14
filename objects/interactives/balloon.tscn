@@ -120,7 +120,6 @@ shadow_mesh = SubResource("ArrayMesh_32mhi")
 height = 3.36426
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yq3ap"]
-radius = 1.0
 
 [node name="Balloon" type="RigidBody3D"]
 axis_lock_linear_x = true
@@ -154,7 +153,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.57217, 0)
 shape = SubResource("CylinderShape3D_ay6k6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.55, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.014208615, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0056368113, 0)
 shape = SubResource("SphereShape3D_yq3ap")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

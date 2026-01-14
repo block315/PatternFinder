@@ -4,12 +4,11 @@ class_name HUD
 @onready var crosshair: Sprite2D = $CrosshairColorD
 @onready var hand := $"../Hand"
 @onready var flash_light := $"../FlashLight"
-@onready var nine_patch_rect: NinePatchRect = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect
-@onready var battery_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/BatteryTextureProgressBar
-@onready var debug_label: Label = %DebugLabel
-@onready var computer_label: Label = $HBoxContainer/VBoxContainer/HBoxContainer3/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/ComputerLabel
-@onready var stamina_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar2/StaminaTextureProgressBar
-@onready var health_texture_progress_bar: TextureProgressBar = $HBoxContainer/VBoxContainer/StatusBar1/HealthTextureProgressBar
+@onready var nine_patch_rect: NinePatchRect = %NinePatchRect
+@onready var battery_texture_progress_bar: TextureProgressBar = %BatteryTextureProgressBar
+@onready var computer_label: Label = %ComputerLabel
+@onready var health_texture_progress_bar: TextureProgressBar = %HealthTextureProgressBar
+@onready var stamina_texture_progress_bar: TextureProgressBar = %StaminaTextureProgressBar
 @onready var player: Player = $"../.."
 
 signal switch(on:bool)

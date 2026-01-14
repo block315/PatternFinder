@@ -1,15 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://beam84f4y4h0o"]
+[gd_scene load_steps=22 format=3 uid="uid://doot5qkixaaut"]
 
 [ext_resource type="Script" uid="uid://cye72mkppe1dp" path="res://worlds/perodic_warfare/1/hydrogen_001.gd" id="2_bx5fg"]
 [ext_resource type="PackedScene" uid="uid://cvmgepfdpxjh4" path="res://arts/3D/models/polyhaven.com/wooden_bucket_02_2k.gltf/wooden_bucket_02_2k.gltf" id="3_70sc5"]
 [ext_resource type="PackedScene" uid="uid://d3hec6j3t12f4" path="res://arts/3D/models/polyhaven.com/rubber_duck_toy_2k.gltf/rubber_duck_toy_2k.gltf" id="6_yliqe"]
 [ext_resource type="Resource" uid="uid://coytvu23vh8w6" path="res://objects/matters/H_2O.tres" id="7_neim0"]
-[ext_resource type="Shader" uid="uid://bnd4ag4cyhfyw" path="res://materials/Water.gdshader" id="8_6362b"]
+[ext_resource type="Shader" uid="uid://bnd4ag4cyhfyw" path="res://materials/WATER.gdshader" id="8_6362b"]
 [ext_resource type="PackedScene" uid="uid://cu0r8a4gefs2g" path="res://objects/interactives/power_box.tscn" id="10_me822"]
 [ext_resource type="PackedScene" uid="uid://bc6lyerwwwkg2" path="res://arts/3D/models/itch.io/IndustrialPack2/CautionSign_WetFloor/Caution_Sign.fbx" id="11_70sc5"]
 [ext_resource type="PackedScene" uid="uid://dp4dqyc15xaat" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Props/Prop_Cable_3.gltf" id="13_d2856"]
 [ext_resource type="PackedScene" uid="uid://c5uql3qxkelo2" path="res://objects/items/equipments/collector/cup.tscn" id="13_n5ifu"]
-[ext_resource type="PackedScene" uid="uid://lif88rujhcpl" path="res://creatures/neutrals/ghost.tscn" id="26_tonv6"]
+[ext_resource type="PackedScene" uid="uid://lif88rujhcpl" path="res://creatures/neutrals/portrait.tscn" id="26_tonv6"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_662c5"]
 top_radius = 0.28
@@ -103,11 +103,11 @@ liquid_material = SubResource("ShaderMaterial_wo4ms")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86354, 1.29443, -2.45619)
 shape = SubResource("BoxShape3D_g7s13")
 
-[node name="Ghost" parent="." instance=ExtResource("26_tonv6")]
+[node name="Portrait" parent="." instance=ExtResource("26_tonv6")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4, 1.24337, -4)
 
 [node name="Caution_Sign" parent="." instance=ExtResource("11_70sc5")]
-transform = Transform3D(0.58250016, 0, -1.0089195, 0, 1.165, 0, 1.0089195, 0, 0.58250016, -1, 0.25, -1)
+transform = Transform3D(1.0000004, 0, -1.7320507, 0, 2, 0, 1.7320507, 0, 1.0000004, -1, 0.4315086, -1)
 
 [node name="PropCable3" parent="." instance=ExtResource("13_d2856")]
 transform = Transform3D(-0.1058649, 0, 0.99438053, 0, 1, 0, -0.99438053, 0, -0.1058649, -4.7171583, 0.0643563, -2)

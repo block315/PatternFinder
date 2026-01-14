@@ -1,12 +1,13 @@
 // Item Highlighter from OzMaister (https://godotshaders.com/shader/collectable-item-shining-highlight/)
+// Little modified
 
 shader_type spatial;
 render_mode unshaded, depth_draw_never;
 
-uniform vec4 shine_color : source_color = vec4( 1.0, 1.0, 1.0, 1.0 );
-uniform float cycle_interval : hint_range(0.5, 5.0) = 1.0;
-uniform float shine_speed : hint_range(1.0, 5.0) = 3.0;
-uniform float shine_width : hint_range(1.0, 100.0) = 3.0;
+uniform vec4 shine_color : source_color = vec4( 0.0, 1.0, 0.0, 0.9 );
+uniform float cycle_interval : hint_range(0.5, 5.0) = 2.0;
+uniform float shine_speed : hint_range(1.0, 5.0) = 2.0;
+uniform float shine_width : hint_range(1.0, 100.0) = 5.0;
 
 void fragment( )
 {

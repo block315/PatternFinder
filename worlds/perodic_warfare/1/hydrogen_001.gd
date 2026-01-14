@@ -13,7 +13,6 @@ const H_2O = preload("res://objects/matters/H_2O.tres")
 
 func _ready() -> void:
 	power_box.switch.connect(_on_power_box_power_on)
-	highlight = true
 
 func _process(delta: float) -> void:
 	rubber_duck_float_sin += delta

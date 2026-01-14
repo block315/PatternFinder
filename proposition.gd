@@ -10,6 +10,7 @@ class_name Proposition
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @export var highlight: bool = false :
 	set(value):
+		_geometry_instance3d_childs.clear()
 		find_mesh(self)
 		if value:
 			for _child:GeometryInstance3D in _geometry_instance3d_childs:
@@ -23,14 +24,13 @@ class_name Proposition
 				_child.material_overlay = null
 		highlight = value
 
-const HIGHLIGHT = preload("res://shaders/highlight.gdshader")
+const HIGHLIGHT = preload("res://materials/HIGHLIGHT.gdshader")
 
 signal success(proposition_number: int)
 
 var _geometry_instance3d_childs = []
 
 func find_mesh(_node):
-	_geometry_instance3d_childs.clear()
 	for _child in _node.get_children():
 		if _child is GeometryInstance3D:
 			_geometry_instance3d_childs.append(_child)
@@ -50,3 +50,6 @@ func _on_player_interest_area_3d_body_exited(body: Node3D) -> void:
 			highlight = true
 		var tween = get_tree().create_tween()
 		tween.tween_property(audio_stream_player, "volume_db", -80, 1.0)
+
+func _on_child_entered_tree(_node: Node) -> void:
+	highlight = highlight

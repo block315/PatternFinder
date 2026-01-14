@@ -8,7 +8,7 @@ extends TextureRect
 			texture = load(texture.resource_path.replace("color", "white").replace("Colored", "White"))
 		active = value
 @export_enum("Shooter", "Collector", "Breaker") var equipment_type: String
-@onready var hud = $"../../../.."
+@onready var hud: HUD = $"../../../../../.."
 @export var equipment_progress_bar : TextureProgressBar
 
 func _process(_delta: float) -> void:

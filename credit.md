@@ -27,6 +27,8 @@
 - Skull https://www.blendswap.com/blend/21809
 - Skull of Virg. Opossum (Didelphis virginiana) https://www.blendswap.com/blend/8971
 - Laboratory Glassware Bundle Part 1 https://www.blendswap.com/blend/27806
+- Sheet Ghost https://www.blendswap.com/blend/19803
+- Water Dispenser https://www.blendswap.com/blend/30526
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03
