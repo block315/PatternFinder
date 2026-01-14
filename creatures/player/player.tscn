@@ -129,6 +129,7 @@ accepted_meta_data_names = PackedStringArray("surface_type")
 default_material_footstep_movement_sound = ExtResource("9_b5q5c")
 min_footstep_delay = 0.1
 max_footstep_delay = 0.4
+debug = false
 metadata/_custom_type_script = "uid://jy4sym0dop3s"
 
 [node name="HitBox" type="Area3D" parent="."]

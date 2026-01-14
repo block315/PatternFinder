@@ -5,11 +5,11 @@
 - https://www.sharetextures.com/models/decorative/scales_1
 - https://threedscans.com/nouveau-musee-national-de-monaco/napoleon-ler/
 - https://freesound.org/people/aspenholden/sounds/788284/
+- [Metal 061 B](https://ambientcg.com/view?id=Metal061B) by [ambientCG](https://ambientcg.com/)
 
 ## From [Blendswap](https://www.blendswap.com)
 - https://blendswap.com/blend/19504
 - https://blendswap.com/blend/27577
-- https://www.blendswap.com/blend/9033
 - https://www.blendswap.com/blend/28955
 - https://www.blendswap.com/blend/29770
 - https://www.blendswap.com/blend/27058
@@ -29,6 +29,7 @@
 - Laboratory Glassware Bundle Part 1 https://www.blendswap.com/blend/27806
 - Sheet Ghost https://www.blendswap.com/blend/19803
 - Water Dispenser https://www.blendswap.com/blend/30526
+- [Pliers (rigged)](https://www.blendswap.com/blend/16835) by [AbelAbelson](https://www.blendswap.com/profile/471477) 
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03

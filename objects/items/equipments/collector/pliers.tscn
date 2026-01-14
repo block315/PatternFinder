@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbv3jnntgl4gy"]
+
+[ext_resource type="PackedScene" uid="uid://bu362ofw6uec7" path="res://objects/items/equipments/collector/collector.tscn" id="1_8s375"]
+[ext_resource type="Script" uid="uid://by2hcp6sb0whu" path="res://objects/items/equipments/collector/pliers.gd" id="2_hvhbu"]
+[ext_resource type="PackedScene" uid="uid://bumaxs6fff1uu" path="res://arts/3D/models/blendswap.com/pliers-rigged/pliers.blend" id="3_v6fu4"]
+
+[sub_resource type="Animation" id="Animation_icsmb"]
+resource_name = "GRAB"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pliers/Pliers/Skeleton3D:Root")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.61237234, 0.61237246, 0.35355338, 0.3535535, 0.5, 1, -0.5609853, 0.56098557, 0.4304594, 0.43045947)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pliers/Pliers/Skeleton3D:Handle")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.68301266, 0.6830127, 0.18301263, -0.18301283, 0.5, 1, -0.6123724, 0.61237246, 0.35355338, -0.35355344)
+
+[sub_resource type="Animation" id="Animation_xoqur"]
+resource_name = "IDLE"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pliers/Pliers/Skeleton3D:Root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.49999988, 0.5, 0.5, 0.5000001)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pliers/Pliers/Skeleton3D:Handle")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.49999988, -0.5, -0.5, 0.5000001)
+
+[sub_resource type="Animation" id="Animation_8s375"]
+resource_name = "OPEN"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pliers/Pliers/Skeleton3D:Root")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.49999988, 0.5, 0.5, 0.5000001, 1, 1, -0.61237234, 0.61237246, 0.35355338, 0.35355353)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pliers/Pliers/Skeleton3D:Handle")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.49999988, -0.5, -0.5, 0.5000001, 1, 1, -0.68301266, 0.6830127, 0.18301255, -0.18301278)
+
+[sub_resource type="Animation" id="Animation_r5j5y"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pliers/Pliers/Skeleton3D:Root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.49999988, 0.5, 0.5, 0.5000001)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pliers/Pliers/Skeleton3D:Handle")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.49999988, -0.5, -0.5, 0.5000001)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jpfle"]
+_data = {
+&"GRAB": SubResource("Animation_icsmb"),
+&"IDLE": SubResource("Animation_xoqur"),
+&"OPEN": SubResource("Animation_8s375"),
+&"RESET": SubResource("Animation_r5j5y")
+}
+
+[node name="Pliers" instance=ExtResource("1_8s375")]
+script = ExtResource("2_hvhbu")
+handle_position = Vector3(-0.07223737, -0.00622797, -0.30598956)
+handle_rotation = Vector3(0.5959622, -1.3962665, -0.2186834)
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14460579, 0.0008997321, -8.5454434e-05)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+&"": SubResource("AnimationLibrary_jpfle")
+}
+playback_default_blend_time = 0.5
+
+[node name="GrabPoint" type="Node3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18400756, 0, 0.000827834)
+
+[node name="pliers" parent="." index="5" instance=ExtResource("3_v6fu4")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Pliers" parent="pliers" index="0"]
+transform = Transform3D(-4.3359695e-08, 0.9919542, -0.12659717, -1, -4.371139e-08, 0, -5.533738e-09, 0.12659717, 0.9919542, 0, 0, 0)
+
+[connection signal="dropping" from="." to="." method="_on_dropping"]
+[connection signal="picking" from="." to="." method="_on_picking"]
+
+[editable path="pliers"]

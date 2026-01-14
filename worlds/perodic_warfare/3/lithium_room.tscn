@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://jh7rfth5gxgi"]
+[gd_scene load_steps=33 format=3 uid="uid://jh7rfth5gxgi"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_q8vm6"]
 [ext_resource type="Script" uid="uid://bkqpy5vp4ntw" path="res://worlds/perodic_warfare/3/lithium_room.gd" id="2_pu50v"]
@@ -13,11 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://pi7e2qjv4mtk" path="res://arts/2D/pictures/kenney.nl/kenney_particle-pack/PNG (Transparent)/fire_01.png" id="8_mx4nq"]
 [ext_resource type="PackedScene" uid="uid://bl0tc51w03yyu" path="res://arts/3D/models/itch.io/IndustrialPack2/Fire_Extinguisher/Fire_extinguisher.fbx" id="9_cq74e"]
 [ext_resource type="Script" uid="uid://hplbqmyh77d4" path="res://objects/interactives/collectables/collectable.gd" id="10_0bxl1"]
-[ext_resource type="PackedScene" uid="uid://bbv3jnntgl4gy" path="res://objects/items/equipments/collector/tongs.tscn" id="11_0bxl1"]
+[ext_resource type="PackedScene" uid="uid://bbv3jnntgl4gy" path="res://objects/items/equipments/collector/pliers.tscn" id="11_0bxl1"]
 [ext_resource type="Resource" uid="uid://bcwvotswtxkqs" path="res://objects/matters/Ca.tres" id="11_3em3g"]
 [ext_resource type="Resource" uid="uid://baxxwv2cxhj0u" path="res://objects/matters/Cu.tres" id="12_lxd25"]
 [ext_resource type="Resource" uid="uid://cy34cx6djp5jq" path="res://objects/matters/Li.tres" id="13_fd3v1"]
 [ext_resource type="Resource" uid="uid://b7isxkjephgeu" path="res://objects/matters/Na.tres" id="14_mwoek"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="19_gmwy0"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_mx4nq"]
 inner_radius = 0.578
@@ -57,7 +58,10 @@ size = Vector2(0.5, 0.5)
 height = 0.69714355
 radius = 0.12890625
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmwy0"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_5iail"]
+material = SubResource("StandardMaterial3D_gmwy0")
 size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mwoek"]
@@ -91,10 +95,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("5_gmwy0")]
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(798.0408, 0, 55.942257, 0, 800, 0, -55.942257, 0, 798.0408, 0, 487, 1748)
+transform = Transform3D(709.02673, 0, 370.513, 0, 800, 0, -370.513, 0, 709.02673, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(379.40454, 0, 21.264326, 0, 380, 0, -21.264326, 0, 379.40454, 1356, 0, 0)
+transform = Transform3D(352.15063, 0, 142.79323, 0, 380, 0, -142.79323, 0, 352.15063, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
@@ -206,11 +210,14 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_gmwy0")
 
 [node name="Tongs" parent="Content/Lithium002" index="4" instance=ExtResource("11_0bxl1")]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -6.758566, 0.96426356, -5.6068854)
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -6.758566, 0.96281743, -5.6068854)
+
+[node name="Player" parent="." index="9" instance=ExtResource("19_gmwy0")]
 
 [connection signal="body_entered" from="Content/Lithium002/FireFlame/Area3D" to="Content/Lithium002" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Content/Lithium002/FireFlame/Area3D" to="Content/Lithium002" method="_on_area_3d_body_exited"]
 
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]
