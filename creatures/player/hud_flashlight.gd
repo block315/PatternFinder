@@ -1,13 +1,16 @@
 extends TextureRect
 
+const PXIEL_FLASHLIGHT = preload("uid://bko5d2l113rcv")
+const PXIEL_FLASHLIGHT_OFF = preload("uid://chiuqse6sritk")
+
 @export var active: bool = false:
 	set(value):
 		if value:
-			texture = load(texture.resource_path.replace("white", "color").replace("White", "Colored"))
+			texture = PXIEL_FLASHLIGHT
 		else:
-			texture = load(texture.resource_path.replace("color", "white").replace("Colored", "White"))
+			texture = PXIEL_FLASHLIGHT_OFF
 		active = value
-@onready var hud: HUD = $"../../../../../.."
+@onready var hud: HUD = $"../../../.."
 
 func _process(_delta: float) -> void:
 	if not active and hud.hand.get_parent().get_node("FlashLight").on :

@@ -28,7 +28,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 							var tween = get_tree().create_tween()
 							previous_position = _molecule.position
 							current_model = _molecule
-							tween.tween_property(_molecule, "position", Vector3(0,2,0), 2.0)
+							tween.tween_property(_molecule, "position", Vector3(0,2,0), 1.0)
 							#_molecule.global_position = model_holder.global_position + Vector3(0,2,0)
 			print(body.hand.current_equipment.collection.name)
 
@@ -37,5 +37,5 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player and !model_holder.get_child(0).visible:
 		model_holder.get_child(0).show()
 		var tween = get_tree().create_tween()
-		tween.tween_property(current_model, "position", previous_position, 2.0)
+		tween.tween_property(current_model, "position", previous_position, 1.0)
 		current_model = null

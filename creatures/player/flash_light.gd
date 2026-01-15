@@ -1,6 +1,8 @@
 extends SpotLight3D
 class_name FlashLight
 
+
+
 @export_range(0,1,0.1) var power_consumption:float = 0.5
 @export var battery: int = 100
 @export var on: bool = false

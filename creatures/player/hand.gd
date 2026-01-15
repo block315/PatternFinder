@@ -40,6 +40,7 @@ func _process(_delta: float) -> void:
 			animation_player.play_backwards("switch")
 		elif Input.is_action_just_pressed("cancel"):
 			current_equipment.drop()
+			current_equipment = get_child(0)
 		else:
 			if animation_player.current_animation != "switch" or !animation_player.is_playing():
 				if player.velocity != Vector3.ZERO:

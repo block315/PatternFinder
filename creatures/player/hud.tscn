@@ -1,29 +1,34 @@
-[gd_scene load_steps=29 format=3 uid="uid://bdpojnur2whta"]
+[gd_scene load_steps=34 format=3 uid="uid://bdpojnur2whta"]
 
 [ext_resource type="Script" uid="uid://dy0bjfgsx2dbn" path="res://creatures/player/hud.gd" id="1_n75y2"]
-[ext_resource type="Texture2D" uid="uid://bldkwxl1ioomk" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/Colored/genericItem_color_102.png" id="2_jfipn"]
-[ext_resource type="Texture2D" uid="uid://dbhqvknqe53ku" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/Vector/Red/bar_round_gloss_large.svg" id="3_f8bq3"]
-[ext_resource type="Texture2D" uid="uid://ctrtbr67a2o6w" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/Vector/Green/bar_round_gloss_large.svg" id="4_kraf3"]
-[ext_resource type="Texture2D" uid="uid://477qtl88mgim" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Blue/Default/crosshair_color_d.png" id="4_o6sas"]
-[ext_resource type="Texture2D" uid="uid://bmhes0wpa2q2e" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/White/genericItem_white_118.png" id="5_hwbq3"]
+[ext_resource type="Texture2D" uid="uid://bwh64qgph61bv" path="res://arts/2D/UI/originals/pixel_crosshair.png" id="2_eorh2"]
+[ext_resource type="Texture2D" uid="uid://dt3syty2mu03p" path="res://arts/2D/UI/originals/pixel_heart.png" id="3_kraf3"]
+[ext_resource type="Texture2D" uid="uid://xrc8sjmj2uyp" path="res://arts/2D/UI/originals/pixel_health_bar_red.png" id="4_2ujcj"]
+[ext_resource type="Texture2D" uid="uid://yfc01mli5b8y" path="res://arts/2D/UI/originals/pixel_health_bar_green.png" id="5_hynwv"]
 [ext_resource type="Script" uid="uid://bbjv5x6u73h3l" path="res://creatures/player/hud_equipment.gd" id="6_hwbq3"]
-[ext_resource type="Texture2D" uid="uid://cfhtpqdgcu3c6" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/White/genericItem_white_163.png" id="6_yx0eb"]
-[ext_resource type="Texture2D" uid="uid://chjnq4ueroskb" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_square_large.png" id="7_ih5fd"]
-[ext_resource type="Texture2D" uid="uid://d3ot1iml6a72x" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/Vector/Grey/bar_square_gloss_small_square.svg" id="7_ljp66"]
-[ext_resource type="Texture2D" uid="uid://bx3kd8xim71rs" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/White/genericItem_white_010.png" id="7_yx0eb"]
-[ext_resource type="Texture2D" uid="uid://c23fh5vqge6pd" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_square_gloss_large.png" id="8_vfjo2"]
-[ext_resource type="Texture2D" uid="uid://ds42p3swknj73" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/White/genericItem_white_048.png" id="11_ia31h"]
-[ext_resource type="Texture2D" uid="uid://deqkoroalk4ps" path="res://arts/2D/pictures/kenney.nl/kenney_generic-items/PNG/Colored/genericItem_color_124.png" id="11_px2jx"]
-[ext_resource type="Texture2D" uid="uid://cfrvxu1enmiip" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/Vector/Yellow/bar_round_gloss_large.svg" id="13_nn5a5"]
+[ext_resource type="Texture2D" uid="uid://kxtvmaw1pqyw" path="res://arts/2D/UI/originals/pixel_stamina_bar_gray.png" id="6_msbi3"]
+[ext_resource type="Texture2D" uid="uid://dghpiiq48mpe" path="res://arts/2D/UI/originals/pixel_stamina_bar_yellow.png" id="7_dijxn"]
+[ext_resource type="Texture2D" uid="uid://1vnphrl2nvw" path="res://arts/2D/UI/originals/pixel_stamina.png" id="7_f8bq3"]
+[ext_resource type="Texture2D" uid="uid://2tl8erjfrxxb" path="res://arts/2D/UI/originals/pixel_vest.png" id="8_kraf3"]
+[ext_resource type="Texture2D" uid="uid://cg4de67kkwvrs" path="res://arts/2D/UI/originals/pixel_armor_bar_gray.png" id="10_dijxn"]
+[ext_resource type="Texture2D" uid="uid://c0q3fyq0x26gy" path="res://arts/2D/UI/originals/pixel_armor_bar_blue.png" id="11_ub8k5"]
+[ext_resource type="Texture2D" uid="uid://sv3rp0b1n4sq" path="res://arts/2D/UI/originals/pixel_battery_bar_gray.png" id="12_doe0u"]
+[ext_resource type="Texture2D" uid="uid://jcixrvg20s2a" path="res://arts/2D/UI/originals/pixel_battery_bar_yellow.png" id="13_qy50d"]
+[ext_resource type="Texture2D" uid="uid://chiuqse6sritk" path="res://arts/2D/UI/originals/pxiel_flashlight_off.png" id="14_eorh2"]
+[ext_resource type="Texture2D" uid="uid://cx8fxobv80w5v" path="res://arts/2D/UI/originals/pixel_cup_empty.png" id="15_nn5a5"]
 [ext_resource type="Script" uid="uid://bd0ku7ga0pn6v" path="res://creatures/player/hud_flashlight.gd" id="16_ibfhx"]
 [ext_resource type="Texture2D" uid="uid://c1dqek8jio7s6" path="res://arts/2D/UI/kenney.nl/kenney_ui-pack-space-expansion/PNG/Grey/Default/button_square_header_blade_square_screws.png" id="16_px2jx"]
 [ext_resource type="FontFile" uid="uid://c70oaji800u6b" path="res://arts/font/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf" id="17_212ep"]
 [ext_resource type="Texture2D" uid="uid://yxoiwxscikh2" path="res://arts/2D/pictures/kenney.nl/kenney_emotes-pack/PNG/Vector/Style 8/emote_circle.png" id="18_ia31h"]
+[ext_resource type="Texture2D" uid="uid://tu8xwog35k8v" path="res://arts/2D/UI/originals/pixel_hammer.png" id="18_nn5a5"]
+[ext_resource type="Texture2D" uid="uid://b0qypwksk05mt" path="res://arts/2D/UI/originals/pixel_revolver.png" id="19_eorh2"]
 [ext_resource type="Texture2D" uid="uid://fn0ydayj1kor" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0090.png" id="19_px2jx"]
 [ext_resource type="Texture2D" uid="uid://c2nnks8ba80e5" path="res://arts/2D/pictures/kenney.nl/kenney_emotes-pack/PNG/Vector/Style 8/emote_cross.png" id="20_212ep"]
 [ext_resource type="Texture2D" uid="uid://c63wvuyuq5mhk" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0133.png" id="21_ibfhx"]
 [ext_resource type="Texture2D" uid="uid://bybmpfmyfhoq8" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0017.png" id="22_ibfhx"]
 [ext_resource type="Texture2D" uid="uid://dpnlvoh0wihsp" path="res://arts/2D/UI/kenney.nl/kenney_input-prompts-pixel-16/Tiles/tile_0678.png" id="23_f8bq3"]
+[ext_resource type="Texture2D" uid="uid://bl4lq14frhccw" path="res://arts/2D/UI/originals/pixel_staus_bar_gray_top.png" id="24_d4pbl"]
+[ext_resource type="Texture2D" uid="uid://b5wr6lxtd1adf" path="res://arts/2D/UI/originals/pixel_status_bar_gray_bottom.png" id="25_qrfgy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_px2jx"]
 font = ExtResource("17_212ep")
@@ -46,7 +51,7 @@ margin = Rect2(2, 2, 0, 0)
 script = ExtResource("1_n75y2")
 
 [node name="CrosshairColorD" type="Sprite2D" parent="."]
-texture = ExtResource("4_o6sas")
+texture = ExtResource("2_eorh2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -65,58 +70,118 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
 [node name="StatusBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
+[node name="HeartTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
 layout_mode = 2
-texture = ExtResource("2_jfipn")
+texture = ExtResource("3_kraf3")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2"]
 layout_mode = 2
-size_flags_vertical = 3
 
-[node name="HealthTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer/HBoxContainer"]
+[node name="HealthTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2/HBoxContainer"]
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
 mouse_filter = 2
-value = 50.0
+max_value = 60.0
+value = 20.0
 nine_patch_stretch = true
-stretch_margin_left = 30
-stretch_margin_right = 30
-texture_under = ExtResource("3_f8bq3")
-texture_progress = ExtResource("4_kraf3")
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("4_2ujcj")
+texture_progress = ExtResource("5_hynwv")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="StaminaTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer"]
-layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
+size_flags_stretch_ratio = 5.0
+mouse_filter = 2
+step = 0.01
+value = 52.0
+nine_patch_stretch = true
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("6_msbi3")
+texture_progress = ExtResource("7_dijxn")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+[node name="StaminaTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
 layout_mode = 2
-size_flags_vertical = 3
+texture = ExtResource("7_f8bq3")
+expand_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer/HBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
+size_flags_stretch_ratio = 0.2
 
-[node name="StaminaTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer/HBoxContainer2"]
+[node name="ArmorTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+texture = ExtResource("8_kraf3")
+expand_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3"]
+layout_mode = 2
+
+[node name="ArmorTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+mouse_filter = 2
+max_value = 60.0
+value = 20.0
+nine_patch_stretch = true
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("10_dijxn")
+texture_progress = ExtResource("11_ub8k5")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3/HBoxContainer2"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="BatteryTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer3/HBoxContainer2"]
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
@@ -124,116 +189,108 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 step = 0.01
-value = 50.0
+value = 52.0
 nine_patch_stretch = true
-stretch_margin_left = 30
-stretch_margin_right = 30
-texture_under = ExtResource("3_f8bq3")
-texture_progress = ExtResource("13_nn5a5")
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("12_doe0u")
+texture_progress = ExtResource("13_qy50d")
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
+[node name="FlashTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
 layout_mode = 2
-texture = ExtResource("11_px2jx")
-expand_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.05
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="CollectorTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer" node_paths=PackedStringArray("equipment_progress_bar")]
-layout_mode = 2
-texture = ExtResource("5_hwbq3")
-expand_mode = 2
-script = ExtResource("6_hwbq3")
-equipment_type = "Collector"
-equipment_progress_bar = NodePath("../CollectorTextureProgressBar")
-
-[node name="CollectorTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-step = 100.0
-nine_patch_stretch = true
-stretch_margin_left = 10
-stretch_margin_right = 10
-texture_under = ExtResource("7_ljp66")
-texture_progress = ExtResource("8_vfjo2")
-
-[node name="BreakerTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer" node_paths=PackedStringArray("equipment_progress_bar")]
-layout_mode = 2
-texture = ExtResource("7_yx0eb")
-expand_mode = 2
-script = ExtResource("6_hwbq3")
-equipment_type = "Breaker"
-equipment_progress_bar = NodePath("../BreakerTextureProgressBar")
-
-[node name="BreakerTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-nine_patch_stretch = true
-stretch_margin_left = 30
-stretch_margin_right = 30
-texture_under = ExtResource("7_ih5fd")
-texture_progress = ExtResource("8_vfjo2")
-
-[node name="ShooterTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer" node_paths=PackedStringArray("equipment_progress_bar")]
-layout_mode = 2
-texture = ExtResource("6_yx0eb")
-expand_mode = 2
-script = ExtResource("6_hwbq3")
-equipment_type = "Shooter"
-equipment_progress_bar = NodePath("../ShooterTextureProgressBar")
-
-[node name="ShooterTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-nine_patch_stretch = true
-stretch_margin_left = 30
-stretch_margin_right = 30
-texture_under = ExtResource("7_ih5fd")
-texture_progress = ExtResource("8_vfjo2")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="FlashLightTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("11_ia31h")
+texture = ExtResource("14_eorh2")
 expand_mode = 2
 script = ExtResource("16_ibfhx")
 
-[node name="BatteryTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/VBoxContainer2/HBoxContainer2"]
-unique_name_in_owner = true
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="CollectorTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar"]
+modulate = Color(1, 1, 1, 0.101960786)
+layout_mode = 2
+texture = ExtResource("15_nn5a5")
+expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Collector"
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="BreakerTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar" node_paths=PackedStringArray("equipment_progress_bar")]
+modulate = Color(1, 1, 1, 0.101960786)
+layout_mode = 2
+texture = ExtResource("18_nn5a5")
+expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Breaker"
+equipment_progress_bar = NodePath("../MarginContainer4/HBoxContainer/DurabilityTextureProgressBar")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4"]
+layout_mode = 2
+
+[node name="DurabilityTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.101960786)
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
 mouse_filter = 2
-value = 50.0
+max_value = 60.0
+value = 20.0
 nine_patch_stretch = true
-stretch_margin_left = 30
-stretch_margin_right = 30
-texture_under = ExtResource("7_ih5fd")
-texture_progress = ExtResource("8_vfjo2")
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("10_dijxn")
+texture_progress = ExtResource("24_d4pbl")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4/HBoxContainer2"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="AmmoTextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/StatusBar/MarginContainer4/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0.101960786)
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+step = 0.01
+value = 52.0
+nine_patch_stretch = true
+stretch_margin_left = 35
+stretch_margin_top = 35
+stretch_margin_right = 35
+stretch_margin_bottom = 35
+texture_under = ExtResource("12_doe0u")
+texture_progress = ExtResource("25_qrfgy")
+
+[node name="ShooterTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/StatusBar" node_paths=PackedStringArray("equipment_progress_bar")]
+modulate = Color(1, 1, 1, 0.101960786)
+layout_mode = 2
+texture = ExtResource("19_eorh2")
+expand_mode = 2
+script = ExtResource("6_hwbq3")
+equipment_type = "Shooter"
+equipment_progress_bar = NodePath("../MarginContainer4/HBoxContainer2/AmmoTextureProgressBar")
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

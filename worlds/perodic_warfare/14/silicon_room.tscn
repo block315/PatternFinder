@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmndj33w6k0gf"]
+[gd_scene load_steps=16 format=3 uid="uid://cmndj33w6k0gf"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_k8s4q"]
 [ext_resource type="Script" uid="uid://d081qhlhtfow3" path="res://worlds/perodic_warfare/14/silicon_room.gd" id="2_3bywq"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c2aqrr3tssno0" path="res://arts/3D/models/polyhaven.com/sand_rocks_small_01_2k.gltf/sand_rocks_small_01_2k.gltf" id="5_cms1n"]
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="6_qjtik"]
 [ext_resource type="PackedScene" uid="uid://dhqcu64mpqp3r" path="res://arts/3D/models/blendswap.com/raspberry-pi-3-model-b/raspberrypi3modelb_images_packed_v1_0.glb" id="7_c4jv3"]
-[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="8_c4jv3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c4jv3"]
 size = Vector3(8.41272, 0.3095703, 5.4664307)
@@ -44,10 +43,10 @@ neutron = Array[int]([14, 15, 16])
 electron = 14
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(730.7845, 0, -325.50388, 0, 800, 0, 325.50388, 0, 730.7845, 0, 487, 1748)
+transform = Transform3D(713.28033, 0, 362.25662, 0, 800, 0, -362.25662, 0, 713.28033, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-216.83134, 0, 312.06433, 0, 380, 0, -312.06433, 0, -216.83134, 1356, 0, 0)
+transform = Transform3D(353.46164, 0, 139.51643, 0, 380, 0, -139.51643, 0, 353.46164, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292, 55, 0)
@@ -120,8 +119,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.666667, 0, 4.7683716e-07)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4713576, 0.6102576, -3.3176618)
 shape = SubResource("BoxShape3D_4iu4n")
 
-[node name="Player" parent="." index="10" instance=ExtResource("8_c4jv3")]
-
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]
