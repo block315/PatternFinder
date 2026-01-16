@@ -2,7 +2,7 @@ extends Node3D
 class_name MainMenu
 
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
-@onready var _3d_cursor: Marker3D = $"3DCursor"
+@onready var _3d_cursor: Marker3D = $"Camera3D/3DCursor"
 @onready var ray_cast_3d: RayCast3D = $Camera3D/SpotLight3D/RayCast3D
 
 @onready var camera_3d: Camera3D = $Camera3D
@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		_3d_cursor.position = Vector3(_3d_cursor.position.x + event.relative.x * .01, 0, _3d_cursor.position.z + event.relative.y * .01)
+		_3d_cursor.global_position = Vector3(_3d_cursor.global_position.x + event.relative.x * .01, 0, _3d_cursor.global_position.z + event.relative.y * .01)
 		spot_light_3d.look_at(_3d_cursor.global_position)
 		if ray_cast_3d.is_colliding():
 			if ray_cast_3d.get_collider() is Button3D:
@@ -40,7 +40,7 @@ func _input(event: InputEvent) -> void:
 func _on_start_button_clicked() -> void:
 	var tween:Tween = get_tree().create_tween()
 	tween.tween_property(camera_3d, "position", Vector3(-7,3,0), 1.0)
-	tween.parallel().tween_property(_3d_cursor, "position", Vector3(-7,0,0), 1.0)
+	#tween.parallel().tween_property(_3d_cursor, "position", Vector3(-7,0,0), 1.0)
 
 func _on_exit_button_clicked() -> void:
 	get_tree().quit()
@@ -48,7 +48,7 @@ func _on_exit_button_clicked() -> void:
 func _on_config_button_clicked() -> void:
 	var tween:Tween = get_tree().create_tween()
 	tween.tween_property(camera_3d, "position", Vector3(7,3,0), 1.0)
-	tween.parallel().tween_property(_3d_cursor, "position", Vector3(7,0,0), 1.0)
+	#tween.parallel().tween_property(_3d_cursor, "position", Vector3(7,0,0), 1.0)
 
 func _on_perodic_warefare_button_clicked() -> void:
 	var _player = PLAYER.instantiate()
@@ -63,4 +63,5 @@ func _on_soaked_button_clicked() -> void:
 func _on_home_button_left_clicked() -> void:
 	var tween:Tween = get_tree().create_tween()
 	tween.tween_property(camera_3d, "position", Vector3(0,3,0), 1.0)
-	tween.parallel().tween_property(_3d_cursor, "position", Vector3(0,0,0), 1.0)
+	#var _new_cursor_postion = _3d_cursor.global_position + Vector3(0,3,0)
+	#tween.parallel().tween_property(_3d_cursor, "position", Vector3(0,0,0), 1.0)

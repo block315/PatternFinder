@@ -45,3 +45,4 @@ func change_room(next_room:int):
 	get_tree().get_root().add_child(current_room)
 	if pervious_room != null:
 		pervious_room.queue_free()
+	get_tree().get_first_node_in_group("player").hud.mini_map.texture = load("res://arts/2D/UI/originals/pixel-perodic-table/{0}.png".format([next_room]))

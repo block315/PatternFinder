@@ -215,6 +215,9 @@ spot_angle = 10.0
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D/SpotLight3D"]
 target_position = Vector3(0, 0, -10)
 
+[node name="3DCursor" type="Marker3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.3113416e-07, -3)
+
 [node name="Title" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.121, -0.816)
 transparency = 1.0
@@ -428,8 +431,6 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Title/r2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040100098, -0.041625977, -0.0010681078)
 shape = SubResource("BoxShape3D_rxajg")
-
-[node name="3DCursor" type="Marker3D" parent="."]
 
 [node name="Buttons" type="Node3D" parent="."]
 

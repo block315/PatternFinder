@@ -10,6 +10,7 @@ class_name HUD
 @onready var health_texture_progress_bar: TextureProgressBar = %HealthTextureProgressBar
 @onready var stamina_texture_progress_bar: TextureProgressBar = %StaminaTextureProgressBar
 @onready var player: Player = $"../.."
+@onready var mini_map: TextureRect = %MiniMap
 
 signal switch(on:bool)
 
@@ -30,6 +31,8 @@ func _process(_delta: float) -> void:
 			hide_options()
 		elif Input.is_action_pressed("ui_cancel"):
 			hide_options()
+	if Input.is_action_just_pressed("map"):
+		mini_map.visible = !mini_map.visible
 
 func display_options(content:String=""):
 	computer_label.text = content

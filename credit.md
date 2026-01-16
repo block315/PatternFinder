@@ -16,7 +16,6 @@
 - Old CRT TV for EEVEE : https://www.blendswap.com/blend/24857
 - Battery Mesh : https://www.blendswap.com/blend/23773
 - Raspberry Pi 3 Model B : https://www.blendswap.com/blend/22255
-- Ceiling Fan : https://www.blendswap.com/blend/15033
 - light emitting diodes set : https://www.blendswap.com/blend/6166
 - Filament bulb : https://www.blendswap.com/blend/4580
 - Wires : https://www.blendswap.com/blend/2184
@@ -43,6 +42,8 @@
 - https://polyhaven.com/a/scandinavian_masonry_heater
 - https://polyhaven.com/a/grass_medium_01
 - https://polyhaven.com/a/stone_fire_pit
+- [Modular Electric Cables](https://polyhaven.com/a/modular_electric_cables) by [Kuutti Siitonen](https://polyhaven.com/all?a=Kuutti%20Siitonen)
+- [Ceiling Fan](https://polyhaven.com/a/ceiling_fan) by [Ulan Cabanilla](https://polyhaven.com/all?a=Ulan%20Cabanilla)
 
 ## From [3DTextures](https://3dtextures.me/)
 - https://3dtextures.me/2018/10/15/painted-metal-001/
@@ -100,4 +101,3 @@
 - https://kenney.nl/assets/kenney-fonts
 
 # Under [Unsplash License](https://unsplash.com/license)
-- https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EB%B0%A4%ED%95%98%EB%8A%98-%EC%82%AC%EC%A7%84-uhjiu8FjnsQ
