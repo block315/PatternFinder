@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://csy8ybyf4g037"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_jjcnl"]
+[ext_resource type="Script" uid="uid://c5onl5g5w7rit" path="res://worlds/perodic_warfare/21/scandium_room.gd" id="2_jjcnl"]
+[ext_resource type="Texture2D" uid="uid://b0vk6g8nm5pa2" path="res://worlds/perodic_warfare/21/T_Decals_Sc.png" id="3_bvdxo"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_7sm4i"]
+
+[node name="ScandiumRoom" instance=ExtResource("1_jjcnl")]
+script = ExtResource("2_jjcnl")
+atomic_number = 21
+element_decal_png = ExtResource("3_bvdxo")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 21
+neutron = Array[int]([24])
+electron = 21
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-720.253, 0, 348.18726, 0, 800, 0, -348.18726, 0, -720.253, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-208.9603, 0, 317.38876, 0, 380, 0, -317.38876, 0, -208.9603, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -45, 78, 0)
+
+[node name="Player" parent="." index="9" instance=ExtResource("4_7sm4i")]
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

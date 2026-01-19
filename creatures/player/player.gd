@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			if camera_3d.position.y < 1.5:
 				camera_3d.position.y += .1
-			if Input.is_action_pressed("boost") and stamina > 0:
+			if Input.is_action_pressed("boost") and stamina > 0 and velocity.length() > 0:
 				speed = 10.0
 				stamina -= .2
 			else:

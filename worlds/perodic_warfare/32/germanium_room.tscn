@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgf6tvlfv28r"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_ssi2n"]
+[ext_resource type="Script" uid="uid://dgm2vlaqswngm" path="res://worlds/perodic_warfare/32/germanium_room.gd" id="2_5gev4"]
+[ext_resource type="Texture2D" uid="uid://bnh3qls7knxbf" path="res://worlds/perodic_warfare/32/T_Decals_Ge.png" id="3_5gev4"]
+
+[node name="GermaniumRoom" instance=ExtResource("1_ssi2n")]
+script = ExtResource("2_5gev4")
+atomic_number = 32
+element_decal_png = ExtResource("3_5gev4")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 32
+neutron = Array[int]([38, 40, 41, 42, 44])
+electron = 32
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-118.65734, 0, 791.1506, 0, 800, 0, -791.1506, 0, -118.65734, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(73.65453, 0, 372.79355, 0, 380, 0, -372.79355, 0, 73.65453, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -293, 78, 0)
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

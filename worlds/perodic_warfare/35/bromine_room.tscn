@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca7rrhkblgcpk"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_7o7g2"]
+[ext_resource type="Script" uid="uid://bbvs1eh14vefv" path="res://worlds/perodic_warfare/35/bromine_room.gd" id="2_wrceq"]
+[ext_resource type="Texture2D" uid="uid://bqq0qtnls8cv4" path="res://worlds/perodic_warfare/4/T_Decals_Be.png" id="3_4lkdo"]
+
+[node name="BromineRoom" instance=ExtResource("1_7o7g2")]
+script = ExtResource("2_wrceq")
+atomic_number = 35
+element_decal_png = ExtResource("3_4lkdo")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 35
+neutron = Array[int]([44, 46])
+electron = 35
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-226.35207, 0, 767.30927, 0, 800, 0, -767.30927, 0, -226.35207, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(32.137127, 0, 378.63864, 0, 380, 0, -378.63864, 0, 32.137127, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -360, 78, 0)
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

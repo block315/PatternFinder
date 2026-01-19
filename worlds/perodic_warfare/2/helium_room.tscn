@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlvd3um4st8my"]
+[gd_scene load_steps=11 format=3 uid="uid://dlvd3um4st8my"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_gt6dr"]
 [ext_resource type="Script" uid="uid://cmjvvu3pma0kh" path="res://worlds/perodic_warfare/2/helium_room.gd" id="2_0ycle"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bk0gg8k4w2kwj" path="res://worlds/perodic_warfare/2/helium_001.gd" id="8_bun02"]
 [ext_resource type="PackedScene" uid="uid://baioq4o6qy0rd" path="res://creatures/friends/robot/robot.tscn" id="9_7uwws"]
 [ext_resource type="Script" uid="uid://cic63ibvj1n7c" path="res://proposition.gd" id="10_5qevc"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="10_nrxwr"]
 
 [node name="HeliumRoom" instance=ExtResource("1_gt6dr")]
 script = ExtResource("2_0ycle")
@@ -36,10 +37,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(767.51935, 0, -225.6389, 0, 800, 0, 225.6389, 0, 767.51935, 0, 487, 1748)
+transform = Transform3D(341.36023, 0, 723.5137, 0, 800, 0, -723.5137, 0, 341.36023, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(32.418568, 0, -378.6146, 0, 380, 0, 378.6146, 0, 32.418568, 1356, 0, 0)
+transform = Transform3D(235.03003, 0, 298.59814, 0, 380, 0, -298.59814, 0, 235.03003, 1356, 0, 0)
 
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 9, 0)
@@ -84,6 +85,9 @@ metadata/_custom_type_script = "uid://cic63ibvj1n7c"
 [node name="AlphaShooter" parent="Content/Helium003" index="0" instance=ExtResource("8_5qevc")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, -0.17007923)
 
+[node name="Player" parent="." index="10" instance=ExtResource("10_nrxwr")]
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

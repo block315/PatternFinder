@@ -311,6 +311,7 @@ size_flags_vertical = 3
 
 [node name="MiniMap" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer4"]
 unique_name_in_owner = true
+visible = false
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("22_i8d0x")

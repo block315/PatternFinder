@@ -18,6 +18,7 @@ var element_symbols = {
 	9 : ["F", "Fluorine", "res://worlds/perodic_warfare/7/nitrogen_room.tscn"],
 	10 : ["Ne", "Neon", "res://worlds/perodic_warfare/10/neon_room.tscn"],
 	11 : ["Na", "Sodium", "res://worlds/perodic_warfare/11/sodium_room.tscn"],
+	12 : ["Mg", "Magnesium", ],
 	13 : ["Al", "Aluminium", "res://worlds/perodic_warfare/13/aluminium_room.tscn"],
 	14 : ["Si", "Silicon", "res://worlds/perodic_warfare/14/silicon_room.tscn"],
 	17 : ["Cl", "Chlorine", "res://worlds/perodic_warfare/17/chlorine_room.tscn"],

@@ -81,13 +81,16 @@ func neutron_init():
 
 func electron_init():
 	for i in range(electron):
-		var _electon = ELECTRON.instantiate()
-		nucleus_center_point.add_child(_electon)
+		var _electron = ELECTRON.instantiate()
+		nucleus_center_point.add_child(_electron)
 		if i >= 2:
 			if i >= 10:
-				_electon.electron_shell = 3
+				if i >= 18:
+					_electron.electron_shell = 4
+				else:
+					_electron.electron_shell = 3
 			else:
-				_electon.electron_shell = 2
+				_electron.electron_shell = 2
 		else:
-			_electon.electron_shell = 1
-		_electon.core_ready()
+			_electron.electron_shell = 1
+		_electron.core_ready(scale.x)
