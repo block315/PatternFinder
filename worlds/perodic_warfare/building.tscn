@@ -464,443 +464,448 @@ surface_material_override/0 = ExtResource("3_73e34")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="36/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+[node name="37" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D5"]
+[node name="Area3D" type="Area3D" parent="37"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="37/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+[node name="38" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 9, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D10"]
+[node name="Area3D" type="Area3D" parent="38"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D10/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="38/Area3D"]
 shape = SubResource("BoxShape3D_aqeu4")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="Area3D" type="Area3D" parent="MeshInstance3D6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/Area3D"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-shape = SubResource("BoxShape3D_aqeu4")
-
-[node name="MeshInstance3D13" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="Area3D" type="Area3D" parent="MeshInstance3D13"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D13/Area3D"]
-shape = SubResource("BoxShape3D_aqeu4")
-
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -45, -5.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="Area3D" type="Area3D" parent="MeshInstance3D11"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D11/Area3D"]
-shape = SubResource("BoxShape3D_aqeu4")
-
-[node name="MeshInstance3D12" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -54, -5.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="Area3D" type="Area3D" parent="MeshInstance3D12"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D12/Area3D"]
-shape = SubResource("BoxShape3D_aqeu4")
-
-[node name="MeshInstance3D16" type="MeshInstance3D" parent="."]
+[node name="39" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 18, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D17" type="MeshInstance3D" parent="."]
+[node name="40" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 27, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D18" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -45, -13.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D19" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 16, -54, -21.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D78" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 16, -45, -21.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D82" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 18.4, -54, -29.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D83" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 18.4, -45, -29.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D84" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -54, -38)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D87" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -45, -38)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D88" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.8, -54, -44.8)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D91" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.8, -45, -44.8)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D92" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.72741, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.72741, 38, -54, -48.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D93" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.72741, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.72741, 38, -45, -48.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D94" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 9.05067e-08, -1.90735e-07, -9.05067e-08, 8, 1.19154e-08, 1.90735e-07, -1.19154e-08, 8, 47.1542, -54, -48.9296)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D95" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 9.05067e-08, -1.90735e-07, -9.05067e-08, 8, 1.19154e-08, 1.90735e-07, -1.19154e-08, 8, 47.1542, -45, -48.9296)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D96" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 9.05067e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -54, -46.6742)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D97" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 9.05067e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -45, -46.6742)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D98" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.65686, 9.05067e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.7628, -54, -40.3962)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D99" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.65686, 9.05067e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.7628, -45, -40.3962)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D100" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, -7.72741, 0, 8, 0, 7.72741, 0, 2.07055, 70.8, -54, -31.2)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D101" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.07055, 0, -7.72741, 0, 8, 0, 7.72741, 0, 2.07055, 70.8, -45, -31.2)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D102" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.8, -54, -8.80001)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D103" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.8, -45, -8.80001)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D104" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -54, -20.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D105" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -45, -20.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D106" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 58, -54, -18.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D107" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 58, -45, -18.4)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D108" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8, 0, 1.90735e-07, 0, 8, 0, -1.90735e-07, 0, -8, 48.8, -54, -17.2)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D109" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8, 0, 1.90735e-07, 0, 8, 0, -1.90735e-07, 0, -8, 48.8, -45, -17.2)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D110" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.72741, 39.2, -54, -16)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D111" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.69687, 0, -2.18133, 0, 8, 0, 2.18133, 0, -7.69687, 39.2, -45, -16)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D79" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -54, -13.6)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D20" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.72741, 26.6, -45, -0.8)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D21" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.72741, 26.6, -54, -0.8)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D24" type="MeshInstance3D" parent="."]
+[node name="41" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D25" type="MeshInstance3D" parent="."]
+[node name="42" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D26" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D27" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D28" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D29" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D32" type="MeshInstance3D" parent="."]
+[node name="43" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D33" type="MeshInstance3D" parent="."]
+[node name="44" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D34" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D36" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D37" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D40" type="MeshInstance3D" parent="."]
+[node name="45" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D41" type="MeshInstance3D" parent="."]
+[node name="46" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D42" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D43" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D44" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D45" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D48" type="MeshInstance3D" parent="."]
+[node name="47" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D49" type="MeshInstance3D" parent="."]
+[node name="48" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D50" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D51" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D52" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D53" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D56" type="MeshInstance3D" parent="."]
+[node name="49" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D57" type="MeshInstance3D" parent="."]
+[node name="50" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D58" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D59" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D60" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D61" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D64" type="MeshInstance3D" parent="."]
+[node name="51" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D65" type="MeshInstance3D" parent="."]
+[node name="52" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D66" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D67" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D68" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -45, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D69" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D72" type="MeshInstance3D" parent="."]
+[node name="53" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D73" type="MeshInstance3D" parent="."]
+[node name="54" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -36, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D74" type="MeshInstance3D" parent="."]
+[node name="55" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="Area3D" type="Area3D" parent="55"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="55/Area3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="56" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -45, -5.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="Area3D" type="Area3D" parent="56"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="56/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="57" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -45, -13.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="58" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.7274103, 0, 8, 0, -7.7274103, 0, 2.07055, 16, -45, -21.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="59" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.7274103, 0, 8, 0, -7.7274103, 0, 2.07055, 18.4, -45, -29.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="60" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -45, -38)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="61" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.800001, -45, -44.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="62" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.7274103, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.7274103, 38, -45, -48.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="63" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 9.050671e-08, -1.9073501e-07, -9.050671e-08, 8, 1.19154e-08, 1.9073501e-07, -1.19154e-08, 8, 47.1542, -45, -48.9296)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="64" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 9.050671e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -45, -46.6742)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="65" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65686, 9.050671e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.76281, -45, -40.3962)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="66" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, -7.7274103, 0, 8, 0, 7.7274103, 0, 2.07055, 70.8, -45, -31.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="67" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -45, -20.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="68" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.7274103, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.7274103, 58, -45, -18.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="69" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8, 0, 1.9073501e-07, 0, 8, 0, -1.9073501e-07, 0, -8, 48.8, -45, -17.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="70" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.69687, 0, -2.18133, 0, 8, 0, 2.18133, 0, -7.69687, 39.2, -45, -16)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="71" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.800001, -45, -8.80001)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="72" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.7274103, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.7274103, 26.6, -45, -0.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="73" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="74" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="75" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="76" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="77" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="78" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="79" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="Area3D" type="Area3D" parent="79"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="79/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="80" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="81" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="82" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="83" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="84" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -45, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="85" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -45, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D75" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -54, 0)
-mesh = ExtResource("2_4duvc")
-surface_material_override/0 = ExtResource("3_73e34")
-
-[node name="MeshInstance3D76" type="MeshInstance3D" parent="."]
+[node name="86" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -45, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")
 
-[node name="MeshInstance3D77" type="MeshInstance3D" parent="."]
+[node name="87" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 0, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="Area3D" type="Area3D" parent="87"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="87/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="88" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65685, 0, 5.65685, 0, 8, 0, -5.65685, 0, 5.65685, 7.4, -54, -5.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="Area3D" type="Area3D" parent="88"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="88/Area3D"]
+shape = SubResource("BoxShape3D_aqeu4")
+
+[node name="89" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 12.8, -54, -13.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="90" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 16, -54, -21.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="91" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, 7.72741, 0, 8, 0, -7.72741, 0, 2.07055, 18.4, -54, -29.6)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="92" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 6.9282, 0, 8, 0, -6.9282, 0, 4, 22, -54, -38)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="93" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, 4, 0, 8, 0, -4, 0, 6.9282, 28.8, -54, -44.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="94" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, 2.07055, 0, 8, 0, -2.07055, 0, 7.72741, 38, -54, -48.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="95" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 9.05067e-08, -1.90735e-07, -9.05067e-08, 8, 1.19154e-08, 1.90735e-07, -1.19154e-08, 8, 47.1542, -54, -48.9296)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="96" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 9.05067e-08, -4, -7.24234e-08, 8, 5.55724e-08, 4, -1.19154e-08, 6.9282, 57.283, -54, -46.6742)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="97" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.65686, 9.05067e-08, -5.65685, -5.55724e-08, 8, 7.24234e-08, 5.65685, -1.19154e-08, 5.65686, 64.7628, -54, -40.3962)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="98" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.07055, 0, -7.72741, 0, 8, 0, 7.72741, 0, 2.07055, 70.8, -54, -31.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="99" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.9282, 0, -4, 0, 8, 0, 4, 0, -6.9282, 67.6, -54, -20.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="100" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.7274103, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.7274103, 58, -54, -18.4)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="101" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8, 0, 1.9073501e-07, 0, 8, 0, -1.9073501e-07, 0, -8, 48.8, -54, -17.2)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="102" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.7274103, 0, -2.07055, 0, 8, 0, 2.07055, 0, -7.7274103, 39.2, -54, -16)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="103" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.9282, 0, -4, 0, 8, 0, 4, 0, 6.9282, 30.8, -54, -8.80001)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="104" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.72741, 0, -2.07055, 0, 8, 0, 2.07055, 0, 7.72741, 26.6, -54, -0.8)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="105" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 36, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="106" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 45, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="107" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 54, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="108" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 63, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="109" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="110" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 81, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="111" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 90, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="112" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 99, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="113" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 108, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="114" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 117, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="115" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 126, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="116" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 135, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="117" type="MeshInstance3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 144, -54, 0)
+mesh = ExtResource("2_4duvc")
+surface_material_override/0 = ExtResource("3_73e34")
+
+[node name="118" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 153, -54, 0)
 mesh = ExtResource("2_4duvc")
 surface_material_override/0 = ExtResource("3_73e34")

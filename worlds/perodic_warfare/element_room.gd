@@ -4,6 +4,8 @@ class_name ElementRoom
 
 signal turn_on_light(switch_value)
 
+const PLAYER = preload("uid://b4uw4bgui2o52")
+
 @export var atomic_number: = 1
 @export var element_decal_png: CompressedTexture2D
 var starting_position: Vector3 = Vector3(0,0,3.0)
@@ -13,6 +15,11 @@ var starting_view_rotation: Vector3 = Vector3(0,0,0)
 @onready var speaker: Node3D = $Speaker
 
 func _ready():
+	# for debug
+	if get_tree().get_node_count_in_group("player") < 1:
+		var _player = PLAYER.instantiate()
+		_player.add_to_group("player")
+		get_tree().get_root().add_child.call_deferred(_player)
 	$Core.strong_nuclear_force_activate = true
 	#$Player.position = starting_position
 	#$Player.rotation = starting_rotation

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://brvrjdumu7wmt"]
+[gd_scene load_steps=24 format=4 uid="uid://brvrjdumu7wmt"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_dcarp"]
 [ext_resource type="Script" uid="uid://bdgewoh8ik3ad" path="res://worlds/perodic_warfare/13/aluminium_room.gd" id="2_oh1h4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cfcxcjbenm10o" path="res://arts/3D/models/itch.io/Food&DrinksPack/Canned_Food/tex/SpaghettiMeatBalls_Base_Color.png" id="8_rrfc3"]
 [ext_resource type="Texture2D" uid="uid://crmv60ijur3lt" path="res://arts/3D/models/itch.io/Food&DrinksPack/Canned_Tuna/DefaultMaterial_Base_Color.png" id="9_b6m8j"]
 [ext_resource type="Texture2D" uid="uid://cnsllg5kiant0" path="res://arts/3D/models/itch.io/Food&DrinksPack/Canned_Tuna/DefaultMaterial_Normal_DirectX.png" id="10_rrfc3"]
+[ext_resource type="PackedScene" uid="uid://cymjmvlpabiom" path="res://arts/3D/models/quaternius.com/Animated Mech Pack - March 2021-20250908T163901Z-1-001/Animated Mech Pack - March 2021/Textured/glTF/Stan.gltf" id="11_rrfc3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7h65k"]
 resource_name = "Skin01"
@@ -200,39 +201,55 @@ electron = 13
 [node name="Structure" parent="." index="1"]
 metadata/_edit_lock_ = true
 
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(374.085, 0, 707.1486, 0, 800, 0, -707.1486, 0, 374.085, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(245.79651, 0, 289.8001, 0, 380, 0, -289.8001, 0, 245.79651, 1356, 0, 0)
+
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -270, 55, 0)
 
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 5
+downstairs = 31
+
 [node name="Aluminium001" parent="Content" index="0" instance=ExtResource("4_8bs0w")]
 
-[node name="CannedFood3" type="MeshInstance3D" parent="Content/Aluminium001" index="3"]
+[node name="CannedFood3" type="MeshInstance3D" parent="Content/Aluminium001" index="2"]
 transform = Transform3D(0.3882286, 0, -1.4488888, 0, 1.5, 0, 1.4488888, 0, 0.3882286, -8.447134, 2, -9)
 mesh = SubResource("ArrayMesh_fogwf")
 skeleton = NodePath("")
 
-[node name="CannedFood1" type="MeshInstance3D" parent="Content/Aluminium001" index="4"]
+[node name="CannedFood1" type="MeshInstance3D" parent="Content/Aluminium001" index="3"]
 transform = Transform3D(0.3882286, 0, -1.4488888, 0, 1.5, 0, 1.4488888, 0, 0.3882286, -8.230905, 2, -9)
 mesh = SubResource("ArrayMesh_fkdw3")
 skeleton = NodePath("")
 
-[node name="CannedFood2" type="MeshInstance3D" parent="Content/Aluminium001" index="5"]
+[node name="CannedFood2" type="MeshInstance3D" parent="Content/Aluminium001" index="4"]
 transform = Transform3D(1.299038, 0, -0.75, 0, 1.5, 0, 0.75, 0, 1.299038, -8, 2, -9)
 mesh = SubResource("ArrayMesh_j4f3l")
 skeleton = NodePath("")
 
-[node name="CannedFood" type="MeshInstance3D" parent="Content/Aluminium001" index="6"]
+[node name="CannedFood" type="MeshInstance3D" parent="Content/Aluminium001" index="5"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.685661, 1.9775352, -9)
 mesh = SubResource("ArrayMesh_jod23")
 skeleton = NodePath("")
 
-[node name="CannedFood4" type="MeshInstance3D" parent="Content/Aluminium001" index="7"]
+[node name="CannedFood4" type="MeshInstance3D" parent="Content/Aluminium001" index="6"]
 transform = Transform3D(0.9822893, 0, 1.1336259, 0, 1.5, 0, -1.1336259, 0, 0.9822893, -7.7087817, 2.0359674, -9)
 mesh = SubResource("ArrayMesh_jod23")
 skeleton = NodePath("")
 
-[node name="CannedFood5" type="MeshInstance3D" parent="Content/Aluminium001" index="8"]
+[node name="CannedFood5" type="MeshInstance3D" parent="Content/Aluminium001" index="7"]
 transform = Transform3D(0.88095826, 0.66352713, 1.0166832, -0.43451703, 1.3452632, -0.5014611, -1.1336262, 1.4667138e-07, 0.9822897, -7.524847, 2.0062726, -9)
 mesh = SubResource("ArrayMesh_jod23")
 skeleton = NodePath("")
 
-[editable path="Structure/ThridFloor/Platform_DarkPlates20/Door_Frame_SquareTall"]
+[node name="Stan" parent="." index="9" instance=ExtResource("11_rrfc3")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0, -4)
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

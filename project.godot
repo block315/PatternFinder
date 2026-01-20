@@ -20,7 +20,6 @@ config/icon="uid://c1fbkt7ss6iyk"
 
 [autoload]
 
-UIAnimation="*res://addons/godot_ui_animations/UIAnimationHandler.tscn"
 PerodicWarfare="*res://perodic_warfare.gd"
 
 [display]

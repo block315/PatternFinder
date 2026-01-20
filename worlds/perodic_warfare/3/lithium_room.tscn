@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://jh7rfth5gxgi"]
+[gd_scene load_steps=33 format=3 uid="uid://jh7rfth5gxgi"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_q8vm6"]
 [ext_resource type="Script" uid="uid://bkqpy5vp4ntw" path="res://worlds/perodic_warfare/3/lithium_room.gd" id="2_pu50v"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://baxxwv2cxhj0u" path="res://objects/matters/Cu.tres" id="12_lxd25"]
 [ext_resource type="Resource" uid="uid://cy34cx6djp5jq" path="res://objects/matters/Li.tres" id="13_fd3v1"]
 [ext_resource type="Resource" uid="uid://b7isxkjephgeu" path="res://objects/matters/Na.tres" id="14_mwoek"]
+[ext_resource type="PackedScene" uid="uid://dwoa6deh8laxp" path="res://creatures/friends/robot/mike.tscn" id="19_gmwy0"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_mx4nq"]
 inner_radius = 0.578
@@ -94,10 +95,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("5_gmwy0")]
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(755.77234, 0, 262.3109, 0, 800, 0, -262.3109, 0, 755.77234, 0, 487, 1748)
+transform = Transform3D(781.07465, 0, 172.97719, 0, 800, 0, -172.97719, 0, 781.07465, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(366.50983, 0, 100.352066, 0, 380, 0, -100.352066, 0, 366.50983, 1356, 0, 0)
+transform = Transform3D(374.2387, 0, 65.91948, 0, 380, 0, -65.91948, 0, 374.2387, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
@@ -210,6 +211,10 @@ shape = SubResource("ConvexPolygonShape3D_gmwy0")
 
 [node name="Tongs" parent="Content/Lithium002" index="4" instance=ExtResource("11_0bxl1")]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -6.758566, 0.96281743, -5.6068854)
+
+[node name="MikeRobot" parent="." index="9" instance=ExtResource("19_gmwy0")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0, -2)
+robot_color = Color(0.99840146, 0.51020753, 0.5215781, 1)
 
 [connection signal="body_entered" from="Content/Lithium002/FireFlame/Area3D" to="Content/Lithium002" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Content/Lithium002/FireFlame/Area3D" to="Content/Lithium002" method="_on_area_3d_body_exited"]

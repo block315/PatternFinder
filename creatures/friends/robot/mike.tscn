@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwoa6deh8laxp"]
+
+[ext_resource type="PackedScene" uid="uid://dfdt04shdbd4n" path="res://arts/3D/models/quaternius.com/Animated Mech Pack - March 2021-20250908T163901Z-1-001/Animated Mech Pack - March 2021/Textured/glTF/Mike.gltf" id="1_f81fc"]
+[ext_resource type="Script" uid="uid://drhmsqowa8yd5" path="res://creatures/friends/robot/mike.gd" id="2_lunci"]
+[ext_resource type="AudioStream" uid="uid://cgextn2w3ywah" path="res://arts/audio/recordings/greet.wav" id="3_4nwnl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f81fc"]
+radius = 2.0
+height = 5.0
+
+[node name="MikeRobot" instance=ExtResource("1_f81fc")]
+script = ExtResource("2_lunci")
+robot_color = Color(1, 1, 1, 1)
+
+[node name="Skeleton3D" parent="RobotArmature" index="0"]
+bones/0/rotation = Quaternion(-0.1790994, -0.019670408, -0.014114243, 0.98353314)
+bones/2/rotation = Quaternion(0.14881445, 1.1869762e-07, 1.833372e-08, 0.98886514)
+bones/3/rotation = Quaternion(0.28848448, -2.28728e-07, -1.3432445e-10, 0.9574846)
+bones/4/rotation = Quaternion(-0.20772839, 2.4881197e-09, 4.9473964e-08, 0.97818655)
+bones/6/rotation = Quaternion(0.050154705, 0.17805322, -0.6381602, 0.74735075)
+bones/7/rotation = Quaternion(0.24183942, -0.81668097, -0.14729755, 0.50284123)
+bones/9/rotation = Quaternion(-0.54342693, 0.29581207, -0.029832253, 0.78504294)
+bones/10/rotation = Quaternion(-0.50631064, 0.0057570236, -0.05501819, 0.860575)
+bones/12/rotation = Quaternion(-0.64988154, 0.15364072, 0.050059963, 0.7426591)
+bones/13/rotation = Quaternion(-0.5173633, 0.054234426, -0.18426226, 0.8339312)
+bones/16/rotation = Quaternion(-0.491432, 0.042060684, 0.025707548, 0.86951977)
+bones/19/rotation = Quaternion(-0.42604628, 0.28488937, 0.086024374, 0.854355)
+bones/21/rotation = Quaternion(0.050154682, -0.17805326, 0.63816035, 0.74735063)
+bones/22/rotation = Quaternion(0.24183944, 0.816681, 0.1472976, 0.50284106)
+bones/24/rotation = Quaternion(-0.54342717, -0.2958122, 0.029832166, 0.78504276)
+bones/25/rotation = Quaternion(-0.1020538, -0.032517374, 0.00025686013, 0.99424726)
+bones/27/rotation = Quaternion(-0.64988154, -0.15364075, -0.05005998, 0.7426591)
+bones/28/rotation = Quaternion(-0.091036975, -0.006007666, 0.0009198611, 0.995829)
+bones/29/rotation = Quaternion(-0.07670344, -0.10780285, 0.33485284, 0.93293554)
+bones/30/rotation = Quaternion(-0.5353315, 0.02168043, -0.1333747, 0.83376336)
+bones/31/rotation = Quaternion(-0.094418235, 0.0009824812, -0.014985608, 0.99541944)
+bones/33/rotation = Quaternion(-0.048259865, -0.0056449403, -0.14595129, 0.98809785)
+bones/34/rotation = Quaternion(-0.4260463, -0.2848893, -0.08602435, 0.854355)
+bones/35/rotation = Quaternion(0.99724495, 0.0023434507, 0.00087325124, -0.07413661)
+bones/36/rotation = Quaternion(-5.1115368e-08, 0.9507369, 0.30999917, 7.497728e-07)
+bones/37/rotation = Quaternion(0.99692464, 0.0027437643, 0.0010093742, -0.07831164)
+bones/38/rotation = Quaternion(4.4830845e-08, 0.96340865, 0.26803684, -7.601551e-07)
+bones/41/rotation = Quaternion(0, 0.7071068, 0.7071068, 0)
+bones/42/rotation = Quaternion(0, 0.7071068, 0.7071068, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("CapsuleShape3D_f81fc")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="3"]
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="4"]
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="RobotVoice" type="AudioStreamPlayer3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+stream = ExtResource("3_4nwnl")
+
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

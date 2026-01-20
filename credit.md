@@ -26,9 +26,11 @@
 - Skull https://www.blendswap.com/blend/21809
 - Skull of Virg. Opossum (Didelphis virginiana) https://www.blendswap.com/blend/8971
 - Laboratory Glassware Bundle Part 1 https://www.blendswap.com/blend/27806
-- Sheet Ghost https://www.blendswap.com/blend/19803
 - Water Dispenser https://www.blendswap.com/blend/30526
 - [Pliers (rigged)](https://www.blendswap.com/blend/16835) by [AbelAbelson](https://www.blendswap.com/profile/471477) 
+- [K31N Robot Model](https://www.blendswap.com/blend/19461) by [poll](https://www.blendswap.com/profile/69505)
+- [c90](https://www.blendswap.com/blend/6299) by [AwesomeStudios](https://www.blendswap.com/profile/4904)
+- [Abandoned Robot](https://www.blendswap.com/blend/21468) by [ArtistWalidd](https://www.blendswap.com/profile/566722)
 
 ## From [polyhaven](https://polyhaven.com/)
 - https://polyhaven.com/a/barrel_03
@@ -84,6 +86,9 @@
 - https://quaternius.com/packs/scifiessentialskit.html
 - https://quaternius.com/packs/modulartrain.html
 - https://quaternius.com/packs/ultimatemodularcharacters.html
+- [Ultimate Monsters](https://quaternius.com/packs/ultimatemonsters.html)
+- [Animated Robot Pack](https://quaternius.com/packs/animatedrobot.html)
+- [Cute Animated Monsters Pack](https://quaternius.com/packs/cutemonsters.html)
 
 ## From [kenney.nl](https://kenney.nl/)
 - https://www.kenney.nl/assets/fantasy-ui-borders

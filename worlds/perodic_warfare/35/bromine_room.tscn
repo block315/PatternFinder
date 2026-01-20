@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca7rrhkblgcpk"]
+[gd_scene load_steps=6 format=3 uid="uid://ca7rrhkblgcpk"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_7o7g2"]
 [ext_resource type="Script" uid="uid://bbvs1eh14vefv" path="res://worlds/perodic_warfare/35/bromine_room.gd" id="2_wrceq"]
-[ext_resource type="Texture2D" uid="uid://bqq0qtnls8cv4" path="res://worlds/perodic_warfare/4/T_Decals_Be.png" id="3_4lkdo"]
+[ext_resource type="Texture2D" uid="uid://bapf7jer0oboo" path="res://worlds/perodic_warfare/35/T_Decals_Br.png" id="3_wrceq"]
+[ext_resource type="PackedScene" uid="uid://u6xtorreb61f" path="res://arts/3D/models/quaternius.com/Animated Monster Pack by @Quaternius-20250908T163628Z-1-001/Animated Monster Pack by @Quaternius/Blend/Slime.blend" id="4_hj4ck"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj4ck"]
+albedo_color = Color(0.6117647, 0.27450982, 0.14901961, 1)
 
 [node name="BromineRoom" instance=ExtResource("1_7o7g2")]
 script = ExtResource("2_wrceq")
 atomic_number = 35
-element_decal_png = ExtResource("3_4lkdo")
+element_decal_png = ExtResource("3_wrceq")
 
 [node name="Core" parent="." index="0"]
 atomic_number = 35
@@ -15,15 +19,40 @@ neutron = Array[int]([44, 46])
 electron = 35
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-226.35207, 0, 767.30927, 0, 800, 0, -767.30927, 0, -226.35207, 0, 487, 1748)
+transform = Transform3D(-490.67633, 0, 631.8508, 0, 800, 0, -631.8508, 0, -490.67633, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(32.137127, 0, 378.63864, 0, 380, 0, -378.63864, 0, 32.137127, 1356, 0, 0)
+transform = Transform3D(-80.7278, 0, 371.32608, 0, 380, 0, -371.32608, 0, -80.7278, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -360, 78, 0)
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 17
+
+[node name="Slime" parent="." index="9" instance=ExtResource("4_hj4ck")]
+transform = Transform3D(0.29999998, 0, -0.5196153, 0, 0.6, 0, 0.5196153, 0, 0.29999998, -3, 0, -2)
+
+[node name="Skeleton3D" parent="Slime/Armature" index="0"]
+bones/1/position = Vector3(-0.045665868, 0.42405492, -1.0887591e-08)
+bones/1/rotation = Quaternion(-5.459391e-09, -1.1908421e-07, 0.045796692, 0.9989508)
+bones/2/position = Vector3(-2.7699427e-08, 0.43756452, 4.631016e-09)
+bones/2/rotation = Quaternion(-0.06274436, 0.0021288327, -0.21324821, 0.974979)
+bones/3/position = Vector3(-0.14446695, 0.39790928, 0.05429856)
+bones/3/rotation = Quaternion(0.100833766, -0.69895566, 0.012501547, 0.7079105)
+bones/7/rotation = Quaternion(-0.26444423, 0.006945044, -0.009541319, 0.9643288)
+bones/8/rotation = Quaternion(0.13968354, 0.0106322365, -0.013565768, 0.9900462)
+bones/10/rotation = Quaternion(0.26206324, -0.0052194647, -0.009921429, 0.9649856)
+bones/11/rotation = Quaternion(-0.14664292, -0.005836194, -0.010329306, 0.98911834)
+
+[node name="Slime2" parent="Slime/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hj4ck")
+
+[node name="AnimationPlayer" parent="Slime" index="1"]
+autoplay = "Slime_Idle"
 
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]
+[editable path="Slime"]

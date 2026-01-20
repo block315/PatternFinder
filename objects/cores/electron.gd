@@ -5,7 +5,6 @@ class_name Electron
 @export_enum("K:1", "L:4", "M:6", "N:8") var electron_shell: int = 1
 @export var rotation_speed:float = 2.0
 @onready var gpu_particles_3d: GPUParticles3D = $GPUParticles3D
-@onready var timer: Timer = $Timer
 
 @export_category("Electron Bullet")
 @export var bullet_mode: bool = false

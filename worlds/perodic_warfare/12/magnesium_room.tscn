@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_tp11a"]
 [ext_resource type="Script" uid="uid://co8iejfhwtnuj" path="res://worlds/perodic_warfare/12/magnesium_room.gd" id="2_erktr"]
 [ext_resource type="Texture2D" uid="uid://rp6ba7d2eld5" path="res://worlds/perodic_warfare/12/T_Decals_Mg.png" id="3_erktr"]
-[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_erktr"]
+[ext_resource type="PackedScene" uid="uid://dp4rgukfpma5" path="res://arts/3D/models/quaternius.com/Animated Mech Pack - March 2021-20250908T163901Z-1-001/Animated Mech Pack - March 2021/Textured/glTF/Leela.gltf" id="4_erktr"]
 
 [node name="MagnesiumRoom" instance=ExtResource("1_tp11a")]
 script = ExtResource("2_erktr")
@@ -16,15 +16,20 @@ neutron = Array[int]([12, 13, 14])
 electron = 12
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-745.63776, 0, 289.86728, 0, 800, 0, -289.86728, 0, -745.63776, 0, 487, 1748)
+transform = Transform3D(596.01074, 0, 533.6384, 0, 800, 0, -533.6384, 0, 596.01074, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-228.71674, 0, 303.46118, 0, 380, 0, -303.46118, 0, -228.71674, 1356, 0, 0)
+transform = Transform3D(316.98, 0, 209.57979, 0, 380, 0, -209.57979, 0, 316.98, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -23, 55, 0)
 
-[node name="Player" parent="." index="9" instance=ExtResource("4_erktr")]
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 4
+downstairs = 20
+
+[node name="Leela" parent="." index="9" instance=ExtResource("4_erktr")]
+transform = Transform3D(0.19999999, 0, 0.34641019, 0, 0.4, 0, -0.34641019, 0, 0.19999999, -6, 0, -1)
 
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]

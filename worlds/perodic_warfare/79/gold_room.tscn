@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsnlqn3il3aaw"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_grqh5"]
+[ext_resource type="Script" uid="uid://cc6102mcuuhso" path="res://worlds/perodic_warfare/79/gold_room.gd" id="2_fi0i7"]
+[ext_resource type="Texture2D" uid="uid://c7axlagmq7sjp" path="res://worlds/perodic_warfare/79/T_Decals_Au.png" id="3_w48xj"]
+[ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="4_0hpip"]
+[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_sxkxy"]
+[ext_resource type="Script" uid="uid://c30bk2bq8pcuy" path="res://worlds/perodic_warfare/79/gold_001.gd" id="5_h6qdf"]
+
+[node name="GoldRoom" instance=ExtResource("1_grqh5")]
+script = ExtResource("2_fi0i7")
+atomic_number = 79
+element_decal_png = ExtResource("3_w48xj")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 79
+neutron = Array[int]([118])
+electron = 79
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-768.27075, 0, 223.06685, 0, 800, 0, -223.06685, 0, -768.27075, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-249.54022, 0, 286.5828, 0, 380, 0, -286.5828, 0, -249.54022, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -225, 123, 0)
+
+[node name="Gold001" parent="Content" index="0" instance=ExtResource("4_0hpip")]
+script = ExtResource("5_h6qdf")
+
+[node name="Player" parent="." index="9" instance=ExtResource("4_sxkxy")]
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8gia4u2nm8gt"]
+[gd_scene load_steps=14 format=3 uid="uid://c8gia4u2nm8gt"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_es6x4"]
 [ext_resource type="Script" uid="uid://uqspo66st6s7" path="res://worlds/perodic_warfare/6/carbon_room.gd" id="2_1vny6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ce20i0jttpx5" path="res://proposition.tscn" id="6_5s5mj"]
 [ext_resource type="PackedScene" uid="uid://bitv6gcs3m32l" path="res://arts/3D/models/blendswap.com/molecule-pack-one/molecule-pack-one_WITHOUTSUBDIV.blend" id="6_p5vpm"]
 [ext_resource type="PackedScene" uid="uid://bdl7noy7vtgi2" path="res://arts/3D/models/blendswap.com/11-common-household-items/pencil.glb" id="7_5rgjj"]
+[ext_resource type="PackedScene" uid="uid://dbqgxiixms8sy" path="res://arts/3D/models/quaternius.com/Alien Animated - April 2019-20250908T163850Z-1-001/Alien Animated - April 2019/Blends/Alien.blend" id="9_p5vpm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rr8r"]
 resource_name = "Carbon"
@@ -41,10 +42,10 @@ electron = 6
 transform = Transform3D(5.9604616e-08, 0.9999996, 0, 0, 5.9604623e-08, -0.99999946, -0.99999946, 0, 5.9604616e-08, -11, 3, 2)
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-79.080696, 0, 796.08105, 0, 800, 0, -796.08105, 0, -79.080696, 0, 487, 1748)
+transform = Transform3D(343.19745, 0, 722.644, 0, 800, 0, -722.644, 0, 343.19745, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(88.46158, 0, 369.56003, 0, 380, 0, -369.56003, 0, 88.46158, 1356, 0, 0)
+transform = Transform3D(235.6365, 0, 298.11993, 0, 380, 0, -298.11993, 0, 235.6365, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -292.5, 32.5, 1)
@@ -128,8 +129,66 @@ transform = Transform3D(-8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0, 0, 0.2
 [node name="Pencil3" parent="Content/Carbon001" index="4" instance=ExtResource("7_5rgjj")]
 transform = Transform3D(-8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0, 0, 0.2, -5.4630985, 1.2769159, -6.630239)
 
+[node name="BlueAlien" parent="." index="9" instance=ExtResource("9_p5vpm")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -2, 0, -3)
+
+[node name="Skeleton3D" parent="BlueAlien/AlienArmature" index="0"]
+bones/1/position = Vector3(0.35297057, 0.024662869, -0.015717717)
+bones/1/rotation = Quaternion(4.7759095e-06, 0.6955496, 0.7184781, 4.7787244e-06)
+bones/2/position = Vector3(0.0034585616, 0.639675, 0.16549532)
+bones/2/rotation = Quaternion(-0.0005070404, 0.002664277, 2.4329604e-05, 0.9999963)
+bones/3/position = Vector3(-0.00084155763, -0.06677489, -0.046242278)
+bones/3/rotation = Quaternion(-0.0992135, -2.663241e-07, -4.4445663e-08, 0.99506617)
+bones/4/rotation = Quaternion(0.08082536, 4.3655731e-07, 4.99706e-08, 0.9967283)
+bones/5/rotation = Quaternion(0.032882262, -8.318035e-07, 7.563165e-09, 0.9994592)
+bones/6/rotation = Quaternion(0.06003444, 1.1140876e-05, 0.00014011418, 0.9981963)
+bones/7/rotation = Quaternion(-0.11539925, 5.194916e-05, 0.000845757, 0.9933189)
+bones/8/position = Vector3(0.19237897, 0.340191, 0.020674558)
+bones/8/rotation = Quaternion(0.04958031, 0.031759053, -0.5384405, 0.8406039)
+bones/9/rotation = Quaternion(-0.5154876, -0.37347767, -0.6090077, 0.4731771)
+bones/10/rotation = Quaternion(-0.012455959, -0.008316767, -0.13764423, 0.99036855)
+bones/11/rotation = Quaternion(0.037506703, 0.017213097, -0.01210835, 0.99907476)
+bones/12/rotation = Quaternion(-0.094023965, 0.036969, 0.2968821, 0.94955456)
+bones/13/rotation = Quaternion(-0.10454825, -0.037705015, -0.10841857, 0.9878732)
+bones/14/rotation = Quaternion(-0.114214145, 0.010934354, -0.03941909, 0.9926137)
+bones/15/rotation = Quaternion(-0.063703775, 0.039808765, -0.045196906, 0.9961498)
+bones/16/rotation = Quaternion(0.47463456, 0.5528333, -0.537196, 0.424874)
+bones/17/rotation = Quaternion(-0.3076205, -0.735585, 0.27562678, 0.536949)
+bones/18/rotation = Quaternion(0.040166434, -0.049139015, 0.16324767, 0.9845417)
+bones/19/rotation = Quaternion(-0.019145856, -0.03736555, -0.29049027, 0.9559564)
+bones/20/rotation = Quaternion(-0.090307236, -0.10646913, 0.18126234, 0.9734747)
+bones/21/rotation = Quaternion(-0.08754912, -0.04324158, 0.059324812, 0.9934516)
+bones/22/rotation = Quaternion(-0.003091169, 0.022323903, 0.016831605, 0.99960434)
+bones/23/position = Vector3(-0.19358677, 0.33974445, 0.02055089)
+bones/24/rotation = Quaternion(-0.519764, 0.44590157, 0.5849989, 0.43450361)
+bones/25/rotation = Quaternion(-0.024595378, -0.03757039, 0.06535219, 0.9968514)
+bones/26/rotation = Quaternion(0.03750669, -0.017213093, 0.012108363, 0.99907476)
+bones/27/rotation = Quaternion(-0.094023906, -0.03696908, -0.29688212, 0.94955456)
+bones/29/rotation = Quaternion(-0.114214376, -0.010934342, 0.03941903, 0.99261355)
+bones/30/rotation = Quaternion(-0.06370372, -0.039808776, 0.04519692, 0.9961498)
+bones/31/rotation = Quaternion(-0.56296724, 0.4912921, -0.63231844, -0.20463014)
+bones/32/rotation = Quaternion(-0.30762038, 0.73558503, -0.27562678, 0.536949)
+bones/33/rotation = Quaternion(0.040166534, 0.049138963, -0.16324762, 0.98454165)
+bones/34/rotation = Quaternion(-0.01914581, 0.037365615, 0.29049027, 0.9559564)
+bones/35/rotation = Quaternion(-0.09030722, 0.106469035, -0.1812623, 0.9734747)
+bones/36/rotation = Quaternion(-0.0875492, 0.04324159, -0.059324846, 0.9934515)
+bones/37/rotation = Quaternion(-0.0030911327, -0.022323914, -0.016831612, 0.99960434)
+bones/38/rotation = Quaternion(0.98979235, 0.012206988, 0.0037517527, 0.14194377)
+bones/39/rotation = Quaternion(0.3737402, 0.0047267997, 0.012351646, 0.92743915)
+bones/40/rotation = Quaternion(0.98994786, -0.00078396377, 0.0048953397, 0.14134593)
+bones/40/scale = Vector3(1.0000001, 0.9999987, 0.9999842)
+bones/41/rotation = Quaternion(0.3752241, -2.119407e-07, 9.3398256e-08, 0.9269341)
+bones/42/rotation = Quaternion(-3.5526934e-15, 1.1920935e-07, -1.6940671e-21, 1)
+bones/43/position = Vector3(-0.3739561, 0.024662867, -0.015718093)
+bones/43/rotation = Quaternion(6.06065e-06, 0.6955496, 0.7184781, 6.0224643e-06)
+bones/44/rotation = Quaternion(-3.5526934e-15, 1.1920935e-07, -1.6940671e-21, 1)
+
+[node name="AnimationPlayer" parent="BlueAlien" index="1"]
+autoplay = "Alien_Idle"
+
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]
 [editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
 [editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]
 [editable path="Molecule/molecule-pack-one_WITHOUTSUBDIV"]
+[editable path="BlueAlien"]

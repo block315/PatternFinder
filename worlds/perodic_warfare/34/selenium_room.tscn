@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_kyasy"]
 [ext_resource type="Script" uid="uid://cvvb60wuyvdhu" path="res://worlds/perodic_warfare/34/selenium_room.gd" id="2_dwedf"]
 [ext_resource type="Texture2D" uid="uid://dxkh8djes66pb" path="res://worlds/perodic_warfare/34/T_Decals_Se.png" id="3_dwedf"]
-[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_ck6gt"]
+[ext_resource type="PackedScene" uid="uid://0kwfbnmxr72p" path="res://arts/3D/models/quaternius.com/Cute Animated Monsters - Aug 2020-20260120T200654Z-3-001/Cute Animated Monsters - Aug 2020/glTF/Bat.gltf" id="4_ck6gt"]
 
 [node name="SeleniumRoom" instance=ExtResource("1_kyasy")]
 script = ExtResource("2_dwedf")
@@ -16,16 +16,19 @@ neutron = Array[int]([40, 42, 43, 44, 46])
 electron = 34
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-712.3833, 0, 364.01746, 0, 800, 0, -364.01746, 0, -712.3833, 0, 487, 1748)
+transform = Transform3D(81.82371, 0, 795.8038, 0, 800, 0, -795.8038, 0, 81.82371, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-203.31683, 0, 321.03317, 0, 380, 0, -321.03317, 0, -203.31683, 1356, 0, 0)
+transform = Transform3D(146.62209, 0, 350.5738, 0, 380, 0, -350.5738, 0, 146.62209, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -337, 78, 0)
-visible = true
 
-[node name="Player" parent="." index="9" instance=ExtResource("4_ck6gt")]
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 16
+
+[node name="MiniBat" parent="." index="9" instance=ExtResource("4_ck6gt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
 
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]

@@ -16,14 +16,13 @@ neutron = Array[int]([42, 44, 46, 47, 48, 50])
 electron = 36
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-562.2591, 0, 569.08997, 0, 800, 0, -569.08997, 0, -562.2591, 0, 487, 1748)
+transform = Transform3D(-743.30383, 0, -295.80075, 0, 800, 0, 295.80075, 0, -743.30383, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-115.679504, 0, 361.96448, 0, 380, 0, -361.96448, 0, -115.679504, 1356, 0, 0)
+transform = Transform3D(-360.06784, 0, 121.45444, 0, 380, 0, -121.45444, 0, -360.06784, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 78, 0)
-visible = true
 
 [node name="Player" parent="." index="9" instance=ExtResource("4_ui5an")]
 
