@@ -1,10 +1,10 @@
-[gd_scene load_steps=57 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=59 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
+[ext_resource type="NavigationMesh" uid="uid://cvq07xf6v1hjv" path="res://worlds/perodic_warfare/1/navigation_mesh.res" id="4_hsy5h"]
 [ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://meshes/walls/wall_astra_straight.tscn" id="5_l5qo0"]
-[ext_resource type="PackedScene" uid="uid://dj8m5svy4l571" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Simple.gltf" id="5_q6ybd"]
 [ext_resource type="PackedScene" uid="uid://cvolcimrxjrnh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopAstra_Straight.gltf" id="6_6cl36"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
@@ -35,6 +35,10 @@
 [ext_resource type="PackedScene" uid="uid://ew2ev20dx7j0" path="res://arts/3D/models/polyhaven.com/wicker_basket_01_2k.blend/wicker_basket_01_2k.blend" id="25_5sfnc"]
 [ext_resource type="PackedScene" uid="uid://cl0nqdivyjvs4" path="res://arts/3D/models/polyhaven.com/ceiling_fan_1k.blend/ceiling_fan_1k.blend" id="34_tni44"]
 [ext_resource type="PackedScene" uid="uid://eegwl5esokl7" path="res://arts/3D/models/quaternius.com/Cute Animated Monsters - Aug 2020-20260120T200654Z-3-001/Cute Animated Monsters - Aug 2020/glTF/Ghost.gltf" id="35_u6em0"]
+[ext_resource type="Script" uid="uid://5wqll4o6dmg1" path="res://creatures/friends/ghost.gd" id="36_tni44"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hsy5h"]
+size = Vector3(3, 1, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5qo0"]
 resource_name = "Hydrogen"
@@ -195,8 +199,11 @@ surface_material_override/0 = null
 surface_material_override/1 = null
 surface_material_override/2 = null
 
-[node name="@Node3D@517631" parent="Structure/FirstFloor/Platforms/PlatformSimple13/PlatformRamp2" index="2" instance=ExtResource("5_q6ybd")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, -5, 1)
+[node name="Chest" parent="Core" index="3" node_paths=PackedStringArray("aggro")]
+aggro = NodePath("../../Ghost")
+
+[node name="Structure" parent="." index="1"]
+navigation_mesh = ExtResource("4_hsy5h")
 
 [node name="DoorFrameSquare" parent="Structure/FirstFloor/Platforms/PlatformSimple24" index="1"]
 visible = false
@@ -207,16 +214,39 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("6_6cl36")]
 
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
-transform = Transform3D(5.96046e-08, 0.9999993, 0, 0, 5.9604606e-08, -0.99999917, -0.99999917, 0, 5.96046e-08, -11, 3, 2)
+transform = Transform3D(5.9604595e-08, 0.9999992, 0, 0, 5.9604602e-08, -0.9999991, -0.9999991, 0, 5.9604595e-08, -11, 3, 2)
 
 [node name="WallBand_Straight2" parent="Structure/SecondFloor/Platforms/PlatformMetal22" index="2"]
 transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 3.991669, 0, -0.0017690659)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_hsy5h")
+disabled = true
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Structure" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/StaticBody3D2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
+shape = SubResource("BoxShape3D_hsy5h")
+disabled = true
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Structure" index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/StaticBody3D3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
+shape = SubResource("BoxShape3D_hsy5h")
+disabled = true
+
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-406.61075, 0, 688.9604, 0, 800, 0, -688.9604, 0, -406.61075, 0, 487, 1748)
+transform = Transform3D(-556.6548, 0, 574.5731, 0, 800, 0, -574.5731, 0, -556.6548, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-42.612614, 0, 377.60315, 0, 380, 0, -377.60315, 0, -42.612614, 1356, 0, 0)
+transform = Transform3D(304.57242, 0, -227.23474, 0, 380, 0, 227.23474, 0, 304.57242, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -233,7 +263,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -6)
 destination = 2
 
 [node name="Star" parent="Transport/Train" index="7" instance=ExtResource("10_nqshe")]
-transform = Transform3D(1.9967045, 0, 0.11474667, 0, 2, 0, -0.11474667, 0, 1.9967045, 0, 2, -2)
+transform = Transform3D(0.18979086, 0, 1.9909734, 0, 2, 0, -1.9909734, 0, 0.18979086, 0, 2, -2)
 layers = 4
 
 [node name="molecule-pack-one_WITHOUTSUBDIV" parent="Molecule" index="0" instance=ExtResource("10_l5qo0")]
@@ -345,7 +375,6 @@ transform = Transform3D(0.28977773, 0, 0.07764569, 0, 0.30000004, 0, -0.07764569
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 5)
 script = ExtResource("8_j2i7t")
 content = "Hydrogen Gas is very light"
-highlight = true
 
 [node name="Hydrogen003" parent="Content" index="2" instance=ExtResource("23_vvanm")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 5, 7)
@@ -463,18 +492,28 @@ transform = Transform3D(0.09999995, 0, 0, 0, 0.09999994, 0, 0, 0, 0.09999995, 5,
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 10, 0)
 
 [node name="Ghost" parent="." index="9" instance=ExtResource("35_u6em0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+transform = Transform3D(0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071068, 7, 0, -3)
+script = ExtResource("36_tni44")
+patrol_position = Array[Vector3]([Vector3(-4, 0, -7), Vector3(4, 0, -8), Vector3(-5, 0, 7), Vector3(4, 0, 6), Vector3(7, 0, -3)])
+
+[node name="MonsterArmature" parent="Ghost" index="0"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Ghost/MonsterArmature" index="0"]
 bones/4/rotation = Quaternion(-4.4455963e-20, 3.5471498e-10, -0.0026400534, 0.9999966)
 
-[node name="Ghost" parent="Ghost/MonsterArmature/Skeleton3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
 [node name="AnimationPlayer" parent="Ghost" index="1"]
 autoplay = "Idle"
+playback_default_blend_time = 1.0
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Ghost" index="2"]
+target_desired_distance = 2.0
+
+[connection signal="found" from="Core/Chest" to="Content/Hydrogen001" method="_on_chest_found"]
+[connection signal="success" from="Content/Hydrogen001" to="." method="_on_hydrogen_001_success"]
+[connection signal="success" from="Content/Hydrogen002" to="." method="_on_hydrogen_002_success"]
 [connection signal="success" from="Content/Hydrogen003" to="." method="_on_hydrogen_003_success"]
+[connection signal="target_reached" from="Ghost/NavigationAgent3D" to="Ghost" method="_on_navigation_agent_3d_target_reached"]
 
 [editable path="Core"]
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]

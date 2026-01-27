@@ -14,6 +14,7 @@ var starting_view_rotation: Vector3 = Vector3(0,0,0)
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var speaker: Node3D = $Speaker
 
+
 func _ready():
 	# for debug
 	if get_tree().get_node_count_in_group("player") < 1:

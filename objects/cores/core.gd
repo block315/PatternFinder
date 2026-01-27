@@ -7,6 +7,7 @@ class_name Core
 @export var strong_nuclear_force:int = 50
 @export_range(0, 1.0, 0.1) var particle_size:float = 1.0
 
+
 @onready var isotope_timer: Timer = $IsotopeTimer
 @onready var isotope_audio_stream_player_3d: AudioStreamPlayer3D = $IsotopeAudioStreamPlayer3D
 @onready var nucleus_center_point: OmniLight3D = $NucleusHolder/NucleusCenterPoint

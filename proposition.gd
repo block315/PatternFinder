@@ -12,7 +12,7 @@ class_name Proposition
 	set(value):
 		_geometry_instance3d_childs.clear()
 		find_mesh(self)
-		if value:
+		if value and not done:
 			for _child:GeometryInstance3D in _geometry_instance3d_childs:
 				if _child.get_parent() is Equipment:
 					continue
@@ -26,7 +26,7 @@ class_name Proposition
 
 const HIGHLIGHT = preload("res://materials/HIGHLIGHT.gdshader")
 
-signal success(proposition_number: int)
+signal success()
 
 var _geometry_instance3d_childs = []
 

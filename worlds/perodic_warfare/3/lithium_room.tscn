@@ -95,10 +95,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("5_gmwy0")]
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(781.07465, 0, 172.97719, 0, 800, 0, -172.97719, 0, 781.07465, 0, 487, 1748)
+transform = Transform3D(796.0603, 0, 79.289444, 0, 800, 0, -79.289444, 0, 796.0603, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(374.2387, 0, 65.91948, 0, 380, 0, -65.91948, 0, 374.2387, 1356, 0, 0)
+transform = Transform3D(378.80215, 0, 30.147846, 0, 380, 0, -30.147846, 0, 378.80215, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 33, 0)
@@ -213,7 +213,7 @@ shape = SubResource("ConvexPolygonShape3D_gmwy0")
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -6.758566, 0.96281743, -5.6068854)
 
 [node name="MikeRobot" parent="." index="9" instance=ExtResource("19_gmwy0")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0, -2)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0, -7)
 robot_color = Color(0.99840146, 0.51020753, 0.5215781, 1)
 
 [connection signal="body_entered" from="Content/Lithium002/FireFlame/Area3D" to="Content/Lithium002" method="_on_area_3d_body_entered"]

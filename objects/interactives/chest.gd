@@ -5,6 +5,7 @@ class_name Chest
 var open = false
 @onready var open_audio_stream_player_3d: AudioStreamPlayer3D = $OpenAudioStreamPlayer3D
 @onready var close_audio_stream_player_3d: AudioStreamPlayer3D = $CloseAudioStreamPlayer3D
+@export var aggro:Creature
 
 signal found
 
@@ -13,12 +14,16 @@ func _ready() -> void:
 
 func _on_box_looking_area_body_entered(body: Node3D) -> void:
 	if body is Player:
+		if aggro != null: aggro.attention = true
 		animation_player.play("Chest_Open")
 		open = true
 		open_audio_stream_player_3d.play()
 		if body.hand.current_equipment is Collector and body.hand.current_equipment.collection != null:
 			if body.hand.current_equipment.collection.name.to_lower() == $"../..".name.left(-4).to_lower():
 				found.emit()
+				if aggro != null: aggro.yes()
+			else:
+				if aggro != null: aggro.no()
 			body.hand.current_equipment.collection = null
 
 func _on_box_looking_area_body_exited(body: Node3D) -> void:

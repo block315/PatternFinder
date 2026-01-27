@@ -4,5 +4,5 @@ extends Proposition
 
 func _process(_delta: float) -> void:
 	if lemon.smashed and !done:
-		success.emit(3)
+		success.emit()
 		done = true
