@@ -1,11 +1,9 @@
-[gd_scene load_steps=59 format=3 uid="uid://dhubdtk42tle8"]
+[gd_scene load_steps=57 format=3 uid="uid://dhubdtk42tle8"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_hru7o"]
 [ext_resource type="Script" uid="uid://cu4u3fkhhf1nf" path="res://worlds/perodic_warfare/1/hydrogen_room.gd" id="2_lgy6p"]
 [ext_resource type="Texture2D" uid="uid://cbhbbforbr47n" path="res://worlds/perodic_warfare/1/T_Decals_H.png" id="3_0n7gw"]
 [ext_resource type="NavigationMesh" uid="uid://cvq07xf6v1hjv" path="res://worlds/perodic_warfare/1/navigation_mesh.res" id="4_hsy5h"]
-[ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://meshes/walls/wall_astra_straight.tscn" id="5_l5qo0"]
-[ext_resource type="PackedScene" uid="uid://cvolcimrxjrnh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Walls/TopAstra_Straight.gltf" id="6_6cl36"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="6_n4crl"]
 [ext_resource type="PackedScene" uid="uid://6uprydwd5mwr" path="res://worlds/perodic_warfare/1/hydrogen_002.tscn" id="7_ty888"]
 [ext_resource type="Script" uid="uid://b1ml8y4r05et6" path="res://worlds/perodic_warfare/1/hydrogen_002.gd" id="8_j2i7t"]
@@ -205,14 +203,6 @@ aggro = NodePath("../../Ghost")
 [node name="Structure" parent="." index="1"]
 navigation_mesh = ExtResource("4_hsy5h")
 
-[node name="DoorFrameSquare" parent="Structure/FirstFloor/Platforms/PlatformSimple24" index="1"]
-visible = false
-
-[node name="WallAstra_Straight" parent="Structure/FirstFloor/Platforms/PlatformSimple24" index="3" instance=ExtResource("5_l5qo0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="TopAstraStraight" parent="Structure/FirstFloor/Platforms/PlatformSimple24/WallAstra_Straight" index="1" instance=ExtResource("6_6cl36")]
-
 [node name="StairShaft" parent="Structure/SecondFloor" index="0"]
 transform = Transform3D(5.9604595e-08, 0.9999992, 0, 0, 5.9604602e-08, -0.9999991, -0.9999991, 0, 5.9604595e-08, -11, 3, 2)
 
@@ -243,10 +233,10 @@ shape = SubResource("BoxShape3D_hsy5h")
 disabled = true
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-556.6548, 0, 574.5731, 0, 800, 0, -574.5731, 0, -556.6548, 0, 487, 1748)
+transform = Transform3D(379.11844, 0, 704.46295, 0, 800, 0, -704.46295, 0, 379.11844, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(304.57242, 0, -227.23474, 0, 380, 0, 227.23474, 0, 304.57242, 1356, 0, 0)
+transform = Transform3D(247.44588, 0, 288.39304, 0, 380, 0, -288.39304, 0, 247.44588, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 9, 0)
@@ -259,11 +249,11 @@ volume_db = -10.0
 downstairs = 3
 
 [node name="Train" parent="Transport" index="1" instance=ExtResource("6_n4crl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
 destination = 2
 
 [node name="Star" parent="Transport/Train" index="7" instance=ExtResource("10_nqshe")]
-transform = Transform3D(0.18979086, 0, 1.9909734, 0, 2, 0, -1.9909734, 0, 0.18979086, 0, 2, -2)
+transform = Transform3D(1.9679319, 0, 0.35670447, 0, 2, 0, -0.35670447, 0, 1.9679319, 0, 2, -2)
 layers = 4
 
 [node name="molecule-pack-one_WITHOUTSUBDIV" parent="Molecule" index="0" instance=ExtResource("10_l5qo0")]

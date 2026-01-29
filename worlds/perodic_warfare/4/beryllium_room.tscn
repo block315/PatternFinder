@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dakobrusmlj14"]
+[gd_scene load_steps=6 format=3 uid="uid://dakobrusmlj14"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_grqh5"]
 [ext_resource type="Script" uid="uid://d1gc3otoh6nh3" path="res://worlds/perodic_warfare/4/beryllium_room.gd" id="2_sh1qw"]
 [ext_resource type="Texture2D" uid="uid://bqq0qtnls8cv4" path="res://worlds/perodic_warfare/4/T_Decals_Be.png" id="3_34uhy"]
+[ext_resource type="PackedScene" uid="uid://cq7iie7i5bp67" path="res://objects/interactives/transports/hallway_right.tscn" id="4_olnoq"]
 [ext_resource type="PackedScene" uid="uid://dp4rgukfpma5" path="res://arts/3D/models/quaternius.com/Animated Mech Pack - March 2021-20250908T163901Z-1-001/Animated Mech Pack - March 2021/Textured/glTF/Leela.gltf" id="4_oolat"]
 
 [node name="BerylliumRoom" instance=ExtResource("1_grqh5")]
@@ -16,16 +17,18 @@ neutron = Array[int]([3, 4, 5])
 electron = 4
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(378.93954, 0, 704.5591, 0, 800, 0, -704.5591, 0, 378.93954, 0, 487, 1748)
+transform = Transform3D(526.3936, 0, 602.4189, 0, 800, 0, -602.4189, 0, 526.3936, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(247.38728, 0, 288.44336, 0, 380, 0, -288.44336, 0, 247.38728, 1356, 0, 0)
+transform = Transform3D(294.9712, 0, 239.56642, 0, 380, 0, -239.56642, 0, 294.9712, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -23, 33, 0)
 
 [node name="Elevator" parent="Transport" index="0"]
 downstairs = 12
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_olnoq")]
 
 [node name="Leela" parent="." index="9" instance=ExtResource("4_oolat")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0, -5)

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_nmkys"]
 [ext_resource type="Script" uid="uid://d0vunqifauaai" path="res://worlds/perodic_warfare/36/krypton_room.gd" id="2_nmkys"]
 [ext_resource type="Texture2D" uid="uid://bqqbod6l36063" path="res://worlds/perodic_warfare/36/T_Decals_Kr.png" id="3_ui5an"]
-[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_ui5an"]
+[ext_resource type="PackedScene" uid="uid://cq7iie7i5bp67" path="res://objects/interactives/transports/hallway_right.tscn" id="4_ui5an"]
 
 [node name="KryptonRoom" instance=ExtResource("1_nmkys")]
 script = ExtResource("2_nmkys")
@@ -16,15 +16,21 @@ neutron = Array[int]([42, 44, 46, 47, 48, 50])
 electron = 36
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-743.30383, 0, -295.80075, 0, 800, 0, 295.80075, 0, -743.30383, 0, 487, 1748)
+transform = Transform3D(724.883, 0, 338.44226, 0, 800, 0, -338.44226, 0, 724.883, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-360.06784, 0, 121.45444, 0, 380, 0, -121.45444, 0, -360.06784, 1356, 0, 0)
+transform = Transform3D(357.0333, 0, 130.1048, 0, 380, 0, -130.1048, 0, 357.0333, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 78, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -382.5, 78, 0)
+visible = true
 
-[node name="Player" parent="." index="9" instance=ExtResource("4_ui5an")]
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 18
+downstairs = 54
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_ui5an")]
+next_room = 35
 
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]

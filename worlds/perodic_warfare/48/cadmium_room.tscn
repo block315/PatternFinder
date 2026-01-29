@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://g84g0nutx7pa"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_cxpgc"]
+[ext_resource type="Script" uid="uid://1gm7vtj654nk" path="res://worlds/perodic_warfare/48/cadmium_room.gd" id="2_85mcm"]
+[ext_resource type="Texture2D" uid="uid://bwxfhmkw6w4ip" path="res://worlds/perodic_warfare/48/T_Decals_Cd.png" id="3_85mcm"]
+[ext_resource type="PackedScene" uid="uid://cq7iie7i5bp67" path="res://objects/interactives/transports/hallway_right.tscn" id="4_fnnpt"]
+
+[node name="CadmiumRoom" instance=ExtResource("1_cxpgc")]
+script = ExtResource("2_85mcm")
+atomic_number = 48
+element_decal_png = ExtResource("3_85mcm")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 48
+neutron = Array[int]([62, 63, 64])
+electron = 48
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-704.11285, 0, 379.76773, 0, 800, 0, -379.76773, 0, -704.11285, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-197.57373, 0, 324.5992, 0, 380, 0, -324.5992, 0, -197.57373, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -247.5, 100, 0)
+visible = true
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 30
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_fnnpt")]
+next_room = 47
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

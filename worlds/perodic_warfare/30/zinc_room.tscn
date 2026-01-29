@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_n6cxw"]
 [ext_resource type="Script" uid="uid://dxkb2nrq78nd5" path="res://worlds/perodic_warfare/30/zinc_room.gd" id="2_i13n5"]
 [ext_resource type="Texture2D" uid="uid://3e2vvc60iqwn" path="res://worlds/perodic_warfare/30/T_Decals_Zn.png" id="3_ukea0"]
-[ext_resource type="PackedScene" uid="uid://b4uw4bgui2o52" path="res://creatures/player/player.tscn" id="4_ukea0"]
+[ext_resource type="PackedScene" uid="uid://b0yxs5vl5qg6d" path="res://objects/interactives/transports/hallway_left.tscn" id="4_ukea0"]
 
 [node name="ZincRoom" instance=ExtResource("1_n6cxw")]
 script = ExtResource("2_i13n5")
@@ -16,16 +16,20 @@ neutron = Array[int]([34, 36, 37, 38, 40])
 electron = 30
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(-513.23065, 0, 613.67175, 0, 800, 0, -613.67175, 0, -513.23065, 0, 487, 1748)
+transform = Transform3D(777.5091, 0, 188.35692, 0, 800, 0, -188.35692, 0, 777.5091, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(-91.44982, 0, 368.83188, 0, 380, 0, -368.83188, 0, -91.44982, 1356, 0, 0)
+transform = Transform3D(373.15143, 0, 71.81948, 0, 380, 0, -71.81948, 0, 373.15143, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -248, 78, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -247.5, 78, 0)
 visible = true
 
-[node name="Player" parent="." index="9" instance=ExtResource("4_ukea0")]
+[node name="Elevator" parent="Transport" index="0"]
+downstairs = 48
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_ukea0")]
+next_room = 31
 
 [editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
 [editable path="Structure/SecondFloor/StairShaft"]

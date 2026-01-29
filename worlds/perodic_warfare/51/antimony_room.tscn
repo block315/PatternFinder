@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnj54k53vxcng"]
+
+[ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_v3fge"]
+[ext_resource type="Script" uid="uid://bb4o2nuopcecr" path="res://worlds/perodic_warfare/51/antimony_room.gd" id="2_aqkrd"]
+[ext_resource type="Texture2D" uid="uid://vnvs7kvtgvv8" path="res://worlds/perodic_warfare/51/T_Decals_Sb.png" id="3_aqkrd"]
+
+[node name="AntimonyRoom" instance=ExtResource("1_v3fge")]
+script = ExtResource("2_aqkrd")
+atomic_number = 51
+element_decal_png = ExtResource("3_aqkrd")
+
+[node name="Core" parent="." index="0"]
+atomic_number = 51
+neutron = Array[int]([70, 72])
+electron = 51
+
+[node name="PlanetGaseous" parent="Environment" index="1"]
+transform = Transform3D(-537.70374, 0, 592.3454, 0, 800, 0, -592.3454, 0, -537.70374, 0, 487, 1748)
+
+[node name="PlanetSand" parent="Environment" index="2"]
+transform = Transform3D(-103.37313, 0, 365.66928, 0, 380, 0, -365.66928, 0, -103.37313, 1356, 0, 0)
+
+[node name="Building" parent="." index="4"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -315, 100, 0)
+visible = true
+
+[node name="Elevator" parent="Transport" index="0"]
+upstairs = 33
+
+[editable path="Structure/FirstFloor/laboratory-glassware-bundle-part-1WITHOUTSUBDIV"]
+[editable path="Structure/SecondFloor/StairShaft"]
+[editable path="Structure/SecondFloor/StairShaft/PlatformStairs4WideTall"]
+[editable path="Structure/SecondFloor/Platforms/PlatformMetal8/PlatformStairs4Wide"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://dp3hsvkn4gaji"]
+[gd_scene load_steps=82 format=4 uid="uid://dp3hsvkn4gaji"]
 
 [ext_resource type="Script" uid="uid://c06kml6k08ak" path="res://worlds/perodic_warfare/element_room.gd" id="1_ofr2s"]
 [ext_resource type="PackedScene" uid="uid://cxs5156f5q4t" path="res://meshes/walls/wall_astra_straight.tscn" id="2_gocgk"]
@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://bx0upkq7yx83p" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Rails_2.gltf" id="19_yiu3u"]
 [ext_resource type="PackedScene" uid="uid://dkpsy33bubnch" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Stairs_4WideTall.gltf" id="20_0ms2t"]
 [ext_resource type="PackedScene" uid="uid://dhnsed5jytaqw" path="res://arts/3D/models/quaternius.com/Sci-Fi Essentials Kit[Standard]/glTF/Prop_Crate_Tarp_Large.gltf" id="20_ky51i"]
-[ext_resource type="PackedScene" uid="uid://uwueevqyejas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_Square.gltf" id="20_q1lyk"]
 [ext_resource type="PackedScene" uid="uid://bbp1sv2ektdas" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Round.gltf" id="20_r7xwa"]
 [ext_resource type="PackedScene" uid="uid://cannlbg5g6uws" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Platform_Metal2.gltf" id="22_0ms2t"]
 [ext_resource type="PackedScene" uid="uid://snn41m4cc0lb" path="res://arts/3D/models/blendswap.com/laboratory-glassware-bundle-part-1/laboratory-glassware-bundle-part-1WITHOUTSUBDIV.blend" id="22_je14t"]
@@ -55,8 +54,10 @@
 [ext_resource type="PackedScene" uid="uid://dvn6ovnrhwiqh" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_SquareTall.gltf" id="43_dr2j5"]
 [ext_resource type="PackedScene" uid="uid://cswou8pyvcsds" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Columns/Column_Hollow.gltf" id="44_u1fk7"]
 [ext_resource type="PackedScene" uid="uid://dxphiovvot3c1" path="res://objects/interactives/transports/elevator.tscn" id="45_pl03k"]
+[ext_resource type="PackedScene" uid="uid://k6aiv0cbxj8f" path="res://arts/3D/models/quaternius.com/Modular SciFi MegaKit[Standard]/glTF/Platforms/Door_Frame_A.gltf" id="50_1apwi"]
 [ext_resource type="PackedScene" uid="uid://c1ml4yvlgnbbv" path="res://addons/naejimer_3d_planet_generator/scenes/planet_gaseous.tscn" id="51_dca73"]
 [ext_resource type="Shader" uid="uid://sjs5gx5nmyx2" path="res://materials/STARRYSKY.gdshader" id="51_je14t"]
+[ext_resource type="Shader" uid="uid://l6bgiwx10s4y" path="res://materials/CHROMATIC.gdshader" id="51_lishh"]
 [ext_resource type="PackedScene" uid="uid://dbexddi1rwbt4" path="res://addons/naejimer_3d_planet_generator/scenes/planet_sand.tscn" id="52_q1lyk"]
 [ext_resource type="Script" uid="uid://bbrrpb7u504an" path="res://worlds/perodic_warfare/molecule.gd" id="58_0a8cd"]
 [ext_resource type="Script" uid="uid://tk2ghjlo2iv4" path="res://worlds/perodic_warfare/content.gd" id="70_ck1vy"]
@@ -75,6 +76,25 @@ points = PackedVector3Array(-2, 0, 0, 2, 0, 0, -2, 3, 0, 2, 3, 0, -2, 0, 6, 2, 0
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0a8cd"]
 points = PackedVector3Array(-2, 0, 0, 2, 0, 0, -2, 2, 0, 2, 2, 0, -2, 0, 4, 2, 0, 4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_em0tn"]
+render_priority = 0
+shader = ExtResource("51_lishh")
+shader_parameter/sphere_color = Color(0, 0, 0, 0)
+shader_parameter/wave_amplitude = 0.006
+shader_parameter/wave_frequency = 19.397
+shader_parameter/wave_speed = 3.618
+shader_parameter/chroma_amount = 1.0
+shader_parameter/stars_enabled = true
+shader_parameter/star_field_scale = 4.377
+shader_parameter/star_size = 0.008
+shader_parameter/star_intensity = 1.0
+shader_parameter/star_axis_speed = 0.051
+shader_parameter/star_move_mode = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_1apwi"]
+material = SubResource("ShaderMaterial_em0tn")
+size = Vector3(4, 4, 0.5)
 
 [sub_resource type="Animation" id="Animation_ycobv"]
 resource_name = "AccessThirdFloor"
@@ -580,8 +600,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="PlatformSimple24" parent="Structure/FirstFloor/Platforms" instance=ExtResource("7_u1fk7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0, -8)
 
-[node name="DoorFrameSquare" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("20_q1lyk")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -4.7683716e-07)
+[node name="DoorFrameSquareTall" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("43_dr2j5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -7.1525574e-07)
 
 [node name="PlatformSimple2" parent="Structure/FirstFloor/Platforms/PlatformSimple24" instance=ExtResource("8_0ms2t")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 5, 0)
@@ -1441,14 +1461,29 @@ transform = Transform3D(-4.37114e-08, 0, 1, 8.742276e-08, -1, 3.8213718e-15, 1, 
 [node name="Prop_Light_Small2" parent="Structure/ThridFloor/PlatformDarkPlates20/PlatformCenterPlate" instance=ExtResource("31_ycobv")]
 transform = Transform3D(-4.37114e-08, 0, -1, -8.742279e-08, -1, 3.8213718e-15, -1, 8.74228e-08, 4.37114e-08, 1, 0, 0)
 
-[node name="DoorFrameSquareTall" parent="Structure/ThridFloor/PlatformDarkPlates20" instance=ExtResource("43_dr2j5")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.2, 0, 1, 0, -4.371139e-08, 2, 0, -8.742279e-08)
-
 [node name="TopWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates20" instance=ExtResource("35_yiu3u")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 3, 0)
 
 [node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates20/TopWindowStraight" instance=ExtResource("36_cx5h6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="WallAstraStraightWindow" parent="Structure/ThridFloor/PlatformDarkPlates20" instance=ExtResource("32_ky51i")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="WallWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates20/WallAstraStraightWindow" instance=ExtResource("34_aal4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="TopWindowStraight" parent="Structure/ThridFloor/PlatformDarkPlates20/WallAstraStraightWindow/WallWindowStraight" instance=ExtResource("35_yiu3u")]
+
+[node name="TopCablesStraight" parent="Structure/ThridFloor/PlatformDarkPlates20/WallAstraStraightWindow/WallWindowStraight/TopWindowStraight" instance=ExtResource("36_cx5h6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Door_Frame_A2" parent="Structure/ThridFloor/PlatformDarkPlates20" instance=ExtResource("50_1apwi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, -1.3113416e-07)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/ThridFloor/PlatformDarkPlates20/Door_Frame_A2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("BoxMesh_1apwi")
 
 [node name="PlatformDarkPlates21" parent="Structure/ThridFloor" instance=ExtResource("30_r7xwa")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -8)
@@ -1511,11 +1546,11 @@ libraries = {
 environment = SubResource("Environment_4d8cp")
 
 [node name="PlanetGaseous" parent="Environment" instance=ExtResource("51_dca73")]
-transform = Transform3D(-772.46655, 0, 208.07245, 0, 800, 0, -208.07245, 0, -772.46655, 0, 487, 1748)
+transform = Transform3D(-789.4046, 0, 129.7664, 0, 800, 0, -129.7664, 0, -789.4046, 0, 487, 1748)
 layers = 4
 
 [node name="PlanetSand" parent="Environment" instance=ExtResource("52_q1lyk")]
-transform = Transform3D(190.34685, 0, 328.8892, 0, 380, 0, -328.8892, 0, 190.34685, 1356, 0, 0)
+transform = Transform3D(163.4034, 0, 343.0734, 0, 380, 0, -343.0734, 0, 163.4034, 1356, 0, 0)
 
 [node name="SunLightGuard" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 0.5, 0, -1, -2.1855694e-08, 1, 6, -16)

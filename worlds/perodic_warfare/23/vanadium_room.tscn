@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq3vlxb4rhpgo"]
+[gd_scene load_steps=6 format=3 uid="uid://bq3vlxb4rhpgo"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_xr536"]
 [ext_resource type="Script" uid="uid://ceke7hjk2choj" path="res://worlds/perodic_warfare/23/vanadium_room.gd" id="2_wg5js"]
 [ext_resource type="Texture2D" uid="uid://bl7up5wlihvhq" path="res://worlds/perodic_warfare/23/T_Decals_V.png" id="3_d5v7j"]
+[ext_resource type="PackedScene" uid="uid://cq7iie7i5bp67" path="res://objects/interactives/transports/hallway_right.tscn" id="4_bgr83"]
 [ext_resource type="PackedScene" uid="uid://xc37vfmkmvsy" path="res://creatures/friends/robot/george.tscn" id="4_d5v7j"]
 
 [node name="VanadiumRoom" instance=ExtResource("1_xr536")]
@@ -16,13 +17,19 @@ neutron = Array[int]([28])
 electron = 23
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(790.33484, 0, 123.974304, 0, 800, 0, -123.974304, 0, 790.33484, 0, 487, 1748)
+transform = Transform3D(789.1077, 0, 131.55927, 0, 800, 0, -131.55927, 0, 789.1077, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(377.0599, 0, 47.17886, 0, 380, 0, -47.17886, 0, 377.0599, 1356, 0, 0)
+transform = Transform3D(376.68625, 0, 50.07461, 0, 380, 0, -50.07461, 0, 376.68625, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -90, 78, 0)
+
+[node name="Elevator" parent="Transport" index="0"]
+downstairs = 41
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_bgr83")]
+next_room = 22
 
 [node name="George" parent="." index="9" instance=ExtResource("4_d5v7j")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0, -4)

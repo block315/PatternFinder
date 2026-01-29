@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://caq16fydyx5ss"]
+[gd_scene load_steps=6 format=3 uid="uid://caq16fydyx5ss"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_kyasy"]
 [ext_resource type="Script" uid="uid://cvvb60wuyvdhu" path="res://worlds/perodic_warfare/34/selenium_room.gd" id="2_dwedf"]
 [ext_resource type="Texture2D" uid="uid://dxkh8djes66pb" path="res://worlds/perodic_warfare/34/T_Decals_Se.png" id="3_dwedf"]
 [ext_resource type="PackedScene" uid="uid://0kwfbnmxr72p" path="res://arts/3D/models/quaternius.com/Cute Animated Monsters - Aug 2020-20260120T200654Z-3-001/Cute Animated Monsters - Aug 2020/glTF/Bat.gltf" id="4_ck6gt"]
+[ext_resource type="PackedScene" uid="uid://cq7iie7i5bp67" path="res://objects/interactives/transports/hallway_right.tscn" id="4_ena3i"]
 
 [node name="SeleniumRoom" instance=ExtResource("1_kyasy")]
 script = ExtResource("2_dwedf")
@@ -16,16 +17,21 @@ neutron = Array[int]([40, 42, 43, 44, 46])
 electron = 34
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(81.82371, 0, 795.8038, 0, 800, 0, -795.8038, 0, 81.82371, 0, 487, 1748)
+transform = Transform3D(770.1197, 0, 216.59717, 0, 800, 0, -216.59717, 0, 770.1197, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(146.62209, 0, 350.5738, 0, 380, 0, -350.5738, 0, 146.62209, 1356, 0, 0)
+transform = Transform3D(370.89615, 0, 82.68062, 0, 380, 0, -82.68062, 0, 370.89615, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -337, 78, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -337.5, 78, 0)
+visible = true
 
 [node name="Elevator" parent="Transport" index="0"]
 upstairs = 16
+downstairs = 52
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_ena3i")]
+next_room = 33
 
 [node name="MiniBat" parent="." index="9" instance=ExtResource("4_ck6gt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)

@@ -9,10 +9,12 @@ class_name Human
 @onready var voice: AudioStreamPlayer3D = $Voice
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var foot_step_audio_stream_player_3d: AudioStreamPlayer3D = $FootStepAudioStreamPlayer3D
+@onready var player = get_tree().get_first_node_in_group("player")
 
 func _ready():
 	foot_step_audio_stream_player_3d.pitch_scale = 0.4
-	move(get_tree().get_first_node_in_group("player").global_position)
+	if player != null:
+		move(player.global_position)
 
 func _physics_process(_delta: float) -> void:
 	if animation_tree.get("parameters/conditions/Walk"):
@@ -28,7 +30,10 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 	else:
 		foot_step_audio_stream_player_3d.stop()
-	move(get_tree().get_first_node_in_group("player").global_position)
+	if player != null:
+		move(player.global_position)
+	else:
+		player = get_tree().get_first_node_in_group("player")
 
 func move(target_position:Vector3):
 	if global_position.distance_to(target_position) > \

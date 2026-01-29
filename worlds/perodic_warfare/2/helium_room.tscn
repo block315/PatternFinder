@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlvd3um4st8my"]
+[gd_scene load_steps=11 format=3 uid="uid://dlvd3um4st8my"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_gt6dr"]
 [ext_resource type="Script" uid="uid://cmjvvu3pma0kh" path="res://worlds/perodic_warfare/2/helium_room.gd" id="2_0ycle"]
 [ext_resource type="Texture2D" uid="uid://dyvxj17yf4xj8" path="res://worlds/perodic_warfare/2/T_Decals_He.png" id="3_b4uus"]
 [ext_resource type="AudioStream" uid="uid://cljtx7w6ceeoj" path="res://arts/audio/musics/originals/helium.ogg" id="5_atodp"]
+[ext_resource type="PackedScene" uid="uid://c1lxtdgeggnej" path="res://addons/naejimer_3d_planet_generator/scenes/star.tscn" id="7_5qevc"]
 [ext_resource type="PackedScene" uid="uid://bfyb4tag6tmo" path="res://objects/interactives/transports/train.tscn" id="7_7q16b"]
 [ext_resource type="PackedScene" uid="uid://7f618ugjhy3u" path="res://objects/items/equipments/shooter/alpha_shooter.tscn" id="8_5qevc"]
 [ext_resource type="Script" uid="uid://bk0gg8k4w2kwj" path="res://worlds/perodic_warfare/2/helium_001.gd" id="8_bun02"]
@@ -36,14 +37,13 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -1)
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(798.9193, 0, 41.55407, 0, 800, 0, -41.55407, 0, 798.9193, 0, 487, 1748)
+transform = Transform3D(763.48334, 0, 238.93915, 0, 800, 0, -238.93915, 0, 763.48334, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(379.67163, 0, 15.79312, 0, 380, 0, -15.79312, 0, 379.67163, 1356, 0, 0)
+transform = Transform3D(368.86844, 0, 91.30205, 0, 380, 0, -91.30205, 0, 368.86844, 1356, 0, 0)
 
 [node name="Building" parent="." index="5"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -383, 9, 0)
-visible = true
 
 [node name="BackGroundMusicPlayer" parent="Speaker" index="2"]
 stream = ExtResource("5_atodp")
@@ -57,8 +57,13 @@ downstairs = 10
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0, -5)
 destination = 6
 
+[node name="Star" parent="Transport/Train" index="7" instance=ExtResource("7_5qevc")]
+transform = Transform3D(1.8883172, 0, 0.65897834, 0, 2, 0, -0.65897834, 0, 1.8883172, 0, 2, -2)
+layers = 4
+
 [node name="Train2" parent="Transport" index="2" instance=ExtResource("7_7q16b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 10, -7)
+visible = false
 train_number = 1
 destination = 6
 

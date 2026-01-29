@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bti6kj1p3nons"]
+[gd_scene load_steps=6 format=3 uid="uid://bti6kj1p3nons"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_2eeoj"]
 [ext_resource type="Script" uid="uid://dt87so8qfvrmb" path="res://worlds/perodic_warfare/16/sulfur_room.gd" id="2_2eeoj"]
 [ext_resource type="Texture2D" uid="uid://csbsdnlh2gkc7" path="res://worlds/perodic_warfare/16/T_Decals_S.png" id="3_2eeoj"]
+[ext_resource type="PackedScene" uid="uid://b0yxs5vl5qg6d" path="res://objects/interactives/transports/hallway_left.tscn" id="4_em6ox"]
 [ext_resource type="PackedScene" uid="uid://v6kvtfrn4nf" path="res://arts/3D/models/quaternius.com/Cute Animated Monsters - Aug 2020-20260120T200654Z-3-001/Cute Animated Monsters - Aug 2020/glTF/YellowDragon.gltf" id="4_vtmfk"]
 
 [node name="SulfurRoom" instance=ExtResource("1_2eeoj")]
@@ -16,10 +17,10 @@ neutron = Array[int]([16, 17, 18])
 electron = 16
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(626.95844, 0, 496.91232, 0, 800, 0, -496.91232, 0, 626.95844, 0, 487, 1748)
+transform = Transform3D(787.2104, 0, 142.47293, 0, 800, 0, -142.47293, 0, 787.2104, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(326.6775, 0, 194.1181, 0, 380, 0, -194.1181, 0, 326.6775, 1356, 0, 0)
+transform = Transform3D(376.1085, 0, 54.244194, 0, 380, 0, -54.244194, 0, 376.1085, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -338, 55, 0)
@@ -27,6 +28,9 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -338, 55, 0)
 [node name="Elevator" parent="Transport" index="0"]
 upstairs = 8
 downstairs = 34
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_em6ox")]
+next_room = 17
 
 [node name="YellowDragon2" parent="." index="9" instance=ExtResource("4_vtmfk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)

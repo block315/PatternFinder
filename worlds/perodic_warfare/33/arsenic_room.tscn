@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ed00l6d8wfcc"]
+[gd_scene load_steps=6 format=3 uid="uid://ed00l6d8wfcc"]
 
 [ext_resource type="PackedScene" uid="uid://dp3hsvkn4gaji" path="res://worlds/perodic_warfare/base_room.tscn" id="1_v0bx4"]
 [ext_resource type="Script" uid="uid://pp3sf38i2mmk" path="res://worlds/perodic_warfare/33/arsenic_room.gd" id="2_t5nt6"]
 [ext_resource type="Texture2D" uid="uid://d3yf1c3f6qwf3" path="res://worlds/perodic_warfare/33/T_Decals_As.png" id="3_t5nt6"]
+[ext_resource type="PackedScene" uid="uid://b0yxs5vl5qg6d" path="res://objects/interactives/transports/hallway_left.tscn" id="4_1tobq"]
 [ext_resource type="PackedScene" uid="uid://bubb5y5r1vn2y" path="res://arts/3D/models/quaternius.com/Cute Animated Monsters - Aug 2020-20260120T200654Z-3-001/Cute Animated Monsters - Aug 2020/glTF/GreenDemon.gltf" id="4_m10xt"]
 
 [node name="ArsenicRoom" instance=ExtResource("1_v0bx4")]
@@ -16,16 +17,20 @@ neutron = Array[int]([42])
 electron = 33
 
 [node name="PlanetGaseous" parent="Environment" index="1"]
-transform = Transform3D(43.036484, 0, 798.84076, 0, 800, 0, -798.84076, 0, 43.036484, 0, 487, 1748)
+transform = Transform3D(787.5197, 0, 140.75307, 0, 800, 0, -140.75307, 0, 787.5197, 0, 487, 1748)
 
 [node name="PlanetSand" parent="Environment" index="2"]
-transform = Transform3D(132.8738, 0, 356.01205, 0, 380, 0, -356.01205, 0, 132.8738, 1356, 0, 0)
+transform = Transform3D(376.20267, 0, 53.586864, 0, 380, 0, -53.586864, 0, 376.20267, 1356, 0, 0)
 
 [node name="Building" parent="." index="4"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -315, 78, 0)
 
 [node name="Elevator" parent="Transport" index="0"]
 upstairs = 15
+downstairs = 51
+
+[node name="Hallway" parent="Transport" index="1" instance=ExtResource("4_1tobq")]
+next_room = 34
 
 [node name="GreenDemon2" parent="." index="9" instance=ExtResource("4_m10xt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
